@@ -1,0 +1,105 @@
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.master {
+  padding: 10px;
+  border-right: #bbbbbb solid 2px;
+  overflow-y: scroll;
+}
+.masterExpandContainer {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.masterExpandButton {
+  transform: translate(50%, 0);
+  pointer-events: all;
+}
+
+.section {
+  padding-top: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.section:hover {
+  text-shadow: 2px 2px #eadff9;
+}
+.section-button {
+  margin-right: 5px;
+}
+.section-content {
+  padding-left: 10px;
+}
+.master-button {
+  background-color: #fff;
+  border: #bbbbbb solid 2px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 3px 3px #eeeeee;
+  text-align: start;
+  cursor: pointer;
+}
+.master-button:hover {
+  text-shadow: 2px 2px #eadff9;
+  box-shadow: 3px 3px #e1ccffbb;
+}
+.master-button:focus {
+  outline: 0;
+}
+.selected {
+  font-weight: 600;
+  border-color: #000000;
+  box-shadow: 3px 3px #00000033;
+}
+
+.detail {
+  flex: 1;
+  padding: 24px;
+  position: relative;
+  overflow: scroll;
+}
+
+.empty-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.empty-screen-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+.empty-screen-message {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.empty-screen-avatar {
+  font-size: 32px;
+}
+.empty-screen-timestamp {
+  font-size: 12px;
+  color: #0006;
+}
