@@ -1,4 +1,4 @@
-import { useInterval } from '6-HooksCollection/Chapter-27/useInterval';
+import { useInterval } from 'hooks/useInterval';
 import { useEffect, useState } from 'react';
 import { getRandomNumber } from 'utils/getRandomNumber';
 
@@ -6,14 +6,19 @@ import { MovingLogo } from './MovingLogo';
 
 const CYCLE_DURATION = 20;
 
-function generateInitialPositions(positionsNumber) {
+interface Position {
+  left: string | number;
+  top: string | number;
+}
+
+function generateInitialPositions(positionsNumber: number): Position[] {
   return new Array(positionsNumber).fill({
     left: '50%',
     top: '50%',
   });
 }
 
-function generateRandomPositions(positionsNumber) {
+function generateRandomPositions(positionsNumber: number): Position[] {
   const array = [];
   for (let i = 0; i < positionsNumber; i++) {
     array.push({
@@ -24,8 +29,8 @@ function generateRandomPositions(positionsNumber) {
   return array;
 }
 
-export function Background({ logosNumber }) {
-  const [positions, setPositions] = useState(() =>
+export function Background({ logosNumber }: { logosNumber: number }): JSX.Element {
+  const [positions, setPositions] = useState<Position[]>(() =>
     generateInitialPositions(logosNumber)
   );
 
@@ -40,12 +45,7 @@ export function Background({ logosNumber }) {
   return (
     <>
       {positions.map(({ left, top }, index) => (
-        <MovingLogo
-          key={index}
-          duration={CYCLE_DURATION}
-          left={left}
-          top={top}
-        />
+        <MovingLogo key={index} duration={CYCLE_DURATION} left={left} top={top} />
       ))}
     </>
   );

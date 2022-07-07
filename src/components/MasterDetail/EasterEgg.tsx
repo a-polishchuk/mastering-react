@@ -8,7 +8,7 @@ enum Side {
   BOTTOM = 'bottom',
 }
 
-function getRandomSide() {
+function getRandomSide(): Side {
   const randomIndex = Math.round(Math.random() * 3);
   switch (randomIndex) {
     case 0:
@@ -71,9 +71,9 @@ const SHOW_TIME = 3 * 1000;
 const PAUSE_TIME = 20 * 1000;
 
 export function EasterEgg() {
-  const [position, setPosition] = useState(getRandomPosition());
-  const [side, setSide] = useState(getRandomSide());
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState<boolean>(true);
+  const [side, setSide] = useState<Side>(getRandomSide());
+  const [position, setPosition] = useState<number>(getRandomPosition());
 
   useEffect(() => {
     setVisible(true);

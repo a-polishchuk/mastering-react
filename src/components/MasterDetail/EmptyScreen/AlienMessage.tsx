@@ -1,17 +1,19 @@
-import '../MasterDetail.css';
-
-import { format } from 'date-fns';
 import { ColoredBlock } from 'components/ColoredBlock';
+import { format } from 'date-fns';
+import { CSSProperties } from 'react';
+
+import classes from './AlienMessage.module.css';
+import { Message } from './types';
 
 const TIME_FORMAT = 'HH:mm';
 
-function buildAvatarStyle(color) {
+function buildAvatarStyle(color: string): CSSProperties {
   return {
     textShadow: `2px 2px ${color + '66'}`,
   };
 }
 
-function buildBlockStyle(backgroundColor) {
+function buildBlockStyle(backgroundColor: string): CSSProperties {
   return {
     display: 'flex',
     padding: 10,
@@ -23,18 +25,22 @@ function buildBlockStyle(backgroundColor) {
   };
 }
 
-export function AlienMessage({ color, message }) {
+interface Props {
+  color: string;
+  message: Message;
+}
+
+export function AlienMessage({ color, message }: Props): JSX.Element {
   const { text, dateTime } = message;
+
   return (
-    <div className="empty-screen-message">
-      <div className="empty-screen-avatar" style={buildAvatarStyle(color)}>
+    <div className={classes.emptyScreenMessage}>
+      <div className={classes.emptyScreenAvatar} style={buildAvatarStyle(color)}>
         👽
       </div>
       <ColoredBlock style={buildBlockStyle(color)}>{text}</ColoredBlock>
       {dateTime && (
-        <div className="empty-screen-timestamp">
-          {format(dateTime, TIME_FORMAT)}
-        </div>
+        <div className={classes.emptyScreenTimestamp}>{format(dateTime, TIME_FORMAT)}</div>
       )}
     </div>
   );

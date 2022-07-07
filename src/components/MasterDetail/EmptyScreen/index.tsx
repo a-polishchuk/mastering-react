@@ -1,36 +1,28 @@
-import '../MasterDetail.css';
-
-import { v4 as uuidv4 } from 'uuid';
-import { useInterval } from 'hooks/useInterval';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { getRandomColor } from 'utils/getRandomColor';
+import { v4 as uuidv4 } from 'uuid';
 
-import { Background } from './Background';
 import { AlienMessage } from './AlienMessage';
+import { Background } from './Background';
 import { DotsMessage } from './DotsMessage';
+import classes from './EmptyScreen.module.css';
+import { Message } from './types';
+import { useDotsVisible } from './useDotsVisible';
 
-const MESSAGES = [
+const MESSAGES_TEXT = [
   'Greetings, human!',
   'Welcome to the "React Hooks in details" course',
   'Please select some chapter in the left menu',
 ];
 
-function useDotsVisible() {
-  const [dotsVisible, setDotsVisible] = useState(false);
-  useInterval(() => {
-    setDotsVisible((value) => !value);
-  }, 3000);
-  return dotsVisible;
-}
-
-export function EmptyScreen() {
+export function EmptyScreen(): JSX.Element {
   const isDotsVisible = useDotsVisible();
 
   const messageColor = useMemo(() => getRandomColor(), []);
 
-  const messages = useMemo(
+  const messages: Message[] = useMemo(
     () =>
-      MESSAGES.map((text) => ({
+      MESSAGES_TEXT.map((text) => ({
         id: uuidv4(),
         text,
         dateTime: new Date(),
@@ -39,9 +31,9 @@ export function EmptyScreen() {
   );
 
   return (
-    <div className="empty-screen">
+    <div className={classes.emptyScreen}>
       <Background logosNumber={3} />
-      <div className="empty-screen-messages">
+      <div className={classes.emptyScreenMessages}>
         {messages.map((message) => (
           <AlienMessage key={message.id} color={messageColor} message={message} />
         ))}
