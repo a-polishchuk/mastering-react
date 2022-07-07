@@ -1,0 +1,14 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.children {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}

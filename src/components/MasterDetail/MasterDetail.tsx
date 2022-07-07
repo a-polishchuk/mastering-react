@@ -1,6 +1,6 @@
 import { useDocumentTitle } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, FC, ReactElement, Suspense, useCallback, useState } from 'react';
+import { CSSProperties, FC, ReactNode, Suspense, useCallback, useState } from 'react';
 
 import { EasterEgg } from './EasterEgg';
 import { EmptyScreen } from './EmptyScreen';
@@ -8,7 +8,6 @@ import { ExpandCollapseButton } from './ExpandCollapseButton';
 import { Loading } from './Loading';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext, MasterDetailState } from './MasterDetailContext';
-import { SectionProps } from './Section';
 
 const COLLAPSED_WIDTH = '25px';
 
@@ -19,7 +18,7 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
 });
 
 export interface MasterDetailProps {
-  children: ReactElement<SectionProps>[];
+  children: ReactNode;
 }
 
 export function MasterDetail({ children }: MasterDetailProps): JSX.Element {
