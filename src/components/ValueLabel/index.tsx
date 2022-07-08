@@ -1,7 +1,7 @@
 import classes from './index.module.css';
 
 export interface ValueLabelProps {
-  value: number;
+  value: string | number;
 }
 
 export function ValueLabel({ value }: ValueLabelProps): JSX.Element {
