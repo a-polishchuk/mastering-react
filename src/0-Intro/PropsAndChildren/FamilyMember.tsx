@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode } from 'react';
-import { getRandomColor } from 'utils/getRandomColor';
+import { generateRandomColor } from 'utils/generateRandomColor';
 
 import { Avatar } from './Avatar';
 import classes from './FamilyMember.module.css';
@@ -11,7 +11,7 @@ interface Props {
 
 export function FamilyMember({ name, children }: Props): JSX.Element {
   const containerStyle: CSSProperties = {
-    backgroundColor: getRandomColor() + '11',
+    backgroundColor: generateRandomColor() + '11',
   };
 
   return (

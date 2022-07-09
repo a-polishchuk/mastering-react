@@ -1,11 +1,11 @@
 import { ReactLogo } from 'components/ReactLogo';
 import { CSSProperties, memo, useRef } from 'react';
-import { getRandomColor } from 'utils/getRandomColor';
-import { getRandomNumber } from 'utils/getRandomNumber';
+import { generateRandomColor } from 'utils/generateRandomColor';
+import { generateRandomNumber } from 'utils/generateRandomNumber';
 
 function generateLogoColor(): string {
-  const opacity = getRandomNumber(1, 4) * 10;
-  return getRandomColor() + opacity.toFixed(0);
+  const opacity = generateRandomNumber(1, 4) * 10;
+  return generateRandomColor() + opacity.toFixed(0);
 }
 
 interface Props {
@@ -27,5 +27,7 @@ export const MovingLogo = memo(({ left, top, duration }: Props): JSX.Element => 
 
   rotationRef.current = rotationRef.current === 0 ? 360 : 0;
 
-  return <ReactLogo size={getRandomNumber(100, 360)} color={generateLogoColor()} style={style} />;
+  return (
+    <ReactLogo size={generateRandomNumber(100, 360)} color={generateLogoColor()} style={style} />
+  );
 });

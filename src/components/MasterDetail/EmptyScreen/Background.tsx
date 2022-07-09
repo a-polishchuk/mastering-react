@@ -1,6 +1,6 @@
 import { useInterval } from 'hooks/useInterval';
 import { useEffect, useState } from 'react';
-import { getRandomNumber } from 'utils/getRandomNumber';
+import { generateRandomNumber } from 'utils/generateRandomNumber';
 
 import { MovingLogo } from './MovingLogo';
 
@@ -22,8 +22,8 @@ function generateRandomPositions(positionsNumber: number): Position[] {
   const array = [];
   for (let i = 0; i < positionsNumber; i++) {
     array.push({
-      left: `${getRandomNumber(0, 100)}%`,
-      top: `${getRandomNumber(0, 100)}%`,
+      left: `${generateRandomNumber(0, 100)}%`,
+      top: `${generateRandomNumber(0, 100)}%`,
     });
   }
   return array;

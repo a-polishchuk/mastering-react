@@ -1,11 +1,11 @@
-import { Section, Chapter } from 'components/MasterDetail';
+import { Chapter, Section } from 'components/MasterDetail';
 
-import { UseStateBasics } from './UseStateBasics';
-import { PreviousStateUpdate } from './PreviousStateUpdate';
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
 import { LazyInitialization } from './LazyInitialization/LazyInitialization';
+import { PreviousStateUpdate } from './PreviousStateUpdate';
 import { StoringFunctions } from './StoringFunctions';
+import { UseStateBasics } from './UseStateBasics';
 
 export function HooksBasicsSection(): JSX.Element {
   return (

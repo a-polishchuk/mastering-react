@@ -1,5 +1,5 @@
 import { CSSProperties, MouseEventHandler, ReactNode } from 'react';
-import { getRandomColor } from 'utils/getRandomColor';
+import { generateRandomColor } from 'utils/generateRandomColor';
 
 import classes from './index.module.css';
 
@@ -11,7 +11,7 @@ export interface ColoredBlockProps {
 
 export function ColoredBlock({ children, style, onClick }: ColoredBlockProps): JSX.Element {
   const composedStyle: CSSProperties = {
-    backgroundColor: getRandomColor(),
+    backgroundColor: generateRandomColor(),
     ...style,
   };
 

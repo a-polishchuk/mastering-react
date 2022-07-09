@@ -1,6 +1,6 @@
 import { ColoredBlock } from 'components/ColoredBlock';
 import { CSSProperties } from 'react';
-import { getRandomColor } from 'utils/getRandomColor';
+import { generateRandomColor } from 'utils/generateRandomColor';
 
 import classes from './index.module.css';
 
@@ -10,7 +10,7 @@ function getSectionStyle(flex: number): CSSProperties {
     flexDirection: 'column',
     padding: 16,
     borderRadius: 8,
-    backgroundColor: getRandomColor() + '22',
+    backgroundColor: generateRandomColor() + '22',
   };
 }
 

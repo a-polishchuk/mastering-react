@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { getRandomColor } from 'utils/getRandomColor';
-import { v4 as uuidv4 } from 'uuid';
+import { generateRandomColor } from 'utils/generateRandomColor';
+import { generateUniqueId } from 'utils/generateUniqueId';
 
 import { AlienMessage } from './AlienMessage';
 import { Background } from './Background';
@@ -11,19 +11,19 @@ import { useDotsVisible } from './useDotsVisible';
 
 const MESSAGES_TEXT = [
   'Greetings, human!',
-  'Welcome to the "React Hooks in details" course',
+  'Welcome to the "Mastering React" course',
   'Please select some chapter in the left menu',
 ];
 
 export function EmptyScreen(): JSX.Element {
   const isDotsVisible = useDotsVisible();
 
-  const messageColor = useMemo(() => getRandomColor(), []);
+  const messageColor = useMemo(() => generateRandomColor(), []);
 
   const messages: Message[] = useMemo(
     () =>
       MESSAGES_TEXT.map((text) => ({
-        id: uuidv4(),
+        id: generateUniqueId(),
         text,
         dateTime: new Date(),
       })),
