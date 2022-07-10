@@ -14,7 +14,7 @@ function Entry({ name, value }: EntryProps): JSX.Element {
 
 export interface PropsTableProps {
   title?: string;
-  data: Record<string, any>;
+  data: Record<string, any> | null | undefined;
 }
 
 export function PropsTable({ title, data }: PropsTableProps): JSX.Element {
