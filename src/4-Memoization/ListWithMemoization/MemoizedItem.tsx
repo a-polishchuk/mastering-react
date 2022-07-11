@@ -1,4 +1,6 @@
+import { useLoggedLifecycle } from 'components/LoggedLifecycle';
 import { memo } from 'react';
+
 import { ItemData } from '../ItemData';
 
 interface Props {
@@ -8,10 +10,9 @@ interface Props {
 
 function Item({ data, onClick }: Props): JSX.Element {
   const { name } = data;
-  console.log(`> render ${name}`);
+  useLoggedLifecycle(name);
 
   return <li onClick={() => onClick(data)}>{name}</li>;
 }
 
-// TODO: use logged lifecycle component here
 export const MemoizedItem = memo(Item);

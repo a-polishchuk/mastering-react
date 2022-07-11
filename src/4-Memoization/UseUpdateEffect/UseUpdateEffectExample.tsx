@@ -1,26 +1,28 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { Button } from 'components/Button';
 import { ChapterHeader } from 'components/ChapterHeader';
+import { useLoggedLifecycle } from 'components/LoggedLifecycle';
 import { Toolbar } from 'components/Toolbar';
 import { ValueLabel } from 'components/ValueLabel';
 import { useCallback, useEffect } from 'react';
+import { logTagged } from 'utils/logTagged';
 
 import { useUpdateEffect } from './useUpdateEffect';
 
-export function UseUpdateEffectExample(): JSX.Element {
+export function UseUpdateEffect(): JSX.Element {
   const { value, increase } = useCounter();
 
+  useLoggedLifecycle('Parent');
+
   useEffect(() => {
-    console.log('useEffect after first render');
+    logTagged('useEffect', 'effect with empty deps list');
   }, []);
 
   useUpdateEffect(
     useCallback(() => {
-      console.log(`useUpdateEffect, value: ${value}`);
+      logTagged('updateEffect', `value === ${value}`);
     }, [value])
   );
-
-  console.log('render');
 
   return (
     <>

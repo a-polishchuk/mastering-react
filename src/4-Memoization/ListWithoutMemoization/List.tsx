@@ -1,12 +1,14 @@
+import { useLoggedLifecycle } from 'components/LoggedLifecycle';
+import { logTagged } from 'utils/logTagged';
 import { ItemData } from '../ItemData';
 import { Item } from './Item';
 
 export function List({ items }: { items: ItemData[] }): JSX.Element {
-  const clickCallback = (item: ItemData) => {
-    console.log(`clicked item with id ${item.id}`);
-  };
+  useLoggedLifecycle('List');
 
-  console.log('render List');
+  const clickCallback = (item: ItemData) => {
+    logTagged('Clicked', JSON.stringify(item));
+  };
 
   return (
     <ol>

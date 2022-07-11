@@ -1,3 +1,5 @@
+import { useLoggedLifecycle } from 'components/LoggedLifecycle';
+
 import { ItemData } from '../ItemData';
 
 interface Props {
@@ -7,7 +9,7 @@ interface Props {
 
 export function Item({ item, onClick }: Props): JSX.Element {
   const { name } = item;
-  console.log(`> render ${name}`);
+  useLoggedLifecycle(name);
 
   return <li onClick={() => onClick(item)}>{name}</li>;
 }
