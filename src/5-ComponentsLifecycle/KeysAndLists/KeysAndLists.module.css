@@ -1,0 +1,16 @@
+.twoColumns {
+  display: flex;
+  gap: 24px;
+}
+
+.columnTitle {
+  flex: 1;
+  margin: 10px;
+}
+
+.list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

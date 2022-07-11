@@ -4,7 +4,7 @@ import { generateRandomColor } from 'utils/generateRandomColor';
 import classes from './index.module.css';
 
 export interface ColoredBlockProps {
-  children: ReactNode;
+  children?: ReactNode;
   style?: CSSProperties;
   onClick?: MouseEventHandler;
 }

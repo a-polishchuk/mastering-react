@@ -10,7 +10,8 @@ export function useLoggedLifecycle(tag: string) {
     return () => {
       logTagged(tag, '⛔️ Unmounting');
     };
-  }, [tag]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 }
 
 interface Props {

@@ -5,9 +5,8 @@ import { ListWithMemoization } from './ListWithMemoization/ListWithMemoization';
 import { UseUpdateEffect } from './UseUpdateEffect/UseUpdateEffectExample';
 import { WhenReactRenderComponents } from './UseMemo/WhenReactRenderComponents';
 import { UseMemoExample } from './UseMemo/UseMemoExample';
-import { KeysToReact } from './KeysToReact/KeysToReact';
 
-export function MemoizationSection() {
+export function MemoizationSection(): JSX.Element {
   return (
     <Section title="Memoization">
       <Section title="useCallback">
@@ -18,9 +17,6 @@ export function MemoizationSection() {
       <Section title="useMemo">
         <Chapter title="When React render components?" component={WhenReactRenderComponents} />
         <Chapter title="useMemo" component={UseMemoExample} />
-      </Section>
-      <Section title="Key property">
-        <Chapter title="Keys to React" component={KeysToReact} />
       </Section>
     </Section>
   );

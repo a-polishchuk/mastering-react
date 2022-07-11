@@ -3,6 +3,7 @@ import { HooksBasicsSection } from '1-HooksBasics/HooksBasicsSection';
 import { SideEffectsSection } from '2-SideEffects/SideEffectsSection';
 import { ImperativeCodeSection } from '3-ImperativeCode/ImperativeCodeSection';
 import { MemoizationSection } from '4-Memoization/MemoizationSection';
+import { ComponentsLifecycleSection } from '5-ComponentsLifecycle/ComponentsLifecycleSection';
 import { MasterDetail } from 'components/MasterDetail';
 
 export function App(): JSX.Element {
@@ -13,6 +14,7 @@ export function App(): JSX.Element {
       <SideEffectsSection />
       <ImperativeCodeSection />
       <MemoizationSection />
+      <ComponentsLifecycleSection />
     </MasterDetail>
   );
 }

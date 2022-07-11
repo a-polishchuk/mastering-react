@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { Item } from './Item';
+import classes from './KeysAndLists.module.css';
 import { ListItem } from './ListItem';
 
 interface ListProps {
@@ -18,7 +19,7 @@ export function List({ generateItems, getKey }: ListProps): JSX.Element {
   }, []);
 
   return (
-    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div className={classes.list}>
       {items.map((item, index) => (
         <ListItem key={getKey(item, index)} item={item} onClick={removeItem} />
       ))}

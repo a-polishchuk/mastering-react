@@ -1,5 +1,6 @@
 import { ColoredBlock } from 'components/ColoredBlock';
 import { memo } from 'react';
+
 import { Item } from './Item';
 
 interface ListItemProps {
