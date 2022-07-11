@@ -1,8 +1,9 @@
 import { Chapter, Section } from 'components/MasterDetail';
 
-import { ConditionalRendering } from './ConditionalRendering';
-import { KeysAndLists } from './KeysAndLists/KeysAndLists';
-import { RemountComponent } from './RemountComponent';
+import { ConditionalRendering } from './Keys/ConditionalRendering';
+import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';
+import { RemountComponent } from './Keys/RemountComponent';
+import { RandomRendering } from './RandomRendering/RandomRendering';
 
 export function ComponentsLifecycleSection(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export function ComponentsLifecycleSection(): JSX.Element {
         <Chapter title="Re-mount component" component={RemountComponent} />
         <Chapter title="Conditional rendering" component={ConditionalRendering} />
       </Section>
+      <Chapter title="Random rendering" component={RandomRendering} />
     </Section>
   );
 }
