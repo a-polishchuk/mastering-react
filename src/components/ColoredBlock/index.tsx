@@ -6,7 +6,7 @@ import classes from './index.module.css';
 export interface ColoredBlockProps {
   children: ReactNode;
   style?: CSSProperties;
-  onClick?: MouseEventHandler<HTMLDivElement>;
+  onClick?: MouseEventHandler;
 }
 
 export function ColoredBlock({ children, style, onClick }: ColoredBlockProps): JSX.Element {
