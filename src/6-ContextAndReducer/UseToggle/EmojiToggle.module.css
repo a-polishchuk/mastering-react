@@ -1,0 +1,5 @@
+.emoji {
+  font-size: 64px;
+  cursor: pointer;
+  user-select: none;
+}
