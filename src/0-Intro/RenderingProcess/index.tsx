@@ -1,3 +1,4 @@
+import { ChapterHeader } from 'components/ChapterHeader';
 import { ColoredBlock } from 'components/ColoredBlock';
 import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
@@ -25,8 +26,7 @@ function Emoji({ children }: { children: string }): JSX.Element {
 export function RenderingProcess(): JSX.Element {
   return (
     <>
-      <h2>React rendering process</h2>
-      <h3>🌲 🆚 🌲 ➡️ 🌳</h3>
+      <ChapterHeader title="React rendering process" subtitle="🌲 🆚 🌲 ➡️ 🌳" />
 
       <div className={classes.container}>
         <div style={getSectionStyle(2)}>

@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Toolbar } from 'components/Toolbar';
 import { Button } from 'components/Button';
+import { ChapterHeader } from 'components/ChapterHeader';
+import { Toolbar } from 'components/Toolbar';
 import { ValueLabel } from 'components/ValueLabel';
+import { useState } from 'react';
 
 const DELAY = 2000;
 const FIBONACCI = [1, 1];
@@ -34,7 +35,7 @@ export function PreviousStateUpdate(): JSX.Element {
 
   return (
     <>
-      <h2>Previous state update</h2>
+      <ChapterHeader title="useState" subtitle="Previous state update" />
 
       <Toolbar>
         <div style={{ minWidth: 150, marginLeft: 16 }}>

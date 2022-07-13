@@ -1,3 +1,4 @@
+import { ChapterHeader } from 'components/ChapterHeader';
 import { Fragment } from 'react';
 
 function FewPoints(): JSX.Element {
@@ -24,8 +25,7 @@ function FewMorePoints(): JSX.Element {
 export function Fragments(): JSX.Element {
   return (
     <Fragment>
-      <h2>Introduction to JSX</h2>
-      <h3>React.Fragment</h3>
+      <ChapterHeader title="Introduction to JSX" subtitle="React.Fragment" />
       React is famous for:
       <ol>
         <FewPoints />

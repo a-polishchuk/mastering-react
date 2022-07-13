@@ -1,6 +1,7 @@
 import { useState, ChangeEvent, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
 import { Button } from 'components/Button';
 import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components/ChapterHeader';
 
 type MathFunction = (a: number, b: number) => number;
 type Setter = Dispatch<SetStateAction<number>>;
@@ -32,7 +33,7 @@ export function StoringFunctions(): JSX.Element {
 
   return (
     <>
-      <h2>Storing function in useState</h2>
+      <ChapterHeader title="useState" subtitle="Storing function in useState" />
 
       <Toolbar>
         <Button onClick={buildClickHandler(add, '➕')} text="➕ Add" />

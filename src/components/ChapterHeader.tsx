@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 interface Props {
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
 }
 
 export function ChapterHeader({ title, subtitle }: Props): JSX.Element {

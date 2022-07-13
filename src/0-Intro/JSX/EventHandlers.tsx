@@ -1,3 +1,4 @@
+import { ChapterHeader } from 'components/ChapterHeader';
 import { ColoredBlock } from 'components/ColoredBlock';
 import { useRerender } from 'hooks/useRerender';
 import { CSSProperties, MouseEventHandler } from 'react';
@@ -17,8 +18,8 @@ export function EventHandlers(): JSX.Element {
 
   return (
     <>
-      <h2>Introduction to JSX</h2>
-      <h3>Adding event handlers</h3>
+      <ChapterHeader title="Introduction to JSX" subtitle="Adding event handlers" />
+
       <div onClick={eventHandler} onMouseEnter={eventHandler} onMouseLeave={eventHandler}>
         <ColoredBlock style={STYLE}>Click me! (Hover will do the trick too)</ColoredBlock>
       </div>

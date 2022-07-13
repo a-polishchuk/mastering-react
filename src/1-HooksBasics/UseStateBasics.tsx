@@ -1,7 +1,8 @@
-import { ChangeEventHandler, useState } from 'react';
-import { Toolbar } from 'components/Toolbar';
 import { Button } from 'components/Button';
+import { ChapterHeader } from 'components/ChapterHeader';
+import { Toolbar } from 'components/Toolbar';
 import { ValueLabel } from 'components/ValueLabel';
+import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];
 
@@ -29,8 +30,7 @@ export function UseStateBasics(): JSX.Element {
 
   return (
     <>
-      <h2>useState basics</h2>
-      <h3>General hooks rules</h3>
+      <ChapterHeader title="useState basics" subtitle="General hooks rules" />
 
       <Toolbar>
         <div style={{ minWidth: 150, marginLeft: 16 }}>

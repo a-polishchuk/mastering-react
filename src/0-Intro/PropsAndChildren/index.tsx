@@ -1,9 +1,12 @@
+import { ChapterHeader } from 'components/ChapterHeader';
+
 import { FamilyMember } from './FamilyMember';
 
 export function PropsAndChildren(): JSX.Element {
   return (
     <>
-      <h2>Components, props and children</h2>
+      <ChapterHeader title="Introduction to JSX" subtitle="Components, props and children" />
+
       <FamilyMember name="Jack">
         <FamilyMember name="John">
           <FamilyMember name="Leo">

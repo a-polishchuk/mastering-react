@@ -1,4 +1,5 @@
 import { Button } from 'components/Button';
+import { ChapterHeader } from 'components/ChapterHeader';
 import { Toolbar } from 'components/Toolbar';
 import { useState } from 'react';
 
@@ -61,7 +62,7 @@ export function LazyInitialization(): JSX.Element {
 
   return (
     <>
-      <h2>Lazy initialization</h2>
+      <ChapterHeader title="useState" subtitle="Lazy initialization" />
 
       <Toolbar>
         <Button text="⬆️ Sort" onClick={sortAscending} />

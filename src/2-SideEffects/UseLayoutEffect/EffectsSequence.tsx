@@ -1,3 +1,4 @@
+import { ChapterHeader } from 'components/ChapterHeader';
 import { useEffect, useState, useRef, MouseEventHandler } from 'react';
 
 import { buildDotStyle } from './buildDotStyle';
@@ -55,8 +56,7 @@ export function EffectsSequence() {
       onClick={handleClick}
       style={{ height: '100%', width: '100%', position: 'relative' }}
     >
-      <h2>useEffect vs useLayoutEffect</h2>
-      <h3>Effects sequence</h3>
+      <ChapterHeader title="useEffect vs useLayoutEffect" subtitle="Effects sequence" />
       {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}
       <div style={buildDotStyle(clickPos, '#5599ff88', 10)} />
       <div style={buildDotStyle(effectPos, '#ff559988', 20)} />
