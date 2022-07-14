@@ -11,6 +11,16 @@ export function ReactTraits(): JSX.Element {
   return (
     <>
       <h3>React traits</h3>
+
+      <ul>
+        <li>🗂 Declarative</li>
+        <li>🌳 Virtual DOM</li>
+        <li>⬇️ Unidirectional data flow</li>
+        <li>📝 JSX - Special syntax describe UI</li>
+        <li>🏗 Components as main building blocks of your app</li>
+        <li>🪝 Hooks helps to encapsulate business logic</li>
+      </ul>
+
       <TypicalComponent name="App" isRoot>
         <TypicalComponent name="Header">
           <TypicalComponent name="UserAvatar" />
