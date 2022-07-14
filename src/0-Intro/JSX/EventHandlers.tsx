@@ -1,7 +1,10 @@
+import { Button } from 'components/Button';
 import { ChapterHeader } from 'components/ChapterHeader';
 import { ColoredBlock } from 'components/ColoredBlock';
+import { Toolbar } from 'components/Toolbar';
 import { useRerender } from 'hooks/useRerender';
-import { CSSProperties, MouseEventHandler } from 'react';
+import { ChangeEventHandler, CSSProperties, MouseEventHandler } from 'react';
+import { logTagged } from 'utils/logTagged';
 
 const STYLE: CSSProperties = {
   display: 'flex',
@@ -12,17 +15,33 @@ const STYLE: CSSProperties = {
 export function EventHandlers(): JSX.Element {
   const rerender = useRerender();
 
-  const eventHandler: MouseEventHandler<HTMLDivElement> = () => {
+  const mouseEventHandler: MouseEventHandler<HTMLDivElement> = () => {
     rerender();
+  };
+
+  const inputChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
+    logTagged('Input', event.target.value);
   };
 
   return (
     <>
       <ChapterHeader title="Introduction to JSX" subtitle="Adding event handlers" />
 
-      <div onClick={eventHandler} onMouseEnter={eventHandler} onMouseLeave={eventHandler}>
+      <div
+        onClick={mouseEventHandler}
+        onMouseEnter={mouseEventHandler}
+        onMouseLeave={mouseEventHandler}
+      >
         <ColoredBlock style={STYLE}>Click me! (Hover will do the trick too)</ColoredBlock>
       </div>
+
+      <Toolbar>
+        <Button text="Click me!" onClick={() => logTagged('Button', 'You clicked me!')} />
+      </Toolbar>
+
+      <Toolbar>
+        <input defaultValue="Default value" onChange={inputChangeHandler} />
+      </Toolbar>
     </>
   );
 }

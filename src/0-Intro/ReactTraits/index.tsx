@@ -16,7 +16,7 @@ export function ReactTraits(): JSX.Element {
         <li>🗂 Declarative</li>
         <li>🌳 Virtual DOM</li>
         <li>⬇️ Unidirectional data flow</li>
-        <li>📝 JSX - Special syntax describe UI</li>
+        <li>📝 JSX - Special syntax to describe UI</li>
         <li>🏗 Components as main building blocks of your app</li>
         <li>🪝 Hooks helps to encapsulate business logic</li>
       </ul>
