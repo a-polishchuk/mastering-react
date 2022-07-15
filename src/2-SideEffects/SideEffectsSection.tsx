@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 
 import { FetchDataInUseEffect } from './FetchDataInUseEffect';
+import { UseGlobalEvents } from './UseGlobalEvents/UseGlobalEvents';
 import { BewareOfInfiniteLoops } from './InfiniteLoops/BewareOfInfiniteLoops';
 import { UseEffectAndInterval } from './UseEffectAndInterval/UseEffectAndInterval';
 import { UseEffectBasics } from './UseEffectBasics';
@@ -11,7 +12,10 @@ import { YouDontNeedUseEffect } from './YouDontNeedUseEffect/YouDontNeedUseEffec
 export function SideEffectsSection(): JSX.Element {
   return (
     <Section title="Side effects, useEffect">
-      <Chapter title="useEffect basics" component={UseEffectBasics} />
+      <Section title="Basics">
+        <Chapter title="useEffect basics" component={UseEffectBasics} />
+      </Section>
+      <Chapter title="Global event listeners" component={UseGlobalEvents} />
       <Chapter title="useEffect + setInterval" component={UseEffectAndInterval} />
       <Chapter title="Fetch data in useEffect" component={FetchDataInUseEffect} />
       <Chapter title="Beware of infinite loops" component={BewareOfInfiniteLoops} />

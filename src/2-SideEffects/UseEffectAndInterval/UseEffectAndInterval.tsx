@@ -6,6 +6,7 @@ const MOON_EMOJIS = ['🌕', '🌖', '🌗', '🌘', '🌑', '🌒', '🌓', '�
 const EARTH_EMOJIS = ['🌎', '🌍', '🌏'];
 const CLOCK_EMOJIS = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚', '🕛'];
 
+// TODO: what about introducing useInterval hook?
 export function UseEffectAndInterval(): JSX.Element {
   return (
     <>

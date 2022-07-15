@@ -35,7 +35,7 @@ export function YouDontNeedUseEffect(): JSX.Element {
       <Toolbar>
         <Button text="Click me to re-render the component" onClick={rerender} />
       </Toolbar>
-      <Toolbar>⬅️ ⬆️ ➡️ ⬇️ Use arrow keys to move the ball.</Toolbar>
+      <Toolbar>Use ⬅️ ⬆️ ➡️ ⬇️ to move the ball.</Toolbar>
 
       <div style={{ position: 'relative' }}>
         <div style={style}>⚽️</div>
