@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import classes from './WindowSize.module.css';
 
 interface Size {
