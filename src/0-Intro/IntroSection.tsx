@@ -21,6 +21,7 @@ export function IntroSection() {
         <Chapter title="Fragments" component={Fragments} />
         <Chapter title="Arrays" component={Arrays} />
         <Chapter title="Event handlers" component={EventHandlers} />
+        <Chapter title="Conditional" component={EventHandlers} />
       </Section>
       <Chapter title="Components, props, children" component={PropsAndChildren} />
       <Chapter title="Rendering process" component={RenderingProcess} />
