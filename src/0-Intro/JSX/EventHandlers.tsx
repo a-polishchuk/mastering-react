@@ -15,25 +15,17 @@ const STYLE: CSSProperties = {
 export function EventHandlers(): JSX.Element {
   const rerender = useRerender();
 
-  const mouseEventHandler: MouseEventHandler<HTMLDivElement> = () => {
-    rerender();
-  };
-
   const inputChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
     logTagged('Input', event.target.value);
+  };
+
+  const mouseEventHandler: MouseEventHandler<HTMLDivElement> = () => {
+    rerender();
   };
 
   return (
     <>
       <ChapterHeader title="Introduction to JSX" subtitle="Adding event handlers" />
-
-      <div
-        onClick={mouseEventHandler}
-        onMouseEnter={mouseEventHandler}
-        onMouseLeave={mouseEventHandler}
-      >
-        <ColoredBlock style={STYLE}>Click me! (Hover will do the trick too)</ColoredBlock>
-      </div>
 
       <Toolbar>
         <Button text="Click me!" onClick={() => logTagged('Button', 'You clicked me!')} />
@@ -42,6 +34,14 @@ export function EventHandlers(): JSX.Element {
       <Toolbar>
         <input defaultValue="Default value" onChange={inputChangeHandler} />
       </Toolbar>
+
+      <div
+        onClick={mouseEventHandler}
+        onMouseEnter={mouseEventHandler}
+        onMouseLeave={mouseEventHandler}
+      >
+        <ColoredBlock style={STYLE}>Click me! (Hover will do the trick too)</ColoredBlock>
+      </div>
     </>
   );
 }
