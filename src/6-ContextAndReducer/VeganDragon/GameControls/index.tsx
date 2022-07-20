@@ -2,8 +2,9 @@ import { Button } from 'components/Button';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 import { useEffect, useState } from 'react';
 
+import { HIGH_SCORE_KEY } from '../constants';
 import { useGameContext } from '../GameContext';
-import { ActionType, GameStatus, HIGH_SCORE_KEY } from '../types';
+import { ActionType, GameStatus } from '../types';
 import { CurrentDirection } from './CurrentDirection';
 import { GameOverModal } from './GameOverModal';
 import classes from './index.module.css';

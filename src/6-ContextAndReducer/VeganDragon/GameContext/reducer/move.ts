@@ -1,10 +1,5 @@
-import {
-  CellType,
-  GameContextState,
-  GameStatus,
-  POINTS_INCREMENT,
-  SnakeSegment,
-} from '../../types';
+import { POINTS_INCREMENT } from '../../constants';
+import { CellType, GameContextState, GameStatus, SnakeSegment } from '../../types';
 import { buildGrid, findDirection, findTail, getNextCell } from './gridUtils';
 import { setGameStatus } from './setGameStatus';
 

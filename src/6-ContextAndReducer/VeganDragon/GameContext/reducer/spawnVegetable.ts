@@ -1,7 +1,8 @@
 import { generateRandomInt } from 'utils/generateRandomInt';
 import { getRandomArrayElement } from 'utils/getRandomArrayElement';
 
-import { GameContextState, Vegetable, VEGETABLES } from '../../types';
+import { VEGETABLES } from '../../constants';
+import { GameContextState, Vegetable } from '../../types';
 import { buildGrid } from './gridUtils';
 
 export function spawnVegetable(state: GameContextState): GameContextState {

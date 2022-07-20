@@ -1,4 +1,4 @@
-import { useEventListener } from 'hooks/useEventListener';
+import { useKeyDown } from '2-SideEffects/UseGlobalEvents/useKeyDown';
 
 import { useGameContext } from '../GameContext';
 import { ActionType, Direction, GameStatus } from '../types';
@@ -7,20 +7,18 @@ export function useHandleDirection() {
   const [state, dispatch] = useGameContext();
   const isPlaying = state.gameStatus === GameStatus.PLAYING;
 
-  useEventListener('keydown', (event) => {
+  const setDirection = (direction: Direction) => {
+    dispatch({
+      type: ActionType.SET_DIRECTION,
+      payload: direction,
+    });
+  };
+
+  useKeyDown((buttonKey: string) => {
     if (!isPlaying) {
       return;
     }
-
-    const setDirection = (direction: Direction) => {
-      dispatch({
-        type: ActionType.SET_DIRECTION,
-        payload: direction,
-      });
-    };
-
-    const { code } = event as KeyboardEvent;
-    switch (code) {
+    switch (buttonKey) {
       case 'ArrowUp':
         setDirection(Direction.UP);
         break;

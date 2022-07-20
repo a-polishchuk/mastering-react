@@ -1,5 +1,5 @@
 import { useInterval } from 'hooks/useInterval';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 interface Props {
   value: number;
@@ -15,12 +15,11 @@ export function Score(props: Props): JSX.Element {
 
 function useAnimatedValue({ value, delay, step }: Props): number {
   const [animatedValue, setAnimatedValue] = useState(value);
+  const delayOrNull = animatedValue !== value ? delay : null;
 
-  const callback = useCallback(() => {
+  useInterval(() => {
     setAnimatedValue((current) => Math.min(current + step, value));
-  }, [step, value]);
-
-  useInterval(callback, delay);
+  }, delayOrNull);
 
   return animatedValue;
 }
