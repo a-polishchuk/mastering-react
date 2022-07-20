@@ -10,12 +10,12 @@ export function ComponentsLifecycleSection(): JSX.Element {
   return (
     <Section title="Components lifecycle">
       <Section title="Key property">
-        <Chapter title="Keys and lists" component={KeysAndLists} />
-        <Chapter title="Re-mount component" component={RemountComponent} />
-        <Chapter title="Conditional rendering" component={ConditionalRendering} />
+        <Chapter title="🔑 Keys and lists" component={KeysAndLists} />
+        <Chapter title="🔑 Re-mount component" component={RemountComponent} />
+        <Chapter title="🔑 Conditional rendering" component={ConditionalRendering} />
       </Section>
-      <Chapter title="Random rendering" component={RandomRendering} />
-      <Chapter title="Lifecycle and memoization" component={LifecycleAndMemoization} />
+      <Chapter title="🎲 Random rendering" component={RandomRendering} />
+      <Chapter title="🔄 Lifecycle and memoization" component={LifecycleAndMemoization} />
     </Section>
   );
 }

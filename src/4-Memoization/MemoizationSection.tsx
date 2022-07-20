@@ -10,13 +10,13 @@ export function MemoizationSection(): JSX.Element {
   return (
     <Section title="Memoization">
       <Section title="useCallback">
-        <Chapter title="List without memoization" component={ListWithoutMemoization} />
-        <Chapter title="List with memoization" component={ListWithMemoization} />
-        <Chapter title="useUpdateEffect" component={UseUpdateEffect} />
+        <Chapter title="📋 List without memoization" component={ListWithoutMemoization} />
+        <Chapter title="📋 List with memoization" component={ListWithMemoization} />
+        <Chapter title="📬 useUpdateEffect" component={UseUpdateEffect} />
       </Section>
       <Section title="useMemo">
-        <Chapter title="When React render components?" component={WhenReactRenderComponents} />
-        <Chapter title="useMemo" component={UseMemoExample} />
+        <Chapter title="📽 When React render components?" component={WhenReactRenderComponents} />
+        <Chapter title="💾 useMemo" component={UseMemoExample} />
       </Section>
     </Section>
   );

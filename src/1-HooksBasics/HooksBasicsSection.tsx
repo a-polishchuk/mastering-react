@@ -10,14 +10,14 @@ import { UseStateBasics } from './UseStateBasics';
 export function HooksBasicsSection(): JSX.Element {
   return (
     <Section title="Hooks basics, useState">
-      <Chapter title="useState basics" component={UseStateBasics} />
-      <Chapter title="Previous state update" component={PreviousStateUpdate} />
+      <Chapter title="🪝 useState basics" component={UseStateBasics} />
+      <Chapter title="📈 Previous state update" component={PreviousStateUpdate} />
       <Section title="First custom hooks">
-        <Chapter title="useCounter" component={UseCounterExample} />
-        <Chapter title="useMergedState" component={UseMergedStateExample} />
+        <Chapter title="🔢 useCounter" component={UseCounterExample} />
+        <Chapter title="➕ useMergedState" component={UseMergedStateExample} />
       </Section>
-      <Chapter title="Lazy initialization" component={LazyInitialization} />
-      <Chapter title="Storing functions" component={StoringFunctions} />
+      <Chapter title="🦥 Lazy initialization" component={LazyInitialization} />
+      <Chapter title="⇒ Storing functions" component={StoringFunctions} />
     </Section>
   );
 }

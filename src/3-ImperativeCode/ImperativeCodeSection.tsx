@@ -10,12 +10,12 @@ export function ImperativeCodeSection(): JSX.Element {
   return (
     <Section title="Imperative code, useRef">
       <Section title="Controlled vs uncontrolled">
-        <Chapter title="Controlled input" component={ControlledInput} />
-        <Chapter title="Uncontrolled input" component={UncontrolledInput} />
+        <Chapter title="🟢 Controlled input" component={ControlledInput} />
+        <Chapter title="🔴 Uncontrolled input" component={UncontrolledInput} />
       </Section>
-      <Chapter title="Rock scissors paper" component={RockScissorsPaper} />
-      <Chapter title="Storing state in useRef" component={StoringStateInUseRef} />
-      <Chapter title="useImperativeHandle" component={UseImperativeHandle} />
+      <Chapter title="✊ Rock scissors paper" component={RockScissorsPaper} />
+      <Chapter title="📦 Storing state in useRef" component={StoringStateInUseRef} />
+      <Chapter title="👉🏼 useImperativeHandle" component={UseImperativeHandle} />
     </Section>
   );
 }

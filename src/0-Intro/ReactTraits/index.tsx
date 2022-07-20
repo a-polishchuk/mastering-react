@@ -1,3 +1,4 @@
+import { ChapterHeader } from 'components/ChapterHeader';
 import { useInterval } from 'hooks/useInterval';
 import { useRerender } from 'hooks/useRerender';
 
@@ -10,7 +11,7 @@ export function ReactTraits(): JSX.Element {
 
   return (
     <>
-      <h3>React traits</h3>
+      <ChapterHeader title="React traits" />
 
       <ul>
         <li>🗂 Declarative</li>

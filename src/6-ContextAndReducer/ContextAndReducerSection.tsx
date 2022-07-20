@@ -9,13 +9,13 @@ import { VeganDragon } from './VeganDragon';
 export function ContextAndReducerSection(): JSX.Element {
   return (
     <Section title="Context and reducer">
-      <Chapter title="useContext" component={UseContext} />
+      <Chapter title="🎨 useContext" component={UseContext} />
       <Section title="useReducer">
-        <Chapter title="Counter reducer" component={UseCounterReducer} />
-        <Chapter title="Toggle reducer" component={UseToggleReducer} />
+        <Chapter title="🧮 Counter reducer" component={UseCounterReducer} />
+        <Chapter title="✅ Toggle reducer" component={UseToggleReducer} />
       </Section>
-      <Chapter title="Contact book" component={ContactBook} />
-      <Chapter title="Vegan Dragon" component={VeganDragon} />
+      <Chapter title="📒 Contact book" component={ContactBook} />
+      <Chapter title="🐲 Vegan Dragon" component={VeganDragon} />
     </Section>
   );
 }

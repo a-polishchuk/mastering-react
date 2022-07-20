@@ -14,20 +14,20 @@ import { RenderingProcess } from './RenderingProcess';
 export function IntroSection() {
   return (
     <Section title="Intro">
-      <Chapter title="React traits" component={ReactTraits} />
-      <Chapter title="Hello, world!" component={HelloWorld} />
+      <Chapter title="⚛️ React traits" component={ReactTraits} />
+      <Chapter title="👽 Hello, world!" component={HelloWorld} />
 
       <Section title="JSX">
-        <Chapter title="JSX Basics" component={JsxBasics} />
-        <Chapter title="React.createElement()" component={ReactWithoutJsx} />
-        <Chapter title="Fragments" component={Fragments} />
-        <Chapter title="Arrays" component={Arrays} />
-        <Chapter title="Event handlers" component={EventHandlers} />
-        <Chapter title="Conditional" component={Conditional} />
+        <Chapter title="📝 JSX Basics" component={JsxBasics} />
+        <Chapter title="📝 React.createElement()" component={ReactWithoutJsx} />
+        <Chapter title="📎 Fragments" component={Fragments} />
+        <Chapter title="🗄 Arrays" component={Arrays} />
+        <Chapter title="📬 Event handlers" component={EventHandlers} />
+        <Chapter title="❓ Conditional" component={Conditional} />
       </Section>
 
-      <Chapter title="Components, props, children" component={PropsAndChildren} />
-      <Chapter title="Rendering process" component={RenderingProcess} />
+      <Chapter title="🧩 Components, props, children" component={PropsAndChildren} />
+      <Chapter title="🎞 Rendering process" component={RenderingProcess} />
     </Section>
   );
 }
