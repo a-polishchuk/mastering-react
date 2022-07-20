@@ -1,11 +1,11 @@
-import { Section, Chapter } from 'components/MasterDetail';
+import { Chapter, Section } from 'components/MasterDetail';
 
+import { ContactBook } from './ContactBook';
 import { UseContext } from './UseContext/UseContext';
 import { UseCounterReducer } from './UseReducer/UseCounterReducer';
 import { UseToggleReducer } from './UseToggle/UseToggleReducer';
-import { ContactBook } from './ContactBook';
+import { VeganDragon } from './VeganDragon';
 
-// TODO: add VeganDragon game here
 export function ContextAndReducerSection(): JSX.Element {
   return (
     <Section title="Context and reducer">
@@ -15,6 +15,7 @@ export function ContextAndReducerSection(): JSX.Element {
         <Chapter title="Toggle reducer" component={UseToggleReducer} />
       </Section>
       <Chapter title="Contact book" component={ContactBook} />
+      <Chapter title="Vegan Dragon" component={VeganDragon} />
     </Section>
   );
 }
