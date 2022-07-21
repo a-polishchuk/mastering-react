@@ -12,11 +12,22 @@ const STYLE: CSSProperties = {
   alignItems: 'center',
 };
 
+const BUTTON_TAG = 'Button';
+const INPUT_TAG = 'Input';
+
 export function EventHandlers(): JSX.Element {
   const rerender = useRerender();
 
+  const inputFocusHandler = () => {
+    logTagged(INPUT_TAG, 'onFocus');
+  };
+
   const inputChangeHandler: ChangeEventHandler<HTMLInputElement> = (event) => {
-    logTagged('Input', event.target.value);
+    logTagged(INPUT_TAG, event.target.value);
+  };
+
+  const inputBlurHandler = () => {
+    logTagged(INPUT_TAG, 'onBlur');
   };
 
   const mouseEventHandler: MouseEventHandler<HTMLDivElement> = () => {
@@ -28,11 +39,16 @@ export function EventHandlers(): JSX.Element {
       <ChapterHeader title="Introduction to JSX" subtitle="Adding event handlers" />
 
       <Toolbar>
-        <Button text="Click me!" onClick={() => logTagged('Button', 'You clicked me!')} />
+        <Button text="Click me!" onClick={() => logTagged(BUTTON_TAG, 'You clicked me!')} />
       </Toolbar>
 
       <Toolbar>
-        <input defaultValue="Default value" onChange={inputChangeHandler} />
+        <input
+          defaultValue="Default value"
+          onChange={inputChangeHandler}
+          onFocus={inputFocusHandler}
+          onBlur={inputBlurHandler}
+        />
       </Toolbar>
 
       <div
