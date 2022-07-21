@@ -1,5 +1,6 @@
 import { Button } from 'components/Button';
 import { ChapterHeader } from 'components/ChapterHeader';
+import { FlexFiller } from 'components/FlexFiller';
 import { Toolbar } from 'components/Toolbar';
 import { ValueLabel } from 'components/ValueLabel';
 import { useRerender } from 'hooks/useRerender';
@@ -7,19 +8,20 @@ import { generateRandomNumber } from 'utils/generateRandomNumber';
 
 export function Conditional(): JSX.Element {
   const rerender = useRerender();
-  const randomNumber = Math.round(generateRandomNumber(0, 10));
+  const randomNumber = Math.round(generateRandomNumber(1, 12));
 
   const header = (
     <>
       <ChapterHeader title="JSX Basics" subtitle="Conditional" />
       <Toolbar>
-        <Button text="Click me to re-render" onClick={rerender} />
-        <ValueLabel value={randomNumber} />
+        <ValueLabel value={`🎲🎲 ${randomNumber}`} />
+        <FlexFiller />
+        <Button text="Throw the dices" onClick={rerender} />
       </Toolbar>
     </>
   );
 
-  if (randomNumber > 8) {
+  if (randomNumber > 11) {
     return header;
   }
 
