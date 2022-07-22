@@ -10,8 +10,8 @@ export function MemoizationSection(): JSX.Element {
   return (
     <Section title="Memoization">
       <Section title="useCallback">
-        <Chapter title="📋 List without memoization" component={ListWithoutMemoization} />
-        <Chapter title="📋 List with memoization" component={ListWithMemoization} />
+        <Chapter title="🌉 List without memoization" component={ListWithoutMemoization} />
+        <Chapter title="🌁 List with memoization" component={ListWithMemoization} />
         <Chapter title="📬 useUpdateEffect" component={UseUpdateEffect} />
       </Section>
       <Section title="useMemo">

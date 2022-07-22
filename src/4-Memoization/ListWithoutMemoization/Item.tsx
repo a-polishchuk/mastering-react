@@ -1,15 +1,24 @@
+import classNames from 'classnames';
 import { useLoggedLifecycle } from 'components/LoggedLifecycle';
 
 import { ItemData } from '../ItemData';
+import classes from './Item.module.css';
 
 interface Props {
   item: ItemData;
+  selected: boolean;
   onClick: (item: ItemData) => void;
 }
 
-export function Item({ item, onClick }: Props): JSX.Element {
-  const { name } = item;
-  useLoggedLifecycle(name);
+export function Item({ item, selected, onClick }: Props): JSX.Element {
+  const { emoji } = item;
+  const className = classNames(classes.item, selected && classes.selected);
 
-  return <li onClick={() => onClick(item)}>{name}</li>;
+  useLoggedLifecycle(emoji);
+
+  return (
+    <div className={className} onClick={() => onClick(item)}>
+      {emoji}
+    </div>
+  );
 }

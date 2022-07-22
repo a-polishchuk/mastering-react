@@ -3,14 +3,8 @@ import { ChapterHeader } from 'components/ChapterHeader';
 import { Toolbar } from 'components/Toolbar';
 import { useRerender } from 'hooks/useRerender';
 
-import { ItemData } from '../ItemData';
-import { List } from './List';
-
-const ITEMS: ItemData[] = [
-  { id: '1', name: 'First' },
-  { id: '2', name: 'Second' },
-  { id: '3', name: 'Third' },
-];
+import { ITEMS } from '../ItemData';
+import { EmojisGallery } from './EmojisGallery';
 
 export function ListWithMemoization(): JSX.Element {
   const rerender = useRerender();
@@ -23,7 +17,7 @@ export function ListWithMemoization(): JSX.Element {
         <Button text="Click me to re-render" onClick={rerender} />
       </Toolbar>
 
-      <List items={ITEMS} />
+      <EmojisGallery items={ITEMS} />
     </>
   );
 }
