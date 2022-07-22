@@ -38,9 +38,7 @@ export function PreviousStateUpdate(): JSX.Element {
       <ChapterHeader title="useState" subtitle="Previous state update" />
 
       <Toolbar>
-        <div style={{ minWidth: 150, marginLeft: 16 }}>
-          <ValueLabel value={isClicksVisible ? clicks : '?'} />
-        </div>
+        <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />
         <Button onClick={incrementWithDelay} text="Increment with delay" />
         <Button onClick={toggleShowClicks} text="Toggle show clicks" />

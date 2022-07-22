@@ -1,9 +1,9 @@
 import { Dispatch } from 'react';
 
-import { getRowId } from './getRowId';
+import { getRowId } from '../getRowId';
+import { Action, ActionType, Matrix } from '../types';
 import { HeaderRow } from './HeaderRow';
 import { Row } from './Row';
-import { Action, ActionType, Matrix } from './types';
 
 interface Props {
   maxPower: number;

@@ -33,9 +33,7 @@ export function UseStateBasics(): JSX.Element {
       <ChapterHeader title="useState basics" subtitle="General hooks rules" />
 
       <Toolbar>
-        <div style={{ minWidth: 150, marginLeft: 16 }}>
-          <ValueLabel value={isClicksVisible ? clicks : '?'} />
-        </div>
+        <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />
         <Button onClick={showClicks} text="Show clicks" disabled={isClicksVisible} />
         <Button onClick={hideClicks} text="Hide clicks" disabled={!isClicksVisible} />

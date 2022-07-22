@@ -29,9 +29,7 @@ export function UseUpdateEffect(): JSX.Element {
       <ChapterHeader title="useCallback" subtitle="useUpdateEffect" />
 
       <Toolbar>
-        <div style={{ minWidth: 100, marginLeft: 20 }}>
-          <ValueLabel value={value} />
-        </div>
+        <ValueLabel value={value} minWidth="100px" />
         <Button text="+1" onClick={increase} />
       </Toolbar>
     </>

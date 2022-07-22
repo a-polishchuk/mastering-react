@@ -2,8 +2,8 @@ import { ChapterHeader } from 'components/ChapterHeader';
 import { useReducer } from 'react';
 
 import { buildMatrix } from './buildMatrix';
-import { DataTable } from './DataTable';
 import { reducer } from './reducer';
+import { DataTable } from './table/DataTable';
 import { TableToolbar } from './TableToolbar';
 
 const MAX_NUMBER = 30;
@@ -14,7 +14,7 @@ export function LazyInit2(): JSX.Element {
 
   return (
     <>
-      <ChapterHeader title="useState" subtitle="Lazy initialization" />
+      <ChapterHeader title="useReducer" subtitle="Lazy initialization (version 2)" />
       <TableToolbar dispatch={dispatch} />
       <DataTable maxPower={MAX_POWER} data={data} dispatch={dispatch} />
     </>
