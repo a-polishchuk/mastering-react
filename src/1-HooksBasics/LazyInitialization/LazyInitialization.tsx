@@ -2,6 +2,7 @@ import { Button } from 'components/Button';
 import { ChapterHeader } from 'components/ChapterHeader';
 import { Toolbar } from 'components/Toolbar';
 import { useState } from 'react';
+import { logTagged } from 'utils/logTagged';
 
 import { HeaderRow } from './HeaderRow';
 import { Row } from './Row';
@@ -20,7 +21,6 @@ function buildMatrix(maxNumber: number, maxPow: number): Matrix {
     }
     data.push(record);
   }
-  console.log(data);
   return data;
 }
 
@@ -30,8 +30,10 @@ function getRowId(row: number[]): number {
 
 export function LazyInitialization(): JSX.Element {
   const [data, setData] = useState<Matrix>(() => {
-    console.log('useState initialization');
-    return buildMatrix(MAX_NUMBER, MAX_POWER);
+    logTagged('useState', 'init');
+    const matrix = buildMatrix(MAX_NUMBER, MAX_POWER);
+    console.table(matrix);
+    return matrix;
   });
 
   const shuffle = () =>
@@ -72,7 +74,7 @@ export function LazyInitialization(): JSX.Element {
 
       <table>
         <thead>
-          <HeaderRow maxPow={MAX_POWER} />
+          <HeaderRow maxPower={MAX_POWER} />
         </thead>
         <tbody>
           {data.map((row) => (
