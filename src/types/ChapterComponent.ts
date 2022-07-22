@@ -1,1 +1,1 @@
-export type ChapterComponent = (props: any) => JSX.Element | string;
+export type ChapterComponent = (props: any) => JSX.Element;

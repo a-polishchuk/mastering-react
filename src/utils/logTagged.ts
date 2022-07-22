@@ -1,6 +1,6 @@
 import { generateRandomColor } from './generateRandomColor';
 
-const TAG_LENGTH = 15;
+const TAG_LENGTH = 20;
 const COLORS_MAP = new Map<string, string>();
 
 export function logTagged(tag: string, message: string) {
