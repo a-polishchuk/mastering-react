@@ -1,11 +1,10 @@
-import { useDocumentTitle } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, FC, ReactNode, Suspense, useCallback, useState } from 'react';
+import { CSSProperties, ReactNode, useCallback, useState } from 'react';
+import { BrowserRouter, PathRouteProps, Route, Routes } from 'react-router-dom';
 
 import { EasterEgg } from './EasterEgg';
 import { EmptyScreen } from './EmptyScreen';
 import { ExpandCollapseButton } from './ExpandCollapseButton';
-import { Loading } from './Loading';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext, MasterDetailState } from './MasterDetailContext';
 
@@ -17,53 +16,47 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
   width: expanded ? '25%' : COLLAPSED_WIDTH,
 });
 
-export interface MasterDetailProps {
-  children: ReactNode;
-}
-
-export function MasterDetail({ children }: MasterDetailProps): JSX.Element {
-  const [selectedTitle, setSelectedTitle] = useState<string | null>(null);
-  const [DetailComponent, setDetailComponent] = useState<FC | null>(null);
+export function MasterDetail({ children }: { children: ReactNode }): JSX.Element {
+  const [routes, setRoutes] = useState<PathRouteProps[]>([]);
   const [expanded, toggleExpanded] = useToggle(true);
   const masterStyle = buildMasterStyle(expanded);
 
-  useDocumentTitle(selectedTitle);
-
-  const selectChapter = useCallback((title: string | null, component: FC | null) => {
-    setSelectedTitle(title);
-    // NOTE: we're passing a setter function here, because component is a function itself
-    setDetailComponent(() => component);
+  const addRoute = useCallback((route: PathRouteProps) => {
+    setRoutes((array) => [...array, route]);
   }, []);
 
-  const contextValue: MasterDetailState = {
-    selectedTitle,
-    DetailComponent,
-    selectChapter,
+  const value: MasterDetailState = {
+    routes,
+    addRoute,
   };
 
   return (
     <>
-      <div className={classes.container}>
-        <div className={classes.master} style={masterStyle}>
-          {expanded && (
-            <MasterDetailContext.Provider value={contextValue}>
-              {children}
-            </MasterDetailContext.Provider>
-          )}
-        </div>
+      <BrowserRouter>
+        <div className={classes.container}>
+          <div className={classes.master} style={masterStyle}>
+            {expanded && (
+              <MasterDetailContext.Provider value={value}>{children}</MasterDetailContext.Provider>
+            )}
+          </div>
 
-        <div className={classes.detail}>
-          <Suspense fallback={<Loading />}>
-            {DetailComponent ? <DetailComponent /> : <EmptyScreen />}
-          </Suspense>
-        </div>
+          <main className={classes.detail}>
+            <Routes>
+              <Route path="/" element={<EmptyScreen />} />
+              <Route path="*" element={<EmptyScreen />} />
+              {routes.map((props) => (
+                <Route key={props.path} {...props} />
+              ))}
+            </Routes>
+          </main>
 
-        <div className={classes.masterExpandContainer} style={masterStyle}>
-          <div className={classes.masterExpandButton}>
-            <ExpandCollapseButton expanded={expanded} onToggle={toggleExpanded} />
+          <div className={classes.masterExpandContainer} style={masterStyle}>
+            <div className={classes.masterExpandButton}>
+              <ExpandCollapseButton expanded={expanded} onToggle={toggleExpanded} />
+            </div>
           </div>
         </div>
-      </div>
+      </BrowserRouter>
       <EasterEgg />
     </>
   );

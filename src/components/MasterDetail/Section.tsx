@@ -1,7 +1,6 @@
+import { useToggle } from 'hooks/useToggle';
 import { Children, ReactNode, useEffect, useState } from 'react';
 
-import { ExpandCollapseButton } from './ExpandCollapseButton';
-import { useMasterDetailContext } from './MasterDetailContext';
 import classes from './Section.module.css';
 
 export interface SectionProps {
@@ -10,33 +9,28 @@ export interface SectionProps {
 }
 
 export function Section({ title, children }: SectionProps): JSX.Element {
-  const [expanded, setExpanded] = useState(false);
-  const { selectedTitle } = useMasterDetailContext();
+  const [expanded, toggleExpanded] = useToggle(false);
 
-  useEffect(() => {
-    if (hasSelectedChild(title, children, selectedTitle)) {
-      setExpanded(true);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   if (hasSelectedChild(title, children, selectedTitle)) {
+  //     setExpanded(true);
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
-  const toggleExpanded = () => {
-    setExpanded((value) => !value);
-  };
-
-  const titleStyle = {
-    fontWeight: expanded ? 600 : 400,
-  };
+  // const titleStyle = {
+  //   fontWeight: expanded ? 600 : 400,
+  // };
 
   return (
     <>
       <div className={classes.section} onClick={toggleExpanded}>
-        <div className={classes.sectionButton}>
-          <ExpandCollapseButton expanded={expanded} />
-        </div>
-        <div style={titleStyle}>{title}</div>
+        <div style={{ fontSize: 24 }}>{expanded ? '➖' : '➕'}</div>
+        <div>{title}</div>
       </div>
-      {expanded && <div className={classes.sectionContent}>{children}</div>}
+      <div className={classes.sectionContent} style={{ display: expanded ? 'block' : 'none' }}>
+        {children}
+      </div>
     </>
   );
 }

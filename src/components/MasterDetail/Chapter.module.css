@@ -1,25 +1,24 @@
+.navLink {
+  text-decoration: none;
+}
+
+.navLinkActive {
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 2px 2px #e1ccff;
+}
+
 .chapter {
-  background-color: #fff;
-  border: #bbbbbb solid 2px;
-  margin-bottom: 10px;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 3px 3px #eeeeee;
-  text-align: start;
-  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .chapter:hover {
-  text-shadow: 2px 2px #eadff9;
-  box-shadow: 3px 3px #e1ccffbb;
+  text-shadow: 2px 2px #e1ccff;
 }
 
-.chapter:focus {
-  outline: 0;
-}
-
-.chapterSelected {
-  font-weight: 600;
-  border-color: #000000;
-  box-shadow: 3px 3px #00000033;
+.emoji {
+  font-size: 24px;
 }

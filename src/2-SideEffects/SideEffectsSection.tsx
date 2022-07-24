@@ -15,18 +15,68 @@ export function SideEffectsSection(): JSX.Element {
   return (
     <Section title="Side effects, useEffect">
       <Section title="useEffect basics">
-        <Chapter title="🔂 Component lifecycle" component={ComponentLifecycle} />
-        <Chapter title="⛓ Effect dependencies" component={EffectDependencies} />
-        <Chapter title="📥 Local storage sync" component={LocalStorageSync} />
+        <Chapter
+          emoji="🔂"
+          title="Component lifecycle"
+          path="component-lifecycle"
+          element={<ComponentLifecycle />}
+        />
+        <Chapter
+          emoji="⛓"
+          title="Effect dependencies"
+          path="effect-dependencies"
+          element={<EffectDependencies />}
+        />
+        <Chapter
+          emoji="📥"
+          title="Local storage sync"
+          path="local-storage-sync"
+          element={<LocalStorageSync />}
+        />
       </Section>
-      <Chapter title="🔔 Global event listeners" component={UseGlobalEvents} />
-      <Chapter title="⏱ useEffect + setInterval" component={UseEffectAndInterval} />
-      <Chapter title="🌐 Fetch data in useEffect" component={FetchDataInUseEffect} />
-      <Chapter title="🔃 Beware of infinite loops" component={BewareOfInfiniteLoops} />
-      <Chapter title="💾 You don't need useEffect" component={YouDontNeedUseEffect} />
+      <Chapter
+        emoji="🔔"
+        title="Global event listeners"
+        path="global-event-listeners"
+        element={<UseGlobalEvents />}
+      />
+      <Chapter
+        emoji="⏱"
+        title="useEffect + setInterval"
+        path="useeffect-setinterval"
+        element={<UseEffectAndInterval />}
+      />
+      <Chapter
+        emoji="🌐"
+        title="Fetch data in useEffect"
+        path="fetch-data-useeffect"
+        element={<FetchDataInUseEffect />}
+      />
+      <Chapter
+        emoji="🔃"
+        title="Beware of infinite loops"
+        path="beware-of-infinite-loops"
+        element={<BewareOfInfiniteLoops />}
+      />
+      <Chapter
+        emoji="💾"
+        title="You don't need useEffect"
+        path="no-need-to-useeffect"
+        element={<YouDontNeedUseEffect />}
+      />
       <Section title="useLayoutEffect">
-        <Chapter title="🪢 Effects sequence" component={EffectsSequence} />
-        <Chapter title="📨 Batching effects" component={UseLayoutEffectExample} />
+        <Chapter
+          emoji="🪢"
+          title="Effects sequence"
+          path="effects-sequence"
+          element={<EffectsSequence />}
+        />
+        <Chapter
+          emoji="📨"
+          title="Batching effects"
+          path="batching-effects"
+          element={<UseLayoutEffectExample />}
+        />
       </Section>
     </Section>
   );

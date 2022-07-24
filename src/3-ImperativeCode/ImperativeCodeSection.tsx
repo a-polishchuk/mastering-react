@@ -10,12 +10,37 @@ export function ImperativeCodeSection(): JSX.Element {
   return (
     <Section title="Imperative code, useRef">
       <Section title="Controlled vs uncontrolled">
-        <Chapter title="🟢 Controlled input" component={ControlledInput} />
-        <Chapter title="🔴 Uncontrolled input" component={UncontrolledInput} />
+        <Chapter
+          emoji="🟢"
+          title="Controlled input"
+          path="controlled-input"
+          element={<ControlledInput />}
+        />
+        <Chapter
+          emoji="🔴"
+          title="Uncontrolled input"
+          path="uncontrolled-input"
+          element={<UncontrolledInput />}
+        />
       </Section>
-      <Chapter title="✊ Rock scissors paper" component={RockScissorsPaper} />
-      <Chapter title="📦 Storing state in useRef" component={StoringStateInUseRef} />
-      <Chapter title="👉🏼 useImperativeHandle" component={UseImperativeHandle} />
+      <Chapter
+        emoji="✊"
+        title="Rock scissors paper"
+        path="rock-scissors-paper"
+        element={<RockScissorsPaper />}
+      />
+      <Chapter
+        emoji="📦"
+        title="Storing state in useRef"
+        path="storing-state-in-useref"
+        element={<StoringStateInUseRef />}
+      />
+      <Chapter
+        emoji="👉🏼"
+        title="useImperativeHandle"
+        path="use-imperative-handle"
+        element={<UseImperativeHandle />}
+      />
     </Section>
   );
 }

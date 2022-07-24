@@ -14,20 +14,40 @@ import { RenderingProcess } from './RenderingProcess';
 export function IntroSection() {
   return (
     <Section title="Intro">
-      <Chapter title="⚛️ React traits" component={ReactTraits} />
-      <Chapter title="👽 Hello, world!" component={HelloWorld} />
+      <Chapter emoji="⚛️" title="React traits" path="react-traits" element={<ReactTraits />} />
+      <Chapter emoji="👽" title="Hello, world!" path="hello-world" element={<HelloWorld />} />
 
       <Section title="JSX">
-        <Chapter title="📝 JSX Basics" component={JsxBasics} />
-        <Chapter title="📝 React.createElement()" component={ReactWithoutJsx} />
-        <Chapter title="📎 Fragments" component={Fragments} />
-        <Chapter title="🗄 Arrays" component={Arrays} />
-        <Chapter title="📬 Event handlers" component={EventHandlers} />
-        <Chapter title="❓ Conditional" component={Conditional} />
+        <Chapter emoji="📝" title="JSX Basics" path="jsx-basics" element={<JsxBasics />} />
+        <Chapter
+          emoji="📝"
+          title="React.createElement()"
+          path="create-element"
+          element={<ReactWithoutJsx />}
+        />
+        <Chapter emoji="📎" title="Fragments" path="fragments" element={<Fragments />} />
+        <Chapter emoji="🗄" title="Arrays" path="arrays" element={<Arrays />} />
+        <Chapter
+          emoji="📬"
+          title="Event handlers"
+          path="event-handlers"
+          element={<EventHandlers />}
+        />
+        <Chapter emoji="❓" title="Conditional" path="conditional" element={<Conditional />} />
       </Section>
 
-      <Chapter title="🧩 Components, props, children" component={PropsAndChildren} />
-      <Chapter title="🎞 Rendering process" component={RenderingProcess} />
+      <Chapter
+        emoji="🧩"
+        title="Components, props, children"
+        path="props-and-children"
+        element={<PropsAndChildren />}
+      />
+      <Chapter
+        emoji="🎞"
+        title="Rendering process"
+        path="rendering-process"
+        element={<RenderingProcess />}
+      />
     </Section>
   );
 }

@@ -13,14 +13,14 @@ export function ReactTraits(): JSX.Element {
     <>
       <ChapterHeader title="React traits" />
 
-      <ul>
-        <li>🗂 Declarative</li>
-        <li>🌳 Virtual DOM</li>
-        <li>⬇️ Unidirectional data flow</li>
-        <li>📝 JSX - Special syntax to describe UI</li>
-        <li>🏗 Components as main building blocks of your app</li>
-        <li>🪝 Hooks helps to encapsulate business logic</li>
-      </ul>
+      <div style={{ padding: 16 }}>
+        <div>🗂 Declarative</div>
+        <div>🌳 Virtual DOM</div>
+        <div>⬇️ Unidirectional data flow</div>
+        <div>📝 JSX - Special syntax to describe UI</div>
+        <div>🏗 Components as main building blocks of your app</div>
+        <div>🪝 Hooks helps to encapsulate business logic</div>
+      </div>
 
       <TypicalComponent name="App" isRoot>
         <TypicalComponent name="Header">
