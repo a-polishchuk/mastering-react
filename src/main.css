@@ -1,3 +1,10 @@
+:root {
+  --table-border-color: #eeeeee;
+  --table-hover-color: #bbbbbb;
+  --active-box-shadow: 3px 3px 0px 0px #eadff9;
+  --active-text-shadow: 2px 2px #e1ccff;
+}
+
 body {
   font-family: Arial;
 }
@@ -10,23 +17,27 @@ h3 {
   margin-block-start: 0px;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 th {
-  background-color: #eeeeee;
-  border: 1px solid #eeeeee;
+  background-color: var(--table-border-color);
+  border: 1px solid var(--table-border-color);
   padding: 8px;
 }
 
 th:hover {
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--table-hover-color);
 }
 
 td {
-  border: 1px solid #eeeeee;
+  border: 1px solid var(--table-border-color);
   padding: 8px;
 }
 
 td:hover {
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--table-hover-color);
 }
 
 form {
@@ -34,21 +45,21 @@ form {
   flex-direction: column;
   gap: 8px;
   padding: 16px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--table-hover-color);
 }
 
 input {
   padding: 8px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid var(--table-hover-color);
   border-radius: 0;
   font-size: 16px;
 }
 
 input:focus {
   outline: none;
-  box-shadow: 3px 3px 0px 0px #eadff9;
+  box-shadow: var(--active-box-shadow);
 }
 
 input:hover {
-  text-shadow: 2px 2px #e1ccff;
+  text-shadow: var(--active-text-shadow);
 }

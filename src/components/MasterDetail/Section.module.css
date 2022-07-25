@@ -7,9 +7,9 @@
 }
 
 .section:hover {
-  text-shadow: 2px 2px #eadff9;
+  text-shadow: 2px 2px #e1ccff;
 }
 
 .sectionContent {
-  padding-left: 16px;
+  padding-left: 24px;
 }

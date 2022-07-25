@@ -70,6 +70,7 @@ function buildStyle(position: number, side: Side, visible: boolean): CSSProperti
 const SHOW_TIME = 3 * 1000;
 const PAUSE_TIME = 20 * 1000;
 
+// TODO: fix the layout problem when alien is visible
 export function EasterEgg() {
   const [visible, setVisible] = useState<boolean>(true);
   const [side, setSide] = useState<Side>(getRandomSide());

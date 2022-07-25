@@ -6,7 +6,6 @@ import { RemountComponent } from './Keys/RemountComponent';
 import { LifecycleAndMemoization } from './Memoization/LifecycleAndMemoization';
 import { RandomRendering } from './RandomRendering/RandomRendering';
 
-// TODO: add section name to the path
 export function ComponentsLifecycleSection(): JSX.Element {
   return (
     <Section title="Components lifecycle">
@@ -14,19 +13,19 @@ export function ComponentsLifecycleSection(): JSX.Element {
         <Chapter
           emoji="🔑"
           title="Keys and lists"
-          path="keys-and-lists"
+          path="keys/keys-and-lists"
           element={<KeysAndLists />}
         />
         <Chapter
           emoji="🔑"
           title="Re-mount component"
-          path="remount-component"
+          path="keys/remount-component"
           element={<RemountComponent />}
         />
         <Chapter
           emoji="🔑"
           title="Conditional rendering"
-          path="conditional-rendering"
+          path="keys/conditional-rendering"
           element={<ConditionalRendering />}
         />
       </Section>

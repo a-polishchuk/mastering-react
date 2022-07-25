@@ -4,11 +4,11 @@ import { BrowserRouter, PathRouteProps, Route, Routes } from 'react-router-dom';
 
 import { EasterEgg } from './EasterEgg';
 import { EmptyScreen } from './EmptyScreen';
-import { ExpandCollapseButton } from './ExpandCollapseButton';
+import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext, MasterDetailState } from './MasterDetailContext';
 
-const COLLAPSED_WIDTH = '25px';
+const COLLAPSED_WIDTH = '16px';
 
 const buildMasterStyle = (expanded: boolean): CSSProperties => ({
   minWidth: expanded ? '250px' : COLLAPSED_WIDTH,
@@ -18,27 +18,29 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
 
 export function MasterDetail({ children }: { children: ReactNode }): JSX.Element {
   const [routes, setRoutes] = useState<PathRouteProps[]>([]);
-  const [expanded, toggleExpanded] = useToggle(true);
-  const masterStyle = buildMasterStyle(expanded);
-
   const addRoute = useCallback((route: PathRouteProps) => {
     setRoutes((array) => [...array, route]);
   }, []);
-
   const value: MasterDetailState = {
     routes,
     addRoute,
   };
 
+  const [expanded, toggleExpanded] = useToggle(true);
+  const masterStyle = buildMasterStyle(expanded);
+
   return (
     <>
       <BrowserRouter>
         <div className={classes.container}>
-          <div className={classes.master} style={masterStyle}>
+          <nav className={classes.master} style={masterStyle}>
             {expanded && (
               <MasterDetailContext.Provider value={value}>{children}</MasterDetailContext.Provider>
             )}
-          </div>
+            <div className={classes.expandCollapseButton}>
+              <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
+            </div>
+          </nav>
 
           <main className={classes.detail}>
             <Routes>
@@ -49,12 +51,6 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
               ))}
             </Routes>
           </main>
-
-          <div className={classes.masterExpandContainer} style={masterStyle}>
-            <div className={classes.masterExpandButton}>
-              <ExpandCollapseButton expanded={expanded} onToggle={toggleExpanded} />
-            </div>
-          </div>
         </div>
       </BrowserRouter>
       <EasterEgg />

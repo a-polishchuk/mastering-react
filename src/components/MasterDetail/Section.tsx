@@ -1,6 +1,7 @@
-import { useToggle } from 'hooks/useToggle';
-import { Children, ReactNode, useEffect, useState } from 'react';
+import { Children, CSSProperties, ReactNode, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
+import { ExpandToggle } from './ExpandToggle';
 import classes from './Section.module.css';
 
 export interface SectionProps {
@@ -9,26 +10,29 @@ export interface SectionProps {
 }
 
 export function Section({ title, children }: SectionProps): JSX.Element {
-  const [expanded, toggleExpanded] = useToggle(false);
+  const [expanded, setExpanded] = useState<boolean>(false);
+  const { pathname } = useLocation();
 
-  // useEffect(() => {
-  //   if (hasSelectedChild(title, children, selectedTitle)) {
-  //     setExpanded(true);
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  const toggleExpanded = () => setExpanded((value) => !value);
 
-  // const titleStyle = {
-  //   fontWeight: expanded ? 600 : 400,
-  // };
+  useEffect(() => {
+    const selectedPath = pathname.substring(1);
+    if (hasSelectedChild('', selectedPath, children)) {
+      setExpanded(true);
+    }
+  }, [children, pathname]);
+
+  const contentStyle: CSSProperties = {
+    display: expanded ? 'block' : 'none',
+  };
 
   return (
     <>
       <div className={classes.section} onClick={toggleExpanded}>
-        <div style={{ fontSize: 24 }}>{expanded ? '➖' : '➕'}</div>
+        <ExpandToggle expanded={expanded} />
         <div>{title}</div>
       </div>
-      <div className={classes.sectionContent} style={{ display: expanded ? 'block' : 'none' }}>
+      <div className={classes.sectionContent} style={contentStyle}>
         {children}
       </div>
     </>
@@ -38,16 +42,11 @@ export function Section({ title, children }: SectionProps): JSX.Element {
 /**
  * Recusrsively checking if a tree node has selected node somewhere down the tree
  */
-function hasSelectedChild(
-  title: string,
-  children: ReactNode,
-  selectedTitle: string | null
-): boolean {
-  if (title === selectedTitle) {
+function hasSelectedChild(path: string, selectedPath: string, children: ReactNode): boolean {
+  if (path === selectedPath) {
     return true;
   }
-  const array = Children.toArray(children);
-  return array.some(({ props }: any) =>
-    hasSelectedChild(props.title, props.children, selectedTitle)
+  return Children.toArray(children).some(({ props }: any) =>
+    hasSelectedChild(props.path, selectedPath, props.children)
   );
 }
