@@ -32,7 +32,7 @@
     "eslint-config-react-app": "^7.0.1",
     "tsdef": "^0.0.14",
     "typescript": "^4.6.3",
-    "vite": "^2.9.9",
+    "vite": "^3.0.3",
     "vite-tsconfig-paths": "^3.5.0"
   }
 }
