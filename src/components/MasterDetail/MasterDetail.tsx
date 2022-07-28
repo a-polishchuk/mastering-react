@@ -16,44 +16,54 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
   width: expanded ? '25%' : COLLAPSED_WIDTH,
 });
 
-export function MasterDetail({ children }: { children: ReactNode }): JSX.Element {
+function useContextValue(): MasterDetailState {
   const [routes, setRoutes] = useState<PathRouteProps[]>([]);
+
   const addRoute = useCallback((route: PathRouteProps) => {
-    setRoutes((array) => [...array, route]);
+    setRoutes((array) => {
+      if (array.some((item) => item.path === route.path)) {
+        return array;
+      }
+      return [...array, route];
+    });
   }, []);
-  const value: MasterDetailState = {
+
+  return {
     routes,
     addRoute,
   };
+}
 
+export function MasterDetail({ children }: { children: ReactNode }): JSX.Element {
+  const contextValue = useContextValue();
   const [expanded, toggleExpanded] = useToggle(true);
   const masterStyle = buildMasterStyle(expanded);
 
   return (
-    <>
-      <BrowserRouter>
-        <div className={classes.container}>
-          <nav className={classes.master} style={masterStyle}>
-            {expanded && (
-              <MasterDetailContext.Provider value={value}>{children}</MasterDetailContext.Provider>
-            )}
-            <div className={classes.expandCollapseButton}>
-              <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
-            </div>
-          </nav>
+    <BrowserRouter>
+      <div className={classes.container}>
+        <nav className={classes.master} style={masterStyle}>
+          {expanded && (
+            <MasterDetailContext.Provider value={contextValue}>
+              {children}
+            </MasterDetailContext.Provider>
+          )}
+          <div className={classes.expandCollapseButton}>
+            <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
+          </div>
+        </nav>
 
-          <main className={classes.detail}>
-            <Routes>
-              <Route path="/" element={<EmptyScreen />} />
-              <Route path="*" element={<EmptyScreen />} />
-              {routes.map((props) => (
-                <Route key={props.path} {...props} />
-              ))}
-            </Routes>
-          </main>
-        </div>
-      </BrowserRouter>
+        <main className={classes.detail}>
+          <Routes>
+            <Route path="/" element={<EmptyScreen />} />
+            <Route path="*" element={<EmptyScreen />} />
+            {contextValue.routes.map((props) => (
+              <Route key={props.path} {...props} />
+            ))}
+          </Routes>
+        </main>
+      </div>
       <EasterEgg />
-    </>
+    </BrowserRouter>
   );
 }

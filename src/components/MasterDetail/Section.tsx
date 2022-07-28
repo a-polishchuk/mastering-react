@@ -17,7 +17,7 @@ export function Section({ title, children }: SectionProps): JSX.Element {
 
   useEffect(() => {
     const selectedPath = pathname.substring(1);
-    if (hasSelectedChild('', selectedPath, children)) {
+    if (selectedPath && hasSelectedChild('', selectedPath, children)) {
       setExpanded(true);
     }
   }, [children, pathname]);
