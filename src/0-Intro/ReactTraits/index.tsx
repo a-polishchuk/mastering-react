@@ -1,4 +1,5 @@
 import { ChapterHeader } from 'components/ChapterHeader';
+import { TextBlock } from 'components/TextBlock';
 import { useInterval } from 'hooks/useInterval';
 import { useRerender } from 'hooks/useRerender';
 
@@ -13,13 +14,19 @@ export function ReactTraits(): JSX.Element {
     <>
       <ChapterHeader title="React traits" />
 
-      <div style={{ padding: 16 }}>
-        <div>🗂 Declarative</div>
-        <div>🌳 Virtual DOM</div>
-        <div>⬇️ Unidirectional data flow</div>
-        <div>📝 JSX - Special syntax to describe UI</div>
-        <div>🏗 Components as main building blocks of your app</div>
-        <div>🪝 Hooks helps to encapsulate business logic</div>
+      <TextBlock>
+        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, fontSize: 24 }}>
+          <li>🗂 Declarative</li>
+          <li>🌳 Virtual DOM</li>
+          <li>⬇️ Unidirectional data flow</li>
+          <li>📝 JSX - Special syntax to describe UI</li>
+          <li>🏗 Components as main building blocks of your app</li>
+          <li>🪝 Hooks helps to encapsulate business logic</li>
+        </ul>
+      </TextBlock>
+
+      <div style={{ marginTop: 20, marginBottom: 10 }}>
+        This is how a typical React app looks like:
       </div>
 
       <TypicalComponent name="App" isRoot>
