@@ -11,10 +11,20 @@ export function EmojisGallery({ items }: { items: ItemData[] }): JSX.Element {
 
   useLoggedLifecycle('Gallery');
 
-  const clickCallback = useCallback((item: ItemData) => {
+  const memoizedCallback = useCallback((item: ItemData) => {
     setSelectedId(item.id);
     logTagged(item.emoji, 'Selected');
   }, []);
+
+  // ! basically, same behaviour can be achieved with useMemo hook instead of useCallback
+
+  // const alsoMemoizedCallback = useMemo(() => {
+  //   const callback = (item: ItemData) => {
+  //     setSelectedId(item.id);
+  //     logTagged(item.emoji, 'Selected');
+  //   };
+  //   return callback;
+  // }, []);
 
   return (
     <div className={classes.gallery}>
@@ -23,7 +33,7 @@ export function EmojisGallery({ items }: { items: ItemData[] }): JSX.Element {
           key={item.id}
           item={item}
           selected={item.id === selectedId}
-          onClick={clickCallback}
+          onClick={memoizedCallback}
         />
       ))}
     </div>
