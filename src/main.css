@@ -10,11 +10,12 @@ body {
 }
 
 h2 {
-  margin-block-start: 0px;
+  margin: 0;
 }
 
 h3 {
-  margin-block-start: 0px;
+  margin: 0;
+  color: #000b;
 }
 
 div {

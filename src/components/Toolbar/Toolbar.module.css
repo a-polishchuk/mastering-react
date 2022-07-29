@@ -3,7 +3,7 @@
   align-items: center;
   gap: 16px;
   padding: 10px;
-  margin: 16px 0px;
+  margin-bottom: 16px;
   border: 2px dotted #cccccc;
   overflow-x: scroll;
 }
