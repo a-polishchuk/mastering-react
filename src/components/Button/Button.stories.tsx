@@ -11,8 +11,9 @@ const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
   <Button {...args} onClick={action('click')} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.storyName = 'Button';
+Default.args = {
   text: 'Button',
   disabled: false,
 };

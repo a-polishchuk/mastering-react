@@ -2,6 +2,10 @@ import { ReactNode } from 'react';
 
 import classes from './TextBlock.module.css';
 
-export function TextBlock({ children }: { children: ReactNode }): JSX.Element {
+export interface TextBlockProps {
+  children: ReactNode;
+}
+
+export function TextBlock({ children }: TextBlockProps): JSX.Element {
   return <div className={classes.textBlock}>{children}</div>;
 }
