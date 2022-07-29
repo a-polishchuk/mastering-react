@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import classes from './index.module.css';
+import classes from './Button.module.css';
 
 export interface ButtonProps {
   text: string;

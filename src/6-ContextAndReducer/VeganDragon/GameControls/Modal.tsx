@@ -1,4 +1,4 @@
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { ReactNode } from 'react';
 
 import classes from './Modal.module.css';

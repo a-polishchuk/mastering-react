@@ -1,5 +1,5 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { ChapterHeader } from 'components/ChapterHeader';
 import { useLoggedLifecycle } from 'components/LoggedLifecycle';
 import { Toolbar } from 'components/Toolbar';

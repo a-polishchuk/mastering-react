@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { Toolbar } from 'components/Toolbar';
 import { ChapterHeader } from 'components/ChapterHeader';
 

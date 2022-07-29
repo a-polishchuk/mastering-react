@@ -1,4 +1,4 @@
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { ChapterHeader } from 'components/ChapterHeader';
 import { PropsTable } from 'components/PropsTable';
 import { Toolbar } from 'components/Toolbar';

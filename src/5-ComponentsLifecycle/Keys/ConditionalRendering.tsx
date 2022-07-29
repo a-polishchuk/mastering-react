@@ -1,4 +1,4 @@
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { ChapterHeader } from 'components/ChapterHeader';
 import { LoggedLifecycle } from 'components/LoggedLifecycle';
 import { Toolbar } from 'components/Toolbar';

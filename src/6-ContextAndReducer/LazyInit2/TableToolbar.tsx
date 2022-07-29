@@ -1,4 +1,4 @@
-import { Button } from 'components/Button';
+import { Button } from 'components';
 import { Toolbar } from 'components/Toolbar';
 import { Dispatch } from 'react';
 
