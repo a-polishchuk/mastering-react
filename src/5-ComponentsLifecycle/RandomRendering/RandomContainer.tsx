@@ -1,4 +1,4 @@
-import { useLoggedLifecycle } from 'components/LoggedLifecycle';
+import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { Children, ReactNode } from 'react';
 import { getRandomArrayElement } from 'utils/getRandomArrayElement';
 

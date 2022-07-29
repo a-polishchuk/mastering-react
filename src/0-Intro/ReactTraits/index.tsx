@@ -1,5 +1,5 @@
-import { ChapterHeader } from 'components/ChapterHeader';
-import { TextBlock } from 'components/TextBlock';
+import { ChapterHeader } from 'components';
+import { TextBlock } from 'components';
 import { useInterval } from 'hooks/useInterval';
 import { useRerender } from 'hooks/useRerender';
 

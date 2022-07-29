@@ -1,7 +1,7 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { Toolbar } from 'components/Toolbar';
-import { ValueLabel } from 'components/ValueLabel';
+import { ChapterHeader } from 'components';
+import { Toolbar } from 'components';
+import { ValueLabel } from 'components';
 import { useState } from 'react';
 
 const DELAY = 2000;

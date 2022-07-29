@@ -1,7 +1,7 @@
 import { CSSProperties, MouseEventHandler, ReactNode } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 
-import classes from './index.module.css';
+import classes from './ColoredBlock.module.css';
 
 export interface ColoredBlockProps {
   children?: ReactNode;

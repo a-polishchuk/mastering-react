@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { Toolbar } from 'components';
 import { useRef, useState } from 'react';
 
 import { PinInput, PinInputHandle } from './PinInput';

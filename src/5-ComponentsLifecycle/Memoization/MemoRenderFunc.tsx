@@ -1,4 +1,4 @@
-import { useLoggedLifecycle } from 'components/LoggedLifecycle';
+import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { memo } from 'react';
 
 interface Props {

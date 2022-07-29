@@ -1,4 +1,4 @@
-import { ReactLogo } from 'components/ReactLogo';
+import { ReactLogo } from 'components';
 import { CSSProperties, memo, useRef } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 import { generateRandomNumber } from 'utils/generateRandomNumber';

@@ -1,4 +1,4 @@
-import { ColoredBlock } from 'components/ColoredBlock';
+import { ColoredBlock } from 'components';
 import { memo } from 'react';
 
 import { Item } from './Item';

@@ -61,6 +61,7 @@ const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
           onChange={(event) => handleChange(index, event.target.value)}
           onKeyDown={(event) => handleKeyDown(index, event.nativeEvent.key)}
           ref={(ref) => (inputRefs.current[index] = ref)}
+          autoComplete="nope"
         />
       ))}
     </>

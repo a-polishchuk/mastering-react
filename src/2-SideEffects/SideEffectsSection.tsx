@@ -1,4 +1,4 @@
-import { Chapter, Section } from 'components/MasterDetail';
+import { Chapter, Section } from 'components';
 
 import { FetchDataInUseEffect } from './FetchDataInUseEffect';
 import { BewareOfInfiniteLoops } from './InfiniteLoops/BewareOfInfiniteLoops';

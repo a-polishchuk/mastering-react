@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 import { useReducer } from 'react';
 
 import { buildMatrix } from './buildMatrix';

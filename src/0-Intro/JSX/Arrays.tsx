@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 
 const TRANSPORT_EMOJIS = ['🚗', '🚕', '🚙', '🚌', '🚎', '🏎', '🚓', '🚑', '🚒', '🚐', '🛻', '🚚'];
 const BALLS_EMOJIS = ['⚽️', '🏀', '🏈', '⚾️', '🎾', '🏐', '🏉'];

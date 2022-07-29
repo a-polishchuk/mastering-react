@@ -1,7 +1,7 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { ColoredBlock } from 'components/ColoredBlock';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { ColoredBlock } from 'components';
+import { Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { ChangeEventHandler, CSSProperties, MouseEventHandler } from 'react';
 import { logTagged } from 'utils/logTagged';

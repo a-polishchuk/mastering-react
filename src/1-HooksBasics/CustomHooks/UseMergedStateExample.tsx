@@ -1,7 +1,7 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { PropsTable } from 'components/PropsTable';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { PropsTable } from 'components';
+import { Toolbar } from 'components';
 
 import { FormField } from './FormField';
 import { useMergedState } from './useMergedState';

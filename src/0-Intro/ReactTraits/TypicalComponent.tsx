@@ -1,4 +1,4 @@
-import { ColoredBlock } from 'components/ColoredBlock';
+import { ColoredBlock } from 'components';
 import { CSSProperties, ReactNode } from 'react';
 
 import classes from './TypicalComponent.module.css';

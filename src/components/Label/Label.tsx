@@ -1,4 +1,4 @@
-import classes from './index.module.css';
+import classes from './Label.module.css';
 
 export interface LabelProps {
   text: string;

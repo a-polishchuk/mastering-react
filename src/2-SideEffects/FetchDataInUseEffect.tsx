@@ -1,7 +1,7 @@
-import { ChapterHeader } from 'components/ChapterHeader';
-import { LoadingSpinner } from 'components/LoadingSpinner';
-import { PropsTable } from 'components/PropsTable';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { LoadingSpinner } from 'components';
+import { PropsTable } from 'components';
+import { Toolbar } from 'components';
 import { ChangeEventHandler, useEffect, useState } from 'react';
 
 type PostData = Record<string, any>;

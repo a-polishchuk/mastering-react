@@ -1,4 +1,4 @@
-import { ColoredBlock } from 'components/ColoredBlock';
+import { ColoredBlock } from 'components';
 import { CSSProperties, MouseEventHandler } from 'react';
 
 import { nodeStyle } from './nodeStyle';

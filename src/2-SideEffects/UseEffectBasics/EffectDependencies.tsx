@@ -1,6 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { Toolbar } from 'components';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 

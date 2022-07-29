@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 import { CSSProperties } from 'react';
 
 function JsxIsNot(): JSX.Element {

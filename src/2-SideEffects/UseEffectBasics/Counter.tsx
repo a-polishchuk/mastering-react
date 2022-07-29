@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import { Toolbar } from 'components/Toolbar';
-import { ValueLabel } from 'components/ValueLabel';
+import { Toolbar } from 'components';
+import { ValueLabel } from 'components';
 
 interface Props {
   value: number;

@@ -1,4 +1,4 @@
-import { Chapter, Section } from 'components/MasterDetail';
+import { Chapter, Section } from 'components';
 
 import { ControlledInput } from './ControlledVsUncontrolled/ControlledInput';
 import { UncontrolledInput } from './ControlledVsUncontrolled/UncontrolledInput';

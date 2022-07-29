@@ -1,4 +1,4 @@
-import { ColoredBlock } from 'components/ColoredBlock';
+import { ColoredBlock } from 'components';
 import { format } from 'date-fns';
 import { CSSProperties } from 'react';
 

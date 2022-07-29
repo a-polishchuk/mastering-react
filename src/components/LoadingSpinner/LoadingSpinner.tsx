@@ -1,4 +1,4 @@
-import classes from './index.module.css';
+import classes from './LoadingSpinner.module.css';
 
 export function LoadingSpinner(): JSX.Element {
   return (

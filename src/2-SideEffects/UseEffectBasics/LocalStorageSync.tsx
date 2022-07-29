@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 

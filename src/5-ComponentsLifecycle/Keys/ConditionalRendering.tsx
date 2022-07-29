@@ -1,7 +1,7 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { LoggedLifecycle } from 'components/LoggedLifecycle';
-import { Toolbar } from 'components/Toolbar';
+import { ChapterHeader } from 'components';
+import { LoggedLifecycle } from 'components';
+import { Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
 
 export function ConditionalRendering(): JSX.Element {

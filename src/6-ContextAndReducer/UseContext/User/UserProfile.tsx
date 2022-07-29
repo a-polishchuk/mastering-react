@@ -1,4 +1,4 @@
-import { PropsTable } from 'components/PropsTable';
+import { PropsTable } from 'components';
 
 import { useCurrentTheme } from '../Theme/ThemeContext';
 import { useUserContext } from './UserContext';

@@ -1,4 +1,4 @@
-import classes from './index.module.css';
+import classes from './ValueLabel.module.css';
 
 export interface ValueLabelProps {
   value: string | number;

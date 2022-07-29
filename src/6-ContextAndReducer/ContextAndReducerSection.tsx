@@ -1,4 +1,4 @@
-import { Chapter, Section } from 'components/MasterDetail';
+import { Chapter, Section } from 'components';
 
 import { ContactBook } from './ContactBook';
 import { LazyInit2 } from './LazyInit2/LazyInit2';

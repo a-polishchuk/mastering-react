@@ -5,7 +5,7 @@ import { ImperativeCodeSection } from '3-ImperativeCode/ImperativeCodeSection';
 import { MemoizationSection } from '4-Memoization/MemoizationSection';
 import { ComponentsLifecycleSection } from '5-ComponentsLifecycle/ComponentsLifecycleSection';
 import { ContextAndReducerSection } from '6-ContextAndReducer/ContextAndReducerSection';
-import { MasterDetail } from 'components/MasterDetail';
+import { MasterDetail } from 'components';
 
 export function App(): JSX.Element {
   return (

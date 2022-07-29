@@ -1,8 +1,8 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { FlexFiller } from 'components/FlexFiller';
-import { Toolbar } from 'components/Toolbar';
-import { ValueLabel } from 'components/ValueLabel';
+import { ChapterHeader } from 'components';
+import { FlexFiller } from 'components';
+import { Toolbar } from 'components';
+import { ValueLabel } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { generateRandomNumber } from 'utils/generateRandomNumber';
 

@@ -1,4 +1,4 @@
-import { Chapter, Section } from 'components/MasterDetail';
+import { Chapter, Section } from 'components';
 
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';

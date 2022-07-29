@@ -1,5 +1,5 @@
-import { ColoredBlock } from 'components/ColoredBlock';
-import { LoggedLifecycle } from 'components/LoggedLifecycle';
+import { ColoredBlock } from 'components';
+import { LoggedLifecycle } from 'components';
 
 export function Child({ tag }: { tag: string }): JSX.Element {
   return (

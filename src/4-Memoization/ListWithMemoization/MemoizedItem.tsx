@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { useLoggedLifecycle } from 'components/LoggedLifecycle';
+import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { memo } from 'react';
 
 import { ItemData } from '../ItemData';

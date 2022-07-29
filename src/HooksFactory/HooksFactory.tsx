@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 
 import { createMappedState } from './createMappedState';
 import { Field } from './Field';

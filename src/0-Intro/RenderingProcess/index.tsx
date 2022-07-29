@@ -1,5 +1,5 @@
-import { ChapterHeader } from 'components/ChapterHeader';
-import { ColoredBlock } from 'components/ColoredBlock';
+import { ChapterHeader } from 'components';
+import { ColoredBlock } from 'components';
 import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 

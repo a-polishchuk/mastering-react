@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 import { MouseEventHandler, useLayoutEffect, useRef, useState } from 'react';
 
 import { buildDotStyle } from './buildDotStyle';

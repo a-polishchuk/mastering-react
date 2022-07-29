@@ -1,7 +1,7 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { Toolbar } from 'components/Toolbar';
-import { ValueLabel } from 'components/ValueLabel';
+import { ChapterHeader } from 'components';
+import { Toolbar } from 'components';
+import { ValueLabel } from 'components';
 import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];

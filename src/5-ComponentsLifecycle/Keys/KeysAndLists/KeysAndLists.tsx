@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 
 import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';

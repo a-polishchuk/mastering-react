@@ -1,5 +1,5 @@
 import { Button } from 'components';
-import { Toolbar } from 'components/Toolbar';
+import { Toolbar } from 'components';
 import { Dispatch } from 'react';
 
 import { Action, ActionType } from './types';

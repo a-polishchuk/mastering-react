@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
 import { Button } from 'components';
-import { Toolbar } from 'components/Toolbar';
-import { ChapterHeader } from 'components/ChapterHeader';
+import { Toolbar } from 'components';
+import { ChapterHeader } from 'components';
 
 type MathFunction = (a: number, b: number) => number;
 type Setter = Dispatch<SetStateAction<number>>;

@@ -1,4 +1,4 @@
-import { Section, Chapter } from 'components/MasterDetail';
+import { Section, Chapter } from 'components';
 
 import { ListWithoutMemoization } from './ListWithoutMemoization/ListWithoutMemoization';
 import { ListWithMemoization } from './ListWithMemoization/ListWithMemoization';

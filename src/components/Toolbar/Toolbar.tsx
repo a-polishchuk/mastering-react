@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import classes from './index.module.css';
+import classes from './Toolbar.module.css';
 
 export interface ToolbarProps {
   children: ReactNode;

@@ -1,4 +1,4 @@
-import { Toolbar } from 'components/Toolbar';
+import { Toolbar } from 'components';
 
 import { useThemeContext } from './ThemeContext';
 import { ThemeOption } from './ThemeOption';

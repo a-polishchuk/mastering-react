@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import { ChapterHeader } from 'components/ChapterHeader';
-import { ValueLabel } from 'components/ValueLabel';
+import { ChapterHeader } from 'components';
+import { ValueLabel } from 'components';
 
 import { useCounter } from './useCounter';
 

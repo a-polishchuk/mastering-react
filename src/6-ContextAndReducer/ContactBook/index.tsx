@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components/ChapterHeader';
+import { ChapterHeader } from 'components';
 
 import { ContactsProvider } from './ContactsContext';
 import { ContactsList } from './ContactsList';

@@ -1,4 +1,4 @@
-import { Chapter, Section } from 'components/MasterDetail';
+import { Chapter, Section } from 'components';
 
 import { ConditionalRendering } from './Keys/ConditionalRendering';
 import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';
