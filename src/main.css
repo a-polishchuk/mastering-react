@@ -1,8 +1,14 @@
 :root {
   --table-border-color: #eeeeee;
   --table-hover-color: #bbbbbb;
-  --active-box-shadow: 3px 3px 0px 0px #eadff9;
+
+  --box-shadow: 3px 3px 0px 0px #eadff9;
+  --active-box-shadow: 3px 3px 0px 0px #e1ccff;
+  --disabled-box-shadow: 3px 3px 0px 0px #e7e7e7;
+
+  --passive-text-shadow: 2px 2px #eadff9;
   --active-text-shadow: 2px 2px #e1ccff;
+  --disabled-text-shadow: 2px 2px 0px 0px #e7e7e7;
 }
 
 body {

@@ -2,14 +2,15 @@
   background-color: white;
   padding: 10px 20px;
   border: 2px solid #bbbbbb;
-  box-shadow: 3px 3px 0px 0px #eadff9;
+  box-shadow: var(--box-shadow);
   font-size: 16px;
   font-weight: 400;
+  outline: none;
 }
 
 .button:hover {
-  box-shadow: 3px 3px 0px 0px #e1ccff;
-  text-shadow: 2px 2px #e1ccff;
+  box-shadow: var(--active-box-shadow);
+  text-shadow: var(--active-text-shadow);
 }
 
 .button:focus {
@@ -22,7 +23,6 @@
 }
 
 .button:disabled {
-  opacity: 0.5;
   pointer-events: none;
-  box-shadow: 3px 3px 0px 0px #e7e7e7;
+  box-shadow: var(--disabled-box-shadow);
 }

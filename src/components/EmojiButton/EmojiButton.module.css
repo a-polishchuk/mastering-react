@@ -1,0 +1,25 @@
+.button {
+  font-size: 32px;
+  border: none;
+  background: none;
+  outline: none;
+  text-shadow: var(--passive-text-shadow);
+}
+
+.button:hover {
+  text-shadow: var(--active-text-shadow);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:active {
+  transform: translate(2px, 2px);
+  text-shadow: none;
+}
+
+.button:disabled {
+  pointer-events: none;
+  text-shadow: var(--disabled-text-shadow);
+}
