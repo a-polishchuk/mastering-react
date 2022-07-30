@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
-import { Toolbar } from 'components';
+import { Button, ChapterWrapper, ColoredBlock, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { ChangeEventHandler, CSSProperties, MouseEventHandler } from 'react';
 import { logTagged } from 'utils/logTagged';
@@ -35,9 +32,7 @@ export function EventHandlers(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="Introduction to JSX" subtitle="Adding event handlers" />
-
+    <ChapterWrapper title="Introduction to JSX" subtitle="Adding event handlers">
       <Toolbar>
         <Button text="Click me!" onClick={() => logTagged(BUTTON_TAG, 'You clicked me!')} />
       </Toolbar>
@@ -58,6 +53,6 @@ export function EventHandlers(): JSX.Element {
       >
         <ColoredBlock style={STYLE}>Click me! (Hover will do the trick too)</ColoredBlock>
       </div>
-    </>
+    </ChapterWrapper>
   );
 }

@@ -1,8 +1,8 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { Button } from 'components/Button/Button';
-import { FlexFiller } from 'components/FlexFiller';
 import { ReactElement, ReactNode } from 'react';
 
+import { EmojiButton } from '../EmojiButton/EmojiButton';
+import { FlexFiller } from '../FlexFiller';
 import classes from './ChapterWrapper.module.css';
 
 export interface ChapterWrapperProps {
@@ -22,8 +22,8 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
         <div className={classes.title}>
           <h2>{title}</h2>
           <FlexFiller />
-          {rerender && <Button text="🔄 Rerender" onClick={rerender} />}
-          <Button text="♻️ Remount" onClick={remount} />
+          {rerender && <EmojiButton emoji="🔄" tooltip="RErender" onClick={rerender} />}
+          <EmojiButton emoji="♻️" tooltip="REmount" onClick={remount} />
         </div>
         <h3>{subtitle}</h3>
       </div>

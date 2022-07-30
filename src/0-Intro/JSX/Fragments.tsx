@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { Fragment } from 'react';
 
 function FewPoints(): JSX.Element {
@@ -14,23 +14,22 @@ function FewPoints(): JSX.Element {
 
 function FewMorePoints(): JSX.Element {
   return (
-    <>
+    <Fragment>
       <li>Sometimes it has too much flexibility</li>
       <li>It's a library, not a framework</li>
       <li>Supports different platforms</li>
-    </>
+    </Fragment>
   );
 }
 
 export function Fragments(): JSX.Element {
   return (
-    <Fragment>
-      <ChapterHeader title="Introduction to JSX" subtitle="React.Fragment" />
+    <ChapterWrapper title="Introduction to JSX" subtitle="React.Fragment">
       React is famous for:
       <ol>
         <FewPoints />
         <FewMorePoints />
       </ol>
-    </Fragment>
+    </ChapterWrapper>
   );
 }

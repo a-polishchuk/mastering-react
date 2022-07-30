@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 
 const TRANSPORT_EMOJIS = ['🚗', '🚕', '🚙', '🚌', '🚎', '🏎', '🚓', '🚑', '🚒', '🚐', '🛻', '🚚'];
 const BALLS_EMOJIS = ['⚽️', '🏀', '🏈', '⚾️', '🎾', '🏐', '🏉'];
@@ -48,21 +48,16 @@ function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
 
 export function Arrays(): JSX.Element {
   return (
-    <>
-      <ChapterHeader title="Introduction to JSX" subtitle="Rendering arrays" />
-
+    <ChapterWrapper title="Introduction to JSX" subtitle="Rendering arrays">
       <p>Balls emojis: {BALLS_EMOJIS}</p>
       <p>Transport emojis: {TRANSPORT_EMOJIS.join(' ')}</p>
 
       <div style={{ display: 'flex', gap: 20 }}>
         <EmojisList emojis={BALLS_EMOJIS} />
         <EmojisList emojis={TRANSPORT_EMOJIS} ordered />
-      </div>
-
-      <div style={{ display: 'flex', gap: 20 }}>
         <EmojisTable emojis={BALLS_EMOJIS} />
         <EmojisTable emojis={TRANSPORT_EMOJIS} />
       </div>
-    </>
+    </ChapterWrapper>
   );
 }

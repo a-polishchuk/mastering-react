@@ -1,5 +1,4 @@
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
+import { ChapterWrapper, ColoredBlock } from 'components';
 import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 
@@ -25,9 +24,7 @@ function Emoji({ children }: { children: string }): JSX.Element {
 
 export function RenderingProcess(): JSX.Element {
   return (
-    <>
-      <ChapterHeader title="React rendering process" subtitle="🌲 🆚 🌲 ➡️ 🌳" />
-
+    <ChapterWrapper title="Rendering process" subtitle="🌲 🆚 🌲 ➡️ 🌳">
       <div className={classes.container}>
         <div style={getSectionStyle(2)}>
           <h3 className={classes.header}>Virtual DOM / React Realm</h3>
@@ -64,6 +61,6 @@ export function RenderingProcess(): JSX.Element {
           </div>
         </div>
       </div>
-    </>
+    </ChapterWrapper>
   );
 }

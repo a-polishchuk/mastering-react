@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { CSSProperties } from 'react';
 
 function JsxIsNot(): JSX.Element {
@@ -71,14 +71,10 @@ export function JsxBasics(): JSX.Element {
     </a>
   );
   return (
-    <div>
-      <ChapterHeader
-        title="Introduction to JSX"
-        subtitle={<span>🤔 What is {anchorElement}?</span>}
-      />
+    <ChapterWrapper title="Introduction to JSX" subtitle={<span>🤔 What is {anchorElement}?</span>}>
       <JsxIsNot />
       <JsxIs />
       <FactsAboutJsx />
-    </div>
+    </ChapterWrapper>
   );
 }

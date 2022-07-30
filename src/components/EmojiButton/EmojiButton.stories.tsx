@@ -12,8 +12,20 @@ const Template: ComponentStory<typeof EmojiButton> = (args: EmojiButtonProps) =>
 );
 
 export const Default = Template.bind({});
-Default.storyName = 'EmojiButton';
 Default.args = {
   emoji: '✅',
   disabled: false,
+};
+
+export const WithTooltip = Template.bind({});
+WithTooltip.args = {
+  emoji: '✅',
+  tooltip: 'Apply',
+  disabled: false,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  emoji: '✅',
+  disabled: true,
 };

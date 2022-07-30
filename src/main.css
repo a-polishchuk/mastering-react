@@ -17,11 +17,12 @@ body {
 
 h2 {
   margin: 0;
+  text-shadow: var(--passive-text-shadow);
 }
 
 h3 {
   margin: 0;
-  color: #000b;
+  color: rgb(102, 102, 102);
 }
 
 div {

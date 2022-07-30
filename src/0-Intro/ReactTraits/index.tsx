@@ -1,5 +1,4 @@
-import { ChapterHeader } from 'components';
-import { TextBlock } from 'components';
+import { ChapterWrapper, TextBlock } from 'components';
 import { useInterval } from 'hooks/useInterval';
 import { useRerender } from 'hooks/useRerender';
 
@@ -11,9 +10,7 @@ export function ReactTraits(): JSX.Element {
   useInterval(rerender, 3000);
 
   return (
-    <>
-      <ChapterHeader title="React traits" />
-
+    <ChapterWrapper title="React traits" subtitle="How React is different from other libraries?">
       <TextBlock>
         <ul style={{ listStyleType: 'none', margin: 0, padding: 0, fontSize: 24 }}>
           <li>🗂 Declarative</li>
@@ -44,6 +41,6 @@ export function ReactTraits(): JSX.Element {
           </TypicalComponent>
         </TypicalComponent>
       </TypicalComponent>
-    </>
+    </ChapterWrapper>
   );
 }
