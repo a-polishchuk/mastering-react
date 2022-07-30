@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
 
 interface CaseProps<T> {
-  value: T;
+  value?: T;
+  condition?: (value: T) => boolean;
   children: JSX.Element;
 }
 
-export function Case<T>({ children }: CaseProps<T>) {
+export function Case<T>({ children }: CaseProps<T>): JSX.Element {
   return children;
 }
 
@@ -14,7 +15,7 @@ export function DefaultCase({ children }: { children: ReactNode }) {
 }
 DefaultCase.displayName = 'DefaultCase';
 
-interface SwitchProps<T> {
+export interface SwitchProps<T> {
   value: T;
   children: JSX.Element[];
 }
