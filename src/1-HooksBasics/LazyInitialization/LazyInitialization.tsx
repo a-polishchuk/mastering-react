@@ -1,6 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 
@@ -63,9 +61,7 @@ export function LazyInitialization(): JSX.Element {
     });
 
   return (
-    <>
-      <ChapterHeader title="useState" subtitle="Lazy initialization" />
-
+    <ChapterWrapper title="useState" subtitle="Lazy initialization">
       <Toolbar>
         <Button text="⬆️ Sort" onClick={sortAscending} />
         <Button text="⬇️ Sort" onClick={sortDescending} />
@@ -82,6 +78,6 @@ export function LazyInitialization(): JSX.Element {
           ))}
         </tbody>
       </table>
-    </>
+    </ChapterWrapper>
   );
 }

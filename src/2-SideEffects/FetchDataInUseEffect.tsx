@@ -1,7 +1,4 @@
-import { ChapterHeader } from 'components';
-import { LoadingSpinner } from 'components';
-import { PropsTable } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, LoadingSpinner, PropsTable, Toolbar } from 'components';
 import { ChangeEventHandler, useEffect, useState } from 'react';
 
 type PostData = Record<string, any>;
@@ -39,9 +36,7 @@ export function FetchDataInUseEffect(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="useEffect" subtitle="Fetch data in useEffect" />
-
+    <ChapterWrapper title="useEffect" subtitle="Fetch data in useEffect">
       <Toolbar>
         Post ID <input type="number" value={postId} onChange={handleInputChange} />
       </Toolbar>
@@ -56,6 +51,6 @@ export function FetchDataInUseEffect(): JSX.Element {
       ) : (
         <PropsTable title={`/posts/${postId}`} data={postData} />
       )}
-    </>
+    </ChapterWrapper>
   );
 }

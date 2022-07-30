@@ -1,5 +1,4 @@
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
 
 import { useKeyDown } from './useKeyDown';
@@ -24,10 +23,9 @@ export function UseGlobalEvents(): JSX.Element {
   });
 
   return (
-    <>
-      <ChapterHeader title="useEffect" subtitle="Listening to global events" />
+    <ChapterWrapper title="useEffect" subtitle="Listening to global events">
       <Toolbar>Use ⬅️ ➡️ to change the preview window size.</Toolbar>
       <WindowSizePreview previewWidth={previewWidth} />
-    </>
+    </ChapterWrapper>
   );
 }

@@ -1,5 +1,5 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { useEffect } from 'react';
 import { logTagged } from 'utils/logTagged';
 
@@ -30,9 +30,8 @@ export function ComponentLifecycle(): JSX.Element {
   logTagged('Render', 'render function was called by React');
 
   return (
-    <>
-      <ChapterHeader title="useEffect basics" subtitle="Component lifecycle" />
+    <ChapterWrapper title="useEffect basics" subtitle="Component lifecycle">
       <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
-    </>
+    </ChapterWrapper>
   );
 }

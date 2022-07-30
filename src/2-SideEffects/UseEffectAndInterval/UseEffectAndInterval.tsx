@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 
 import { EmojiSection } from './EmojiSection';
 
@@ -8,11 +8,10 @@ const CLOCK_EMOJIS = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '�
 
 export function UseEffectAndInterval(): JSX.Element {
   return (
-    <>
-      <ChapterHeader title="useEffect" subtitle="useEffect + setInterval" />
+    <ChapterWrapper title="useEffect" subtitle="useEffect + setInterval">
       <EmojiSection emojis={MOON_EMOJIS} />
       <EmojiSection emojis={EARTH_EMOJIS} />
       <EmojiSection emojis={CLOCK_EMOJIS} />
-    </>
+    </ChapterWrapper>
   );
 }

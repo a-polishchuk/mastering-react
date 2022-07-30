@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
-import { ValueLabel } from 'components';
+import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];
@@ -29,9 +26,7 @@ export function UseStateBasics(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="useState basics" subtitle="General hooks rules" />
-
+    <ChapterWrapper title="useState basics" subtitle="General hooks rules">
       <Toolbar>
         <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />
@@ -48,6 +43,6 @@ export function UseStateBasics(): JSX.Element {
         <Button text="Add Fibonacci number" onClick={addFibonacci} />
       </Toolbar>
       <div>Fibonacci sequence: {fibonacci.join(', ')}</div>
-    </>
+    </ChapterWrapper>
   );
 }

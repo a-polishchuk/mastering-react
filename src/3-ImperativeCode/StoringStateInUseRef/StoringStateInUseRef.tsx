@@ -1,5 +1,5 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { Button, ChapterHeader, Toolbar, ValueLabel } from 'components';
+import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { logTagged } from 'utils/logTagged';
 
@@ -22,9 +22,7 @@ export function StoringStateInUseRef(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="Storing state in useRef" subtitle="useUpdateEffect" />
-
+    <ChapterWrapper title="Storing state in useRef" subtitle="useUpdateEffect">
       <div>useState clicks:</div>
       <Toolbar>
         <ValueLabel value={stateClicks} minWidth="100px" />
@@ -36,6 +34,6 @@ export function StoringStateInUseRef(): JSX.Element {
         <ValueLabel value={refStateClicks} minWidth="100px" />
         <Button text="+1" onClick={increaseRefStateClicks} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

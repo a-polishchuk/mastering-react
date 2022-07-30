@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { PropsTable } from 'components';
-import { Toolbar } from 'components';
+import { Button, ChapterWrapper, PropsTable, Toolbar } from 'components';
 
 import { FormField } from './FormField';
 import { useMergedState } from './useMergedState';
@@ -42,9 +39,7 @@ export function UseMergedStateExample(): JSX.Element {
   const reset = () => setData(INITIAL_STATE);
 
   return (
-    <>
-      <ChapterHeader title="First custom hooks" subtitle="useMergedState" />
-
+    <ChapterWrapper title="First custom hooks" subtitle="useMergedState">
       <form>
         <FormField
           name="firstName"
@@ -91,6 +86,6 @@ export function UseMergedStateExample(): JSX.Element {
       </Toolbar>
 
       <PropsTable title="Form data" data={data} />
-    </>
+    </ChapterWrapper>
   );
 }

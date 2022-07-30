@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { MouseEventHandler, useLayoutEffect, useRef, useState } from 'react';
 
 import { buildDotStyle } from './buildDotStyle';
@@ -56,13 +56,14 @@ export function UseLayoutEffectExample() {
       onClick={handleClick}
       style={{ height: '100%', width: '100%', position: 'relative' }}
     >
-      <ChapterHeader
+      <ChapterWrapper
         title="useEffect vs useLayoutEffect"
         subtitle="Batching effects with useLayoutEffect"
-      />
-      {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}
-      <div style={buildDotStyle(clickPos, '#5599ff88', 10)} />
-      <div style={buildDotStyle(effectPos, '#ff559988', 20)} />
+      >
+        {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}
+        <div style={buildDotStyle(clickPos, '#5599ff88', 10)} />
+        <div style={buildDotStyle(effectPos, '#ff559988', 20)} />
+      </ChapterWrapper>
     </div>
   );
 }

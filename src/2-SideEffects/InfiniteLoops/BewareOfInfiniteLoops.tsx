@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { useEffect, useState } from 'react';
 
 import { EmojisBar } from './EmojisBar';
@@ -27,10 +27,9 @@ export function BewareOfInfiniteLoops(): JSX.Element {
   }, [topEmojis]);
 
   return (
-    <>
-      <ChapterHeader title="useEffect" subtitle="Beware of infinite loops" />
+    <ChapterWrapper title="useEffect" subtitle="Beware of infinite loops">
       <EmojisBar emojis={topEmojis} onClick={addToBottom} />
       <EmojisBar emojis={bottomEmojis} onClick={addToTop} />
-    </>
+    </ChapterWrapper>
   );
 }

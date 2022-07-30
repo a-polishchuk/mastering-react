@@ -1,6 +1,5 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, Toolbar } from 'components';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 
@@ -29,12 +28,11 @@ export function EffectDependencies(): JSX.Element {
   );
 
   return (
-    <>
-      <ChapterHeader title="useEffect basics" subtitle="Effect dependencies" />
+    <ChapterWrapper title="useEffect basics" subtitle="Effect dependencies">
       <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
       <Toolbar>
         <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

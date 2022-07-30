@@ -1,6 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ValueLabel } from 'components';
+import { Button, ChapterWrapper, ValueLabel } from 'components';
 
 import { useCounter } from './useCounter';
 
@@ -30,10 +28,9 @@ function DecadePicker({ initialValue }: { initialValue: number }): JSX.Element {
 
 export function UseCounterExample(): JSX.Element {
   return (
-    <>
-      <ChapterHeader title="First custom hooks" subtitle="useCounter" />
+    <ChapterWrapper title="First custom hooks" subtitle="useCounter">
       <ClicksCounter />
       <DecadePicker initialValue={1970} />
-    </>
+    </ChapterWrapper>
   );
 }

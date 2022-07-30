@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 
@@ -40,9 +40,8 @@ export function LocalStorageSync() {
   logTagged('Render', String(count));
 
   return (
-    <>
-      <ChapterHeader title="useEffect basics" subtitle="Local storage sync" />
+    <ChapterWrapper title="useEffect basics" subtitle="Local storage sync">
       <Counter value={count} delta={DELTA} increase={increase} decrease={decrease} />
-    </>
+    </ChapterWrapper>
   );
 }

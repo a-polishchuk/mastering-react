@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
-import { ValueLabel } from 'components';
+import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useState } from 'react';
 
 const DELAY = 2000;
@@ -34,9 +31,7 @@ export function PreviousStateUpdate(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="useState" subtitle="Previous state update" />
-
+    <ChapterWrapper title="useState" subtitle="Previous state update">
       <Toolbar>
         <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />
@@ -48,6 +43,6 @@ export function PreviousStateUpdate(): JSX.Element {
         <Button text="Add Fibonacci number" onClick={addFibonacci} />
       </Toolbar>
       <div>Fibonacci sequence: {fibonacci.join(', ')}</div>
-    </>
+    </ChapterWrapper>
   );
 }

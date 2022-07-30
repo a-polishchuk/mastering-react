@@ -1,6 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useRef, useState } from 'react';
 
 import { PinInput, PinInputHandle } from './PinInput';
@@ -20,9 +18,7 @@ export function UseImperativeHandle(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="useImperativeHandle" subtitle="PinInput component" />
-
+    <ChapterWrapper title="useImperativeHandle" subtitle="PinInput component">
       <Toolbar>
         <PinInput ref={ref} digits={digits} onChange={setDigits} />
       </Toolbar>
@@ -31,6 +27,6 @@ export function UseImperativeHandle(): JSX.Element {
         <Button text="Focus" onClick={focus} />
         <Button text="Clear" onClick={clear} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

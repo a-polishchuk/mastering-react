@@ -1,7 +1,5 @@
-import { useState, ChangeEvent, Dispatch, SetStateAction, ChangeEventHandler } from 'react';
-import { Button } from 'components';
-import { Toolbar } from 'components';
-import { ChapterHeader } from 'components';
+import { Button, ChapterWrapper, Toolbar } from 'components';
+import { ChangeEvent, ChangeEventHandler, Dispatch, SetStateAction, useState } from 'react';
 
 type MathFunction = (a: number, b: number) => number;
 type Setter = Dispatch<SetStateAction<number>>;
@@ -32,9 +30,7 @@ export function StoringFunctions(): JSX.Element {
   };
 
   return (
-    <>
-      <ChapterHeader title="useState" subtitle="Storing function in useState" />
-
+    <ChapterWrapper title="useState" subtitle="Storing function in useState">
       <Toolbar>
         <Button onClick={buildClickHandler(add, '➕')} text="➕ Add" />
         <Button onClick={buildClickHandler(subtract, '➖')} text="➖ Subtract" />
@@ -48,6 +44,6 @@ export function StoringFunctions(): JSX.Element {
         <input type="number" value={b} onChange={buildOnChange(setB)} />
         <span> = {mathFunction ? mathFunction(a, b) : ''}</span>
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

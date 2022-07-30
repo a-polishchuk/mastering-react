@@ -1,6 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { CSSProperties } from 'react';
 
@@ -26,12 +24,10 @@ export function YouDontNeedUseEffect(): JSX.Element {
   const rerender = useRerender();
 
   return (
-    <>
-      <ChapterHeader
-        title="useEffect"
-        subtitle="You don't need useEffect. Maybe useMemo will do the thing?"
-      />
-
+    <ChapterWrapper
+      title="useEffect"
+      subtitle="You don't need useEffect. Maybe useMemo will do the thing?"
+    >
       <Toolbar>
         <Button text="Click me to re-render the component" onClick={rerender} />
       </Toolbar>
@@ -40,6 +36,6 @@ export function YouDontNeedUseEffect(): JSX.Element {
       <div style={{ position: 'relative' }}>
         <div style={style}>⚽️</div>
       </div>
-    </>
+    </ChapterWrapper>
   );
 }
