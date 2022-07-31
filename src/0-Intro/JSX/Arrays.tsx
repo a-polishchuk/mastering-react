@@ -48,7 +48,7 @@ function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
 
 export function Arrays(): JSX.Element {
   return (
-    <ChapterWrapper title="Introduction to JSX" subtitle="Rendering arrays">
+    <ChapterWrapper title="Rendering arrays" subtitle="Introduction to JSX">
       <p>Balls emojis: {BALLS_EMOJIS}</p>
       <p>Transport emojis: {TRANSPORT_EMOJIS.join(' ')}</p>
 

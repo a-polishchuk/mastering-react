@@ -71,7 +71,7 @@ export function JsxBasics(): JSX.Element {
     </a>
   );
   return (
-    <ChapterWrapper title="Introduction to JSX" subtitle={<span>🤔 What is {anchorElement}?</span>}>
+    <ChapterWrapper title={<span>🤔 What is {anchorElement}?</span>} subtitle="Introduction to JSX">
       <JsxIsNot />
       <JsxIs />
       <FactsAboutJsx />

@@ -6,7 +6,7 @@ import { FlexFiller } from '../FlexFiller';
 import classes from './ChapterWrapper.module.css';
 
 export interface ChapterWrapperProps {
-  title: string;
+  title: string | ReactElement;
   subtitle?: string | ReactElement;
   rerender?: () => void;
   children: ReactNode;

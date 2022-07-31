@@ -1,22 +1,25 @@
 import { ChapterWrapper, Toolbar, ValueLabel } from 'components';
-import { useRerender } from 'hooks/useRerender';
-import { generateRandomNumber } from 'utils/generateRandomNumber';
 
-function RandomContent({ randomNumber }: { randomNumber: number }): JSX.Element | null {
-  if (randomNumber > 11) {
+interface ConditionalContentProps {
+  value: number;
+}
+
+function ConditionalContent({ value }: ConditionalContentProps): JSX.Element | null {
+  if (value > 11) {
     return null;
   }
 
-  const butterfly = randomNumber === 1 ? '🐛' : '🦋';
-  const greaterThanFive = randomNumber > 5;
+  const butterfly = value === 1 ? '🐛' : '🦋';
+  const greaterThanFive = value > 5;
 
   return (
     <div style={{ fontSize: 48 }}>
       <Toolbar>
-        <span>{randomNumber % 2 === 0 ? '🐈' : '🐈‍⬛'}</span>
+        <ValueLabel value={value} minWidth={150} />
+        <span>{value % 2 === 0 ? '🐈' : '🐈‍⬛'}</span>
         <span>{butterfly}</span>
-        {randomNumber === 6 ? <span>🐬</span> : null}
-        {randomNumber % 3 === 0 && <span>🦔</span>}
+        {value === 6 ? <span>🐬</span> : null}
+        {value % 3 === 0 && <span>🦔</span>}
         <span>{greaterThanFive && '🦕'}</span>
       </Toolbar>
     </div>
@@ -24,18 +27,13 @@ function RandomContent({ randomNumber }: { randomNumber: number }): JSX.Element 
 }
 
 export function Conditional(): JSX.Element {
-  const randomNumber = Math.round(generateRandomNumber(1, 12));
+  const numbers = new Array(12).fill(0).map((value, index) => index + 1);
 
   return (
-    <ChapterWrapper
-      title="Introduction to JSX"
-      subtitle="Conditional rendering"
-      rerender={useRerender()}
-    >
-      <Toolbar>
-        <ValueLabel value={`🎲🎲 ${randomNumber}`} />
-      </Toolbar>
-      <RandomContent randomNumber={randomNumber} />
+    <ChapterWrapper title="Conditional rendering" subtitle="Introduction to JSX">
+      {numbers.map((num) => (
+        <ConditionalContent key={num} value={num} />
+      ))}
     </ChapterWrapper>
   );
 }

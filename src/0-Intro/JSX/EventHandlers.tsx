@@ -32,7 +32,7 @@ export function EventHandlers(): JSX.Element {
   };
 
   return (
-    <ChapterWrapper title="Introduction to JSX" subtitle="Adding event handlers">
+    <ChapterWrapper title="Event handlers" subtitle="Introduction to JSX">
       <Toolbar>
         <Button text="Click me!" onClick={() => logTagged(BUTTON_TAG, 'You clicked me!')} />
       </Toolbar>

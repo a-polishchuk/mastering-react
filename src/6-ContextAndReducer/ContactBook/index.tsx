@@ -8,8 +8,8 @@ export function ContactBook(): JSX.Element {
   return (
     <ChapterWrapper title="Contact book" subtitle="useContext + useReducer">
       <ContactsProvider>
-        <ContactsList />
         <ContactsToolbar />
+        <ContactsList />
       </ContactsProvider>
     </ChapterWrapper>
   );
