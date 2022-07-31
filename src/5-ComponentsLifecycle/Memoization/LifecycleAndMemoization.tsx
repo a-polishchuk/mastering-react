@@ -1,8 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
-import { LoggedLifecycle } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, ColoredBlock, LoggedLifecycle } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, useCallback, useMemo } from 'react';
 
@@ -12,8 +8,6 @@ import { MemoText } from './MemoText';
 const MemoLoggedLifecycle = memo(LoggedLifecycle);
 
 export function LifecycleAndMemoization(): JSX.Element {
-  const rerender = useRerender();
-
   const useMemoText = useMemo(
     () => <MemoText tag="4. useMemoText" text="4. Text wrapped with useMemo" />,
     []
@@ -33,13 +27,7 @@ export function LifecycleAndMemoization(): JSX.Element {
   );
 
   return (
-    <>
-      <ChapterHeader title="Components lifecycle" subtitle="Memoization" />
-
-      <Toolbar>
-        <Button text="Click me to trigger new render" onClick={rerender} />
-      </Toolbar>
-
+    <ChapterWrapper title="Components lifecycle" subtitle="Memoization" rerender={useRerender()}>
       <ColoredBlock>
         <MemoLoggedLifecycle tag="1. Static text parent">
           1. Just a static text here.
@@ -64,6 +52,6 @@ export function LifecycleAndMemoization(): JSX.Element {
         <MemoRenderFunc tag="6. MemoRenderFunc" renderContent={memoizedRenderFunc} />
         <br />
       </ColoredBlock>
-    </>
+    </ChapterWrapper>
   );
 }

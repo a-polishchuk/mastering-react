@@ -1,5 +1,4 @@
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
 
 import { EmojiToggle } from './EmojiToggle';
@@ -10,14 +9,12 @@ export function UseToggleReducer(): JSX.Element {
   const [isDay, toggleDay] = useToggle(false);
 
   return (
-    <>
-      <ChapterHeader title="useReducer" subtitle="useToggle" />
-
+    <ChapterWrapper title="useReducer" subtitle="useToggle">
       <Toolbar>
         <EmojiToggle emojiOn="😊" emojiOff="😢" value={isHappy} toggle={toggleHappy} />
         <EmojiToggle emojiOn="👍" emojiOff="👎" value={isOk} toggle={toggleOk} />
         <EmojiToggle emojiOn="🌞" emojiOff="🌚" value={isDay} toggle={toggleDay} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

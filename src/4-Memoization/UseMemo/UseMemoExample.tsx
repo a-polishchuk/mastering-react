@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, ColoredBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, MouseEventHandler, useMemo } from 'react';
 
@@ -37,17 +34,9 @@ const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps): JSX.Element =>
 });
 
 export function UseMemoExample(): JSX.Element {
-  const rerender = useRerender();
-
   return (
-    <>
-      <ChapterHeader title="useMemo" subtitle="React.memo + useMemo" />
-
-      <Toolbar>
-        <Button text="Click me to re-render the whole thing" onClick={rerender} />
-      </Toolbar>
-
+    <ChapterWrapper title="useMemo" subtitle="React.memo + useMemo" rerender={useRerender()}>
       <MemoizedNode level={0} maxLevel={2} path={['root']} />
-    </>
+    </ChapterWrapper>
   );
 }

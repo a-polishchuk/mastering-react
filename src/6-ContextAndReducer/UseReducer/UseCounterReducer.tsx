@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
-import { ValueLabel } from 'components';
+import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useReducer } from 'react';
 
 import { Action } from './Action';
@@ -11,9 +8,7 @@ export function UseCounterReducer(): JSX.Element {
   const [count, dispatch] = useReducer<CounterReducer>(counterReducer, INITIAL_COUNT);
 
   return (
-    <>
-      <ChapterHeader title="useReducer" subtitle="Simple counter example" />
-
+    <ChapterWrapper title="useReducer" subtitle="Simple counter example">
       <Toolbar>
         <ValueLabel value={count} />
       </Toolbar>
@@ -24,6 +19,6 @@ export function UseCounterReducer(): JSX.Element {
         <Button text="^ 2" onClick={() => dispatch(Action.POWER_2)} />
         <Button text="Reset" onClick={() => dispatch(Action.RESET)} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

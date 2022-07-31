@@ -1,5 +1,4 @@
-import { ChapterHeader } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, Toolbar } from 'components';
 
 import { ThemeButton } from './Theme/ThemeButton';
 import { ThemeProvider } from './Theme/ThemeContext';
@@ -9,9 +8,7 @@ import { UserProfile } from './User/UserProfile';
 
 export function UseContext(): JSX.Element {
   return (
-    <>
-      <ChapterHeader title="useContext" />
-
+    <ChapterWrapper title="useContext">
       <ThemeProvider>
         {/* you can get current theme in any component in this subtree */}
         <ThemeToolbar />
@@ -24,6 +21,6 @@ export function UseContext(): JSX.Element {
           <UserProfile />
         </UserProvider>
       </ThemeProvider>
-    </>
+    </ChapterWrapper>
   );
 }

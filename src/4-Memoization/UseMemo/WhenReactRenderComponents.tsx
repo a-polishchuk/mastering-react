@@ -1,7 +1,4 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, ColoredBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { MouseEventHandler } from 'react';
 
@@ -35,17 +32,13 @@ function Node({ level, maxLevel, path }: NodeProps): JSX.Element {
 }
 
 export function WhenReactRenderComponents(): JSX.Element {
-  const rerender = useRerender();
-
   return (
-    <>
-      <ChapterHeader title="useMemo" subtitle="When React render components?" />
-
-      <Toolbar>
-        <Button text="Click me to re-render the whole thing" onClick={rerender} />
-      </Toolbar>
-
+    <ChapterWrapper
+      title="useMemo"
+      subtitle="When React render components?"
+      rerender={useRerender()}
+    >
       <Node level={0} maxLevel={2} path={['root']} />
-    </>
+    </ChapterWrapper>
   );
 }

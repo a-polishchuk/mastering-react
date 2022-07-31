@@ -1,28 +1,17 @@
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
-import { ColoredBlock } from 'components';
-import { LoggedLifecycle } from 'components';
-import { Toolbar } from 'components';
+import { ChapterWrapper, ColoredBlock, LoggedLifecycle } from 'components';
 import { useRerender } from 'hooks/useRerender';
-
-function generateRandomKey() {
-  return Math.random().toString();
-}
+import { useRef } from 'react';
 
 export function RemountComponent(): JSX.Element {
-  const rerender = useRerender();
+  const keyRef = useRef<number>(0);
+
+  keyRef.current = keyRef.current + 1;
 
   return (
-    <>
-      <ChapterHeader title="Key property" subtitle="Re-mount component" />
-
-      <Toolbar>
-        <Button text="Click me to re-render the component" onClick={rerender} />
-      </Toolbar>
-
-      <LoggedLifecycle key={generateRandomKey()} tag="Random key">
-        <ColoredBlock>I have a randomly generated key.</ColoredBlock>
+    <ChapterWrapper title="Key property" subtitle="Re-mount component" rerender={useRerender()}>
+      <LoggedLifecycle key={keyRef.current} tag="Random key">
+        <ColoredBlock>My key is changing every render.</ColoredBlock>
       </LoggedLifecycle>
-    </>
+    </ChapterWrapper>
   );
 }

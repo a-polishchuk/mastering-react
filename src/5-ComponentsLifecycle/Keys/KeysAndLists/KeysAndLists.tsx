@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 
 import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';
@@ -11,8 +11,7 @@ export function KeysAndLists(): JSX.Element {
   const getIdKey = (item: Item, index: number) => item.id;
 
   return (
-    <>
-      <ChapterHeader title="Key property" subtitle="Keys & lists" />
+    <ChapterWrapper title="Key property" subtitle="Keys & lists">
       <div className={classes.twoColumns}>
         <i className={classes.columnTitle}>key === index</i>
         <i className={classes.columnTitle}>key === uniqueId</i>
@@ -21,6 +20,6 @@ export function KeysAndLists(): JSX.Element {
         <List generateItems={generateInitialItems} getKey={getIndexKey} />
         <List generateItems={generateInitialItems} getKey={getIdKey} />
       </div>
-    </>
+    </ChapterWrapper>
   );
 }

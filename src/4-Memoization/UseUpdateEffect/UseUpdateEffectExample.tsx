@@ -1,9 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { Button } from 'components';
-import { ChapterHeader } from 'components';
+import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
-import { Toolbar } from 'components';
-import { ValueLabel } from 'components';
 import { useCallback, useEffect } from 'react';
 import { logTagged } from 'utils/logTagged';
 
@@ -25,13 +22,11 @@ export function UseUpdateEffect(): JSX.Element {
   );
 
   return (
-    <>
-      <ChapterHeader title="useCallback" subtitle="useUpdateEffect" />
-
+    <ChapterWrapper title="useCallback" subtitle="useUpdateEffect">
       <Toolbar>
         <ValueLabel value={value} minWidth="100px" />
         <Button text="+1" onClick={increase} />
       </Toolbar>
-    </>
+    </ChapterWrapper>
   );
 }

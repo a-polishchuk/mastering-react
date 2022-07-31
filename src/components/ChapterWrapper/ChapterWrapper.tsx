@@ -17,7 +17,7 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
   const { value: childrenKey, increase: remount } = useCounter();
 
   return (
-    <>
+    <div className={classes.root}>
       <div className={classes.header}>
         <div className={classes.title}>
           <h2>{title}</h2>
@@ -30,6 +30,6 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
       <div key={childrenKey} className={classes.content}>
         {children}
       </div>
-    </>
+    </div>
   );
 }

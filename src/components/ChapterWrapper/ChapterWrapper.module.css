@@ -1,3 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .header {
   padding: 16px;
   border-bottom: 1px solid black;
@@ -10,4 +16,6 @@
 
 .content {
   padding: 16px;
+  flex: 1;
+  position: relative;
 }
