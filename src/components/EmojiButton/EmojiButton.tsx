@@ -18,7 +18,7 @@ export function EmojiButton({ emoji, onClick, disabled, tooltip }: EmojiButtonPr
           {emoji}
         </button>
       </div>
-      <ReactTooltip effect="float" type="dark" place="bottom" wrapper="span" />
+      <ReactTooltip effect="float" type="dark" place="bottom" wrapper="span" delayShow={500} />
     </>
   );
 }

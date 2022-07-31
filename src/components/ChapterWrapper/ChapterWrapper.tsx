@@ -1,5 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { ReactElement, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { EmojiButton } from '../EmojiButton/EmojiButton';
 import { FlexFiller } from '../FlexFiller';
@@ -16,6 +17,9 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
   const { title, subtitle, rerender, children } = props;
   const { value: childrenKey, increase: remount } = useCounter();
 
+  const navigate = useNavigate();
+  const closeChapter = () => navigate('/');
+
   return (
     <div className={classes.root}>
       <div className={classes.header}>
@@ -24,6 +28,7 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
           <FlexFiller />
           {rerender && <EmojiButton emoji="🔄" tooltip="RErender" onClick={rerender} />}
           <EmojiButton emoji="♻️" tooltip="REmount" onClick={remount} />
+          <EmojiButton emoji="❌" tooltip="Close" onClick={closeChapter} />
         </div>
         <h3>{subtitle}</h3>
       </div>

@@ -8,7 +8,7 @@ import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext, MasterDetailState } from './MasterDetailContext';
 
-const COLLAPSED_WIDTH = '16px';
+const COLLAPSED_WIDTH = '44px';
 
 const buildMasterStyle = (expanded: boolean): CSSProperties => ({
   minWidth: expanded ? '250px' : COLLAPSED_WIDTH,
@@ -43,14 +43,17 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
     <BrowserRouter>
       <div className={classes.container}>
         <nav className={classes.master} style={masterStyle}>
-          {expanded && (
-            <MasterDetailContext.Provider value={contextValue}>
-              {children}
-            </MasterDetailContext.Provider>
-          )}
-          <div className={classes.expandCollapseButton}>
+          <div className={classes.masterTitle}>
+            {expanded && <h2 style={{ flex: 1 }}>Mastering React</h2>}
             <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
           </div>
+          {expanded && (
+            <div className={classes.tableOfContents}>
+              <MasterDetailContext.Provider value={contextValue}>
+                {children}
+              </MasterDetailContext.Provider>
+            </div>
+          )}
         </nav>
 
         <main className={classes.detail}>

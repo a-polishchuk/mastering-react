@@ -8,21 +8,27 @@
 }
 
 .master {
-  position: relative;
-  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-right: 2px solid #000;
-  overflow-y: scroll;
 }
 
-.master .expandCollapseButton {
-  position: absolute;
-  right: 0;
-  top: 0;
+.masterTitle {
   display: flex;
-  justify-content: center;
+  gap: 8;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  justify-content: center;
+  padding: 16px;
+  min-height: 68px;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.tableOfContents {
+  position: relative;
+  overflow-y: scroll;
+  padding: 10px;
+  flex: 1;
 }
 
 .detail {
