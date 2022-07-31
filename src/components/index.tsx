@@ -1,5 +1,4 @@
 import { Button } from './Button/Button';
-import { ChapterHeader } from './ChapterHeader';
 import { ChapterWrapper } from './ChapterWrapper/ChapterWrapper';
 import { ColoredBlock } from './ColoredBlock/ColoredBlock';
 import { FlexFiller } from './FlexFiller';
@@ -17,7 +16,6 @@ import { ValueLabel } from './ValueLabel/ValueLabel';
 export {
   Button,
   Chapter,
-  ChapterHeader,
   ChapterWrapper,
   ColoredBlock,
   FlexFiller,

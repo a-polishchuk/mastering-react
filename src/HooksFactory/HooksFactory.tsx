@@ -1,4 +1,4 @@
-import { ChapterHeader } from 'components';
+import { ChapterWrapper } from 'components';
 
 import { createMappedState } from './createMappedState';
 import { Field } from './Field';
@@ -21,11 +21,10 @@ export function HooksFactory(): JSX.Element {
   const [noSpaces, setNoSpaces] = useNoSpacesState('  SOME VALUE    ');
 
   return (
-    <>
-      <ChapterHeader title="Design Patterns" subtitle="Hooks Factory" />
+    <ChapterWrapper title="Design Patterns" subtitle="Hooks Factory">
       <Field label="lowercase only" value={lowercase} onChange={setLowercase} />
       <Field label="UPPERCASE ONLY" value={uppercase} onChange={setUppercase} />
       <Field label="NoSpacesHere" value={noSpaces} onChange={setNoSpaces} />
-    </>
+    </ChapterWrapper>
   );
 }
