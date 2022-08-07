@@ -1,0 +1,22 @@
+.topPanel {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px dashed #bbbbbb;
+  padding-left: 10px;
+}
+
+.avatarContainer {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.userNameContainer {
+  flex: 1;
+}
+
+.widgetContainer {
+  margin-left: 10px;
+  margin-right: 10px;
+}

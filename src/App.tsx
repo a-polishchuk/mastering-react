@@ -5,6 +5,7 @@ import { ImperativeCodeSection } from '3-ImperativeCode/ImperativeCodeSection';
 import { MemoizationSection } from '4-Memoization/MemoizationSection';
 import { ComponentsLifecycleSection } from '5-ComponentsLifecycle/ComponentsLifecycleSection';
 import { ContextAndReducerSection } from '6-ContextAndReducer/ContextAndReducerSection';
+import { DataFecthingSection } from '8-DataFetching/DataFetchingSection';
 import { MasterDetail } from 'components';
 
 export function App(): JSX.Element {
@@ -17,6 +18,7 @@ export function App(): JSX.Element {
       <MemoizationSection />
       <ComponentsLifecycleSection />
       <ContextAndReducerSection />
+      <DataFecthingSection />
     </MasterDetail>
   );
 }

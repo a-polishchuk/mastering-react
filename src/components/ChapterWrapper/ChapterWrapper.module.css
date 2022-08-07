@@ -7,7 +7,6 @@
 .header {
   padding: 16px;
   border-bottom: 1px solid var(--divider-color);
-  min-height: 68px;
 }
 
 .title {

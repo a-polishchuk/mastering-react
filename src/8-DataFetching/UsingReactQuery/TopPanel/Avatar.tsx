@@ -1,0 +1,18 @@
+import { useUser } from '../hooks/useUser';
+import classes from './Avatar.module.css';
+
+function useUserInitials(): string {
+  const { data } = useUser();
+  const userName: string = data?.name ?? '';
+
+  return userName
+    .split(' ')
+    .map((w) => w.charAt(0))
+    .join('');
+}
+
+export function Avatar(): JSX.Element {
+  const initials = useUserInitials();
+
+  return <div className={classes.avatar}>{initials}</div>;
+}
