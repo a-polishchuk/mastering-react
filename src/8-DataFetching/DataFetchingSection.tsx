@@ -7,7 +7,7 @@ import { UsingSwr } from './UsingSwr/UsingSwr';
 // const UsingSwr = lazy(() => import('./UsingSwr'));
 // const UsingReactQuery = lazy(() => import('./UsingReactQuery'));
 
-export function DataFecthingSection() {
+export function DataFecthingSection(): JSX.Element {
   return (
     <Section title="Data fecthing">
       <Chapter emoji="🌐" title="React Query" path="react-query" element={<UsingReactQuery />} />
