@@ -1,0 +1,9 @@
+.profile {
+  border: 2px dashed #bbbbbb;
+}
+
+.error {
+  font-size: 36px;
+  color: red;
+  padding: 20px;
+}

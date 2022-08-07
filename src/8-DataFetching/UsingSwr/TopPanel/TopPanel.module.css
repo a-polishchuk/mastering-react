@@ -1,10 +1,10 @@
 .topPanel {
   display: flex;
   flex-direction: row;
-  gap: 16px;
   align-items: center;
-  border: 2px dashed #bbbbbb;
+  gap: 16px;
   padding: 10px;
+  border: 2px dashed #bbbbbb;
 }
 
 .flex1 {
