@@ -1,27 +1,9 @@
-import { Todo } from '8-DataFetching/types';
 import { Button } from 'components';
 
-import { useTodoList } from '../hooks/useTodoList';
-
-interface TodoRowProps {
-  number: number;
-  data: Todo;
-}
-
-function TodoRow({ number, data }: TodoRowProps): JSX.Element {
-  const { title, completed } = data;
-  return (
-    <tr>
-      <td>{number}</td>
-      <td>{title}</td>
-      <td>{completed && '✅'}</td>
-    </tr>
-  );
-}
+import { useTodoList } from './hooks/useTodoList';
 
 export function TodoList(): JSX.Element {
   const { data, refetch } = useTodoList();
-  const todos = data || [];
 
   return (
     <table>
@@ -41,8 +23,12 @@ export function TodoList(): JSX.Element {
         </tr>
       </thead>
       <tbody>
-        {todos.map((todo, index) => (
-          <TodoRow key={todo.id} number={index + 1} data={todo} />
+        {data?.map((todo, index) => (
+          <tr key={todo.id}>
+            <td>{index + 1}</td>
+            <td>{todo.title}</td>
+            <td>{todo.completed && '✅'}</td>
+          </tr>
         ))}
       </tbody>
     </table>

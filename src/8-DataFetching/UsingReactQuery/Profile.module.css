@@ -1,4 +1,6 @@
-.profile {
+.loading {
+  position: relative;
+  height: 100px;
   border: 2px dashed #bbbbbb;
 }
 
@@ -6,4 +8,5 @@
   font-size: 36px;
   color: red;
   padding: 20px;
+  border: 2px dashed red;
 }

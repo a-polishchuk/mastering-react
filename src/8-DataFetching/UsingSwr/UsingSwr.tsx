@@ -14,8 +14,8 @@ export function UsingSwr() {
   return (
     <ChapterWrapper title="SWR" subtitle="Data fetching">
       <SWRConfig value={SWR_CONFIG}>
+        <TopPanel />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <TopPanel />
           <Profile />
           <TodoList />
         </div>

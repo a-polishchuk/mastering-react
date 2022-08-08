@@ -20,8 +20,8 @@ export function UsingReactQuery(): JSX.Element {
   return (
     <ChapterWrapper title="React Query" subtitle="Data fetching">
       <QueryClientProvider client={queryClient}>
+        <TopPanel />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <TopPanel />
           <Profile />
           <TodoList />
         </div>
