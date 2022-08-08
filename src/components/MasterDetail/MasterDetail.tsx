@@ -1,5 +1,6 @@
+import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, ReactNode, useCallback, useState } from 'react';
+import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
 import { BrowserRouter, PathRouteProps, Route, Routes } from 'react-router-dom';
 
 import { EasterEgg } from './EasterEgg';
@@ -57,13 +58,15 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
         </nav>
 
         <main className={classes.detail}>
-          <Routes>
-            <Route path="/" element={<EmptyScreen />} />
-            <Route path="*" element={<EmptyScreen />} />
-            {contextValue.routes.map((props) => (
-              <Route key={props.path} {...props} />
-            ))}
-          </Routes>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<EmptyScreen />} />
+              <Route path="*" element={<EmptyScreen />} />
+              {contextValue.routes.map((props) => (
+                <Route key={props.path} {...props} />
+              ))}
+            </Routes>
+          </Suspense>
         </main>
       </div>
       <EasterEgg />

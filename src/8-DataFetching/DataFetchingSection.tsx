@@ -1,11 +1,11 @@
 import { Chapter, Section } from 'components/MasterDetail';
+import { lazy } from 'react';
 
-import { UsingReactQuery } from './UsingReactQuery/UsingReactQuery';
-import { UsingSwr } from './UsingSwr/UsingSwr';
+// import { UsingReactQuery } from './UsingReactQuery/UsingReactQuery';
+// import { UsingSwr } from './UsingSwr/UsingSwr';
 
-// TODO: check how lazy loading works with react router
-// const UsingSwr = lazy(() => import('./UsingSwr'));
-// const UsingReactQuery = lazy(() => import('./UsingReactQuery'));
+const UsingReactQuery = lazy(() => import('./UsingReactQuery'));
+const UsingSwr = lazy(() => import('./UsingSwr'));
 
 export function DataFecthingSection(): JSX.Element {
   return (

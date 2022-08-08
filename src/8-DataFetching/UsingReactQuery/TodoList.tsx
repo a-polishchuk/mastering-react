@@ -2,7 +2,6 @@ import { Todo } from '8-DataFetching/types';
 import { Button } from 'components';
 
 import { useTodoList } from '../hooks/useTodoList';
-import classes from './TodoList.module.css';
 
 interface TodoRowProps {
   number: number;
@@ -15,24 +14,24 @@ function TodoRow({ number, data }: TodoRowProps): JSX.Element {
     <tr>
       <td>{number}</td>
       <td>{title}</td>
-      <td>{completed && '\u{2705}'}</td>
+      <td>{completed && '✅'}</td>
     </tr>
   );
 }
 
 export function TodoList(): JSX.Element {
-  const { data, mutate } = useTodoList();
+  const { data, refetch } = useTodoList();
   const todos = data || [];
 
   return (
     <table>
       <thead>
         <tr>
-          <th className={classes.title} colSpan={2}>
+          <th colSpan={2} style={{ fontSize: 24 }}>
             Todos List
           </th>
           <th>
-            <Button text="Refresh" onClick={() => mutate()} />
+            <Button text="Refresh" onClick={() => refetch()} />
           </th>
         </tr>
         <tr>

@@ -1,20 +1,21 @@
+import { Toolbar } from 'components';
+
 import { Avatar } from './Avatar';
 import { LastUpdated } from './LastUpdated';
 import { RefreshAll } from './RefreshAll';
 import { TodoCounter } from './TodoCounter';
-import classes from './TopPanel.module.css';
 import { UserName } from './UserName';
 
 export function TopPanel(): JSX.Element {
   return (
-    <div className={classes.topPanel}>
+    <Toolbar>
       <Avatar />
-      <div className={classes.flex1}>
+      <div style={{ flex: 1 }}>
         <UserName />
       </div>
       <TodoCounter />
       <LastUpdated />
       <RefreshAll />
-    </div>
+    </Toolbar>
   );
 }

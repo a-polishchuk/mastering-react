@@ -2,8 +2,8 @@ import { ChapterWrapper } from 'components';
 import { SWRConfig } from 'swr';
 
 import { fetcher } from './api/fetcher';
-import { Profile } from './Profile/Profile';
-import { TodoList } from './TodoList/TodoList';
+import { Profile } from './Profile';
+import { TodoList } from './TodoList';
 import { TopPanel } from './TopPanel/TopPanel';
 
 const SWR_CONFIG = {

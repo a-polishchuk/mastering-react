@@ -30,6 +30,10 @@ div {
   box-sizing: border-box;
 }
 
+tr:nth-child(even) {
+  background-color: #eeeeee66;
+}
+
 th {
   background-color: var(--table-border-color);
   border: 1px solid var(--table-border-color);
