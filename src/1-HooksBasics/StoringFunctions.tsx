@@ -30,7 +30,7 @@ export function StoringFunctions(): JSX.Element {
   };
 
   return (
-    <ChapterWrapper title="useState" subtitle="Storing function in useState">
+    <ChapterWrapper title="Storing function in useState" subtitle="Hooks basics, useState">
       <Toolbar>
         <Button onClick={buildClickHandler(add, '➕')} text="➕ Add" />
         <Button onClick={buildClickHandler(subtract, '➖')} text="➖ Subtract" />

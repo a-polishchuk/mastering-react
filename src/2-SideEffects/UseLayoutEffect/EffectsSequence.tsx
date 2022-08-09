@@ -56,7 +56,7 @@ export function EffectsSequence() {
       onClick={handleClick}
       style={{ height: '100%', width: '100%', position: 'relative' }}
     >
-      <ChapterWrapper title="useEffect vs useLayoutEffect" subtitle="Effects sequence">
+      <ChapterWrapper title="Effects sequence" subtitle="useEffect vs useLayoutEffect">
         {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}
         <div style={buildDotStyle(clickPos, '#5599ff88', 10)} />
         <div style={buildDotStyle(effectPos, '#ff559988', 20)} />

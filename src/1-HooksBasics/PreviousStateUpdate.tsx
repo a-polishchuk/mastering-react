@@ -31,7 +31,7 @@ export function PreviousStateUpdate(): JSX.Element {
   };
 
   return (
-    <ChapterWrapper title="useState" subtitle="Previous state update">
+    <ChapterWrapper title="Previous state update" subtitle="Hooks basics, useState">
       <Toolbar>
         <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />

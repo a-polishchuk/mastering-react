@@ -57,8 +57,8 @@ export function UseLayoutEffectExample() {
       style={{ height: '100%', width: '100%', position: 'relative' }}
     >
       <ChapterWrapper
-        title="useEffect vs useLayoutEffect"
-        subtitle="Batching effects with useLayoutEffect"
+        title="Batching effects with useLayoutEffect"
+        subtitle="useEffect vs useLayoutEffect"
       >
         {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}
         <div style={buildDotStyle(clickPos, '#5599ff88', 10)} />

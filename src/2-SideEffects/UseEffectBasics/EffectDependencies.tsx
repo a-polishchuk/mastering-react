@@ -28,7 +28,7 @@ export function EffectDependencies(): JSX.Element {
   );
 
   return (
-    <ChapterWrapper title="useEffect basics" subtitle="Effect dependencies">
+    <ChapterWrapper title="Effect dependencies" subtitle="useEffect basics">
       <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
       <Toolbar>
         <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />

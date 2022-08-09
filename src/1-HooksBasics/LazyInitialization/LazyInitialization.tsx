@@ -61,7 +61,7 @@ export function LazyInitialization(): JSX.Element {
     });
 
   return (
-    <ChapterWrapper title="useState" subtitle="Lazy initialization">
+    <ChapterWrapper title="Lazy initialization" subtitle="Hooks basics, useState">
       <Toolbar>
         <Button text="⬆️ Sort" onClick={sortAscending} />
         <Button text="⬇️ Sort" onClick={sortDescending} />

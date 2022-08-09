@@ -36,7 +36,7 @@ export function FetchDataInUseEffect(): JSX.Element {
   };
 
   return (
-    <ChapterWrapper title="useEffect" subtitle="Fetch data in useEffect">
+    <ChapterWrapper title="Fetch data in useEffect" subtitle="Side effects, useEffect">
       <Toolbar>
         Post ID <input type="number" value={postId} onChange={handleInputChange} />
       </Toolbar>

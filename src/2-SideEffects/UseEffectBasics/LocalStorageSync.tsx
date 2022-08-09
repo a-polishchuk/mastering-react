@@ -40,7 +40,7 @@ export function LocalStorageSync() {
   logTagged('Render', String(count));
 
   return (
-    <ChapterWrapper title="useEffect basics" subtitle="Local storage sync">
+    <ChapterWrapper title="Local storage sync" subtitle="useEffect basics">
       <Counter value={count} delta={DELTA} increase={increase} decrease={decrease} />
     </ChapterWrapper>
   );

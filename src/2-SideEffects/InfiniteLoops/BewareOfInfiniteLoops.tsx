@@ -27,7 +27,7 @@ export function BewareOfInfiniteLoops(): JSX.Element {
   }, [topEmojis]);
 
   return (
-    <ChapterWrapper title="useEffect" subtitle="Beware of infinite loops">
+    <ChapterWrapper title="Beware of infinite loops" subtitle="Side effects, useEffect">
       <EmojisBar emojis={topEmojis} onClick={addToBottom} />
       <EmojisBar emojis={bottomEmojis} onClick={addToTop} />
     </ChapterWrapper>

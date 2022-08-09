@@ -23,7 +23,7 @@ export function UseGlobalEvents(): JSX.Element {
   });
 
   return (
-    <ChapterWrapper title="useEffect" subtitle="Listening to global events">
+    <ChapterWrapper title="Listening to global events" subtitle="Side effects, useEffect">
       <Toolbar>Use ⬅️ ➡️ to change the preview window size.</Toolbar>
       <WindowSizePreview previewWidth={previewWidth} />
     </ChapterWrapper>

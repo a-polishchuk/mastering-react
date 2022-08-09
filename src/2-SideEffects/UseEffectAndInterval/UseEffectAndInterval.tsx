@@ -8,7 +8,7 @@ const CLOCK_EMOJIS = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '�
 
 export function UseEffectAndInterval(): JSX.Element {
   return (
-    <ChapterWrapper title="useEffect" subtitle="useEffect + setInterval">
+    <ChapterWrapper title="useEffect + setInterval" subtitle="Side effects, useEffect">
       <EmojiSection emojis={MOON_EMOJIS} />
       <EmojiSection emojis={EARTH_EMOJIS} />
       <EmojiSection emojis={CLOCK_EMOJIS} />

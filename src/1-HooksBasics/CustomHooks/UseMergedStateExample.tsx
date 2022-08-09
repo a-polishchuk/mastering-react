@@ -39,7 +39,7 @@ export function UseMergedStateExample(): JSX.Element {
   const reset = () => setData(INITIAL_STATE);
 
   return (
-    <ChapterWrapper title="First custom hooks" subtitle="useMergedState">
+    <ChapterWrapper title="useMergedState" subtitle="First custom hooks">
       <form>
         <FormField
           name="firstName"

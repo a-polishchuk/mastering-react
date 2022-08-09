@@ -18,9 +18,9 @@ function DecadePicker({ initialValue }: { initialValue: number }): JSX.Element {
     <div style={{ padding: 10 }}>
       <div style={{ fontSize: 24 }}>Pick a decade:</div>
       <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-        <Button onClick={() => decrease()} text="-" />
+        <Button onClick={() => decrease()} text="➖" />
         <ValueLabel value={`${year}'s`} />
-        <Button onClick={() => increase()} text="+" />
+        <Button onClick={() => increase()} text="➕" />
       </div>
     </div>
   );
@@ -28,7 +28,7 @@ function DecadePicker({ initialValue }: { initialValue: number }): JSX.Element {
 
 export function UseCounterExample(): JSX.Element {
   return (
-    <ChapterWrapper title="First custom hooks" subtitle="useCounter">
+    <ChapterWrapper title="useCounter" subtitle="First custom hooks">
       <ClicksCounter />
       <DecadePicker initialValue={1970} />
     </ChapterWrapper>

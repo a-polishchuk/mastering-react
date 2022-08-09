@@ -24,10 +24,7 @@ export function YouDontNeedUseEffect(): JSX.Element {
   const rerender = useRerender();
 
   return (
-    <ChapterWrapper
-      title="useEffect"
-      subtitle="You don't need useEffect. Maybe useMemo will do the thing?"
-    >
+    <ChapterWrapper title="You don't need useEffect" subtitle="Side effects, useEffect">
       <Toolbar>
         <Button text="Click me to re-render the component" onClick={rerender} />
       </Toolbar>

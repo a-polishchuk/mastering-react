@@ -26,7 +26,7 @@ export function UseStateBasics(): JSX.Element {
   };
 
   return (
-    <ChapterWrapper title="useState basics" subtitle="General hooks rules">
+    <ChapterWrapper title="What is a hook?" subtitle="Hooks basics, useState">
       <Toolbar>
         <ValueLabel value={isClicksVisible ? clicks : '?'} minWidth={100} />
         <Button onClick={incrementCounter} text="Increment counter" />
