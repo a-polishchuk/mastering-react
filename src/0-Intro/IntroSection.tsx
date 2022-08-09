@@ -7,7 +7,7 @@ import { EventHandlers } from './JSX/EventHandlers';
 import { Fragments } from './JSX/Fragments';
 import { JsxBasics } from './JSX/JsxBasics';
 import { ReactWithoutJsx } from './JSX/ReactWithoutJsx';
-import { PropsAndChildren } from './PropsAndChildren';
+import { PropsAndChildren } from './PropsAndChildren/PropsAndChildren';
 import { ReactTraits } from './ReactTraits/ReactTraits';
 import { RenderingProcess } from './RenderingProcess/RenderingProcess';
 

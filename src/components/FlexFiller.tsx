@@ -1,3 +1,3 @@
 export function FlexFiller(): JSX.Element {
-  return <div style={{ flex: 1 }} />;
+  return <div className="flex1" />;
 }
