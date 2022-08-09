@@ -4,7 +4,10 @@ import { FamilyMember } from './FamilyMember';
 
 export function PropsAndChildren(): JSX.Element {
   return (
-    <ChapterWrapper title="Components, props and children">
+    <ChapterWrapper
+      title="Components, props and children"
+      subtitle="How to manage child components"
+    >
       <FamilyMember name="Jack">
         <FamilyMember name="John">
           <FamilyMember name="Leo">

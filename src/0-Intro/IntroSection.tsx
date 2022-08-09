@@ -8,8 +8,8 @@ import { Fragments } from './JSX/Fragments';
 import { JsxBasics } from './JSX/JsxBasics';
 import { ReactWithoutJsx } from './JSX/ReactWithoutJsx';
 import { PropsAndChildren } from './PropsAndChildren';
-import { ReactTraits } from './ReactTraits';
-import { RenderingProcess } from './RenderingProcess';
+import { ReactTraits } from './ReactTraits/ReactTraits';
+import { RenderingProcess } from './RenderingProcess/RenderingProcess';
 
 export function IntroSection() {
   return (
