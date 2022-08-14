@@ -4,7 +4,7 @@ export type IntervalCallback = (...args: any[]) => void;
 
 export function useInterval(callback: IntervalCallback, delay: number | null) {
   const callbackRef = useRef(callback);
-  const [intervalHandle, setIntervalHandle] = useState<number | null>(null);
+  const [intervalHandle, setIntervalHandle] = useState<any>(null);
   const [trigger, setTrigger] = useState<{} | null>(null);
 
   useEffect(() => {

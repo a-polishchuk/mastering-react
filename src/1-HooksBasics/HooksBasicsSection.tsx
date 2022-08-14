@@ -5,6 +5,7 @@ import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
 import { LazyInitialization } from './LazyInitialization/LazyInitialization';
 import { PreviousStateUpdate } from './PreviousStateUpdate';
 import { StoringFunctions } from './StoringFunctions';
+import { UseStateAndNewRenders } from './UseStateAndNewRenders';
 import { UseStateBasics } from './UseStateBasics';
 
 export function HooksBasicsSection(): JSX.Element {
@@ -23,9 +24,9 @@ export function HooksBasicsSection(): JSX.Element {
         element={<PreviousStateUpdate />}
       />
       <Section title="First custom hooks">
-        <Chapter emoji="🪝" title="useCounter" path="use-counter" element={<UseCounterExample />} />
+        <Chapter emoji="🔢" title="useCounter" path="use-counter" element={<UseCounterExample />} />
         <Chapter
-          emoji="🪝"
+          emoji="📑"
           title="useMergedState"
           path="use-merged-state"
           element={<UseMergedStateExample />}
@@ -42,6 +43,12 @@ export function HooksBasicsSection(): JSX.Element {
         title="Storing functions"
         path="storing-functions"
         element={<StoringFunctions />}
+      />
+      <Chapter
+        emoji="🎞"
+        title="useState and new renders"
+        path="use-state-and-new-renders"
+        element={<UseStateAndNewRenders />}
       />
     </Section>
   );
