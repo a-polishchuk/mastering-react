@@ -2,6 +2,7 @@ import { Chapter, Section } from 'components';
 
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
+import { DirectDomChanges } from './DirectDomChanges';
 import { LazyInitialization } from './LazyInitialization/LazyInitialization';
 import { PreviousStateUpdate } from './PreviousStateUpdate';
 import { StoringFunctions } from './StoringFunctions';
@@ -49,6 +50,12 @@ export function HooksBasicsSection(): JSX.Element {
         title="useState and new renders"
         path="use-state-and-new-renders"
         element={<UseStateAndNewRenders />}
+      />
+      <Chapter
+        emoji="🔀"
+        title="Direct DOM changes"
+        path="direct-dom-changes"
+        element={<DirectDomChanges />}
       />
     </Section>
   );

@@ -15,16 +15,17 @@ interface User {
   role: UserRole;
 }
 
-const EMOJIS: string[] = ['🗺', '🗿', '🏟', '🗼', '🏯', '🎡'];
-const USER: User = {
+const DEFAULT_USER: User = {
   id: '1',
   name: 'John Doe',
   role: UserRole.ADMIN,
 };
 
+const EMOJIS: string[] = ['🗺', '🗿', '🏟', '🗼', '🏯', '🎡'];
+
 export function UseStateAndNewRenders(): JSX.Element {
   const [emoji, setEmoji] = useState<string>(EMOJIS[0]);
-  const [user, setUser] = useState<User>(USER);
+  const [user, setUser] = useState<User>(DEFAULT_USER);
 
   const rerender = useRerender();
 
@@ -37,7 +38,7 @@ export function UseStateAndNewRenders(): JSX.Element {
   };
 
   const setUserConstant = () => {
-    setUser(USER);
+    setUser(DEFAULT_USER);
   };
 
   const setObjectLiteral = () => {
@@ -57,6 +58,7 @@ export function UseStateAndNewRenders(): JSX.Element {
       <ColoredBlock style={{ marginBottom: 24 }}>
         I'm a render indicator. If I will change my background color - new render was triggered.
       </ColoredBlock>
+
       <Toolbar>{EMOJIS.map(mapToEmojiButton)}</Toolbar>
       <ValueLabel value={emoji} />
 
