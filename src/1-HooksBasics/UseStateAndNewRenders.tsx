@@ -1,5 +1,12 @@
-import { Button, ChapterWrapper, ColoredBlock, PropsTable, Toolbar, ValueLabel } from 'components';
-import { EmojiButton } from 'components/EmojiButton/EmojiButton';
+import {
+  Button,
+  ChapterWrapper,
+  ColoredBlock,
+  EmojiButton,
+  PropsTable,
+  Toolbar,
+  ValueLabel,
+} from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { useState } from 'react';
 import { logTagged } from 'utils/logTagged';

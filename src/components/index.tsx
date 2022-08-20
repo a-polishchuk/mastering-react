@@ -1,6 +1,7 @@
 import { Button } from './Button/Button';
 import { ChapterWrapper } from './ChapterWrapper/ChapterWrapper';
 import { ColoredBlock } from './ColoredBlock/ColoredBlock';
+import { EmojiButton } from './EmojiButton/EmojiButton';
 import { FlexFiller } from './FlexFiller';
 import { Label } from './Label/Label';
 import { LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
@@ -18,6 +19,7 @@ export {
   Chapter,
   ChapterWrapper,
   ColoredBlock,
+  EmojiButton,
   FlexFiller,
   Label,
   LoadingSpinner,

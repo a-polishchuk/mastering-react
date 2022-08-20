@@ -3,6 +3,7 @@ import { Chapter, Section } from 'components';
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
 import { DirectDomChanges } from './DirectDomChanges';
+import { DirectStateMutation } from './DirectStateMutation';
 import { LazyInitialization } from './LazyInitialization/LazyInitialization';
 import { PreviousStateUpdate } from './PreviousStateUpdate';
 import { StoringFunctions } from './StoringFunctions';
@@ -23,6 +24,12 @@ export function HooksBasicsSection(): JSX.Element {
         title="Previous state update"
         path="prev-state-update"
         element={<PreviousStateUpdate />}
+      />
+      <Chapter
+        emoji="📉"
+        title="Direct state mutation"
+        path="direct-state-mutation"
+        element={<DirectStateMutation />}
       />
       <Section title="First custom hooks">
         <Chapter emoji="🔢" title="useCounter" path="use-counter" element={<UseCounterExample />} />

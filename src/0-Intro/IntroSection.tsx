@@ -20,7 +20,7 @@ export function IntroSection() {
       <Section title="JSX">
         <Chapter emoji="📝" title="JSX Basics" path="jsx-basics" element={<JsxBasics />} />
         <Chapter
-          emoji="📝"
+          emoji="🏗"
           title="React.createElement()"
           path="create-element"
           element={<ReactWithoutJsx />}
