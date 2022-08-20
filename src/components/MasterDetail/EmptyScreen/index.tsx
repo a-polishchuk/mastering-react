@@ -10,9 +10,9 @@ import { Message } from './types';
 import { useDotsVisible } from './useDotsVisible';
 
 const MESSAGES_TEXT = [
-  'Greetings, human!',
-  'Welcome to the "Mastering React" course',
-  'Please select some chapter in the left menu',
+  'Вітаю, homo sapiens!',
+  'Тут ти зможеш знайти всі приклади з курсу "Опановуємо React"',
+  'Просто натисни на потрібний розділ в меню ліворуч',
 ];
 
 export function EmptyScreen(): JSX.Element {

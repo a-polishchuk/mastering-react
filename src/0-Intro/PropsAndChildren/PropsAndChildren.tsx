@@ -21,9 +21,8 @@ export function PropsAndChildren(): JSX.Element {
         <FamilyMember name="Jill">
           <FamilyMember name="Fluffy" />
           <FamilyMember name="Tiger" />
-          <FamilyMember name="Mufasa">
-            <FamilyMember name="Simba" />
-          </FamilyMember>
+          {/* you can pass children as a regular property as well, but I think it's a bad practice */}
+          <FamilyMember name="Mufasa" children={<FamilyMember name="Simba" />} />
         </FamilyMember>
       </FamilyMember>
     </ChapterWrapper>
