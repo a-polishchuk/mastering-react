@@ -47,7 +47,7 @@ export function HooksBasicsSection(): JSX.Element {
         element={<LazyInitialization />}
       />
       <Chapter
-        emoji="⇒"
+        emoji="🧰"
         title="Storing functions"
         path="storing-functions"
         element={<StoringFunctions />}
