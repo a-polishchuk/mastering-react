@@ -16,7 +16,12 @@ export function ColoredBlock({ children, style, onClick }: ColoredBlockProps): J
   };
 
   return (
-    <div className={classes.coloredBlock} style={composedStyle} onClick={onClick}>
+    <div
+      data-testid="colored-block"
+      className={classes.coloredBlock}
+      style={composedStyle}
+      onClick={onClick}
+    >
       {children}
     </div>
   );
