@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
-import { describe, expect, test, vi } from 'vitest';
+import { vi } from 'vitest';
 
 import { ChapterWrapper, ChapterWrapperProps } from './ChapterWrapper';
 
@@ -18,7 +18,6 @@ describe('ChapterWrapper', () => {
     const title = 'Title';
     const subtitle = 'Subtitle';
 
-    // TODO: should I wrapper the render call with act() every time?
     render(
       <TestWrapper title={title} subtitle={subtitle}>
         Chapter content

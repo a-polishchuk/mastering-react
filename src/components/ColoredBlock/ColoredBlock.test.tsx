@@ -1,12 +1,11 @@
-import { describe, expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-import { ColoredBlock } from './ColoredBlock';
 import { ChapterWrapper } from 'components/ChapterWrapper/ChapterWrapper';
 import { useRerender } from 'hooks/useRerender';
-import { BrowserRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
+import { BrowserRouter } from 'react-router-dom';
+
+import { ColoredBlock } from './ColoredBlock';
 
 function WithChapterWrapper(): JSX.Element {
   const rerender = useRerender();
