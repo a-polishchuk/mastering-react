@@ -6,8 +6,9 @@ export default defineConfig({
   plugins: [react() as any, tsconfigPaths()],
   test: {
     globals: true,
+    css: false,
+    clearMocks: true,
     environment: 'jsdom',
     setupFiles: 'src/setupTests.ts',
-    css: false,
   },
 });
