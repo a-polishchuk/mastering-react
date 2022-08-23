@@ -27,15 +27,15 @@ export function Section({ title, children }: SectionProps): JSX.Element {
   };
 
   return (
-    <>
-      <div className={classes.section} onClick={toggleExpanded}>
+    <div className={classes.section}>
+      <div className={classes.sectionTitle} onClick={toggleExpanded}>
         <ExpandToggle expanded={expanded} />
         <div>{title}</div>
       </div>
       <div className={classes.sectionContent} style={contentStyle}>
         {children}
       </div>
-    </>
+    </div>
   );
 }
 

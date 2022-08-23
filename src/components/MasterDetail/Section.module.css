@@ -1,20 +1,21 @@
 .section {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.sectionTitle {
   display: flex;
   gap: 10px;
   align-items: center;
   cursor: pointer;
-  border-bottom: 1px solid #00000022;
 }
 
-.section:hover {
+.sectionTitle:hover {
   text-shadow: 2px 2px #e1ccff;
 }
 
 .sectionContent {
-  padding-top: 8px;
-  padding-left: 8px;
-  padding-bottom: 8px;
-  border-left: 1px solid #00000022;
+  padding: 8px;
+  border: 1px solid var(--divider-color);
+  box-shadow: 2px 2px 0px 0px #0001;
 }
