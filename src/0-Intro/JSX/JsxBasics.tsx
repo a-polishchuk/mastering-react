@@ -44,6 +44,7 @@ function getUrlFor(subject: string): string {
 }
 
 function FactsAboutJsx(): JSX.Element {
+  const any = 'any';
   return (
     <div>
       👽 Facts about JSX:
@@ -58,6 +59,7 @@ function FactsAboutJsx(): JSX.Element {
         </li>
         <li>JSX is JS, so you can do with JSX everything you can do with regular JS values</li>
         <li>You can use {'any'} expressions inside the JSX</li>
+        <li>{`But note that '${any}' in previous example rendered in a separate text element`}</li>
         <li>2 + 2 = {2 + 2} (a fact, but not about JSX)</li>
       </ol>
     </div>
