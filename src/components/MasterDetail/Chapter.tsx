@@ -1,3 +1,4 @@
+import { RouterPath } from 'config/RouterPath';
 import { ReactNode, useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -7,7 +8,7 @@ import { useMasterDetailContext } from './MasterDetailContext';
 export interface ChapterProps {
   title: string;
   element: ReactNode;
-  path: string;
+  path: RouterPath;
   emoji?: string;
 }
 

@@ -1,4 +1,5 @@
 import { Chapter, Section } from 'components/MasterDetail';
+import { RouterPath } from 'config/RouterPath';
 import { lazy } from 'react';
 
 // import { UsingReactQuery } from './UsingReactQuery/UsingReactQuery';
@@ -10,8 +11,13 @@ const UsingSwr = lazy(() => import('./UsingSwr'));
 export function DataFecthingSection(): JSX.Element {
   return (
     <Section title="Data fecthing">
-      <Chapter emoji="🌐" title="React Query" path="react-query" element={<UsingReactQuery />} />
-      <Chapter emoji="🌐" title="SWR" path="swr" element={<UsingSwr />} />
+      <Chapter
+        emoji="🌐"
+        title="React Query"
+        path={RouterPath.REACT_QUERY}
+        element={<UsingReactQuery />}
+      />
+      <Chapter emoji="🌐" title="SWR" path={RouterPath.SWR} element={<UsingSwr />} />
     </Section>
   );
 }

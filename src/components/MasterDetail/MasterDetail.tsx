@@ -1,4 +1,5 @@
 import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
+import { RouterPath } from 'config/RouterPath';
 import { useToggle } from 'hooks/useToggle';
 import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
 import { BrowserRouter, PathRouteProps, Route, Routes } from 'react-router-dom';
@@ -41,7 +42,7 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
   const masterStyle = buildMasterStyle(expanded);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mastering-react">
       <div className={classes.container}>
         <nav className={classes.master} style={masterStyle}>
           <div className={classes.masterTitle}>
@@ -60,8 +61,8 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
         <main className={classes.detail}>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              <Route path="/" element={<EmptyScreen />} />
-              <Route path="*" element={<EmptyScreen />} />
+              <Route path={RouterPath.ROOT} element={<EmptyScreen />} />
+              <Route path={RouterPath.PAGE_NOT_FOUND} element={<EmptyScreen />} />
               {contextValue.routes.map((props) => (
                 <Route key={props.path} {...props} />
               ))}

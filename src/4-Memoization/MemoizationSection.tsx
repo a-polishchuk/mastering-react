@@ -1,10 +1,11 @@
-import { Section, Chapter } from 'components';
+import { Chapter, Section } from 'components';
+import { RouterPath } from 'config/RouterPath';
 
-import { ListWithoutMemoization } from './ListWithoutMemoization/ListWithoutMemoization';
 import { ListWithMemoization } from './ListWithMemoization/ListWithMemoization';
-import { UseUpdateEffect } from './UseUpdateEffect/UseUpdateEffectExample';
-import { WhenReactRenderComponents } from './UseMemo/WhenReactRenderComponents';
+import { ListWithoutMemoization } from './ListWithoutMemoization/ListWithoutMemoization';
 import { UseMemoExample } from './UseMemo/UseMemoExample';
+import { WhenReactRenderComponents } from './UseMemo/WhenReactRenderComponents';
+import { UseUpdateEffect } from './UseUpdateEffect/UseUpdateEffectExample';
 
 export function MemoizationSection(): JSX.Element {
   return (
@@ -13,19 +14,19 @@ export function MemoizationSection(): JSX.Element {
         <Chapter
           emoji="🌉"
           title="List without memoization"
-          path="list-withouth-memoization"
+          path={RouterPath.LIST_WITHOUT_MEMOIZATION}
           element={<ListWithoutMemoization />}
         />
         <Chapter
           emoji="🌁"
           title="List with memoization"
-          path="list-with-memoization"
+          path={RouterPath.LIST_WITH_MEMOIZATION}
           element={<ListWithMemoization />}
         />
         <Chapter
           emoji="📬"
           title="useUpdateEffect"
-          path="use-update-effect"
+          path={RouterPath.USE_UPDATE_EFFECT}
           element={<UseUpdateEffect />}
         />
       </Section>
@@ -33,10 +34,15 @@ export function MemoizationSection(): JSX.Element {
         <Chapter
           emoji="📽"
           title="When React render components?"
-          path="when-react-renders"
+          path={RouterPath.WHEN_REACT_RENDERS}
           element={<WhenReactRenderComponents />}
         />
-        <Chapter emoji="💾" title="useMemo" path="use-memo" element={<UseMemoExample />} />
+        <Chapter
+          emoji="💾"
+          title="useMemo"
+          path={RouterPath.USE_MEMO}
+          element={<UseMemoExample />}
+        />
       </Section>
     </Section>
   );

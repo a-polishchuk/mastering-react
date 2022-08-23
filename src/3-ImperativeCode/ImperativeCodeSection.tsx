@@ -1,4 +1,5 @@
 import { Chapter, Section } from 'components';
+import { RouterPath } from 'config/RouterPath';
 
 import { ControlledInput } from './ControlledVsUncontrolled/ControlledInput';
 import { UncontrolledInput } from './ControlledVsUncontrolled/UncontrolledInput';
@@ -13,32 +14,32 @@ export function ImperativeCodeSection(): JSX.Element {
         <Chapter
           emoji="🟢"
           title="Controlled input"
-          path="controlled-input"
+          path={RouterPath.CONTROLLED_INPUT}
           element={<ControlledInput />}
         />
         <Chapter
           emoji="🔴"
           title="Uncontrolled input"
-          path="uncontrolled-input"
+          path={RouterPath.UNCONTROLLED_INPUT}
           element={<UncontrolledInput />}
         />
       </Section>
       <Chapter
         emoji="✊"
         title="Rock scissors paper"
-        path="rock-scissors-paper"
+        path={RouterPath.ROCK_SCISSORS_PAPER}
         element={<RockScissorsPaper />}
       />
       <Chapter
         emoji="📦"
         title="Storing state in useRef"
-        path="storing-state-in-useref"
+        path={RouterPath.STORING_STATE_IN_USEREF}
         element={<StoringStateInUseRef />}
       />
       <Chapter
         emoji="👉🏼"
         title="useImperativeHandle"
-        path="use-imperative-handle"
+        path={RouterPath.USE_IMPERATIVE_HANDLE}
         element={<UseImperativeHandle />}
       />
     </Section>

@@ -1,4 +1,5 @@
 import { Chapter, Section } from 'components';
+import { RouterPath } from 'config/RouterPath';
 
 import { ConditionalRendering } from './Keys/ConditionalRendering';
 import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';
@@ -13,32 +14,32 @@ export function ComponentsLifecycleSection(): JSX.Element {
         <Chapter
           emoji="🔑"
           title="Keys and lists"
-          path="keys/keys-and-lists"
+          path={RouterPath.KEYS_AND_LISTS}
           element={<KeysAndLists />}
         />
         <Chapter
           emoji="🔑"
           title="Re-mount component"
-          path="keys/remount-component"
+          path={RouterPath.KEYS_REMOUNT_COMPONENT}
           element={<RemountComponent />}
         />
         <Chapter
           emoji="🔑"
           title="Conditional rendering"
-          path="keys/conditional-rendering"
+          path={RouterPath.KEYS_CONDITIONAL_RENDERING}
           element={<ConditionalRendering />}
         />
       </Section>
       <Chapter
         emoji="🎲"
         title="Random rendering"
-        path="random-rendering"
+        path={RouterPath.RANDOM_RENDERING}
         element={<RandomRendering />}
       />
       <Chapter
         emoji="🔄"
         title="Lifecycle and memoization"
-        path="lifecycle-and-memoization"
+        path={RouterPath.LIFECYCLE_AMD_MEMOIZATION}
         element={<LifecycleAndMemoization />}
       />
     </Section>

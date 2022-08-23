@@ -1,4 +1,5 @@
 import { Chapter, Section } from 'components';
+import { RouterPath } from 'config/RouterPath';
 
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
@@ -16,52 +17,57 @@ export function HooksBasicsSection(): JSX.Element {
       <Chapter
         emoji="🪝"
         title="useState basics"
-        path="usestate-basics"
+        path={RouterPath.USE_STATE_BASICS}
         element={<UseStateBasics />}
       />
       <Chapter
         emoji="📈"
         title="Previous state update"
-        path="prev-state-update"
+        path={RouterPath.PREV_STATE_UPDATE}
         element={<PreviousStateUpdate />}
       />
       <Chapter
         emoji="📉"
         title="Direct state mutation"
-        path="direct-state-mutation"
+        path={RouterPath.DIRECT_STATE_MUTATION}
         element={<DirectStateMutation />}
       />
       <Section title="First custom hooks">
-        <Chapter emoji="🔢" title="useCounter" path="use-counter" element={<UseCounterExample />} />
+        <Chapter
+          emoji="🔢"
+          title="useCounter"
+          path={RouterPath.USE_COUNTER}
+          element={<UseCounterExample />}
+        />
         <Chapter
           emoji="📑"
           title="useMergedState"
-          path="use-merged-state"
+          path={RouterPath.USE_MERGED_STATE}
           element={<UseMergedStateExample />}
         />
       </Section>
       <Chapter
         emoji="🦥"
         title="Lazy initialization"
-        path="lazy-init"
+        path={RouterPath.USE_STATE_LAZY_INIT}
         element={<LazyInitialization />}
       />
       <Chapter
         emoji="🧰"
         title="Storing functions"
-        path="storing-functions"
+        path={RouterPath.STORING_FUNCTIONS}
         element={<StoringFunctions />}
       />
       <Chapter
         emoji="🎞"
         title="useState and new renders"
-        path="use-state-and-new-renders"
+        path={RouterPath.USE_STATE_AND_NEW_RENDERS}
         element={<UseStateAndNewRenders />}
       />
       <Chapter
         emoji="🔀"
         title="Direct DOM changes"
-        path="direct-dom-changes"
+        path={RouterPath.DIRECT_DOM_CHANGES}
         element={<DirectDomChanges />}
       />
     </Section>

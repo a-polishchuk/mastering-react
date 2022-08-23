@@ -1,4 +1,5 @@
 import { Chapter, Section } from 'components';
+import { RouterPath } from 'config/RouterPath';
 
 import { FetchDataInUseEffect } from './FetchDataInUseEffect';
 import { BewareOfInfiniteLoops } from './InfiniteLoops/BewareOfInfiniteLoops';
@@ -18,63 +19,63 @@ export function SideEffectsSection(): JSX.Element {
         <Chapter
           emoji="🔂"
           title="Component lifecycle"
-          path="component-lifecycle"
+          path={RouterPath.COMPONENT_LIFECYCLE_EFFECTS}
           element={<ComponentLifecycle />}
         />
         <Chapter
           emoji="⛓"
           title="Effect dependencies"
-          path="effect-dependencies"
+          path={RouterPath.EFFECTS_DEPENDENCIES}
           element={<EffectDependencies />}
         />
         <Chapter
           emoji="📥"
           title="Local storage sync"
-          path="local-storage-sync"
+          path={RouterPath.LOCAL_STORAGE_SYNC}
           element={<LocalStorageSync />}
         />
       </Section>
       <Chapter
         emoji="🔔"
         title="Global event listeners"
-        path="global-event-listeners"
+        path={RouterPath.GLOBAL_EVENT_LISTENERS}
         element={<UseGlobalEvents />}
       />
       <Chapter
         emoji="⏱"
         title="useEffect + setInterval"
-        path="useeffect-setinterval"
+        path={RouterPath.USE_EFFECT_SET_INTERVAL}
         element={<UseEffectAndInterval />}
       />
       <Chapter
         emoji="🌐"
         title="Fetch data in useEffect"
-        path="fetch-data-useeffect"
+        path={RouterPath.FETCH_DATA_USE_EFFECT}
         element={<FetchDataInUseEffect />}
       />
       <Chapter
         emoji="🔃"
         title="Beware of infinite loops"
-        path="beware-of-infinite-loops"
+        path={RouterPath.BEWARE_OF_INFINITE_LOOPS}
         element={<BewareOfInfiniteLoops />}
       />
       <Chapter
         emoji="💾"
         title="You don't need useEffect"
-        path="no-need-to-useeffect"
+        path={RouterPath.NO_NEED_TO_USE_EFFECT}
         element={<YouDontNeedUseEffect />}
       />
       <Section title="useLayoutEffect">
         <Chapter
           emoji="🪢"
           title="Effects sequence"
-          path="effects-sequence"
+          path={RouterPath.EFFECTS_SEQUENCE}
           element={<EffectsSequence />}
         />
         <Chapter
           emoji="📨"
           title="Batching effects"
-          path="batching-effects"
+          path={RouterPath.BATCHING_EFFECTS}
           element={<UseLayoutEffectExample />}
         />
       </Section>
