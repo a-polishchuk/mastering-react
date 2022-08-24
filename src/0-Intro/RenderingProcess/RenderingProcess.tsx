@@ -3,6 +3,7 @@ import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 
 import classes from './RenderingProcess.module.css';
+import realDomPng from './real-dom.png';
 
 function getSectionStyle(flex: number): CSSProperties {
   return {
@@ -54,7 +55,7 @@ export function RenderingProcess(): JSX.Element {
 
         <div style={getSectionStyle(1)}>
           <h3 className={classes.header}>Real DOM / Browser Realm</h3>
-          <img alt="Real DOM" src="/real-dom.png" className={classes.realDomImage} />
+          <img alt="Real DOM" src={realDomPng} className={classes.realDomImage} />
           <div className={classes.bottomLabel}>
             The "real" Document Object Model tree. You can check it on any page by opening the
             browser's Dev Tools panel.

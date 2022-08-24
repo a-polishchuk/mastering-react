@@ -12,8 +12,9 @@
     "test:coverage": "vitest run --coverage",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist",
+    "check-deps": "npx npm-check"
   },
   "dependencies": {
     "@rematch/core": "^2.2.0",
