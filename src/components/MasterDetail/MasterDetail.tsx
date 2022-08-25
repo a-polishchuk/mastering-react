@@ -5,10 +5,10 @@ import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react
 import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router-dom';
 
 import { EasterEgg } from './EasterEgg';
-import { EmptyScreen } from './EmptyScreen';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext, MasterDetailState } from './MasterDetailContext';
+import { WelcomeScreen } from './WelcomeScreen/WelcomeScreen';
 
 const COLLAPSED_WIDTH = '44px';
 
@@ -65,8 +65,8 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
         <main className={classes.detail}>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              <Route path={RouterPath.ROOT} element={<EmptyScreen />} />
-              <Route path={RouterPath.PAGE_NOT_FOUND} element={<EmptyScreen />} />
+              <Route path={RouterPath.ROOT} element={<WelcomeScreen />} />
+              <Route path={RouterPath.PAGE_NOT_FOUND} element={<WelcomeScreen />} />
               {contextValue.routes.map((props) => (
                 <Route key={props.path} {...props} />
               ))}

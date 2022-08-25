@@ -1,16 +1,15 @@
-.emptyScreen {
+.container {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
-.emptyScreenMessages {
+.messages {
   display: flex;
   flex-direction: column;
   gap: 10px;
   z-index: 1;
+  padding: 48px;
 }

@@ -3,11 +3,12 @@ import { CSSProperties } from 'react';
 export interface ReactLogoProps {
   size: number;
   color?: string;
+  className?: string;
   style?: CSSProperties;
 }
 
 export function ReactLogo(props: ReactLogoProps): JSX.Element {
-  const { color = '#61dafb', size, style } = props;
+  const { color = '#61dafb', size, className, style } = props;
 
   return (
     <svg
@@ -15,6 +16,7 @@ export function ReactLogo(props: ReactLogoProps): JSX.Element {
       viewBox="-11.5 -10.232 23 20.463"
       width={size}
       height={size}
+      className={className}
       style={style}
     >
       <circle r={2.05} fill={color} />

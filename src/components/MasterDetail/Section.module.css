@@ -21,6 +21,6 @@
 
 .sectionContent {
   padding: 8px;
-  border: 1px solid var(--divider-color);
-  box-shadow: 2px 2px 0px 0px #0001;
+  border-left: 1px solid var(--divider-color);
+  border-top: 1px solid var(--divider-color);
 }

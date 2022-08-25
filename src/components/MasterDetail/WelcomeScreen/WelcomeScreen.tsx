@@ -1,3 +1,5 @@
+import { useInterval } from 'hooks/useInterval';
+import { useToggle } from 'hooks/useToggle';
 import { useMemo } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 import { generateUniqueId } from 'utils/generateUniqueId';
@@ -5,9 +7,8 @@ import { generateUniqueId } from 'utils/generateUniqueId';
 import { AlienMessage } from './AlienMessage';
 import { Background } from './Background';
 import { DotsMessage } from './DotsMessage';
-import classes from './EmptyScreen.module.css';
 import { Message } from './types';
-import { useDotsVisible } from './useDotsVisible';
+import classes from './WelcomeScreen.module.css';
 
 const MESSAGES_TEXT = [
   'Вітаю, homo sapiens!',
@@ -15,7 +16,7 @@ const MESSAGES_TEXT = [
   'Просто натисни на потрібний розділ в меню ліворуч',
 ];
 
-export function EmptyScreen(): JSX.Element {
+export function WelcomeScreen(): JSX.Element {
   const isDotsVisible = useDotsVisible();
 
   const messageColor = useMemo(() => generateRandomColor(), []);
@@ -31,9 +32,9 @@ export function EmptyScreen(): JSX.Element {
   );
 
   return (
-    <div className={classes.emptyScreen}>
-      <Background logosNumber={3} />
-      <div className={classes.emptyScreenMessages}>
+    <div className={classes.container}>
+      <Background />
+      <div className={classes.messages}>
         {messages.map((message) => (
           <AlienMessage key={message.id} color={messageColor} message={message} />
         ))}
@@ -41,4 +42,10 @@ export function EmptyScreen(): JSX.Element {
       </div>
     </div>
   );
+}
+
+function useDotsVisible() {
+  const [dotsVisible, toggle] = useToggle(false);
+  useInterval(toggle, 3000);
+  return dotsVisible;
 }
