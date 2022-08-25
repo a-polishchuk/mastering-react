@@ -2,7 +2,7 @@ import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { RouterPath } from 'config/RouterPath';
 import { useToggle } from 'hooks/useToggle';
 import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
-import { BrowserRouter, PathRouteProps, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router-dom';
 
 import { EasterEgg } from './EasterEgg';
 import { EmptyScreen } from './EmptyScreen';
@@ -46,8 +46,12 @@ export function MasterDetail({ children }: { children: ReactNode }): JSX.Element
       <div className={classes.container}>
         <nav className={classes.master} style={masterStyle}>
           <div className={classes.masterTitle}>
-            {expanded && <h2 style={{ flex: 1 }}>Mastering React</h2>}
             <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
+            {expanded && (
+              <NavLink to={RouterPath.ROOT} className={classes.titleLink}>
+                <h2>Mastering React</h2>
+              </NavLink>
+            )}
           </div>
           {expanded && (
             <div className={classes.tableOfContents}>

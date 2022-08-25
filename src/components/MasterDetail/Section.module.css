@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.expanded {
+  font-weight: 600;
+  text-shadow: var(--active-text-shadow);
+}
+
 .sectionTitle:hover {
   text-shadow: 2px 2px #e1ccff;
 }

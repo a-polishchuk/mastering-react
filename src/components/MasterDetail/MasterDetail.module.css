@@ -16,11 +16,17 @@
 
 .masterTitle {
   display: flex;
-  gap: 8;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  gap: 16px;
+  padding: 16px 8px;
   border-bottom: 1px solid var(--divider-color);
+}
+
+.titleLink {
+  flex: 1;
+  text-decoration: none;
+  color: black;
 }
 
 .tableOfContents {

@@ -2,8 +2,8 @@ import { ChapterWrapper, ColoredBlock } from 'components';
 import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 
-import classes from './RenderingProcess.module.css';
 import realDomPng from './real-dom.png';
+import classes from './RenderingProcess.module.css';
 
 function getSectionStyle(flex: number): CSSProperties {
   return {

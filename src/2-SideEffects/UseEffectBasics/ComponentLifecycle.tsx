@@ -10,6 +10,7 @@ const DELTA = 1;
 export function ComponentLifecycle(): JSX.Element {
   const { value, increase, decrease } = useCounter(0, DELTA);
 
+  // ! async functions are not allowed here
   useEffect(() => {
     logTagged('useEffect', 'component did mount');
 

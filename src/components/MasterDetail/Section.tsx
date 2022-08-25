@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { Children, CSSProperties, ReactNode, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -28,7 +29,10 @@ export function Section({ title, children }: SectionProps): JSX.Element {
 
   return (
     <div className={classes.section}>
-      <div className={classes.sectionTitle} onClick={toggleExpanded}>
+      <div
+        className={classNames(classes.sectionTitle, expanded && classes.expanded)}
+        onClick={toggleExpanded}
+      >
         <ExpandToggle expanded={expanded} />
         <div>{title}</div>
       </div>
