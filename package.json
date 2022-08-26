@@ -1,7 +1,12 @@
 {
   "name": "mastering-react",
+  "description": "Udemy course to learn web devolpment with React",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-polishchuk/mastering-react"
+  },
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://a-polishchuk.github.io/mastering-react/",
   "scripts": {
     "dev": "vite",
