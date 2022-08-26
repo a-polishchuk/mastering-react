@@ -7,8 +7,8 @@ export function StateManagementSection(): JSX.Element {
   return (
     <Section title="State management">
       <Chapter
-        emoji="🌐"
-        title="Rematch"
+        emoji="🤹🏼‍♂️"
+        title="Rematch (Redux)"
         path={RouterPath.STATE_REMATCH}
         element={<UsingRematch />}
       />
