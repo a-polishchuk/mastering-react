@@ -12,6 +12,7 @@ import { ReactLogo } from './ReactLogo/ReactLogo';
 import { Switch } from './Switch/Switch';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Toolbar } from './Toolbar/Toolbar';
+import { ToolbarSeparator } from './ToolbarSeparator/ToolbarSeparator';
 import { ValueLabel } from './ValueLabel/ValueLabel';
 
 export {
@@ -31,5 +32,6 @@ export {
   Switch,
   TextBlock,
   Toolbar,
+  ToolbarSeparator,
   ValueLabel,
 };
