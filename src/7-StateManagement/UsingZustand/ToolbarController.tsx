@@ -4,7 +4,7 @@ import { useToggle } from 'hooks/useToggle';
 
 import { useGridStore } from './useGridStore';
 
-const GENERATION_DELAY = 200;
+const GENERATION_DELAY = 500;
 
 export function ToolbarController(): JSX.Element {
   const nextGeneration = useGridStore((state) => state.nextGeneration);
