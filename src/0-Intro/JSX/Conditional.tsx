@@ -1,10 +1,11 @@
-import { ChapterWrapper, Toolbar, ValueLabel } from 'components';
+import { ChapterWrapper, FlexFiller, Toolbar, ValueLabel } from 'components';
 
 interface ConditionalContentProps {
   value: number;
 }
 
 function ConditionalContent({ value }: ConditionalContentProps): JSX.Element | null {
+  // an early return
   if (value > 11) {
     return null;
   }
@@ -15,19 +16,26 @@ function ConditionalContent({ value }: ConditionalContentProps): JSX.Element | n
   return (
     <div style={{ fontSize: 48 }}>
       <Toolbar>
-        <ValueLabel value={value} minWidth={150} />
+        <ValueLabel value={value} />
+        <FlexFiller />
+
         <span>{value % 2 === 0 ? '🐈' : '🐈‍⬛'}</span>
         <span>{butterfly}</span>
         {value === 6 ? <span>🐬</span> : null}
         {value % 3 === 0 && <span>🦔</span>}
         <span>{greaterThanFive && '🦕'}</span>
+
+        {/* DON'T DO THAT, value is a number and can be 0 */}
+        <span>{value && '🦩'}</span>
+        {/* this is the right way (or even better - just always use ternary operator) */}
+        <span>{!!value && '🐙'}</span>
       </Toolbar>
     </div>
   );
 }
 
 export function Conditional(): JSX.Element {
-  const numbers = new Array(12).fill(0).map((value, index) => index + 1);
+  const numbers = new Array(12).fill(0).map((value, index) => index);
 
   return (
     <ChapterWrapper title="Conditional rendering" subtitle="Introduction to JSX">

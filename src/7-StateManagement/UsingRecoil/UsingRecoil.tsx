@@ -1,4 +1,4 @@
-import { Button, ChapterWrapper, Toolbar, ToolbarSeparator } from 'components';
+import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
 import { RecoilRoot } from 'recoil';
 
@@ -18,11 +18,11 @@ export function UsingRecoil(): JSX.Element {
   const [gridType] = gridTypeState;
   const [cellSize, setCellSize] = useState<number>(INITIAL_CELL_SIZE);
 
-  const decreaseCellSize = () => {
+  const reduceSize = () => {
     setCellSize((value) => Math.max(value - CELL_SIZE_STEP, MIN_CELL_SIZE));
   };
 
-  const increaseCellSize = () => {
+  const increaseSize = () => {
     setCellSize((value) => Math.min(value + CELL_SIZE_STEP, MAX_CELL_SIZE));
   };
 
@@ -33,9 +33,8 @@ export function UsingRecoil(): JSX.Element {
           <Toolbar>
             <GridTypeButton gridType={GridType.CHECKBOX} state={gridTypeState} />
             <GridTypeButton gridType={GridType.DIV} state={gridTypeState} />
-            <ToolbarSeparator />
-            <Button text="➖ Cell size" onClick={decreaseCellSize} />
-            <Button text="➕ Cell size" onClick={increaseCellSize} />
+            <Button text="Reduce size" onClick={reduceSize} />
+            <Button text="Increase size" onClick={increaseSize} />
           </Toolbar>
 
           <ToolbarController />
