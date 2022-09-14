@@ -6,6 +6,7 @@ import { Arrays } from './JSX/Arrays';
 import { Conditional } from './JSX/Conditional';
 import { EventHandlers } from './JSX/EventHandlers';
 import { Fragments } from './JSX/Fragments';
+import { IgnoredValues } from './JSX/IgnoredValues';
 import { JsxBasics } from './JSX/JsxBasics';
 import { ReactWithoutJsx } from './JSX/ReactWithoutJsx';
 import { PropsAndChildren } from './PropsAndChildren/PropsAndChildren';
@@ -48,6 +49,12 @@ export function IntroSection() {
           element={<Fragments />}
         />
         <Chapter emoji="🗄" title="Arrays" path={RouterPath.JSX_ARRAYS} element={<Arrays />} />
+        <Chapter
+          emoji="🚯"
+          title="Ignored values"
+          path={RouterPath.JSX_IGNORED_VALUES}
+          element={<IgnoredValues />}
+        />
         <Chapter
           emoji="📬"
           title="Event handlers"
