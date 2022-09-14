@@ -2,8 +2,7 @@ import { GridToolbar } from '7-StateManagement/components/GridToolbar';
 import { clear } from '7-StateManagement/model/clear';
 import { nextGeneration } from '7-StateManagement/model/nextGeneration';
 import { randomize } from '7-StateManagement/model/randomize';
-import { useInterval } from 'hooks/useInterval';
-import { useToggle } from 'hooks/useToggle';
+import { useAutoGeneration } from '7-StateManagement/useAutoGeneration';
 import { useRecoilState } from 'recoil';
 
 import { gridAtom } from './gridAtom';
@@ -17,10 +16,7 @@ export function ToolbarController(): JSX.Element {
   const setRandomized = () => setGrid((value) => randomize(value));
   const setCleared = () => setGrid((value) => clear(value));
 
-  // TODO: separate hook?
-  const [isAutoGenerating, toggleAutoGeneration] = useToggle(false);
-  const generationDelay = isAutoGenerating ? GENERATION_DELAY : null;
-  useInterval(setNextGen, generationDelay);
+  const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(GENERATION_DELAY, setNextGen);
 
   return (
     <GridToolbar

@@ -1,6 +1,5 @@
 import { GridToolbar } from '7-StateManagement/components/GridToolbar';
-import { useInterval } from 'hooks/useInterval';
-import { useToggle } from 'hooks/useToggle';
+import { useAutoGeneration } from '7-StateManagement/useAutoGeneration';
 
 import { useGridStore } from './useGridStore';
 
@@ -11,9 +10,10 @@ export function ToolbarController(): JSX.Element {
   const randomize = useGridStore((state) => state.randomize);
   const clear = useGridStore((state) => state.clear);
 
-  const [isAutoGenerating, toggleAutoGeneration] = useToggle(false);
-  const generationDelay = isAutoGenerating ? GENERATION_DELAY : null;
-  useInterval(nextGeneration, generationDelay);
+  const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(
+    GENERATION_DELAY,
+    nextGeneration
+  );
 
   return (
     <GridToolbar

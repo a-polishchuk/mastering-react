@@ -4,9 +4,9 @@
 
 .cell {
   border: 0.5px solid #0005;
-  transition: all ease-in-out 0.3s;
+  transition: background ease-in-out 0.3s;
 }
 
 .cell:hover {
-  border: 2px solid red;
+  border: 2px solid black;
 }
