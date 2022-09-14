@@ -1,16 +1,16 @@
 import { ChapterWrapper } from 'components';
 
-import { Grid } from './Grid';
 import { GridController } from './GridController';
+import { ToolbarController } from './ToolbarController';
 import classes from './UsingZustand.module.css';
 
 export function UsingZustand(): JSX.Element {
   return (
     <ChapterWrapper title="Zustand" subtitle="State management">
       <div className={classes.root}>
-        <GridController />
+        <ToolbarController />
         <div className={classes.gridContainer}>
-          <Grid />
+          <GridController />
         </div>
       </div>
     </ChapterWrapper>

@@ -1,9 +1,9 @@
 import { ChapterWrapper } from 'components';
 import { Provider } from 'react-redux';
 
-import { Grid } from './Grid';
-import { GridController } from './GridController';
 import { store } from './store';
+import { ToolbarController } from './ToolbarController';
+import { GridController } from './GridController';
 import classes from './UsingRematch.module.css';
 
 export function UsingRematch(): JSX.Element {
@@ -11,9 +11,9 @@ export function UsingRematch(): JSX.Element {
     <ChapterWrapper title="Rematch (Redux)" subtitle="State management">
       <Provider store={store}>
         <div className={classes.root}>
-          <GridController />
+          <ToolbarController />
           <div className={classes.gridContainer}>
-            <Grid />
+            <GridController />
           </div>
         </div>
       </Provider>

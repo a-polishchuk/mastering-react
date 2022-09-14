@@ -69,6 +69,7 @@ export enum RouterPath {
   // state management
   STATE_REMATCH = 'state-rematch',
   STATE_ZUSTAND = 'state-zustand',
+  STATE_RECOIL = 'state-recoil',
 
   // data fetching
   REACT_QUERY = 'react-query',

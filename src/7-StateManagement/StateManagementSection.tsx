@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 
+import { UsingRecoil } from './UsingRecoil/UsingRecoil';
 import { UsingRematch } from './UsingRematch/UsingRematch';
 import { UsingZustand } from './UsingZustand/UsingZustand';
 
@@ -14,11 +15,12 @@ export function StateManagementSection(): JSX.Element {
         element={<UsingRematch />}
       />
       <Chapter
-        emoji="🤹🏼"
+        emoji="🤹🏼‍♂️"
         title="Zustand"
         path={RouterPath.STATE_ZUSTAND}
         element={<UsingZustand />}
       />
+      <Chapter emoji="🤹🏼‍♂️" title="Recoil" path={RouterPath.STATE_RECOIL} element={<UsingRecoil />} />
     </Section>
   );
 }

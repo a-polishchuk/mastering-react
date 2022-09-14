@@ -1,29 +1,22 @@
-import { useInterval } from 'hooks/useInterval';
-import { useToggle } from 'hooks/useToggle';
-import { useDispatch } from 'react-redux';
+import { CheckboxGrid } from '7-StateManagement/components/CheckboxGrid';
+import { GridState } from '7-StateManagement/types';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { ControlsBar } from '../ControlsBar';
-import { Dispatch } from './store';
+import { Dispatch, RootState } from './store';
 
-const GENERATION_DELAY = 500;
+const CELL_SIZE = 16;
+
+function gridSelector(state: RootState): GridState {
+  return state.grid;
+}
 
 export function GridController(): JSX.Element {
+  const grid = useSelector<RootState, GridState>(gridSelector);
   const dispatch = useDispatch<Dispatch>();
-  const nextGeneration = () => dispatch.grid.nextGeneration();
-  const randomize = () => dispatch.grid.randomize();
-  const clear = () => dispatch.grid.clear();
 
-  const [isAutoGenerating, toggleAutoGeneration] = useToggle(false);
-  const generationDelay = isAutoGenerating ? GENERATION_DELAY : null;
-  useInterval(nextGeneration, generationDelay);
+  const toggleCell = (row: number, col: number) => {
+    return dispatch.grid.toggleCell([row, col]);
+  };
 
-  return (
-    <ControlsBar
-      isAutoGenerating={isAutoGenerating}
-      toggleAutoGeneration={toggleAutoGeneration}
-      nextGeneration={nextGeneration}
-      randomize={randomize}
-      clear={clear}
-    />
-  );
+  return <CheckboxGrid grid={grid} cellSize={CELL_SIZE} toggleCell={toggleCell} />;
 }
