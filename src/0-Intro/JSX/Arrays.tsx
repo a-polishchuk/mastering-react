@@ -3,20 +3,22 @@ import { ChapterWrapper } from 'components';
 const TRANSPORT_EMOJIS = ['🚗', '🚕', '🚙', '🚌', '🚎', '🏎', '🚓', '🚑', '🚒', '🚐', '🛻', '🚚'];
 const BALLS_EMOJIS = ['⚽️', '🏀', '🏈', '⚾️', '🎾', '🏐', '🏉'];
 
-function EmojisList(props: { emojis: string[]; ordered?: boolean }): JSX.Element {
+interface EmojisListProps {
+  emojis: string[];
+  ordered?: boolean;
+}
+
+function EmojisList(props: EmojisListProps): JSX.Element {
   const { emojis, ordered = false } = props;
+  const listItems = emojis.map((emoji, index) => <li key={index}>{emoji}</li>);
   const ListComponent = ordered ? 'ol' : 'ul';
-  return (
-    <ListComponent>
-      {emojis.map((emoji, index) => (
-        <li key={index}>{emoji}</li>
-      ))}
-    </ListComponent>
-  );
+  return <ListComponent>{listItems}</ListComponent>;
 }
 
 function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
-  const rows = [];
+  const rows = new Array<JSX.Element>();
+  // const rows: JSX.Element[] = [];
+
   for (let i = 0; i < emojis.length; i++) {
     const emoji = emojis[i];
     rows.push(
@@ -32,6 +34,7 @@ function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
       </tr>
     );
   }
+
   return (
     <table>
       <thead>
