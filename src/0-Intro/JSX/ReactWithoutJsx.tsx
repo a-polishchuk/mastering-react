@@ -2,7 +2,7 @@ import { ChapterWrapper } from 'components';
 import { createElement } from 'react';
 
 export function ReactWithoutJsx() {
-  return createElement(ChapterWrapper, {
+  const props = {
     title: 'React without JSX',
     subtitle: 'Introduction to JSX',
     children: createElement(
@@ -10,12 +10,13 @@ export function ReactWithoutJsx() {
       { style: { fontSize: '18px' } },
       `You don't have to use JSX, but the code is much harder to work without it.`
     ),
-  });
+  };
+  return createElement(ChapterWrapper, props);
 }
 
 export function SameThingWithJsx(): JSX.Element {
   return (
-    <ChapterWrapper title="React without JSX" subtitle="Introduction to JSX">
+    <ChapterWrapper title="Same thing with JSX" subtitle="Introduction to JSX">
       <p style={{ fontSize: '18px' }}>
         You don't have to use JSX, but the code is much harder to read without it.
       </p>
