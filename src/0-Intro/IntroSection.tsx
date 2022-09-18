@@ -43,12 +43,6 @@ export function IntroSection() {
           element={<ReactWithoutJsx />}
         />
         <Chapter
-          emoji="🔣"
-          title="Data types"
-          path={RouterPath.JSX_DATA_TYPES}
-          element={<DataTypes />}
-        />
-        <Chapter
           emoji="📎"
           title="Fragments"
           path={RouterPath.JSX_FRAGMENTS}
