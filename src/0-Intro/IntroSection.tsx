@@ -56,6 +56,12 @@ export function IntroSection() {
         />
         <Chapter emoji="🗄" title="Arrays" path={RouterPath.JSX_ARRAYS} element={<Arrays />} />
         <Chapter
+          emoji="🔣"
+          title="Data types"
+          path={RouterPath.JSX_DATA_TYPES}
+          element={<DataTypes />}
+        />
+        <Chapter
           emoji="📬"
           title="Event handlers"
           path={RouterPath.JSX_EVENT_HANDLERS}
