@@ -7,7 +7,7 @@ export enum RouterPath {
   HELLO_WORLD = 'hello-world',
   JSX_BASICS = 'jsx-basics',
   JSX_CREATE_ELEMENT = 'jsx-create-element',
-  JSX_IGNORED_VALUES = 'jsx-ignored-values',
+  JSX_DATA_TYPES = 'jsx-data-types',
   JSX_FRAGMENTS = 'jsx-fragments',
   JSX_ARRAYS = 'jsx-arrays',
   JSX_EVENT_HANDLERS = 'jsx-event-handlers',
