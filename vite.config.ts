@@ -2,7 +2,6 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vitest/config';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-// TODO: try to use triple slash to configure vitest types
 export default defineConfig({
   base: '/mastering-react/',
   plugins: [react() as any, tsconfigPaths()],
