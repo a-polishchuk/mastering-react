@@ -81,9 +81,11 @@ export function UseMergedStateExample(): JSX.Element {
         />
       </form>
 
-      <Toolbar>
-        <Button onClick={reset} text="Reset" />
-      </Toolbar>
+      <div style={{ marginTop: 16 }}>
+        <Toolbar>
+          <Button onClick={reset} text="Reset" />
+        </Toolbar>
+      </div>
 
       <PropsTable title="Form data" data={data} />
     </ChapterWrapper>
