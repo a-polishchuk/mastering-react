@@ -20,6 +20,7 @@ export function DirectDomChanges(): JSX.Element {
   };
 
   const directChangeBgColor = () => {
+    // ! don't do that, don't change DOM directly
     const element = document.getElementById(NODE_ID);
     if (element) {
       element.style.backgroundColor = 'red';
