@@ -8,9 +8,9 @@ const DELTA = 1;
 const STORAGE_KEY = 'chapter-6-current-count';
 
 export function LocalStorageSync() {
-  const [count, setCount] = useState<number>(0);
-  const increase = () => setCount((value) => value + DELTA);
-  const decrease = () => setCount((value) => value - DELTA);
+  const [count, setCount] = useState<number | null>(null);
+  const increase = () => setCount((value) => (value || 0) + DELTA);
+  const decrease = () => setCount((value) => (value || 0) - DELTA);
 
   useEffect(function readFromStorage() {
     try {
@@ -25,6 +25,9 @@ export function LocalStorageSync() {
 
   useEffect(
     function writeToStorage() {
+      if (count === null) {
+        return;
+      }
       try {
         const stringValue = String(count);
         logTagged('Write', stringValue);
@@ -41,7 +44,7 @@ export function LocalStorageSync() {
 
   return (
     <ChapterWrapper title="Local storage sync" subtitle="useEffect basics">
-      <Counter value={count} delta={DELTA} increase={increase} decrease={decrease} />
+      <Counter value={count || 0} delta={DELTA} increase={increase} decrease={decrease} />
     </ChapterWrapper>
   );
 }
