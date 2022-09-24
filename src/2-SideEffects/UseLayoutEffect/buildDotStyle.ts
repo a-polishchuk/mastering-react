@@ -1,10 +1,8 @@
 import { CSSProperties } from 'react';
 
-import { Position } from './Position';
+import { Dot } from './Dot';
 
-export function buildDotStyle(position: Position, color: string, size: number): CSSProperties {
-  const { x, y } = position;
-
+export function buildDotStyle({ x, y }: Dot, color: string, size: number): CSSProperties {
   return {
     position: 'absolute',
     left: x,
