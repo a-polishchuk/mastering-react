@@ -29,7 +29,7 @@ export function UncontrolledInput(): JSX.Element {
   const focus = () => inputRef.current?.focus();
 
   return (
-    <ChapterWrapper title="Controlled vs uncontrolled" subtitle="Uncontrolled input">
+    <ChapterWrapper title="Uncontrolled input" subtitle="Controlled vs uncontrolled">
       <TextBlock>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ fontSize: 24 }}>ℹ️</span> State is managed by real DOM
