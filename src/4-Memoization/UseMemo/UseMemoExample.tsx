@@ -33,10 +33,12 @@ const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps): JSX.Element =>
   );
 });
 
+const ROOT_PATH = ['root'];
+
 export function UseMemoExample(): JSX.Element {
   return (
     <ChapterWrapper title="useMemo" subtitle="React.memo + useMemo" rerender={useRerender()}>
-      <MemoizedNode level={0} maxLevel={2} path={['root']} />
+      <MemoizedNode level={0} maxLevel={2} path={ROOT_PATH} />
     </ChapterWrapper>
   );
 }
