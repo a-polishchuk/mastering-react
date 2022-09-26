@@ -55,7 +55,7 @@ export enum RouterPath {
   // components lifecycle
   KEYS_AND_LISTS = 'keys/keys-and-lists',
   KEYS_REMOUNT_COMPONENT = 'keys/remount-component',
-  KEYS_CONDITIONAL_RENDERING = 'keys/conditional-rendering',
+  KEYS_COMPONENTS_STRUCTURE = 'keys/components-structure',
   RANDOM_RENDERING = 'random-rendering',
   LIFECYCLE_AMD_MEMOIZATION = 'lifecycle-and-memoization',
 

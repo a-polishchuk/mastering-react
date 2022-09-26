@@ -1,7 +1,7 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
 
-import { ConditionalRendering } from './Keys/ConditionalRendering';
+import { ComponentsStructure } from './Keys/ComponentsStructure';
 import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';
 import { RemountComponent } from './Keys/RemountComponent';
 import { LifecycleAndMemoization } from './Memoization/LifecycleAndMemoization';
@@ -25,9 +25,9 @@ export function ComponentsLifecycleSection(): JSX.Element {
         />
         <Chapter
           emoji="🔑"
-          title="Conditional rendering"
-          path={RouterPath.KEYS_CONDITIONAL_RENDERING}
-          element={<ConditionalRendering />}
+          title="Components structure"
+          path={RouterPath.KEYS_COMPONENTS_STRUCTURE}
+          element={<ComponentsStructure />}
         />
       </Section>
       <Chapter
