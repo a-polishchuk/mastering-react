@@ -3,6 +3,7 @@ import { RouterPath } from 'config/RouterPath';
 
 import { ListWithMemoization } from './ListWithMemoization/ListWithMemoization';
 import { ListWithoutMemoization } from './ListWithoutMemoization/ListWithoutMemoization';
+import { MemoizedRefCallback } from './MemoizedRefCallback/MemoizedRefCallback';
 import { UseMemoExample } from './UseMemo/UseMemoExample';
 import { WhenReactRenderComponents } from './UseMemo/WhenReactRenderComponents';
 import { UseUpdateEffect } from './UseUpdateEffect/UseUpdateEffectExample';
@@ -44,6 +45,12 @@ export function MemoizationSection(): JSX.Element {
           element={<UseMemoExample />}
         />
       </Section>
+      <Chapter
+        emoji="📏"
+        title="Memoized ref callback"
+        path={RouterPath.MEMOIZED_REF_CALLBACK}
+        element={<MemoizedRefCallback />}
+      />
     </Section>
   );
 }

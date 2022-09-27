@@ -51,6 +51,7 @@ export enum RouterPath {
   USE_UPDATE_EFFECT = 'use-update-effect',
   WHEN_REACT_RENDERS = 'when-react-renders',
   USE_MEMO = 'use-memo',
+  MEMOIZED_REF_CALLBACK = 'memoized-ref-callback',
 
   // components lifecycle
   KEYS_AND_LISTS = 'keys/keys-and-lists',
