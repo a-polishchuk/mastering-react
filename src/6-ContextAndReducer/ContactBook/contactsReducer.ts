@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { initialState } from './initialState';
 import { Action, ActionType, Contact, ContactsState } from './types';
 
-export function contactsReducer(state: ContactsState, action: Action) {
+export function contactsReducer(state: ContactsState, action: Action): ContactsState {
   switch (action.type) {
     case ActionType.ADD:
       return add(state);
