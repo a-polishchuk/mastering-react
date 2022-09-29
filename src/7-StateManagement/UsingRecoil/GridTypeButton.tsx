@@ -4,16 +4,17 @@ import { UseState } from 'types/UseState';
 import { GridType } from './GridType';
 
 interface Props {
+  text: string;
   gridType: GridType;
   state: UseState<GridType>;
 }
 
-export function GridTypeButton({ gridType, state }: Props): JSX.Element {
+export function GridTypeButton({ text, gridType, state }: Props): JSX.Element {
   const [currentGridType, setGridType] = state;
 
   return (
     <Button
-      text="Checkbox Grid"
+      text={text}
       onClick={() => setGridType(gridType)}
       disabled={gridType === currentGridType}
     />

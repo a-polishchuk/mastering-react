@@ -31,8 +31,12 @@ export function UsingRecoil(): JSX.Element {
       <RecoilRoot>
         <div className={classes.root}>
           <Toolbar>
-            <GridTypeButton gridType={GridType.CHECKBOX} state={gridTypeState} />
-            <GridTypeButton gridType={GridType.DIV} state={gridTypeState} />
+            <GridTypeButton
+              text="Checkbox grid"
+              gridType={GridType.CHECKBOX}
+              state={gridTypeState}
+            />
+            <GridTypeButton text="Div grid" gridType={GridType.DIV} state={gridTypeState} />
             <Button text="Reduce size" onClick={reduceSize} />
             <Button text="Increase size" onClick={increaseSize} />
           </Toolbar>
