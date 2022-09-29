@@ -9,20 +9,12 @@ export interface ThemesPalette {
 
 export type ThemeContextState = [ThemesPalette, (themeIndex: number) => void];
 
-const defaultValue: ThemeContextState = [
-  {
-    themes: [],
-    themeIndex: -1,
-  },
-  (themeIndex: number) => {},
-];
-
+const defaultValue: any = null;
 const ThemeContext = createContext<ThemeContextState>(defaultValue);
 
 export function useThemeContext(): ThemeContextState {
   const theme = useContext(ThemeContext);
   if (!theme) {
-    // TODO: check it
     throw new Error(`useTheme must be used within a ThemeProvider`);
   }
   return theme;

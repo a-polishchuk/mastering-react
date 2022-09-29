@@ -8,7 +8,7 @@ import { UserProfile } from './User/UserProfile';
 
 export function UseContext(): JSX.Element {
   return (
-    <ChapterWrapper title="useContext">
+    <ChapterWrapper title="useContext" subtitle="Solving the props drilling problem">
       <ThemeProvider>
         {/* you can get current theme in any component in this subtree */}
         <ThemeToolbar />
