@@ -3,7 +3,7 @@ import { ActionType } from '../types';
 import { useHandleDirection } from './useHandleDirection';
 import { useIntervalAction } from './useIntervalAction';
 
-export function Controller(): null {
+export function GameController(): null {
   useHandleDirection();
 
   useIntervalAction(ActionType.MOVE, MOVE_DELAY);

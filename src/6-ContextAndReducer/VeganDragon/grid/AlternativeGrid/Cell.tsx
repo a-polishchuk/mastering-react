@@ -1,5 +1,5 @@
 import { CSSProperties, memo } from 'react';
-import { CellType } from '../types';
+import { CellType } from '../../types';
 
 enum BgColor {
   NONE = 'inherit',

@@ -1,5 +1,5 @@
 import { CSSProperties, memo } from 'react';
-import { CellType } from '../types';
+import { CellType } from '../../types';
 
 function getStyle(gridRow: number, gridColumn: number, isSnake: boolean): CSSProperties {
   return {

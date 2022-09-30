@@ -3,11 +3,11 @@ import { useLocalStorage } from 'hooks/useLocalStorage';
 import { useEffect, useState } from 'react';
 
 import { HIGH_SCORE_KEY } from '../constants';
-import { useGameContext } from '../GameContext';
+import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, GameStatus } from '../types';
 import { CurrentDirection } from './CurrentDirection';
+import classes from './GameControls.module.css';
 import { GameOverModal } from './GameOverModal';
-import classes from './index.module.css';
 import { Score } from './Score';
 
 export function GameControls() {

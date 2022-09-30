@@ -1,6 +1,6 @@
 import { useKeyDown } from '2-SideEffects/UseGlobalEvents/useKeyDown';
 
-import { useGameContext } from '../GameContext';
+import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, Direction, GameStatus } from '../types';
 
 export function useHandleDirection() {
@@ -30,8 +30,6 @@ export function useHandleDirection() {
         break;
       case 'ArrowLeft':
         setDirection(Direction.LEFT);
-        break;
-      default:
         break;
     }
   });

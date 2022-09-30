@@ -6,7 +6,7 @@ import { LazyInit2 } from './LazyInit2/LazyInit2';
 import { UseContext } from './UseContext/UseContext';
 import { UseCounterReducer } from './UseReducer/UseCounterReducer';
 import { UseToggleReducer } from './UseToggle/UseToggleReducer';
-import { VeganDragon } from './VeganDragon';
+import { VeganDragon } from './VeganDragon/VeganDragon';
 
 export function ContextAndReducerSection(): JSX.Element {
   return (

@@ -1,6 +1,6 @@
 import { useInterval } from 'hooks/useInterval';
 
-import { useGameContext } from '../GameContext';
+import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, GameStatus } from '../types';
 
 export function useIntervalAction(actionType: ActionType, playingDelay: number) {
