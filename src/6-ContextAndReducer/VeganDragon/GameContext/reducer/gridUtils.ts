@@ -66,14 +66,9 @@ export function buildGrid(
   snakeHead: SnakeSegment,
   vegetables: Vegetable[]
 ): string[][] {
-  const grid = [];
-
+  const grid = new Array<string[]>();
   for (let r = 0; r < rows; r++) {
-    const row = [];
-    for (let c = 0; c < cols; c++) {
-      row.push('');
-    }
-    grid.push(row);
+    grid.push(new Array<string>(cols).fill(''));
   }
 
   for (const v of vegetables) {

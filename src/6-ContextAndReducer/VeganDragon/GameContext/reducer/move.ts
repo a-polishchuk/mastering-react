@@ -8,7 +8,7 @@ function moveSnake(state: GameContextState) {
   const { row, col } = snakeHead;
   const [newRow, newCol] = getNextCell(row, col, rows, cols, direction);
   if (grid[newRow][newCol] === CellType.SNAKE) {
-    return null;
+    return null; // game over
   }
   return moveSegment(snakeHead, newRow, newCol);
 }
