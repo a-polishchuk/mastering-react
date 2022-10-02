@@ -6,6 +6,8 @@ import { toggleCell } from '7-StateManagement/model/toggleCell';
 import { GridState } from '7-StateManagement/types';
 import create from 'zustand';
 
+const GRID_SIZE = 30;
+
 interface GridStore {
   grid: GridState;
   toggleCell: (row: number, col: number) => void;
@@ -15,7 +17,7 @@ interface GridStore {
 }
 
 export const useGridStore = create<GridStore>((set) => ({
-  grid: empty(50, 50),
+  grid: empty(GRID_SIZE, GRID_SIZE),
   toggleCell: (row: number, col: number) => {
     return set(({ grid }) => ({ grid: toggleCell(grid, [row, col]) }));
   },
