@@ -64,6 +64,7 @@ export enum RouterPath {
   COUNTER_REDUCER = 'counter-reducer',
   REDUCER_LAZY_INIT = 'reducer-lazy-init',
   TOGGLE_REDUCER = 'toggle-reducer',
+  RERENDER_REDUCER = 'rerender-reducer',
   USE_CONTEXT = 'use-context',
   CONTACT_BOOK = 'contact-book',
   VEGAN_DRAGON = 'vegan-dragon',
