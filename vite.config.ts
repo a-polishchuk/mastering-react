@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/mastering-react/',
   plugins: [react() as any, tsconfigPaths()],
   server: {
-    open: false,
+    open: true,
     port: 3000,
   },
   test: {
