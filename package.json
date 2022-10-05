@@ -1,6 +1,11 @@
 {
   "name": "mastering-react",
   "description": "Udemy course to learn web devolpment with React",
+  "author": {
+    "name": "Andrii Polishchuk",
+    "email": "polishchuk91@gmail.com",
+    "url": "https://github.com/a-polishchuk"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/a-polishchuk/mastering-react"
