@@ -58,6 +58,9 @@ NPM створює свій package-json.lock файл, yarn - свій yarn.loc
 - [Документація React](https://reactjs.org/docs/hello-world.html)
 - [usehooks](https://usehooks.com/) - колекція "рецептів" користувацьких хуків
 - [react-use](https://github.com/streamich/react-use) - бібліотека хуків загального призначення, стане в нагоді майже у кожному проекті
-- [Блог React](https://reactjs.org/blog/2021/06/08/the-plan-for-react-18.html)
-- [Блог Kent C. Dodds](https://kentcdodds.com/blog/)
-- [Блог Robin Wieruch](https://www.robinwieruch.de/blog)
+- Блоги
+  - [React](https://reactjs.org/blog/2021/06/08/the-plan-for-react-18.html)
+  - [Kent C. Dodds](https://kentcdodds.com/blog/)
+  - [Robin Wieruch](https://www.robinwieruch.de/blog)
+  - [Josh W Comeau](https://www.joshwcomeau.com/)
+  - [TkDodo](https://tkdodo.eu/blog/)
