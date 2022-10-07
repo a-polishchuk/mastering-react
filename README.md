@@ -6,7 +6,9 @@
 Від "Hello, world!" до комплексних великих застосунків.
 Десятки цікавих прикладів, кожен з яких висвітлює певну тему.
 
-▶️ Live Demo ось [тут](https://a-polishchuk.github.io/mastering-react/), а сам курс можна знайти [тут](https://www.udemy.com/course/opanovuemo-react/?referralCode=C0563B0126CAF7329C80).
+▶️ [Live Demo](https://a-polishchuk.github.io/mastering-react/)
+
+🎓 [Udemy курс](https://www.udemy.com/course/opanovuemo-react/?referralCode=C0563B0126CAF7329C80)
 
 ## 🛠 Стек технологій
 
