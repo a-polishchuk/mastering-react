@@ -80,4 +80,5 @@ export enum RouterPath {
 
   // design patters
   HOOKS_FACTORY = 'hactory-factory',
+  COMPOUND_COMPONENT = 'compound-component',
 }
