@@ -1,7 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
+import { EmojiNumberedListExample } from './CompoundComponent/EmojiNumberedListExample';
 
-import { CompoundComponent } from './CompoundComponent/CompoundComponent';
 import { HooksFactory } from './HooksFactory/HooksFactory';
 
 export function DesignPatternsSection(): JSX.Element {
@@ -13,12 +13,14 @@ export function DesignPatternsSection(): JSX.Element {
         path={RouterPath.HOOKS_FACTORY}
         element={<HooksFactory />}
       />
-      <Chapter
-        emoji="🔢"
-        title="Compound component"
-        path={RouterPath.COMPOUND_COMPONENT}
-        element={<CompoundComponent />}
-      />
+      <Section title="Compound component">
+        <Chapter
+          emoji="🔢"
+          title="Emoji numbered list"
+          path={RouterPath.EMOJI_NUMBERED_LIST}
+          element={<EmojiNumberedListExample />}
+        />
+      </Section>
     </Section>
   );
 }
