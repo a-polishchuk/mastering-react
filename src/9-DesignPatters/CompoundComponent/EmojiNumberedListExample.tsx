@@ -22,12 +22,14 @@ export function EmojiNumberedListExample(): JSX.Element {
   return (
     <ChapterWrapper title="Emoji numbered list" subtitle="Compound component">
       <TextBlock>
-        This list is constructed of <code>EmojiNumberedList</code> component + array of child
-        components.
+        This list is constructed of <code>EmojiNumberedList</code> component + array of{' '}
+        <code>child components</code>.
       </TextBlock>
+
       <TextBlock>
         <EmojiNumberedList>{FRUITS}</EmojiNumberedList>
       </TextBlock>
+
       <TextBlock>
         <EmojiNumberedList>
           <div>One</div>

@@ -17,7 +17,7 @@ export function EmojiNumberedList({ children }: { children: ReactNode }): JSX.El
     <>
       {array.map((child, index) => (
         <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
-          <div style={{ marginRight: 10 }}>{getEmojiNumber(index)}</div>
+          <div style={{ marginRight: 10 }}>{getEmojiNumber(index + 1)}</div>
           {child}
         </div>
       ))}

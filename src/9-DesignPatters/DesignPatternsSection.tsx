@@ -1,7 +1,8 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-import { EmojiNumberedListExample } from './CompoundComponent/EmojiNumberedListExample';
 
+import { EmojiNumberedListExample } from './CompoundComponent/EmojiNumberedListExample';
+import { ToggleButtonExample } from './CompoundComponent/ToggleButtonExample';
 import { HooksFactory } from './HooksFactory/HooksFactory';
 
 export function DesignPatternsSection(): JSX.Element {
@@ -19,6 +20,12 @@ export function DesignPatternsSection(): JSX.Element {
           title="Emoji numbered list"
           path={RouterPath.EMOJI_NUMBERED_LIST}
           element={<EmojiNumberedListExample />}
+        />
+        <Chapter
+          emoji="🎛"
+          title="Toggle button"
+          path={RouterPath.TOGGLE_BUTTON}
+          element={<ToggleButtonExample />}
         />
       </Section>
     </Section>

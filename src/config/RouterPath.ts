@@ -81,4 +81,5 @@ export enum RouterPath {
   // design patters
   HOOKS_FACTORY = 'hactory-factory',
   EMOJI_NUMBERED_LIST = 'emoji-numbered-list',
+  TOGGLE_BUTTON = 'toggle-button',
 }
