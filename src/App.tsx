@@ -1,5 +1,6 @@
 import { IntroSection } from '0-Intro/IntroSection';
 import { HooksBasicsSection } from '1-HooksBasics/HooksBasicsSection';
+import { MoreCustomHooksSection } from '10-MoreCustomHooks/MoreCustomHooksSection';
 import { SideEffectsSection } from '2-SideEffects/SideEffectsSection';
 import { ImperativeCodeSection } from '3-ImperativeCode/ImperativeCodeSection';
 import { MemoizationSection } from '4-Memoization/MemoizationSection';
@@ -23,6 +24,7 @@ export function App(): JSX.Element {
       <StateManagementSection />
       <DataFecthingSection />
       <DesignPatternsSection />
+      <MoreCustomHooksSection />
     </MasterDetail>
   );
 }

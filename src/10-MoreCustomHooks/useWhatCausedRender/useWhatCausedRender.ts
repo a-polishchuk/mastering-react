@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { logTagged } from 'utils/logTagged';
 
-export function useWhatCausedRender(name, props) {
-  const prevPropsRef = useRef({});
+export function useWhatCausedRender(tag: string, props: any) {
+  const prevPropsRef = useRef<any>({});
+
   useEffect(() => {
-    const changes = [];
+    const changes = new Array<any>();
     const prevProps = prevPropsRef.current;
     const keySet = new Set([...Object.keys(prevProps), ...Object.keys(props)]);
 
@@ -17,11 +19,8 @@ export function useWhatCausedRender(name, props) {
       }
     });
 
-    console.log(`[${name}] rerendered because of:`);
-    changes.forEach((change) => {
-      const { key, from, to } = change;
-      console.log(`  ${key}: ${from} => ${to}`);
-    });
+    logTagged(tag, 'rendered because of:');
+    console.table(changes);
 
     prevPropsRef.current = props;
   });

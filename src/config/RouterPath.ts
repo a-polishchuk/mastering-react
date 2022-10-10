@@ -82,4 +82,7 @@ export enum RouterPath {
   HOOKS_FACTORY = 'hactory-factory',
   EMOJI_NUMBERED_LIST = 'emoji-numbered-list',
   TOGGLE_BUTTON = 'toggle-button',
+
+  // more custom hooks
+  USE_WHAT_CAUSED_RENDER = 'use-what-caused-render',
 }
