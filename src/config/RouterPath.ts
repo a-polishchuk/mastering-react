@@ -85,4 +85,5 @@ export enum RouterPath {
 
   // more custom hooks
   USE_WHAT_CAUSED_RENDER = 'use-what-caused-render',
+  USE_HOVERED = 'use-hovered',
 }
