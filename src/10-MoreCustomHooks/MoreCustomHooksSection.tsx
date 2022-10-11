@@ -1,7 +1,9 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-import { UseHoveredExample } from './useHovered/UseHoveredExample';
 
+import { UseDebouncedValueExample } from './useDebouncedValue/UseDebouncedValueExample';
+import { UseHoveredExample } from './useHovered/UseHoveredExample';
+import { UseThrottledValueExample } from './useThrottledValue/UseThrottledValueExample';
 import { UseWhatCausedRenderExample } from './useWhatCausedRender/UseWhatCausedRenderExample';
 
 export function MoreCustomHooksSection(): JSX.Element {
@@ -18,6 +20,18 @@ export function MoreCustomHooksSection(): JSX.Element {
         title="useHovered"
         path={RouterPath.USE_HOVERED}
         element={<UseHoveredExample />}
+      />
+      <Chapter
+        emoji="⏳"
+        title="useThrottledValue"
+        path={RouterPath.USE_THROTTLED_VALUE}
+        element={<UseThrottledValueExample />}
+      />
+      <Chapter
+        emoji="⌛️"
+        title="useDebouncedValue"
+        path={RouterPath.USE_DEBOUNCED_VALUE}
+        element={<UseDebouncedValueExample />}
       />
     </Section>
   );

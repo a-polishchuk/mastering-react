@@ -1,6 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 
-export function useThrottle(value, delay) {
+/**
+ * Prevents rapid change of a passed value.
+ *
+ * @param delay in milliseconds
+ * @returns throttled value
+ */
+export function useThrottledValue<T>(value: T, delay: number): T {
   const [throttledValue, setThrottledValue] = useState(value);
   const valueRef = useRef(value);
 
@@ -9,12 +15,12 @@ export function useThrottle(value, delay) {
   }, [value]);
 
   useEffect(() => {
-    const intervalHandle = setInterval(() => {
+    const intervalId = setInterval(() => {
       setThrottledValue(valueRef.current);
     }, delay);
 
     return () => {
-      clearInterval(intervalHandle);
+      clearInterval(intervalId);
     };
   }, [delay]);
 

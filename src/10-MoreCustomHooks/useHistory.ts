@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-export function useHistory(value) {
-  const [history, setHistory] = useState([]);
+export function useHistory<T>(value: T): T[] {
+  const [history, setHistory] = useState<T[]>([]);
 
   useEffect(() => {
     setHistory((array) => [...array, value]);
