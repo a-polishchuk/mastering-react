@@ -4,8 +4,8 @@ import { useThrottledValue } from 'hooks/useThrottledValue';
 import { MouseEventHandler, useState } from 'react';
 
 import { CircleColor, mapToCircle } from './common/Circle';
+import classes from './common/common.module.css';
 import { Position } from './common/Position';
-import classes from './UseThrottledValue.module.css';
 
 const DELAY = 200;
 

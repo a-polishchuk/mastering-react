@@ -2,7 +2,9 @@ import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 
 import { UseDebouncedValueExample } from './UseDebouncedValueExample';
+import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
+import { UsePreviousExample } from './UsePreviousExample';
 import { UseThrottledValueExample } from './UseThrottledValueExample';
 import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
@@ -22,13 +24,25 @@ export function MoreCustomHooksSection(): JSX.Element {
         element={<UseHoveredExample />}
       />
       <Chapter
-        emoji="⏳"
+        emoji="🔴"
+        title="usePrevious"
+        path={RouterPath.USE_PREVIOUS}
+        element={<UsePreviousExample />}
+      />
+      <Chapter
+        emoji="🟢"
+        title="useHistory"
+        path={RouterPath.USE_HISTORY}
+        element={<UseHistoryExample />}
+      />
+      <Chapter
+        emoji="🟣"
         title="useThrottledValue"
         path={RouterPath.USE_THROTTLED_VALUE}
         element={<UseThrottledValueExample />}
       />
       <Chapter
-        emoji="⌛️"
+        emoji="🟠"
         title="useDebouncedValue"
         path={RouterPath.USE_DEBOUNCED_VALUE}
         element={<UseDebouncedValueExample />}

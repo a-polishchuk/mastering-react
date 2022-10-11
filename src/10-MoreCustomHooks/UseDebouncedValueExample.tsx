@@ -4,8 +4,8 @@ import { useHistory } from 'hooks/useHistory';
 import { MouseEventHandler, useState } from 'react';
 
 import { CircleColor, mapToCircle } from './common/Circle';
+import classes from './common/common.module.css';
 import { Position } from './common/Position';
-import classes from './UseDebouncedValue.module.css';
 
 const DELAY = 200;
 
@@ -29,8 +29,8 @@ export function UseDebouncedValueExample(): JSX.Element {
   return (
     <ChapterWrapper title="useDebouncedValue" subtitle="More custom hooks">
       <div className={classes.container} onMouseMove={onMouseMove}>
-        {mapToCircle(positionHistory, CircleColor.GREEN)}
-        {mapToCircle(debouncedHistory, CircleColor.RED)}
+        {mapToCircle(positionHistory, CircleColor.BLUE)}
+        {mapToCircle(debouncedHistory, CircleColor.ORANGE)}
       </div>
     </ChapterWrapper>
   );
