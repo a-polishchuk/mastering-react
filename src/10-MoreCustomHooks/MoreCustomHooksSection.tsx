@@ -1,10 +1,10 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 
-import { UseDebouncedValueExample } from './useDebouncedValue/UseDebouncedValueExample';
-import { UseHoveredExample } from './useHovered/UseHoveredExample';
-import { UseThrottledValueExample } from './useThrottledValue/UseThrottledValueExample';
-import { UseWhatCausedRenderExample } from './useWhatCausedRender/UseWhatCausedRenderExample';
+import { UseDebouncedValueExample } from './UseDebouncedValueExample';
+import { UseHoveredExample } from './UseHoveredExample';
+import { UseThrottledValueExample } from './UseThrottledValueExample';
+import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
 export function MoreCustomHooksSection(): JSX.Element {
   return (

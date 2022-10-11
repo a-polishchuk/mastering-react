@@ -1,10 +1,10 @@
-import { CircleColor, mapToCircle } from '10-MoreCustomHooks/Circle';
-import { Position } from '10-MoreCustomHooks/Position';
-import { useHistory } from '10-MoreCustomHooks/useHistory';
 import { ChapterWrapper } from 'components';
+import { useHistory } from 'hooks/useHistory';
+import { useThrottledValue } from 'hooks/useThrottledValue';
 import { MouseEventHandler, useState } from 'react';
 
-import { useThrottledValue } from './useThrottledValue';
+import { CircleColor, mapToCircle } from './common/Circle';
+import { Position } from './common/Position';
 import classes from './UseThrottledValue.module.css';
 
 const DELAY = 200;

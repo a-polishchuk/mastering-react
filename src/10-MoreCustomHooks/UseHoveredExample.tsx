@@ -1,6 +1,5 @@
 import { ChapterWrapper, Toolbar } from 'components';
-
-import { useHovered } from './useHovered';
+import { useHovered } from 'hooks/useHovered';
 
 interface EmojiHoverProps {
   idle: string;

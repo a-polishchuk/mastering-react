@@ -1,6 +1,6 @@
 import { ChapterWrapper, ColoredBlock, Toolbar } from 'components';
+import { useWhatCausedRender } from 'hooks/useWhatCausedRender';
 import { useState } from 'react';
-import { useWhatCausedRender } from './useWhatCausedRender';
 
 interface BadgeProps {
   firstName: string;
