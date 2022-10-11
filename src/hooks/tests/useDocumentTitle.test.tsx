@@ -2,7 +2,7 @@ import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 
-import { useDocumentTitle } from './useDocumentTitle';
+import { useDocumentTitle } from '../useDocumentTitle';
 
 function TestComponent(): JSX.Element {
   const [count, setCount] = useState<number>(0);

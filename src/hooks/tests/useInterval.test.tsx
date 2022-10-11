@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useState } from 'react';
 
-import { useInterval } from './useInterval';
+import { useInterval } from '../useInterval';
 
 function TestComponent(): JSX.Element {
   const [count, setCount] = useState<number>(0);

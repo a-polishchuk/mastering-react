@@ -2,7 +2,7 @@ import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 
-import { useLocalStorage } from './useLocalStorage';
+import { useLocalStorage } from '../useLocalStorage';
 
 function TestComponent(): JSX.Element {
   const [count, setCount] = useLocalStorage<number>('test-key', 0);

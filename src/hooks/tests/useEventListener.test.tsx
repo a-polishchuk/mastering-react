@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 
-import { useEventListener } from './useEventListener';
+import { useEventListener } from '../useEventListener';
 
 interface TestProps {
   eventName: string;

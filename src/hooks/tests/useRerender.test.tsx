@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useRef } from 'react';
 
-import { useRerender } from './useRerender';
+import { useRerender } from '../useRerender';
 
 function TestComponent(): JSX.Element {
   const rerender = useRerender();

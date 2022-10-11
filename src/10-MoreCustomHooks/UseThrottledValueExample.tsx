@@ -9,6 +9,7 @@ import { Position } from './common/Position';
 
 const DELAY = 200;
 
+// TODO: check if it works properly, sometime last point is skipped for some reason
 export function UseThrottledValueExample(): JSX.Element {
   const [mousePosition, setMousePosition] = useState<Position | null>(null);
   const throttledPosition = useThrottledValue(mousePosition, DELAY);

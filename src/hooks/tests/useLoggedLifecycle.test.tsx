@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { vi } from 'vitest';
 
-import { useLoggedLifecycle } from './useLoggedLifecycle';
+import { useLoggedLifecycle } from '../useLoggedLifecycle';
 
 function LifecycleTest(): JSX.Element {
   useLoggedLifecycle('test');

@@ -1,6 +1,6 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 
-import { useToggle } from './useToggle';
+import { useToggle } from '../useToggle';
 
 describe('useToggle', () => {
   test('should toggle boolean value', async () => {
