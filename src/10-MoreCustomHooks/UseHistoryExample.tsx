@@ -1,28 +1,25 @@
 import { ChapterWrapper } from 'components';
 import { useHistory } from 'hooks/useHistory';
-import { MouseEventHandler, useState } from 'react';
 
 import { Circle, CircleColor, mapToCircle } from './common/Circle';
 import classes from './common/common.module.css';
+import { mapToLine } from './common/Line';
 import { Position } from './common/Position';
+import { useMousePosition } from './common/useMousePosition';
 
 export function UseHistoryExample(): JSX.Element {
-  const [clickPosition, setClickPosition] = useState<Position | null>(null);
+  const [clickPosition, clickHandler] = useMousePosition();
   const history = useHistory(clickPosition);
 
-  const onClick: MouseEventHandler<HTMLDivElement> = (event) => {
-    const { clientX, clientY } = event;
-    const target = event.target as HTMLDivElement;
-    const { x, y } = target.getBoundingClientRect();
-    setClickPosition({
-      x: clientX - x,
-      y: clientY - y,
-    });
-  };
+  const linePath = history.filter((item) => item !== null) as Position[];
+  if (clickPosition) {
+    linePath.push(clickPosition);
+  }
 
   return (
     <ChapterWrapper title="useHistory" subtitle="More custom hooks">
-      <div className={classes.container} onClick={onClick}>
+      <div className={classes.container} onClick={clickHandler}>
+        {mapToLine(linePath)}
         {mapToCircle(history, CircleColor.RED)}
         {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
       </div>

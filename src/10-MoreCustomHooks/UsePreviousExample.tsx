@@ -1,28 +1,19 @@
 import { ChapterWrapper } from 'components';
 import { usePrevious } from 'hooks/usePrevious';
-import { MouseEventHandler, useState } from 'react';
 
 import { Circle, CircleColor } from './common/Circle';
 import classes from './common/common.module.css';
-import { Position } from './common/Position';
+import { Line } from './common/Line';
+import { useMousePosition } from './common/useMousePosition';
 
 export function UsePreviousExample(): JSX.Element {
-  const [clickPosition, setClickPosition] = useState<Position | null>(null);
+  const [clickPosition, clickHandler] = useMousePosition();
   const previousPosition = usePrevious(clickPosition);
-
-  const onClick: MouseEventHandler<HTMLDivElement> = (event) => {
-    const { clientX, clientY } = event;
-    const target = event.target as HTMLDivElement;
-    const { x, y } = target.getBoundingClientRect();
-    setClickPosition({
-      x: clientX - x,
-      y: clientY - y,
-    });
-  };
 
   return (
     <ChapterWrapper title="usePrevious" subtitle="More custom hooks">
-      <div className={classes.container} onClick={onClick}>
+      <div className={classes.container} onClick={clickHandler}>
+        {previousPosition && clickPosition && <Line from={previousPosition} to={clickPosition} />}
         {previousPosition && <Circle position={previousPosition} color={CircleColor.RED} />}
         {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
       </div>
