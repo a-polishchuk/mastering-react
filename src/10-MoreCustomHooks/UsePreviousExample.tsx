@@ -14,7 +14,9 @@ export function UsePreviousExample(): JSX.Element {
     <ChapterWrapper title="usePrevious" subtitle="More custom hooks">
       <div className={classes.container} onClick={clickHandler}>
         {previousPosition && clickPosition && <Line from={previousPosition} to={clickPosition} />}
-        {previousPosition && <Circle position={previousPosition} color={CircleColor.RED} />}
+        {previousPosition && (
+          <Circle position={previousPosition} color={CircleColor.RED} opacity={0.5} />
+        )}
         {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
       </div>
     </ChapterWrapper>

@@ -5,9 +5,10 @@ import { Position } from './Position';
 interface Props {
   from: Position;
   to: Position;
+  color?: string;
 }
 
-export function Line({ from, to }: Props): JSX.Element {
+export function Line({ from, to, color }: Props): JSX.Element {
   const center = getMiddle(from, to);
   const angle = getAngle(from, to);
 
@@ -15,7 +16,7 @@ export function Line({ from, to }: Props): JSX.Element {
     pointerEvents: 'none',
     position: 'absolute',
     height: '2px',
-    border: '1px dashed #0003',
+    border: `1px dashed ${color || '#0003'}`,
     width: getDistance(from, to),
     left: center.x,
     top: center.y,
@@ -40,9 +41,11 @@ function getDistance(a: Position, b: Position): number {
   return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
 }
 
-export function mapToLine(positions: Position[]) {
+export function mapToLine(positions: (Position | null)[], color?: string) {
   return positions.map((position, index, array) => {
-    const isNotLast = index < array.length - 1;
-    return isNotLast ? <Line from={position} to={array[index + 1]} /> : null;
+    const nextPosition = array[index + 1];
+    return position && nextPosition ? (
+      <Line from={position} to={nextPosition} color={color} />
+    ) : null;
   });
 }

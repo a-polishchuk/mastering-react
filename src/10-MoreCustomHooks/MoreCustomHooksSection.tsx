@@ -18,7 +18,7 @@ export function MoreCustomHooksSection(): JSX.Element {
         element={<UseWhatCausedRenderExample />}
       />
       <Chapter
-        emoji="🖱️"
+        emoji="🦄"
         title="useHovered"
         path={RouterPath.USE_HOVERED}
         element={<UseHoveredExample />}
