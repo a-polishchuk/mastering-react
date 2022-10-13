@@ -1,4 +1,4 @@
-import { ChapterWrapper } from 'components';
+import { Button, ChapterWrapper } from 'components';
 import { useTimeout } from 'hooks/useTimeout';
 import { useState } from 'react';
 import { generateUniqueId } from 'utils/generateUniqueId';
@@ -10,10 +10,13 @@ import { Creature } from './Creature';
 import { generateRandomPosition } from './generateRandomPosition';
 import classes from './UseTimeouteExample.module.css';
 
+const TARGETS_NUMBER = 10;
 const PLAY_TIME = 10 * 1000;
 
 export function UseTimeoutExample(): JSX.Element {
-  const [caterpillars, setCaterpillars] = useState<Creature[]>(() => generateRandomPositions(10));
+  const [caterpillars, setCaterpillars] = useState<Creature[]>(() =>
+    generateRandomPositions(TARGETS_NUMBER)
+  );
   const [butterflies, setButterflies] = useState<Creature[]>([]);
   const [isPlaying, setPlaying] = useState<boolean>(true);
 
@@ -22,7 +25,14 @@ export function UseTimeoutExample(): JSX.Element {
     setButterflies((array) => [...array, creature]);
   };
 
-  useTimeout(() => setPlaying(false), PLAY_TIME);
+  const { reschedule: rescheduleTimeout } = useTimeout(() => setPlaying(false), PLAY_TIME);
+
+  const playAgain = () => {
+    setCaterpillars(generateRandomPositions(TARGETS_NUMBER));
+    setButterflies([]);
+    setPlaying(true);
+    rescheduleTimeout();
+  };
 
   return (
     <ChapterWrapper title="useTimeout" subtitle="More custom hooks">
@@ -38,8 +48,10 @@ export function UseTimeoutExample(): JSX.Element {
       ) : (
         <div className={classes.gameOver}>
           Game over!
-          <br />
-          {butterflies.length + caterpillars.length} 🐛 ➡️ {butterflies.length} 🦋
+          <div>
+            {butterflies.length + caterpillars.length} 🐛 ➡️ {butterflies.length} 🦋
+          </div>
+          <Button text="Play again" onClick={playAgain} />
         </div>
       )}
     </ChapterWrapper>

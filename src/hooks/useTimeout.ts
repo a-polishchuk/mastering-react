@@ -1,7 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export function useTimeout(callback: () => void, timeout: number | null) {
+export interface UseTimeout {
+  reschedule: () => void;
+}
+
+export function useTimeout(callback: () => void, timeout: number | null): UseTimeout {
   const callbackRef = useRef(callback);
+  const [dummyState, setDummyState] = useState<any>();
 
   useEffect(() => {
     callbackRef.current = callback;
@@ -12,8 +17,12 @@ export function useTimeout(callback: () => void, timeout: number | null) {
       return;
     }
 
-    const timeoutId = setTimeout(callbackRef.current, timeout);
+    const timeoutId = setTimeout(() => callbackRef.current(), timeout);
 
     return () => clearTimeout(timeoutId);
-  }, [timeout]);
+  }, [timeout, dummyState]);
+
+  return {
+    reschedule: () => setDummyState({}),
+  };
 }
