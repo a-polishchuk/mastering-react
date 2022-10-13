@@ -20,9 +20,9 @@ export function UseDebouncedValueExample(): JSX.Element {
   return (
     <ChapterWrapper title="useDebouncedValue" subtitle="More custom hooks">
       <div className={classes.container} onMouseMove={moveHandler}>
-        {mapToCircle(positionHistory, CircleColor.BLUE, HALF_TRANSPARENT)}
-        {mapToLine(debouncedHistory, '#ffbb00')}
-        {mapToCircle(debouncedHistory, CircleColor.ORANGE)}
+        {mapToCircle(positionHistory, CircleColor.ORANGE, HALF_TRANSPARENT)}
+        {mapToLine(debouncedHistory, '#0066ff')}
+        {mapToCircle(debouncedHistory, CircleColor.BLUE)}
       </div>
     </ChapterWrapper>
   );

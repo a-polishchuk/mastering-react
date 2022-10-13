@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export function useTimeout(callback: () => {}, timeout: number | null) {
+export function useTimeout(callback: () => void, timeout: number | null) {
   const callbackRef = useRef(callback);
 
   useEffect(() => {

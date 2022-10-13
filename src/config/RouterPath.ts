@@ -90,4 +90,5 @@ export enum RouterPath {
   USE_HISTORY = 'use-history',
   USE_THROTTLED_VALUE = 'use-throttled-value',
   USE_DEBOUNCED_VALUE = 'use-debounced-value',
+  USE_TIMEOUT = 'use-timeout',
 }

@@ -6,6 +6,7 @@ import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
 import { UsePreviousExample } from './UsePreviousExample';
 import { UseThrottledValueExample } from './UseThrottledValueExample';
+import { UseTimeoutExample } from './useTimeout/UseTimeoutExample';
 import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
 export function MoreCustomHooksSection(): JSX.Element {
@@ -42,10 +43,16 @@ export function MoreCustomHooksSection(): JSX.Element {
         element={<UseThrottledValueExample />}
       />
       <Chapter
-        emoji="🟠"
+        emoji="🔵"
         title="useDebouncedValue"
         path={RouterPath.USE_DEBOUNCED_VALUE}
         element={<UseDebouncedValueExample />}
+      />
+      <Chapter
+        emoji="⏲"
+        title="useTimeout"
+        path={RouterPath.USE_TIMEOUT}
+        element={<UseTimeoutExample />}
       />
     </Section>
   );

@@ -1,6 +1,5 @@
 import { CSSProperties } from 'react';
-
-import { Position } from './Position';
+import { getAngle, getDistance, getMiddle, Position } from 'utils/geometry';
 
 interface Props {
   from: Position;
@@ -24,21 +23,6 @@ export function Line({ from, to, color }: Props): JSX.Element {
   };
 
   return <div style={style} />;
-}
-
-function getMiddle(a: Position, b: Position): Position {
-  return {
-    x: (a.x + b.x) / 2,
-    y: (a.y + b.y) / 2,
-  };
-}
-
-function getAngle(a: Position, b: Position): number {
-  return Math.atan2(b.y - a.y, b.x - a.x);
-}
-
-function getDistance(a: Position, b: Position): number {
-  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
 }
 
 export function mapToLine(positions: (Position | null)[], color?: string) {
