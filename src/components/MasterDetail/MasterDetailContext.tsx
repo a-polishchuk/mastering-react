@@ -10,5 +10,9 @@ const defaultValue: any = null;
 export const MasterDetailContext = createContext<MasterDetailState>(defaultValue);
 
 export function useMasterDetailContext() {
-  return useContext(MasterDetailContext);
+  const contextValue = useContext(MasterDetailContext);
+  if (!contextValue) {
+    throw new Error('Do not use this hook outside of correspondent Provider');
+  }
+  return contextValue;
 }

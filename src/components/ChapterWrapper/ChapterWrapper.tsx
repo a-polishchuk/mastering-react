@@ -1,4 +1,3 @@
-import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { ReactElement, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,13 +8,12 @@ import classes from './ChapterWrapper.module.css';
 export interface ChapterWrapperProps {
   title: string | ReactElement;
   subtitle?: string | ReactElement;
-  rerender?: () => void;
   children: ReactNode;
+  rerender?: () => void;
 }
 
 export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
-  const { title, subtitle, rerender, children } = props;
-  const { value: childrenKey, increase: remount } = useCounter();
+  const { title, subtitle, children, rerender } = props;
 
   const navigate = useNavigate();
   const closeChapter = () => navigate('/');
@@ -27,14 +25,11 @@ export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
           <h2>{title}</h2>
           <FlexFiller />
           {rerender && <EmojiButton emoji="🔄" tooltip="RErender" onClick={rerender} />}
-          <EmojiButton emoji="♻️" tooltip="REmount" onClick={remount} />
           <EmojiButton emoji="❌" tooltip="Close" onClick={closeChapter} />
         </div>
         <h3>{subtitle}</h3>
       </div>
-      <div key={childrenKey} className={classes.content}>
-        {children}
-      </div>
+      <div className={classes.content}>{children}</div>
     </div>
   );
 }
