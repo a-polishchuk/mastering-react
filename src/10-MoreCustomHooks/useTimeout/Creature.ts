@@ -1,4 +1,4 @@
-import { Position } from '10-MoreCustomHooks/common/Position';
+import { Position } from 'utils/geometry';
 
 export interface Creature {
   id: string;

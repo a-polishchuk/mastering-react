@@ -29,7 +29,7 @@ export function mapToLine(positions: (Position | null)[], color?: string) {
   return positions.map((position, index, array) => {
     const nextPosition = array[index + 1];
     return position && nextPosition ? (
-      <Line from={position} to={nextPosition} color={color} />
+      <Line key={index} from={position} to={nextPosition} color={color} />
     ) : null;
   });
 }

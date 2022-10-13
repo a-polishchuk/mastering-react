@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
+import { Position } from 'utils/geometry';
 
 import classes from './Circle.module.css';
-import { Position } from './Position';
 
 export enum CircleColor {
   RED = '🔴',

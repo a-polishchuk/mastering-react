@@ -1,5 +1,5 @@
 import { MouseEventHandler, useState } from 'react';
-import { Position } from './Position';
+import { Position } from 'utils/geometry';
 
 export type UseMousePosition = [Position | null, MouseEventHandler<HTMLElement>];
 
