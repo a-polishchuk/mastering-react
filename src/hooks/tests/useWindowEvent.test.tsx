@@ -1,16 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { useWindowEvent, EventType } from 'hooks/useWindowEvent';
 import { vi } from 'vitest';
 
-import { useEventListener } from '../useEventListener';
-
 interface TestProps {
-  eventName: string;
+  eventName: EventType;
   callback: () => void;
 }
 
 function TestComponent({ eventName, callback }: TestProps): JSX.Element {
-  useEventListener(eventName, () => callback());
+  useWindowEvent(eventName, () => callback());
   return <div>Test Component</div>;
 }
 

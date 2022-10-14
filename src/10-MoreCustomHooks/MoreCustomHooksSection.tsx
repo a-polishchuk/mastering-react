@@ -3,6 +3,7 @@ import { RouterPath } from 'config/RouterPath';
 
 import { UseClickOutsideExample } from './UseClickOutsideExample';
 import { UseDebouncedValueExample } from './UseDebouncedValueExample';
+import { UseElementSizeExample } from './UseElementSizeExample';
 import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
 import { UsePreviousExample } from './UsePreviousExample';
@@ -65,7 +66,7 @@ export function MoreCustomHooksSection(): JSX.Element {
         emoji="📐"
         title="useElementSize"
         path={RouterPath.USE_ELEMENT_SIZE}
-        element={<UseClickOutsideExample />}
+        element={<UseElementSizeExample />}
       />
     </Section>
   );

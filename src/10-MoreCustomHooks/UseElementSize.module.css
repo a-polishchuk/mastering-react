@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.target {
+  width: 30%;
+  padding: 24px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px #0006;
+  border-radius: 4px;
+  border: 2px solid #0004;
+}
