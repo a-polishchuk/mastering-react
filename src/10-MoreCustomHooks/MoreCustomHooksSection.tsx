@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 
+import { UseClickOutsideExample } from './UseClickOutsideExample';
 import { UseDebouncedValueExample } from './UseDebouncedValueExample';
 import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
@@ -53,6 +54,18 @@ export function MoreCustomHooksSection(): JSX.Element {
         title="useTimeout"
         path={RouterPath.USE_TIMEOUT}
         element={<UseTimeoutExample />}
+      />
+      <Chapter
+        emoji="🎯"
+        title="useClickOutside"
+        path={RouterPath.USE_CLICK_OUTSIDE}
+        element={<UseClickOutsideExample />}
+      />
+      <Chapter
+        emoji="📐"
+        title="useElementSize"
+        path={RouterPath.USE_ELEMENT_SIZE}
+        element={<UseClickOutsideExample />}
       />
     </Section>
   );

@@ -91,4 +91,6 @@ export enum RouterPath {
   USE_THROTTLED_VALUE = 'use-throttled-value',
   USE_DEBOUNCED_VALUE = 'use-debounced-value',
   USE_TIMEOUT = 'use-timeout',
+  USE_CLICK_OUTSIDE = 'use-click-outside',
+  USE_ELEMENT_SIZE = 'use-element-size',
 }
