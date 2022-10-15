@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 
+import { TrackMousePosition } from './TrackMousePosition';
 import { UseClickOutsideExample } from './UseClickOutsideExample';
 import { UseDebouncedValueExample } from './UseDebouncedValueExample';
 import { UseElementSizeExample } from './UseElementSizeExample';
@@ -38,18 +39,26 @@ export function MoreCustomHooksSection(): JSX.Element {
         path={RouterPath.USE_HISTORY}
         element={<UseHistoryExample />}
       />
-      <Chapter
-        emoji="🟣"
-        title="useThrottledValue"
-        path={RouterPath.USE_THROTTLED_VALUE}
-        element={<UseThrottledValueExample />}
-      />
-      <Chapter
-        emoji="🔵"
-        title="useDebouncedValue"
-        path={RouterPath.USE_DEBOUNCED_VALUE}
-        element={<UseDebouncedValueExample />}
-      />
+      <Section title="Throttle, debounce">
+        <Chapter
+          emoji="🟠"
+          title="Track mouse position"
+          path={RouterPath.TRACK_MOUSE_POSITION}
+          element={<TrackMousePosition />}
+        />
+        <Chapter
+          emoji="🟣"
+          title="useThrottle"
+          path={RouterPath.USE_THROTTLE}
+          element={<UseThrottledValueExample />}
+        />
+        <Chapter
+          emoji="🔵"
+          title="useDebounce"
+          path={RouterPath.USE_DEBOUNCE}
+          element={<UseDebouncedValueExample />}
+        />
+      </Section>
       <Chapter
         emoji="⏲"
         title="useTimeout"
