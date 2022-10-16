@@ -8,7 +8,7 @@ import { UseElementSizeExample } from './UseElementSizeExample';
 import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
 import { UsePreviousExample } from './UsePreviousExample';
-import { UseThrottledValueExample } from './UseThrottledValueExample';
+import { UseThrottledStateExample } from './UseThrottledStateExample';
 import { UseTimeoutExample } from './useTimeout/UseTimeoutExample';
 import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
@@ -48,9 +48,9 @@ export function MoreCustomHooksSection(): JSX.Element {
         />
         <Chapter
           emoji="🟣"
-          title="useThrottle"
-          path={RouterPath.USE_THROTTLE}
-          element={<UseThrottledValueExample />}
+          title="useThrottledState"
+          path={RouterPath.USE_THROTTLED_STATE}
+          element={<UseThrottledStateExample />}
         />
         <Chapter
           emoji="🔵"

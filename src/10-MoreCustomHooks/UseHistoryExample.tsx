@@ -14,7 +14,7 @@ export function UseHistoryExample(): JSX.Element {
     <ChapterWrapper title="useHistory" subtitle="More custom hooks">
       <div className={classes.container} onClick={clickHandler}>
         {mapToLine(history)}
-        {mapToCircle(history, CircleColor.RED, 0.5)}
+        {mapToCircle(history, CircleColor.GREEN, 0.5)}
         {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
       </div>
     </ChapterWrapper>

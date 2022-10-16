@@ -89,7 +89,7 @@ export enum RouterPath {
   USE_PREVIOUS = 'use-previous',
   USE_HISTORY = 'use-history',
   TRACK_MOUSE_POSITION = 'track-mouse-position',
-  USE_THROTTLE = 'use-throttle',
+  USE_THROTTLED_STATE = 'use-throttled-state',
   USE_DEBOUNCE = 'use-debounce',
   USE_TIMEOUT = 'use-timeout',
   USE_CLICK_OUTSIDE = 'use-click-outside',
