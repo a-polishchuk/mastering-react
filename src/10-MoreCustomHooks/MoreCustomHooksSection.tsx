@@ -3,7 +3,7 @@ import { RouterPath } from 'config/RouterPath';
 
 import { TrackMousePosition } from './TrackMousePosition';
 import { UseClickOutsideExample } from './UseClickOutsideExample';
-import { UseDebouncedValueExample } from './UseDebouncedValueExample';
+import { UseDebouncedStateExample } from './UseDebouncedStateExample';
 import { UseElementSizeExample } from './UseElementSizeExample';
 import { UseHistoryExample } from './UseHistoryExample';
 import { UseHoveredExample } from './UseHoveredExample';
@@ -54,9 +54,9 @@ export function MoreCustomHooksSection(): JSX.Element {
         />
         <Chapter
           emoji="🔵"
-          title="useDebounce"
-          path={RouterPath.USE_DEBOUNCE}
-          element={<UseDebouncedValueExample />}
+          title="useDebouncedState"
+          path={RouterPath.USE_DEBOUNCED_STATE}
+          element={<UseDebouncedStateExample />}
         />
       </Section>
       <Chapter

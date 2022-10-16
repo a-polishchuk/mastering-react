@@ -9,7 +9,7 @@ export function useThrottledState<T>(initialValue: T, delay: number): UseThrottl
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const setter = useCallback(
     throttle((newValue: T) => setThrottledValue(newValue), delay),
-    []
+    [delay]
   );
 
   return [throttledValue, setter];
