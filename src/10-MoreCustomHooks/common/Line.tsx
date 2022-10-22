@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, memo } from 'react';
 import { getAngle, getDistance, getMiddle, Position } from 'utils/geometry';
 
 interface Props {
@@ -7,8 +7,9 @@ interface Props {
   color?: string;
 }
 
-export function Line({ from, to, color }: Props): JSX.Element {
-  const center = getMiddle(from, to);
+export const Line = memo(({ from, to, color }: Props): JSX.Element => {
+  const { x, y } = getMiddle(from, to);
+  const width = getDistance(from, to);
   const angle = getAngle(from, to);
 
   const style: CSSProperties = {
@@ -16,14 +17,14 @@ export function Line({ from, to, color }: Props): JSX.Element {
     position: 'absolute',
     height: '2px',
     border: `1px dashed ${color || '#0003'}`,
-    width: getDistance(from, to),
-    left: center.x,
-    top: center.y,
+    left: x,
+    top: y,
+    width,
     transform: `translate(-50%, -50%) rotate(${angle}rad)`,
   };
 
   return <div style={style} />;
-}
+});
 
 export function mapToLine(positions: (Position | null)[], color?: string) {
   return positions.map((position, index, array) => {

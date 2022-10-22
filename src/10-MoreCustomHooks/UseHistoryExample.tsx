@@ -1,6 +1,7 @@
 import { ChapterWrapper } from 'components';
 import { useHistory } from 'hooks/useHistory';
 
+import { Car } from './common/Car';
 import { Circle, CircleColor, mapToCircle } from './common/Circle';
 import classes from './common/common.module.css';
 import { mapToLine } from './common/Line';
@@ -16,6 +17,7 @@ export function UseHistoryExample(): JSX.Element {
         {mapToLine(history)}
         {mapToCircle(history, CircleColor.GREEN, 0.5)}
         {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
+        <Car path={history} />
       </div>
     </ChapterWrapper>
   );

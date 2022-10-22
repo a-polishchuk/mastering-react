@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, memo } from 'react';
 import { Position } from 'utils/geometry';
 
 import classes from './Circle.module.css';
@@ -19,7 +19,7 @@ interface CircleProps {
   opacity?: number;
 }
 
-export function Circle({ position, color, opacity }: CircleProps): JSX.Element {
+export const Circle = memo(({ position, color, opacity }: CircleProps): JSX.Element => {
   const style: CSSProperties = {
     left: position.x,
     top: position.y,
@@ -31,7 +31,7 @@ export function Circle({ position, color, opacity }: CircleProps): JSX.Element {
       {color}
     </div>
   );
-}
+});
 
 export function mapToCircle(positions: (Position | null)[], color: CircleColor, opacity?: number) {
   return positions.map(
