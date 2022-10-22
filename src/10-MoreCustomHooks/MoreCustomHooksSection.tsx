@@ -29,8 +29,8 @@ export function MoreCustomHooksSection(): JSX.Element {
       />
       <Chapter
         emoji="🔴"
-        title="usePrevious"
-        path={RouterPath.USE_PREVIOUS}
+        title="usePreviousRenderValue"
+        path={RouterPath.USE_PREVIOUS_RENDER_VALUE}
         element={<UsePreviousExample />}
       />
       <Chapter

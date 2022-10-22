@@ -86,7 +86,7 @@ export enum RouterPath {
   // more custom hooks
   USE_WHAT_CAUSED_RENDER = 'use-what-caused-render',
   USE_HOVERED = 'use-hovered',
-  USE_PREVIOUS = 'use-previous',
+  USE_PREVIOUS_RENDER_VALUE = 'use-previous-render-value',
   USE_HISTORY = 'use-history',
   TRACK_MOUSE_POSITION = 'track-mouse-position',
   USE_THROTTLED_STATE = 'use-throttled-state',

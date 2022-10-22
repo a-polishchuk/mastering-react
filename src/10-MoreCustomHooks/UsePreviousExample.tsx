@@ -1,24 +1,29 @@
 import { ChapterWrapper } from 'components';
-import { usePrevious } from 'hooks/usePrevious';
+import { usePreviousRenderValue } from 'hooks/usePreviousRenderValue';
+import { useRerender } from 'hooks/useRerender';
 
 import { Circle, CircleColor } from './common/Circle';
 import classes from './common/common.module.css';
 import { Line } from './common/Line';
 import { useMousePosition } from './common/useMousePosition';
 
-// TODO: rename, add rerender button
+const HALF_TRANSPARENT = 0.5;
+
 export function UsePreviousExample(): JSX.Element {
   const [clickPosition, clickHandler] = useMousePosition();
-  const previousPosition = usePrevious(clickPosition);
+  const prevPosition = usePreviousRenderValue(clickPosition);
+  const rerender = useRerender();
 
   return (
-    <ChapterWrapper title="usePrevious" subtitle="More custom hooks">
+    <ChapterWrapper title="usePreviousRenderValue" subtitle="More custom hooks" rerender={rerender}>
       <div className={classes.container} onClick={clickHandler}>
-        {previousPosition && clickPosition && <Line from={previousPosition} to={clickPosition} />}
-        {previousPosition && (
-          <Circle position={previousPosition} color={CircleColor.RED} opacity={0.5} />
+        {prevPosition && clickPosition && <Line from={prevPosition} to={clickPosition} />}
+        {prevPosition && (
+          <Circle position={prevPosition} color={CircleColor.RED} opacity={HALF_TRANSPARENT} />
         )}
-        {clickPosition && <Circle position={clickPosition} color={CircleColor.GREEN} />}
+        {clickPosition && (
+          <Circle position={clickPosition} color={CircleColor.GREEN} opacity={HALF_TRANSPARENT} />
+        )}
       </div>
     </ChapterWrapper>
   );

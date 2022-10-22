@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-// TODO: it's actually usePrevRenderValue()
-export function usePrevious<T>(value: T): T | undefined {
+export function usePreviousRenderValue<T>(value: T): T | undefined {
   const refContainer = useRef<T | undefined>(undefined);
 
   useEffect(() => {
