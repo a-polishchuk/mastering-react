@@ -41,7 +41,8 @@ describe('ColoredBlock', () => {
     expect(await screen.findByText('🔄')).toBeVisible();
     const bgColor = screen.getByTestId('colored-block').style.backgroundColor;
 
-    await userEvent.click(screen.getByText('🔄'));
+    await act(() => userEvent.click(screen.getByText('🔄')));
+
     const newBgColor = screen.getByTestId('colored-block').style.backgroundColor;
     expect(newBgColor !== bgColor).toBe(true);
   });

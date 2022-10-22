@@ -6,14 +6,10 @@ import { useLocalStorage } from '../useLocalStorage';
 
 function TestComponent(): JSX.Element {
   const [count, setCount] = useLocalStorage<number>('test-key', 0);
-  const plusOne = () => {
-    console.log('set count ' + (count + 1));
-    setCount(count + 1);
-  };
   return (
     <div>
       {`Value: ${count}`}
-      <button onClick={plusOne}>+1</button>
+      <button onClick={() => setCount(count + 1)}>+1</button>
     </div>
   );
 }

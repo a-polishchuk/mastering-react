@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useRef } from 'react';
 
@@ -22,10 +22,10 @@ describe('useRerender', () => {
   test('should trigger new render when called', async () => {
     render(<TestComponent />);
 
-    expect(await screen.findByText('Renders count: 1'));
+    expect(await screen.findByText('Renders count: 1')).toBeVisible();
 
-    await userEvent.click(screen.getByText('RERENDER'));
+    await act(() => userEvent.click(screen.getByText('RERENDER')));
 
-    expect(await screen.findByText('Renders count: 2'));
+    expect(await screen.findByText('Renders count: 2')).toBeVisible();
   });
 });
