@@ -6,6 +6,7 @@ import classes from './common/common.module.css';
 import { Line } from './common/Line';
 import { useMousePosition } from './common/useMousePosition';
 
+// TODO: rename, add rerender button
 export function UsePreviousExample(): JSX.Element {
   const [clickPosition, clickHandler] = useMousePosition();
   const previousPosition = usePrevious(clickPosition);
