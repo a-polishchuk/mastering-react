@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { vi } from 'vitest';
@@ -33,9 +33,7 @@ describe('useLoggedLifecycle', () => {
     expect(mockFn.mock.calls[0][0]).toBe('%c test %c                🔄 Rendering');
     expect(mockFn.mock.calls[1][0]).toBe('%c test %c                ✅ Mounted');
 
-    act(() => {
-      userEvent.click(screen.getByText('remount'));
-    });
+    userEvent.click(screen.getByText('remount'));
 
     await waitFor(() => {
       expect(mockFn.mock.calls[2][0]).toBe('%c test %c                🔄 Rendering');

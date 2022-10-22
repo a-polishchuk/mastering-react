@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { ChapterWrapper } from 'components/ChapterWrapper/ChapterWrapper';
 import { useRerender } from 'hooks/useRerender';
-import { act } from 'react-dom/test-utils';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ColoredBlock } from './ColoredBlock';
@@ -34,16 +33,16 @@ describe('ColoredBlock', () => {
   });
 
   test('should change color each render', async () => {
-    act(() => {
-      render(<WithChapterWrapper />);
-    });
+    render(<WithChapterWrapper />);
 
     expect(await screen.findByText('🔄')).toBeVisible();
     const bgColor = screen.getByTestId('colored-block').style.backgroundColor;
 
-    await act(() => userEvent.click(screen.getByText('🔄')));
+    userEvent.click(screen.getByText('🔄'));
 
-    const newBgColor = screen.getByTestId('colored-block').style.backgroundColor;
-    expect(newBgColor !== bgColor).toBe(true);
+    waitFor(() => {
+      const newBgColor = screen.getByTestId('colored-block').style.backgroundColor;
+      expect(newBgColor !== bgColor).toBe(true);
+    });
   });
 });

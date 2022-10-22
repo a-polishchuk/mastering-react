@@ -1,4 +1,4 @@
-import { act, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { vi } from 'vitest';
 
@@ -23,9 +23,7 @@ describe('useLocalStorage', () => {
 
     expect(getItemSpy).toHaveBeenCalledWith('test-key');
 
-    act(() => {
-      userEvent.click(screen.getByText('+1'));
-    });
+    userEvent.click(screen.getByText('+1'));
 
     expect(await screen.findByText('Value: 1')).toBeVisible();
 

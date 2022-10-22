@@ -20,12 +20,8 @@ describe('useDocumentTitle', () => {
       expect(document.title).toBe('0');
     });
 
-    act(() => {
-      userEvent.click(screen.getByText('increment'));
-    });
+    await act(() => userEvent.click(screen.getByText('increment')));
 
-    await waitFor(() => {
-      expect(document.title).toBe('1');
-    });
+    expect(document.title).toBe('1');
   });
 });
