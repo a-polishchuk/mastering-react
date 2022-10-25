@@ -9,7 +9,6 @@ import { LoadingSpinner } from './LoadingSpinner/LoadingSpinner';
 import { LoggedLifecycle } from './LoggedLifecycle';
 import { Chapter, MasterDetail, Section } from './MasterDetail';
 import { PropsTable } from './PropsTable/PropsTable';
-import { ReactLogo } from './ReactLogo/ReactLogo';
 import { Switch } from './Switch/Switch';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Toolbar } from './Toolbar/Toolbar';
@@ -28,7 +27,6 @@ export {
   LoggedLifecycle,
   MasterDetail,
   PropsTable,
-  ReactLogo,
   Section,
   Switch,
   TextBlock,

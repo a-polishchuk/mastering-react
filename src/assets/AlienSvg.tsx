@@ -1,20 +1,23 @@
-export const AlienSvg = ({
-  width,
-  height,
-  eyesColor = '#242424',
-  mouthColor = '#242424',
-  fillColor = '#ccd6dd',
-}) => {
+export interface AlienSvgProps {
+  size: number;
+  eyesColor: string;
+  mouthColor: string;
+  fillColor: string;
+}
+
+export function AlienSvg(props: AlienSvgProps): JSX.Element {
+  const { size, eyesColor = '#242424', mouthColor = '#242424', fillColor = '#ccd6dd' } = props;
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
-      style={{
-        enableBackground: 'new 0 0 47.5 47.5',
-      }}
+      // style={{
+      //   enableBackground: 'new 0 0 47.5 47.5',
+      // }}
       xmlSpace="preserve"
-      width={width}
-      height={height}
+      width={size}
+      height={size}
     >
       <defs>
         <clipPath id="a">
@@ -65,4 +68,4 @@ export const AlienSvg = ({
       </g>
     </svg>
   );
-};
+}
