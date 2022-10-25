@@ -4,10 +4,6 @@
   align-items: center;
 }
 
-.emptyScreenAvatar {
-  font-size: 32px;
-}
-
 .emptyScreenTimestamp {
   font-size: 12px;
   color: #0006;

@@ -1,23 +1,30 @@
+import { CSSProperties } from 'react';
+
 export interface AlienSvgProps {
   size: number;
-  eyesColor: string;
-  mouthColor: string;
-  fillColor: string;
+  eyesColor?: string;
+  mouthColor?: string;
+  fillColor?: string;
+  style?: CSSProperties;
 }
 
 export function AlienSvg(props: AlienSvgProps): JSX.Element {
-  const { size, eyesColor = '#242424', mouthColor = '#242424', fillColor = '#ccd6dd' } = props;
+  const {
+    size,
+    eyesColor = '#242424',
+    mouthColor = '#242424',
+    fillColor = '#ccd6dd',
+    style,
+  } = props;
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
-      // style={{
-      //   enableBackground: 'new 0 0 47.5 47.5',
-      // }}
       xmlSpace="preserve"
       width={size}
       height={size}
+      style={style}
     >
       <defs>
         <clipPath id="a">
