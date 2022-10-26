@@ -1,3 +1,4 @@
+import { AlienSvg } from 'assets/AlienSvg';
 import { useInterval } from 'hooks/useInterval';
 import { CSSProperties, useEffect, useState } from 'react';
 
@@ -36,5 +37,9 @@ export function EasterEgg() {
     setPosition(getRandomPosition());
   }, PAUSE_TIME);
 
-  return <div style={buildStyle(position, visible)}>👽</div>;
+  return (
+    <div style={buildStyle(position, visible)}>
+      <AlienSvg size={25} />
+    </div>
+  );
 }
