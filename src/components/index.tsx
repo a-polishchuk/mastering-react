@@ -10,6 +10,7 @@ import { LoggedLifecycle } from './LoggedLifecycle';
 import { Chapter, MasterDetail, Section } from './MasterDetail';
 import { PropsTable } from './PropsTable/PropsTable';
 import { Switch } from './Switch/Switch';
+import { Tabs } from './Tabs/Tabs';
 import { TextBlock } from './TextBlock/TextBlock';
 import { Toolbar } from './Toolbar/Toolbar';
 import { ValueLabel } from './ValueLabel/ValueLabel';
@@ -29,6 +30,7 @@ export {
   PropsTable,
   Section,
   Switch,
+  Tabs,
   TextBlock,
   Toolbar,
   ValueLabel,

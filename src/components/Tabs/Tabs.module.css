@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  display: flex;
+}
+
+.tab {
+  padding: 10px;
+  transition: all 0.2s linear;
+  cursor: default;
+}
+
+.selected {
+  text-shadow: var(--active-text-shadow);
+  box-shadow: 0px 3px 0px 0px #eadff9;
+}
