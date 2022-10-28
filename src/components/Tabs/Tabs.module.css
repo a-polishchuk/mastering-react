@@ -8,8 +8,11 @@
   transition: all 0.2s linear;
   cursor: default;
 }
+.tab:hover {
+  text-shadow: var(--passive-text-shadow);
+}
 
 .selected {
   text-shadow: var(--active-text-shadow);
-  box-shadow: 0px 3px 0px 0px #eadff9;
+  box-shadow: 0px 3px 0px 0px #e1ccff;
 }
