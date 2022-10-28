@@ -18,5 +18,5 @@ export function Profile(): JSX.Element {
     return <div className={classes.error}>Oops! Something went wrong...</div>;
   }
 
-  return <PropsTable title="User Profile" data={data} />;
+  return <PropsTable data={data} />;
 }

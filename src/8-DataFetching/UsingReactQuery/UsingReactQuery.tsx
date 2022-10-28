@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ChapterWrapper, Tabs } from 'components';
 
-import { queryFunction } from './api';
+import { queryFunction } from './api/queryFunction';
 import { Profile } from './Profile';
 import { TodoList } from './TodoList';
 import { TopPanel } from './TopPanel/TopPanel';

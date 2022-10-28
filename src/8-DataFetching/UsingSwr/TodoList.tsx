@@ -1,23 +1,17 @@
-import { Button } from 'components';
+import { EmojiButton } from 'components';
 
 import { useTodoList } from './hooks/useTodoList';
 
 export function TodoList(): JSX.Element {
-  const { data, mutate } = useTodoList();
+  const { data, mutate: refetch } = useTodoList();
 
   return (
     <table>
       <thead>
         <tr>
-          <th colSpan={2} style={{ fontSize: 24 }}>
-            Todos List
-          </th>
           <th>
-            <Button text="Refresh" onClick={() => mutate()} />
+            <EmojiButton emoji="🔄" tooltip="Refetch" onClick={() => refetch()} />
           </th>
-        </tr>
-        <tr>
-          <th>#</th>
           <th>Title</th>
           <th>Completed</th>
         </tr>
@@ -27,7 +21,7 @@ export function TodoList(): JSX.Element {
           <tr key={todo.id}>
             <td>{index + 1}</td>
             <td>{todo.title}</td>
-            <td>{todo.completed && '✅'}</td>
+            <td>{todo.completed ? '✅' : null}</td>
           </tr>
         ))}
       </tbody>

@@ -1,4 +1,4 @@
-import { ChapterWrapper } from 'components';
+import { ChapterWrapper, Tabs } from 'components';
 import { SWRConfig } from 'swr';
 
 import { fetcher } from './api/fetcher';
@@ -6,19 +6,17 @@ import { Profile } from './Profile';
 import { TodoList } from './TodoList';
 import { TopPanel } from './TopPanel/TopPanel';
 
-const SWR_CONFIG = {
-  fetcher,
-};
+const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
 
-export function UsingSwr() {
+export function UsingSwr(): JSX.Element {
   return (
     <ChapterWrapper title="SWR" subtitle="Data fetching">
-      <SWRConfig value={SWR_CONFIG}>
+      <SWRConfig value={{ fetcher }}>
         <TopPanel />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+        <Tabs tabs={TABS}>
           <Profile />
           <TodoList />
-        </div>
+        </Tabs>
       </SWRConfig>
     </ChapterWrapper>
   );
