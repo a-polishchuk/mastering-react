@@ -1,15 +1,20 @@
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
   display: flex;
 }
 
-.tab {
+.tabHeader {
   padding: 10px;
   transition: all 0.2s linear;
   cursor: default;
   font-weight: 600;
 }
-.tab:hover {
+.tabHeader:hover {
   text-shadow: var(--passive-text-shadow);
 }
 

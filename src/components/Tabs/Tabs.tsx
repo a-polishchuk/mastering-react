@@ -1,26 +1,22 @@
-import classNames from 'classnames';
+import { Children, ReactNode, useState } from 'react';
+
 import classes from './Tabs.module.css';
+import { TabsHeader } from './TabsHeader';
 
 export interface TabsProps {
   tabs: string[];
-  selectedTab: string;
-  onSelectedTabChange: (newSelectedTab: string) => void;
+  children: ReactNode;
 }
 
-export function Tabs(props: TabsProps): JSX.Element {
-  const { tabs, selectedTab, onSelectedTabChange } = props;
+export function Tabs({ tabs, children }: TabsProps): JSX.Element {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const childArray = Children.toArray(children);
+  const selectedTabContent = childArray[selectedIndex];
 
   return (
     <div className={classes.container}>
-      {tabs.map((tab) => {
-        const className = classNames(classes.tab, tab === selectedTab && classes.selected);
-        const onClick = () => onSelectedTabChange(tab);
-        return (
-          <div key={tab} className={className} onClick={onClick}>
-            {tab}
-          </div>
-        );
-      })}
+      <TabsHeader tabs={tabs} selectedIndex={selectedIndex} onSelect={setSelectedIndex} />
+      {selectedTabContent}
     </div>
   );
 }
