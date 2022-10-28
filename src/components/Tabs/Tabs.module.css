@@ -7,6 +7,7 @@
   padding: 10px;
   transition: all 0.2s linear;
   cursor: default;
+  font-weight: 600;
 }
 .tab:hover {
   text-shadow: var(--passive-text-shadow);

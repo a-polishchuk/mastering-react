@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ChapterWrapper } from 'components';
+import { ChapterWrapper, Tabs } from 'components';
+import { useState } from 'react';
 
 import { queryFunction } from './api';
 import { Profile } from './Profile';
@@ -16,14 +17,18 @@ const queryClient = new QueryClient({
   },
 });
 
+const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
+
 export function UsingReactQuery(): JSX.Element {
+  const [selectedTab, setSelectedTab] = useState<string>(TABS[0]);
+
   return (
     <ChapterWrapper title="React Query" subtitle="Data fetching">
       <QueryClientProvider client={queryClient}>
         <TopPanel />
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <Profile />
-          <TodoList />
+        <Tabs tabs={TABS} selectedTab={selectedTab} onSelectedTabChange={setSelectedTab} />
+        <div style={{ marginTop: 10, display: 'flex', flexDirection: 'column' }}>
+          {selectedTab === TABS[0] ? <Profile /> : selectedTab === TABS[1] ? <TodoList /> : null}
         </div>
       </QueryClientProvider>
     </ChapterWrapper>
