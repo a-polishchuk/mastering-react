@@ -2,9 +2,6 @@ import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 import { lazy } from 'react';
 
-// import { UsingReactQuery } from './UsingReactQuery/UsingReactQuery';
-// import { UsingSwr } from './UsingSwr/UsingSwr';
-
 const UsingReactQuery = lazy(() => import('./UsingReactQuery'));
 const UsingSwr = lazy(() => import('./UsingSwr'));
 

@@ -2,15 +2,15 @@ import { useUserId } from '8-DataFetching/UserContext';
 import { Button } from 'components';
 import { useSWRConfig } from 'swr';
 
-import { RequestKey } from '../api/RequestKey';
+import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 
 export function RefreshAll(): JSX.Element {
   const userId = useUserId();
-  const { mutate } = useSWRConfig();
+  const { mutate: refetch } = useSWRConfig();
 
   const handleClick = () => {
-    mutate(RequestKey.user(userId));
-    mutate(RequestKey.todos(userId));
+    refetch(QueryKeyFactory[Queries.USER_DETAILS](userId));
+    refetch(QueryKeyFactory[Queries.TODO_LIST](userId));
   };
 
   return <Button text="Refresh all" onClick={handleClick} />;

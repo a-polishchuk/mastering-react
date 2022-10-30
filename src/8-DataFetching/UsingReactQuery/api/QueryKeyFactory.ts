@@ -7,13 +7,7 @@ export enum Queries {
 }
 
 export const QueryKeyFactory = {
-  [Queries.USER_DETAILS]: (userId: number): QueryKey => {
-    return [`users/${userId}`];
-  },
-  [Queries.TODO_LIST]: (userId: number): QueryKey => {
-    return [`todos?userId=${userId}`];
-  },
-  [Queries.LAST_UPDATED]: (): QueryKey => {
-    return ['lastUpdated'];
-  },
+  [Queries.USER_DETAILS]: (userId: number): QueryKey => [`users/${userId}`],
+  [Queries.TODO_LIST]: (userId: number): QueryKey => [`todos?userId=${userId}`],
+  [Queries.LAST_UPDATED]: (): QueryKey => ['lastUpdated'],
 };

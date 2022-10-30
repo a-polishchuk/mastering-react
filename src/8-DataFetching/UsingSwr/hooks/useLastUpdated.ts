@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 
 const SWR_CONFIG = {
   refreshInterval: 3000,
@@ -11,5 +12,7 @@ function fetchLastUpdated(): Promise<Date> {
 }
 
 export function useLastUpdated() {
-  return useSWR<Date>('lastUpdated', fetchLastUpdated, SWR_CONFIG);
+  const keyBuilder = QueryKeyFactory[Queries.LAST_UPDATED];
+
+  return useSWR<Date>(keyBuilder(), fetchLastUpdated, SWR_CONFIG);
 }
