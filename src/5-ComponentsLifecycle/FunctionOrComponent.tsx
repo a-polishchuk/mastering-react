@@ -7,7 +7,7 @@ function Message({ children }: { children: JSX.Element }): JSX.Element {
 
 export function FunctionOrComponent(): JSX.Element {
   return (
-    <ChapterWrapper title="Function or component?">
+    <ChapterWrapper title="Function or component?" subtitle="Components lifecycle">
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         <TextBlock>
           🔍 Open{' '}

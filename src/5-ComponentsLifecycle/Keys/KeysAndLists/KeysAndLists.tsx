@@ -1,4 +1,4 @@
-import { ChapterWrapper } from 'components';
+import { ChapterWrapper, TextBlock } from 'components';
 
 import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';
@@ -11,11 +11,20 @@ export function KeysAndLists(): JSX.Element {
   const getIdKey = (item: Item, index: number) => item.id;
 
   return (
-    <ChapterWrapper title="Key property" subtitle="Keys & lists">
+    <ChapterWrapper title="Keys & lists" subtitle="Key property">
+      <TextBlock>
+        <div>
+          ❗️ DO NOT use <code>index</code> property as React <code>key</code> if the order of items
+          will be changed.
+        </div>
+        <div>🚮 Click on the list item to remove it. Note how many items were re-rendered.</div>
+      </TextBlock>
+
       <div className={classes.twoColumns}>
-        <i className={classes.columnTitle}>key === index</i>
-        <i className={classes.columnTitle}>key === uniqueId</i>
+        <code className={classes.columnTitle}>key === index</code>
+        <code className={classes.columnTitle}>key === uniqueId</code>
       </div>
+
       <div className={classes.twoColumns}>
         <List generateItems={generateInitialItems} getKey={getIndexKey} />
         <List generateItems={generateInitialItems} getKey={getIdKey} />

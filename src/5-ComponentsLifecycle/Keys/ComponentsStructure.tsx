@@ -1,11 +1,9 @@
-import { ChapterWrapper, EmojiButton, LoggedLifecycle, Toolbar } from 'components';
+import { ChapterWrapper, EmojiButton, LoggedLifecycle, TextBlock, Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
 
 export function ComponentsStructure(): JSX.Element {
   const [isToggled, toggle] = useToggle(true);
 
-  // note that event settings the same key property won't help
-  // key only make sense in the scope of a single parent
   const hedgehog = (
     <LoggedLifecycle key="🦔" tag="🦔">
       <EmojiButton emoji="🦔" onClick={toggle} />
@@ -13,7 +11,14 @@ export function ComponentsStructure(): JSX.Element {
   );
 
   return (
-    <ChapterWrapper title="Key property" subtitle="Components structure">
+    <ChapterWrapper title="Components structure" subtitle="Key property">
+      <TextBlock>
+        <div>
+          ℹ️ <code>key</code> property only makes sense in the scope of a single parent.
+        </div>
+        <div>ℹ️ Changes in a components tree will cause mounts and unmounts.</div>
+      </TextBlock>
+
       <h3>{isToggled ? 'Click the hedgehog!' : 'Nicely done! Now do it again.'}</h3>
       <Toolbar>
         {isToggled ? hedgehog : <div style={{ transform: 'scaleX(-1)' }}>{hedgehog}</div>}

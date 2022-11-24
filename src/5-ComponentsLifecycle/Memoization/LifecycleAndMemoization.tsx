@@ -1,4 +1,4 @@
-import { ChapterWrapper, ColoredBlock, LoggedLifecycle } from 'components';
+import { ChapterWrapper, ColoredBlock, LoggedLifecycle, TextBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, useCallback, useMemo } from 'react';
 
@@ -8,6 +8,8 @@ import { MemoText } from './MemoText';
 const MemoLoggedLifecycle = memo(LoggedLifecycle);
 
 export function LifecycleAndMemoization(): JSX.Element {
+  const rerender = useRerender();
+
   const useMemoText = useMemo(
     () => <MemoText tag="4. useMemoText" text="4. Text wrapped with useMemo" />,
     []
@@ -27,7 +29,12 @@ export function LifecycleAndMemoization(): JSX.Element {
   );
 
   return (
-    <ChapterWrapper title="Components lifecycle" subtitle="Memoization" rerender={useRerender()}>
+    <ChapterWrapper title="Memoization" subtitle="Components lifecycle" rerender={rerender}>
+      <TextBlock>
+        <div>ℹ️ Each of these lines was rendered in a different way.</div>
+        <div>ℹ️ You can achieve similar results in so many different ways with React.</div>
+      </TextBlock>
+
       <ColoredBlock>
         <MemoLoggedLifecycle tag="1. Static text parent">
           1. Just a static text here.
