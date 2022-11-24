@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
 
+import { FunctionOrComponent } from './FunctionOrComponent';
 import { ComponentsStructure } from './Keys/ComponentsStructure';
 import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';
 import { RemountComponent } from './Keys/RemountComponent';
@@ -41,6 +42,12 @@ export function ComponentsLifecycleSection(): JSX.Element {
         title="Lifecycle and memoization"
         path={RouterPath.LIFECYCLE_AMD_MEMOIZATION}
         element={<LifecycleAndMemoization />}
+      />
+      <Chapter
+        emoji="🔬"
+        title="Function or component?"
+        element={<FunctionOrComponent />}
+        path={RouterPath.FUNCTION_OR_COMPONENT}
       />
     </Section>
   );

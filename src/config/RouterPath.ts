@@ -59,6 +59,7 @@ export enum RouterPath {
   KEYS_COMPONENTS_STRUCTURE = 'keys/components-structure',
   RANDOM_RENDERING = 'random-rendering',
   LIFECYCLE_AMD_MEMOIZATION = 'lifecycle-and-memoization',
+  FUNCTION_OR_COMPONENT = 'function-or-component',
 
   // context and reducer
   COUNTER_REDUCER = 'counter-reducer',
