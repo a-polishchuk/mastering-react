@@ -3,6 +3,7 @@ import { RouterPath } from 'config/RouterPath';
 
 import { FetchDataInUseEffect } from './FetchDataInUseEffect';
 import { BewareOfInfiniteLoops } from './InfiniteLoops/BewareOfInfiniteLoops';
+import { EffectsPractice } from './Practice/EffectsPractice';
 import { UseEffectAndInterval } from './UseEffectAndInterval/UseEffectAndInterval';
 import { ComponentLifecycle } from './UseEffectBasics/ComponentLifecycle';
 import { EffectDependencies } from './UseEffectBasics/EffectDependencies';
@@ -79,6 +80,12 @@ export function SideEffectsSection(): JSX.Element {
           element={<UseLayoutEffectExample />}
         />
       </Section>
+      <Chapter
+        emoji="🛠"
+        title="Practice"
+        path={RouterPath.EFFECTS_PRACTICE}
+        element={<EffectsPractice />}
+      />
     </Section>
   );
 }

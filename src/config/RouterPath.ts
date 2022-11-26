@@ -37,6 +37,7 @@ export enum RouterPath {
   NO_NEED_TO_USE_EFFECT = 'no-need-to-use-effect',
   EFFECTS_SEQUENCE = 'effects-sequence',
   BATCHING_EFFECTS = 'batching-effects',
+  EFFECTS_PRACTICE = 'effects-practice',
 
   // imperative code
   CONTROLLED_INPUT = 'controlled-input',

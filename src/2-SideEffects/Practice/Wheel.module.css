@@ -1,0 +1,36 @@
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: spin 2s linear infinite;
+}
+
+.wheel {
+  width: 30px;
+  height: 30px;
+  background-color: darkgray;
+  border: 3px solid #0006;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.tyre {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed #0006;
+}
