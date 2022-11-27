@@ -12,4 +12,14 @@
   color: white;
   background-color: #0008;
   border-radius: 4px;
+  animation: blink 0.3s ease-out;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #0008;
+  }
 }
