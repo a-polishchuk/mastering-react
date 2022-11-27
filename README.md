@@ -56,23 +56,23 @@
 
 Якщо ви намагаєтесь запустити проект локально і отримуєте незрозумілий еррор, найперше і найліпше що можна зробити - видалити node_modules в директорії проекту та встановити залежності ще раз. Для цього треба виконати наступну команду (❗️перед цим треба впевнитись, що ви знаходитесь в root директорії проекту, це важливо❗️)
 
-| rm -rf node_modules && yarn
+> rm -rf node_modules && yarn
 
 Якщо ви намагаєтесь запустити storybook за допомогою команди **yarn storybook** і отримуєте ось цей еррор
 
-| Error: error:0308010C:digital envelope routines::unsupported
+> Error: error:0308010C:digital envelope routines::unsupported
 
 то скоріше за все, ви використовуєте Node.js версії 17+. Щоб позбавитись цієї помилки, треба додати env variable
 
-| NODE_OPTIONS=--openssl-legacy-provider
+> NODE_OPTIONS=--openssl-legacy-provider
 
 Я додав спеціальний скрипт до package.json, що робить це за Вас. Замість
 
-| yarn storybook
+> yarn storybook
 
 треба запускати
 
-| yarn storybook:node18
+> yarn storybook:node18
 
 ## ✅ Ваша контрибуція
 
