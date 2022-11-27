@@ -23,6 +23,7 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "storybook": "start-storybook -p 6006",
+    "storybook:node18": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
