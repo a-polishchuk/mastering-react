@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.rendersCounter {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px;
+  font-size: 10px;
+  color: white;
+  background-color: #0008;
+  border-radius: 4px;
+}
