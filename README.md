@@ -1,4 +1,4 @@
-[🇺🇦 Українською](README_ua)
+[🇺🇦 Українською](README_ua.md)
 
 ## 🎓 Udemy course repository - [Mastering React](https://www.udemy.com/course/opanovuemo-react/?referralCode=C0563B0126CAF7329C80)
 
