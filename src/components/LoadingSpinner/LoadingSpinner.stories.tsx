@@ -1,10 +1,21 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { LoadingSpinner } from './LoadingSpinner';
 
 export default {
   component: LoadingSpinner,
-} as ComponentMeta<typeof LoadingSpinner>;
+} as Meta<typeof LoadingSpinner>;
 
-export const Default: ComponentStory<typeof LoadingSpinner> = () => <LoadingSpinner />;
-Default.storyName = 'LoadingSpinner';
+type Story = StoryObj<typeof LoadingSpinner>;
+
+export const Default: Story = {
+  render: () => (
+    <div style={{
+      border: '1px solid #0004',
+      position: 'relative',
+      height: 300,
+    }}>
+      <LoadingSpinner />
+    </div>
+  ),
+};

@@ -1,18 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { ReactLogo, ReactLogoProps } from './ReactLogo';
+import { ReactLogo } from './ReactLogo';
 
 export default {
   component: ReactLogo,
-} as ComponentMeta<typeof ReactLogo>;
+} as Meta<typeof ReactLogo>;
 
-const Template: ComponentStory<typeof ReactLogo> = (args: ReactLogoProps) => (
-  <ReactLogo {...args} />
-);
+type Story = StoryObj<typeof ReactLogo>;
 
-export const Default = Template.bind({});
-Default.storyName = 'ReactLogo';
-Default.args = {
-  size: 150,
-  color: '#61dafb',
+export const Default: Story = {
+  args: {
+    size: 150,
+    color: '#61dafb',
+  },
 };

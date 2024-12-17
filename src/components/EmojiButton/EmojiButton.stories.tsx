@@ -1,31 +1,37 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
 import { EmojiButton, EmojiButtonProps } from './EmojiButton';
 
 export default {
   component: EmojiButton,
-} as ComponentMeta<typeof EmojiButton>;
+} as Meta<typeof EmojiButton>;
 
-const Template: ComponentStory<typeof EmojiButton> = (args: EmojiButtonProps) => (
-  <EmojiButton {...args} onClick={action('click')} />
-);
+type Story = StoryObj<typeof EmojiButton>;
 
-export const Default = Template.bind({});
-Default.args = {
-  emoji: '✅',
-  disabled: false,
+const render = (args: EmojiButtonProps) => <EmojiButton {...args} onClick={action('click')} />;
+
+export const Default: Story = {
+  args: {
+    emoji: '✅',
+    disabled: false,
+  },
+  render,
 };
 
-export const WithTooltip = Template.bind({});
-WithTooltip.args = {
-  emoji: '✅',
-  tooltip: 'Apply',
-  disabled: false,
+export const WithTooltip: Story = {
+  args: {
+    emoji: '✅',
+    tooltip: 'Apply',
+    disabled: false,
+  },
+  render,
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  emoji: '✅',
-  disabled: true,
+export const Disabled: Story = {
+  args: {
+    emoji: '✅',
+    disabled: true,
+  },
+  render,
 };

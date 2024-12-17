@@ -8,5 +8,7 @@ export function useUser() {
   const userId = useUserId();
   const keyBuilder = QueryKeyFactory[Queries.USER_DETAILS];
 
-  return useQuery<User>(keyBuilder(userId));
+  return useQuery<User>({
+    queryKey: keyBuilder(userId),
+  });
 }

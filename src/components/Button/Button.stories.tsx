@@ -1,19 +1,25 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-
-import { Button, ButtonProps } from './Button';
+import { Button } from './Button';
 
 export default {
   component: Button,
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args: ButtonProps) => (
-  <Button {...args} onClick={action('click')} />
-);
+type Story = StoryObj<typeof Button>;
 
-export const Default = Template.bind({});
-Default.storyName = 'Button';
-Default.args = {
-  text: 'Button',
-  disabled: false,
+export const Default: Story = {
+  args: {
+    text: 'Button',
+    disabled: false,
+    onClick: action('click action'),
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    text: 'Disabled Button',
+    disabled: true,
+    onClick: action('click'),
+  },
 };

@@ -4,7 +4,7 @@ import { nextGeneration } from '7-StateManagement/model/nextGeneration';
 import { randomize } from '7-StateManagement/model/randomize';
 import { toggleCell } from '7-StateManagement/model/toggleCell';
 import { GridState } from '7-StateManagement/types';
-import create from 'zustand';
+import { create } from 'zustand';
 
 const GRID_SIZE = 30;
 
@@ -16,7 +16,7 @@ interface GridStore {
   clear: () => void;
 }
 
-export const useGridStore = create<GridStore>((set) => ({
+export const useGridStore = create<GridStore>()((set) => ({
   grid: empty(GRID_SIZE, GRID_SIZE),
   toggleCell: (row: number, col: number) => {
     return set(({ grid }) => ({ grid: toggleCell(grid, [row, col]) }));

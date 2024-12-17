@@ -1,23 +1,21 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { ColoredBlock, ColoredBlockProps } from './ColoredBlock';
+import { ColoredBlock } from './ColoredBlock';
 
 export default {
   component: ColoredBlock,
-} as ComponentMeta<typeof ColoredBlock>;
+} as Meta<typeof ColoredBlock>;
 
-const Template: ComponentStory<typeof ColoredBlock> = ({
-  children,
-  ...args
-}: ColoredBlockProps) => (
-  <ColoredBlock {...args} onClick={action('click')}>
-    {children}
-  </ColoredBlock>
-);
+type Story = StoryObj<typeof ColoredBlock>;
 
-export const Default = Template.bind({});
-Default.storyName = 'ColoredBlock';
-Default.args = {
-  children: 'Colored block with a simple text inside',
+export const Default: Story = {
+  args: {
+    children: 'Colored block with a simple text inside',
+  },
+  render: (args) => (
+    <ColoredBlock {...args} onClick={action('click')}>
+      {args.children}
+    </ColoredBlock>
+  ),
 };
