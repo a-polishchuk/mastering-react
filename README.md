@@ -56,25 +56,13 @@ There are other package managers (e.g. [pnpm](https://pnpm.io/)), but they are n
 
 ## 🆘 Troubleshooting
 
-1️⃣ If you're trying to run the project locally and encounter an unclear error, the best first step is to delete the node_modules directory in the project and reinstall dependencies. To do this, run the following command (❗️ensure you're in the root directory of the project, this is important❗️)
+If you're trying to run the project locally and encounter an unclear error, the best first step is to delete the node_modules directory in the project and reinstall dependencies. To do this, run the following command (❗️ensure you're in the root directory of the project, this is important❗️)
 
 > rm -rf node_modules && yarn
 
-2️⃣ If you're trying to run Storybook with the **yarn storybook** command and encounter the following error
+or if you're using npm
 
-> Error: error:0308010C:digital envelope routines::unsupported
-
-it's likely you're using Node.js version 17+. To resolve this error, add the following environment variable:
-
-> NODE_OPTIONS=--openssl-legacy-provider
-
-I've added a special script to package.json that does this for you. Instead of
-
-> yarn storybook
-
-run
-
-> yarn storybook:node18
+> rm -rf node_modules && npm install
 
 ## ✅ Contributions
 
