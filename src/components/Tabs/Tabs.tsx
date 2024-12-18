@@ -6,16 +6,22 @@ import { TabsHeader } from './TabsHeader';
 export interface TabsProps {
   tabs: string[];
   children: ReactNode;
+  onSelect?: (index: number) => void;
 }
 
-export function Tabs({ tabs, children }: TabsProps): JSX.Element {
+export function Tabs({ tabs, children, onSelect }: TabsProps): JSX.Element {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const childArray = Children.toArray(children);
   const selectedTabContent = childArray[selectedIndex];
 
+  const handleSelect = (index: number) => {
+    setSelectedIndex(index);
+    onSelect?.(index);
+  };
+
   return (
     <div className={classes.container}>
-      <TabsHeader tabs={tabs} selectedIndex={selectedIndex} onSelect={setSelectedIndex} />
+      <TabsHeader tabs={tabs} selectedIndex={selectedIndex} onSelect={handleSelect} />
       {selectedTabContent}
     </div>
   );

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { fn } from '@storybook/test';
+
 import { Button } from './Button';
 
 export default {
@@ -12,7 +13,7 @@ export const Default: Story = {
   args: {
     text: 'Button',
     disabled: false,
-    onClick: action('click action'),
+    onClick: fn(),
   },
 };
 
@@ -20,6 +21,6 @@ export const Disabled: Story = {
   args: {
     text: 'Disabled Button',
     disabled: true,
-    onClick: action('click'),
+    onClick: fn(),
   },
 };

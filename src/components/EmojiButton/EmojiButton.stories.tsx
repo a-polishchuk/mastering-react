@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { fn } from '@storybook/test';
 
 import { EmojiButton, EmojiButtonProps } from './EmojiButton';
 
@@ -9,12 +9,13 @@ export default {
 
 type Story = StoryObj<typeof EmojiButton>;
 
-const render = (args: EmojiButtonProps) => <EmojiButton {...args} onClick={action('click')} />;
+const render = (args: EmojiButtonProps) => <EmojiButton {...args} />;
 
 export const Default: Story = {
   args: {
     emoji: '✅',
     disabled: false,
+    onClick: fn(),
   },
   render,
 };
@@ -24,6 +25,7 @@ export const WithTooltip: Story = {
     emoji: '✅',
     tooltip: 'Apply',
     disabled: false,
+    onClick: fn(),
   },
   render,
 };
@@ -32,6 +34,7 @@ export const Disabled: Story = {
   args: {
     emoji: '✅',
     disabled: true,
+    onClick: fn(),
   },
   render,
 };

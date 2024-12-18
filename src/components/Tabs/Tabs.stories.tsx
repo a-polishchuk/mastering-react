@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 
 import { TextBlock } from '../TextBlock/TextBlock';
 import { Tabs } from './Tabs';
@@ -12,6 +13,7 @@ type Story = StoryObj<typeof Tabs>;
 export const Default: Story = {
   args: {
     tabs: ['Animals', 'Food', 'Zodiac'],
+    onSelect: fn(),
   },
   render: (args) => (
     <Tabs {...args}>
