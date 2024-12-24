@@ -18,15 +18,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "yarn"
-      - run: yarn
-      - run: yarn test:ci
+          cache: "npm"
+      - run: npm ci
+      - run: npm run test:ci
       - name: Deploy
         run: |
           git config --global user.name $user_name
           git config --global user.email $user_email
           git remote set-url origin https://${github_token}@github.com/${repository}
-          yarn deploy
+          npm run deploy
         env:
           user_name: github-actions-bot
           user_email: noreply@dummy.com
