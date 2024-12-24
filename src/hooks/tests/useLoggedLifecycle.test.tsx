@@ -33,7 +33,7 @@ describe('useLoggedLifecycle', () => {
     expect(mockFn.mock.calls[0][0]).toBe('%c test %c                🔄 Rendering');
     expect(mockFn.mock.calls[1][0]).toBe('%c test %c                ✅ Mounted');
 
-    userEvent.click(screen.getByText('remount'));
+    await userEvent.click(screen.getByText('remount'));
 
     await waitFor(() => {
       expect(mockFn.mock.calls[2][0]).toBe('%c test %c                🔄 Rendering');

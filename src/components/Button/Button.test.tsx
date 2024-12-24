@@ -13,7 +13,7 @@ describe('Button', () => {
 
     await userEvent.click(screen.getByText('Click me!'));
 
-    expect(clickHandler).toBeCalledTimes(1);
+    expect(clickHandler).toHaveBeenCalledTimes(1);
   });
 
   test('click handler should not be called when disabled', async () => {
@@ -24,6 +24,6 @@ describe('Button', () => {
 
     await userEvent.click(screen.getByText('Click me!'));
 
-    expect(clickHandler).not.toBeCalled();
+    expect(clickHandler).not.toHaveBeenCalled();
   });
 });

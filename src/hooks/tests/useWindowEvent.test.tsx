@@ -21,7 +21,7 @@ describe('useEventListener', () => {
 
     await userEvent.keyboard('key');
 
-    expect(onKeyPress).toBeCalledTimes(3);
+    expect(onKeyPress).toHaveBeenCalledTimes(3);
   });
 
   test('should listen to click event', async () => {
@@ -36,6 +36,6 @@ describe('useEventListener', () => {
 
     await userEvent.click(screen.getByTestId('parent-node'));
 
-    expect(onClick).toBeCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

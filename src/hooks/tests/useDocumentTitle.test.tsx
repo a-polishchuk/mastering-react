@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 
@@ -20,7 +20,7 @@ describe('useDocumentTitle', () => {
       expect(document.title).toBe('0');
     });
 
-    await act(() => userEvent.click(screen.getByText('increment')));
+    await userEvent.click(screen.getByText('increment'));
 
     expect(document.title).toBe('1');
   });

@@ -19,11 +19,11 @@ describe('useToggle', () => {
 
     expect(await screen.findByText('NOPE')).toBeVisible();
 
-    userEvent.click(await screen.findByText('Toggle'));
+    await userEvent.click(screen.getByText('Toggle'));
 
     expect(await screen.findByText('YEAH')).toBeVisible();
 
-    userEvent.click(await screen.findByText('Toggle'));
+    await userEvent.click(screen.getByText('Toggle'));
 
     expect(await screen.findByText('NOPE')).toBeVisible();
   });

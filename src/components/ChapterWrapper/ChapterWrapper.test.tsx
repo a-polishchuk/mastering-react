@@ -1,4 +1,4 @@
-import { act, render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import { vi } from 'vitest';
@@ -47,8 +47,8 @@ describe('ChapterWrapper', () => {
     const rerenderButton = screen.getByText('🔄');
     expect(rerenderButton).toBeVisible();
 
-    await act(() => userEvent.click(rerenderButton));
+    await userEvent.click(rerenderButton);
 
-    expect(rerender).toBeCalledTimes(1);
+    expect(rerender).toHaveBeenCalledTimes(1);
   });
 });

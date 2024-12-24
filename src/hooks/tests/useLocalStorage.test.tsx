@@ -23,7 +23,7 @@ describe('useLocalStorage', () => {
 
     expect(getItemSpy).toHaveBeenCalledWith('test-key');
 
-    userEvent.click(screen.getByText('+1'));
+    await userEvent.click(screen.getByText('+1'));
 
     expect(await screen.findByText('Value: 1')).toBeVisible();
 
