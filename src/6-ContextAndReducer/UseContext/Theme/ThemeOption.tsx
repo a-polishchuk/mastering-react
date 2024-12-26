@@ -1,5 +1,4 @@
-import { CSSProperties, ReactElement } from 'react';
-
+import { CSSProperties } from 'react';
 import { Theme } from './Theme';
 
 function squareStyle(size: number, backgroundColor: string): CSSProperties {
@@ -10,11 +9,11 @@ function squareStyle(size: number, backgroundColor: string): CSSProperties {
   };
 }
 
-interface Props {
+type Props = {
   theme: Theme;
   selected: boolean;
   onSelect: (theme: Theme) => void;
-}
+};
 
 export function ThemeOption({ theme, selected, onSelect }: Props) {
   const { primaryColor, secondaryColor } = theme;

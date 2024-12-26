@@ -1,7 +1,6 @@
+import classes from './Circle.module.css';
 import { CSSProperties, memo } from 'react';
 import { Position } from 'utils/geometry';
-
-import classes from './Circle.module.css';
 
 export enum CircleColor {
   RED = '🔴',
@@ -13,11 +12,11 @@ export enum CircleColor {
   BLACK = '⚫️',
 }
 
-interface CircleProps {
+type CircleProps = {
   position: Position;
   color: CircleColor;
   opacity?: number;
-}
+};
 
 export const Circle = memo(({ position, color, opacity }: CircleProps) => {
   const style: CSSProperties = {

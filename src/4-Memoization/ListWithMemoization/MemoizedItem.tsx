@@ -1,15 +1,14 @@
 import classNames from 'classnames';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { memo } from 'react';
-
 import { ItemData } from '../ItemData';
 import classes from './MemoizedItem.module.css';
 
-interface Props {
+type Props = {
   item: ItemData;
   selected: boolean;
   onClick: (item: ItemData) => void;
-}
+};
 
 function Item({ item, selected, onClick }: Props) {
   const { emoji } = item;

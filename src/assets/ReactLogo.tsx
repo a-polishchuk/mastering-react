@@ -1,11 +1,11 @@
 import { CSSProperties } from 'react';
 
-export interface ReactLogoProps {
+export type ReactLogoProps = {
   size: number;
   color?: string;
   className?: string;
   style?: CSSProperties;
-}
+};
 
 export function ReactLogo(props: ReactLogoProps) {
   const { color = '#61dafb', size, className, style } = props;

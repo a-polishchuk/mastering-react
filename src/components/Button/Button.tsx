@@ -1,12 +1,11 @@
+import classes from './Button.module.css';
 import { MouseEventHandler } from 'react';
 
-import classes from './Button.module.css';
-
-export interface ButtonProps {
+export type ButtonProps = {
   text: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
-}
+};
 
 export function Button(props: ButtonProps) {
   const { text, onClick, disabled = false } = props;

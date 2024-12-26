@@ -1,10 +1,10 @@
 import { ChapterWrapper, Toolbar } from 'components';
 import { useHovered } from 'hooks/useHovered';
 
-interface EmojiHoverProps {
+type EmojiHoverProps = {
   idle: string;
   hover: string;
-}
+};
 
 function EmojiHover({ idle, hover }: EmojiHoverProps) {
   const [isHovered, refCallback] = useHovered();

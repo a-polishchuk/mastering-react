@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useContext } from 'react';
-
 import { User } from './User';
 import { useUser } from './useUser';
 
@@ -9,10 +8,10 @@ export function useUserContext() {
   return useContext(UserContext);
 }
 
-interface ProviderProps {
+type ProviderProps = {
   userId: number;
   children: ReactNode;
-}
+};
 
 export function UserProvider({ userId, children }: ProviderProps) {
   const user = useUser(userId);

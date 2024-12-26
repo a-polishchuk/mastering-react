@@ -1,11 +1,11 @@
-import { useInterval } from 'hooks/useInterval';
 import { useState } from 'react';
+import { useInterval } from 'hooks/useInterval';
 
-interface Props {
+type Props = {
   emojis: string[];
   delay: number;
   fontSize: number;
-}
+};
 
 export function AnimatedEmoji({ emojis, delay, fontSize }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);

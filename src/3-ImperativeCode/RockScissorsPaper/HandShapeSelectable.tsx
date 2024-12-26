@@ -1,13 +1,12 @@
 import { CSSProperties } from 'react';
-
 import { HandShape } from './HandShape';
 import { HandShapeEmoji } from './HandShapeEmoji';
 
-interface Props {
+type Props = {
   value: HandShape;
   isSelected: boolean;
   onClick: (value: HandShape) => void;
-}
+};
 
 export function HandShapeSelectable({ value, isSelected, onClick }: Props) {
   const style: CSSProperties = {

@@ -1,14 +1,14 @@
-import classNames from 'classnames';
 import { Children, CSSProperties, ReactNode, useEffect, useState } from 'react';
+import classNames from 'classnames';
 import { useLocation } from 'react-router-dom';
 
 import { ExpandToggle } from './ExpandToggle';
 import classes from './Section.module.css';
 
-export interface SectionProps {
+export type SectionProps = {
   title: string;
   children: ReactNode;
-}
+};
 
 export function Section({ title, children }: SectionProps) {
   const [expanded, setExpanded] = useState<boolean>(false);

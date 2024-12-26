@@ -1,13 +1,12 @@
-import { Toolbar } from 'components';
 import { ReactElement } from 'react';
-
+import { Toolbar } from 'components';
 import { ToggleOption, ToggleOptionProps } from './ToggleOption';
 
-interface Props {
+type Props = {
   value: any;
   onChange: (newValue: any) => void;
   children: ReactElement<ToggleOptionProps>[];
-}
+};
 
 export function ToggleButton({ value, onChange, children }: Props) {
   const childProps = children.map(({ props }) => ({

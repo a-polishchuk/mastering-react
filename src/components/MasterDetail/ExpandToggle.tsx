@@ -1,9 +1,9 @@
 import classes from './ExpandToggle.module.css';
 
-interface Props {
+type Props = {
   expanded: boolean;
   onClick?: () => void;
-}
+};
 
 export function ExpandToggle({ expanded, onClick }: Props) {
   return (

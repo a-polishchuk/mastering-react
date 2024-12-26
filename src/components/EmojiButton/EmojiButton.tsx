@@ -1,14 +1,13 @@
 import { MouseEventHandler } from 'react';
 import ReactTooltip from 'react-tooltip';
-
 import classes from './EmojiButton.module.css';
 
-export interface EmojiButtonProps {
+export type EmojiButtonProps = {
   emoji: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
   tooltip?: string;
   disabled?: boolean;
-}
+};
 
 export function EmojiButton({ emoji, onClick, disabled, tooltip }: EmojiButtonProps) {
   return (

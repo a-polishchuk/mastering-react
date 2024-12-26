@@ -1,12 +1,11 @@
 import { ColoredBlock } from 'components';
 import { CSSProperties, MouseEventHandler } from 'react';
-
 import { nodeStyle } from './nodeStyle';
 
-interface Props {
+type Props = {
   path: string[];
   onClick: MouseEventHandler<HTMLDivElement>;
-}
+};
 
 export function Leaf({ path, onClick }: Props) {
   const leafStyle: CSSProperties = {

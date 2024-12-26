@@ -1,9 +1,8 @@
 import { Button, ChapterWrapper, PropsTable, Toolbar } from 'components';
-
 import { FormField } from './FormField';
 import { useMergedState } from './useMergedState';
 
-interface Person {
+type Person = {
   firstName: string;
   lastName: string;
   age: number | null;
@@ -12,7 +11,7 @@ interface Person {
     street: string;
     house: number | null;
   };
-}
+};
 
 const INITIAL_STATE: Person = {
   firstName: 'John',

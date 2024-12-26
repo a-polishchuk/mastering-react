@@ -1,14 +1,13 @@
+import { CSSProperties, useMemo } from 'react';
 import { useInterval } from 'hooks/useInterval';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, useMemo } from 'react';
 import { generateRandomNumber } from 'utils/generateRandomNumber';
-
 import { Creature } from './Creature';
 
-interface Props {
+type Props = {
   creature: Creature;
   onClick: (creature: Creature) => void;
-}
+};
 
 export function Caterpillar({ creature, onClick }: Props) {
   const { x, y } = creature.position;

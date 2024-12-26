@@ -1,9 +1,9 @@
 import classes from './ValueLabel.module.css';
 
-export interface ValueLabelProps {
+export type ValueLabelProps = {
   value: string | number;
   minWidth?: string | number;
-}
+};
 
 export function ValueLabel({ value, minWidth }: ValueLabelProps) {
   return (

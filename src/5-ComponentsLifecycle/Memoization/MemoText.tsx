@@ -1,10 +1,10 @@
-import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { memo } from 'react';
+import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 
-interface Props {
+type Props = {
   tag: string;
   text: string;
-}
+};
 
 export const MemoText = memo(({ tag, text }: Props) => {
   useLoggedLifecycle(tag);

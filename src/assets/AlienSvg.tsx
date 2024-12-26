@@ -1,12 +1,12 @@
 import { CSSProperties } from 'react';
 
-export interface AlienSvgProps {
+export type AlienSvgProps = {
   size: number;
   eyesColor?: string;
   mouthColor?: string;
   fillColor?: string;
   style?: CSSProperties;
-}
+};
 
 export function AlienSvg(props: AlienSvgProps) {
   const {

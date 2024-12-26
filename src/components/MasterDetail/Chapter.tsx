@@ -1,16 +1,15 @@
+import classes from './Chapter.module.css';
 import { RouterPath } from 'config/RouterPath';
 import { ReactNode, useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-
-import classes from './Chapter.module.css';
 import { useMasterDetailContext } from './MasterDetailContext';
 
-export interface ChapterProps {
+export type ChapterProps = {
   title: string;
   element: ReactNode;
   path: RouterPath;
   emoji?: string;
-}
+};
 
 export function Chapter({ emoji, title, path, element }: ChapterProps) {
   useRegisterRoute(path, element);

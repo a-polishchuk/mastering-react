@@ -1,9 +1,9 @@
 import { AlienSvg } from 'assets/AlienSvg';
 
-interface Props {
+type Props = {
   size: number;
   hovered: boolean;
-}
+};
 
 export function AlienAvatar({ size, hovered }: Props) {
   return (

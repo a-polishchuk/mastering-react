@@ -1,15 +1,14 @@
 import { Dispatch } from 'react';
-
 import { getRowId } from '../getRowId';
 import { Action, ActionType, Matrix } from '../types';
 import { HeaderRow } from './HeaderRow';
 import { Row } from './Row';
 
-interface Props {
+type Props = {
   maxPower: number;
   data: Matrix;
   dispatch: Dispatch<Action>;
-}
+};
 
 export function DataTable({ maxPower, data, dispatch }: Props) {
   const handleRowClick = (rowId: number) => {

@@ -1,14 +1,13 @@
+import { CSSProperties, useEffect, useState } from 'react';
 import { useInterval } from 'hooks/useInterval';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, useEffect, useState } from 'react';
 import { Position } from 'utils/geometry';
-
 import { Creature } from './Creature';
 import { generateRandomPosition } from './generateRandomPosition';
 
-interface Props {
+type Props = {
   creature: Creature;
-}
+};
 
 export function Butterfly({ creature }: Props) {
   const [position, setPosition] = useState<Position>(creature.position);

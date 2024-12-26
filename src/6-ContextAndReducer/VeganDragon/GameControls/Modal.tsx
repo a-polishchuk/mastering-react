@@ -1,13 +1,12 @@
 import { Button } from 'components';
+import classes from './Modal.module.css';
 import { ReactNode } from 'react';
 
-import classes from './Modal.module.css';
-
-interface Props {
+type Props = {
   title: string;
   message: ReactNode;
   buttons: Record<string, () => void>;
-}
+};
 
 export function Modal({ title, message, buttons }: Props) {
   return (

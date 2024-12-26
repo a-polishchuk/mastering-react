@@ -1,13 +1,12 @@
 import { Children, ReactNode, useState } from 'react';
-
 import classes from './Tabs.module.css';
 import { TabsHeader } from './TabsHeader';
 
-export interface TabsProps {
+export type TabsProps = {
   tabs: string[];
   children: ReactNode;
   onSelect?: (index: number) => void;
-}
+};
 
 export function Tabs({ tabs, children, onSelect }: TabsProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);

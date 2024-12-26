@@ -1,15 +1,14 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, MouseEventHandler, useMemo } from 'react';
-
 import { Leaf } from './Leaf';
 import { nodeStyle } from './nodeStyle';
 
-interface NodeProps {
+type NodeProps = {
   level: number;
   maxLevel: number;
   path: string[];
-}
+};
 
 const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps) => {
   const rerender = useRerender();

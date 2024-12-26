@@ -1,7 +1,7 @@
-interface EntryProps {
+type EntryProps = {
   name: string;
   value: any;
-}
+};
 
 function Entry({ name, value }: EntryProps) {
   return (
@@ -12,10 +12,10 @@ function Entry({ name, value }: EntryProps) {
   );
 }
 
-export interface PropsTableProps {
+export type PropsTableProps = {
   title?: string;
   data: Record<string, any> | null | undefined;
-}
+};
 
 export function PropsTable({ title, data }: PropsTableProps) {
   if (!data) {

@@ -1,12 +1,12 @@
 import { Button, Toolbar } from 'components';
 
-interface Props {
+type Props = {
   isAutoGenerating: boolean;
   toggleAutoGeneration: () => void;
   nextGeneration: () => void;
   randomize: () => void;
   clear: () => void;
-}
+};
 
 export function GridToolbar(props: Props) {
   const { isAutoGenerating, toggleAutoGeneration, nextGeneration, randomize, clear } = props;

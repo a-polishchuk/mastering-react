@@ -1,16 +1,15 @@
-import { ReactElement, ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
-
 import { EmojiButton } from '../EmojiButton/EmojiButton';
 import { FlexFiller } from '../FlexFiller';
+import { ReactElement, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 import classes from './ChapterWrapper.module.css';
 
-export interface ChapterWrapperProps {
+export type ChapterWrapperProps = {
   title: string | ReactElement;
   subtitle?: string | ReactElement;
   children: ReactNode;
   rerender?: () => void;
-}
+};
 
 export function ChapterWrapper(props: ChapterWrapperProps) {
   const { title, subtitle, children, rerender } = props;

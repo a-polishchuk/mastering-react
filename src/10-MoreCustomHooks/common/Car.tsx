@@ -1,5 +1,5 @@
-import { useInterval } from 'hooks/useInterval';
 import { CSSProperties, useState } from 'react';
+import { useInterval } from 'hooks/useInterval';
 import { getDistance, Position } from 'utils/geometry';
 
 enum Direction {
@@ -9,9 +9,9 @@ enum Direction {
 
 const INITIAL_DELAY = 1000;
 
-interface Props {
+type Props = {
   path: (Position | null)[];
-}
+};
 
 export function Car({ path }: Props) {
   const [prevIndex, setPrevIndex] = useState<number>(0);

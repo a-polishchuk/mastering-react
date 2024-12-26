@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import classes from './Tabs.module.css';
 
-export interface TabsHeaderProps {
+export type TabsHeaderProps = {
   tabs: string[];
   selectedIndex: number;
   onSelect: (index: number) => void;
-}
+};
 
 export function TabsHeader(props: TabsHeaderProps) {
   const { tabs, selectedIndex, onSelect } = props;

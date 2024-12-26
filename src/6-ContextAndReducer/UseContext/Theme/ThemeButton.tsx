@@ -1,5 +1,4 @@
 import { CSSProperties, useState } from 'react';
-
 import { Theme } from './Theme';
 import { useCurrentTheme } from './ThemeContext';
 
@@ -18,11 +17,11 @@ function buildStyle(theme: Theme, pressed: boolean, disabled: boolean): CSSPrope
   };
 }
 
-interface Props {
+type Props = {
   text: string;
   onClick?: () => void;
   disabled?: boolean;
-}
+};
 
 export function ThemeButton(props: Props) {
   const { text, onClick, disabled = false } = props;

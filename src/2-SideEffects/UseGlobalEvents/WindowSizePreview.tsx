@@ -1,11 +1,10 @@
+import classes from './WindowSize.module.css';
 import { useEffect, useState } from 'react';
 
-import classes from './WindowSize.module.css';
-
-interface Size {
+type Size = {
   width: number;
   height: number;
-}
+};
 
 function calculatePreviewSize(previewWidth: number): Size {
   const { innerWidth, innerHeight } = window;

@@ -1,14 +1,13 @@
-import { ReactElement } from 'react';
-
 import { ChapterWrapper } from 'components';
+import { ReactElement } from 'react';
 
 const TRANSPORT_EMOJIS = ['🚗', '🚕', '🚙', '🚌', '🚎', '🏎', '🚓', '🚑', '🚒', '🚐', '🛻', '🚚'];
 const BALLS_EMOJIS = ['⚽️', '🏀', '🏈', '⚾️', '🎾', '🏐', '🏉'];
 
-interface EmojisListProps {
+type EmojisListProps = {
   emojis: string[];
   ordered?: boolean;
-}
+};
 
 function EmojisList(props: EmojisListProps) {
   const { emojis, ordered = false } = props;

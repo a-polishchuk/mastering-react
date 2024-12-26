@@ -1,11 +1,11 @@
 import { CSSProperties, memo } from 'react';
 import { getAngle, getDistance, getMiddle, Position } from 'utils/geometry';
 
-interface Props {
+type Props = {
   from: Position;
   to: Position;
   color?: string;
-}
+};
 
 export const Line = memo(({ from, to, color }: Props) => {
   const { x, y } = getMiddle(from, to);

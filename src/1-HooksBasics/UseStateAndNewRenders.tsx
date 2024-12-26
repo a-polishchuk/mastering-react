@@ -1,15 +1,7 @@
+import { Button, ChapterWrapper, ColoredBlock, EmojiButton, PropsTable, Toolbar, ValueLabel } from 'components';
 import { ReactElement } from 'react';
-import {
-  Button,
-  ChapterWrapper,
-  ColoredBlock,
-  EmojiButton,
-  PropsTable,
-  Toolbar,
-  ValueLabel,
-} from 'components';
-import { useRerender } from 'hooks/useRerender';
 import { useState } from 'react';
+import { useRerender } from 'hooks/useRerender';
 import { logTagged } from 'utils/logTagged';
 
 enum UserRole {
@@ -17,11 +9,11 @@ enum UserRole {
   CUSTOMER = 'customer',
 }
 
-interface User {
+type User = {
   id: string;
   name: string;
   role: UserRole;
-}
+};
 
 const DEFAULT_USER: User = {
   id: '1',

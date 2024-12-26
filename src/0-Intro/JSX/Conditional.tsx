@@ -2,9 +2,9 @@ import { ChapterWrapper, FlexFiller, Toolbar, ValueLabel } from 'components';
 
 const MAX_RENDERED_NUM = 11;
 
-interface ConditionalContentProps {
+type ConditionalContentProps = {
   value: number;
-}
+};
 
 function ConditionalContent({ value }: ConditionalContentProps) {
   // an early return

@@ -1,10 +1,10 @@
 import { Modal } from './Modal';
 
-interface Props {
+type Props = {
   points: number;
   prevHighScore: number;
   onPlayAgain: () => void;
-}
+};
 
 export function GameOverModal({ points, prevHighScore, onPlayAgain }: Props) {
   const message = (

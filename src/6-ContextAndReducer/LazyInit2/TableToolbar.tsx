@@ -1,14 +1,13 @@
 import { Button } from 'components';
-import { Toolbar } from 'components';
 import { Dispatch } from 'react';
-
+import { Toolbar } from 'components';
 import { Action, ActionType } from './types';
 
-interface ActionButtonProps {
+type ActionButtonProps = {
   text: string;
   actionType: ActionType;
   dispatch: Dispatch<Action>;
-}
+};
 
 function ActionButton({ text, actionType, dispatch }: ActionButtonProps) {
   return <Button text={text} onClick={() => dispatch({ type: actionType })} />;

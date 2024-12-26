@@ -1,15 +1,14 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
-import { useRerender } from 'hooks/useRerender';
-import { MouseEventHandler } from 'react';
-
 import { Leaf } from './Leaf';
+import { MouseEventHandler } from 'react';
 import { nodeStyle } from './nodeStyle';
+import { useRerender } from 'hooks/useRerender';
 
-interface NodeProps {
+type NodeProps = {
   level: number;
   maxLevel: number;
   path: string[];
-}
+};
 
 function Node({ level, maxLevel, path }: NodeProps) {
   const rerender = useRerender();

@@ -1,5 +1,4 @@
 import { CSSProperties, MouseEventHandler } from 'react';
-
 import { buildDotStyle } from './buildDotStyle';
 import { Dot } from './Dot';
 import { generateDummies } from './generateDummies';
@@ -17,11 +16,11 @@ const STYLE: CSSProperties = {
   width: '100%',
 };
 
-interface Props {
+type Props = {
   blueDot: Dot;
   pinkDot: Dot;
   onClick: MouseEventHandler<HTMLDivElement>;
-}
+};
 
 export function ClickDots({ blueDot, pinkDot, onClick }: Props) {
   return (

@@ -1,8 +1,8 @@
-interface RowProps {
+type RowProps = {
   rowId: number;
   array: number[];
   onClick: (rowId: number) => void;
-}
+};
 
 export function Row({ rowId, array, onClick }: RowProps) {
   const handleClick = () => {

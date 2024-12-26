@@ -1,13 +1,12 @@
 import { useCallback, useState } from 'react';
-
 import { Item } from './Item';
 import classes from './KeysAndLists.module.css';
 import { ListItem } from './ListItem';
 
-interface ListProps {
+type ListProps = {
   generateItems: () => Item[];
   getKey: (item: Item, index: number) => string | number;
-}
+};
 
 export function List({ generateItems, getKey }: ListProps) {
   const [items, setItems] = useState<Item[]>(generateItems);

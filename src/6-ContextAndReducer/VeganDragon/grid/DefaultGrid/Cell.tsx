@@ -16,11 +16,11 @@ function getStyle(gridRow: number, gridColumn: number, isSnake: boolean): CSSPro
   };
 }
 
-interface Props {
+type Props = {
   row: number;
   col: number;
   content: string;
-}
+};
 
 export const Cell = memo(({ row, col, content }: Props) => {
   const isSnake = content === CellType.SNAKE || content === CellType.SNAKE_HEAD;

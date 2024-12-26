@@ -1,11 +1,11 @@
 import { useInterval } from 'hooks/useInterval';
 import { useState } from 'react';
 
-interface Props {
+type Props = {
   value: number;
   delay: number;
   step: number;
-}
+};
 
 export function Score(props: Props) {
   const animatedValue = useAnimatedValue(props);

@@ -1,11 +1,11 @@
 import classes from './EmojiToggle.module.css';
 
-interface Props {
+type Props = {
   emojiOn: string;
   emojiOff: string;
   value: boolean;
   toggle: () => void;
-}
+};
 
 export function EmojiToggle(props: Props) {
   const { emojiOn, emojiOff, value, toggle } = props;

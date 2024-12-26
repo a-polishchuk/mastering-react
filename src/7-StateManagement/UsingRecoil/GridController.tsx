@@ -2,14 +2,13 @@ import { CheckboxGrid } from '7-StateManagement/components/CheckboxGrid';
 import { DivGrid } from '7-StateManagement/components/DivGrid';
 import { toggleCell } from '7-StateManagement/model/toggleCell';
 import { useRecoilState } from 'recoil';
-
 import { gridAtom } from './gridAtom';
 import { GridType } from './GridType';
 
-interface Props {
+type Props = {
   gridType: GridType;
   cellSize: number;
-}
+};
 
 export function GridController({ gridType, cellSize }: Props) {
   const [grid, setGrid] = useRecoilState(gridAtom);

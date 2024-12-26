@@ -18,9 +18,9 @@ function getStyle(content: string): CSSProperties {
   };
 }
 
-interface Props {
+type Props = {
   content: string;
-}
+};
 
 export const Cell = memo(({ content }: Props) => {
   const style = getStyle(content);

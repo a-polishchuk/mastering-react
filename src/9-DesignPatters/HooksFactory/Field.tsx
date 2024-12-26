@@ -1,10 +1,9 @@
 import { Toolbar } from 'components';
-
-interface Props {
+type Props = {
   label: string;
   value: string;
   onChange: (newValue: string) => void;
-}
+};
 
 export function Field({ label, value, onChange }: Props) {
   return (

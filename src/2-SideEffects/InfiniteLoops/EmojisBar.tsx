@@ -1,11 +1,10 @@
 import { Toolbar } from 'components';
-
 import classes from './EmojisBar.module.css';
 
-interface Props {
+type Props = {
   emojis: string[];
   onClick: (emoji: string) => void;
-}
+};
 
 export function EmojisBar({ emojis, onClick }: Props) {
   return (

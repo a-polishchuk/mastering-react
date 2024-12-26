@@ -1,11 +1,10 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
-
 import { generateThemes, Theme } from './Theme';
 
-export interface ThemesPalette {
+export type ThemesPalette = {
   themes: Theme[];
   themeIndex: number;
-}
+};
 
 export type ThemeContextState = [ThemesPalette, (themeIndex: number) => void];
 

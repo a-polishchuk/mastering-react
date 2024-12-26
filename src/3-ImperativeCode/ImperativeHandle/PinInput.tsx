@@ -3,14 +3,14 @@ import { updateArrayElement } from 'utils/updateArrayElement';
 
 import classes from './PinInput.module.css';
 
-export interface PinInputHandle {
+export type PinInputHandle = {
   focus: () => void;
-}
+};
 
-export interface PinInputProps {
+export type PinInputProps = {
   digits: string[];
   onChange: (newDigits: string[]) => void;
-}
+};
 
 const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
   props,

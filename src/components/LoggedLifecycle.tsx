@@ -1,10 +1,10 @@
-import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { ReactNode } from 'react';
+import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 
-interface Props {
+type Props = {
   tag: string;
   children: ReactNode;
-}
+};
 
 export function LoggedLifecycle({ tag, children }: Props) {
   useLoggedLifecycle(tag);

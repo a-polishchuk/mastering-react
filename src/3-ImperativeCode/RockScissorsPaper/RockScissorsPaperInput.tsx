@@ -1,10 +1,10 @@
 import { HandShape } from './HandShape';
 import { HandShapeSelectable } from './HandShapeSelectable';
 
-interface Props {
+type Props = {
   currentValue: HandShape;
   onChange: (newValue: HandShape) => void;
-}
+};
 
 const HAND_SHAPES: HandShape[] = ['✊', '✌️', '✋'];
 

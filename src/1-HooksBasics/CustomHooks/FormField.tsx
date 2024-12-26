@@ -1,12 +1,12 @@
 import { HTMLInputTypeAttribute } from 'react';
 
-interface FormFieldProps {
+type FormFieldProps = {
   name: string;
   label: string;
   value: string | number | null;
   onChange: (newValue: string) => void;
   type?: HTMLInputTypeAttribute;
-}
+};
 
 export function FormField(props: FormFieldProps) {
   const { name, label, value, onChange, type = 'text' } = props;

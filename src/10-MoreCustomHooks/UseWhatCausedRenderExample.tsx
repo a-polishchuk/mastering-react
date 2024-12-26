@@ -2,10 +2,10 @@ import { ChapterWrapper, ColoredBlock, Toolbar } from 'components';
 import { useWhatCausedRender } from 'hooks/useWhatCausedRender';
 import { useState } from 'react';
 
-interface BadgeProps {
+type BadgeProps = {
   firstName: string;
   lastName: string;
-}
+};
 
 function Badge(props: BadgeProps) {
   const { firstName, lastName } = props;

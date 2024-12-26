@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-interface Props {
+type Props = {
   emojis: string[];
   delay: number;
   fontSize: number;
-}
+};
 
 export function AnimatedEmoji({ emojis, delay, fontSize }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);

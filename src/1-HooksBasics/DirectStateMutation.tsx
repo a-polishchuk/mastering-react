@@ -1,7 +1,7 @@
+import { ChangeEvent, ChangeEventHandler, Dispatch, SetStateAction, useState } from 'react';
 import { Button, ChapterWrapper, EmojiButton, Label, PropsTable, Toolbar } from 'components';
-import { useState, Dispatch, SetStateAction, ChangeEventHandler, ChangeEvent } from 'react';
 
-interface User {
+type User = {
   id: string;
   firstName: string;
   middleName?: string;
@@ -9,7 +9,7 @@ interface User {
   country: string;
   addressLine1: string;
   addressLine2?: string;
-}
+};
 
 const INITIAL_VALUE: User = {
   id: '1',

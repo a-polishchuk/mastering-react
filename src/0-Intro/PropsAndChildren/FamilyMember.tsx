@@ -1,13 +1,12 @@
 import { ColoredBlock } from 'components';
 import { ReactNode } from 'react';
-
 import { Avatar } from './Avatar';
 import classes from './FamilyMember.module.css';
 
-interface Props {
+type Props = {
   name: string;
   children?: ReactNode;
-}
+};
 
 export function FamilyMember({ name, children }: Props) {
   return (

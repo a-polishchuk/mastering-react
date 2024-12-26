@@ -1,18 +1,17 @@
-import { ColoredBlock } from 'components';
-import { format } from 'date-fns';
-import { useHovered } from 'hooks/useHovered';
-import { CSSProperties } from 'react';
-
 import { AlienAvatar } from './AlienAvatar';
 import classes from './AlienMessage.module.css';
+import { ColoredBlock } from 'components';
+import { CSSProperties } from 'react';
+import { format } from 'date-fns';
 import { Message } from './types';
+import { useHovered } from 'hooks/useHovered';
 
 const TIME_FORMAT = 'HH:mm';
 
-interface Props {
+type Props = {
   color: string;
   message: Message;
-}
+};
 
 export function AlienMessage({ color, message }: Props) {
   const { text, dateTime } = message;

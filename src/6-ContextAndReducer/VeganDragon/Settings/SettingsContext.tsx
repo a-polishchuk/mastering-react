@@ -1,14 +1,13 @@
+import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
 import { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
 import { ProviderProps } from 'types/ProviderProps';
 
-import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
-
-export interface SettingsContextState {
+export type SettingsContextState = {
   useAlternativeGrid: boolean;
   setUseAlternativeGrid: Dispatch<SetStateAction<boolean>>;
   moveDelay: number;
   changeMoveDelay: () => void;
-}
+};
 
 const defaultValue: any = null;
 const SettingsContext = createContext<SettingsContextState>(defaultValue);

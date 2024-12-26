@@ -1,13 +1,12 @@
 import { ColoredBlock } from 'components';
 import { CSSProperties, ReactNode } from 'react';
-
 import classes from './TypicalComponent.module.css';
 
-interface Props {
+type Props = {
   name: string;
   isRoot?: boolean;
   children?: ReactNode;
-}
+};
 
 const BLOCK_STYLE: CSSProperties = {
   flex: 1,

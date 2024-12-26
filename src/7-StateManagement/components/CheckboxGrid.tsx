@@ -1,13 +1,13 @@
+import { CSSProperties } from 'react';
 import { ReactElement } from 'react';
 import { CellState, GridState } from '7-StateManagement/types';
 import { getGridSize } from '7-StateManagement/utils';
-import { CSSProperties } from 'react';
 
-interface Props {
+type Props = {
   grid: GridState;
   cellSize: number;
   toggleCell: (row: number, col: number) => void;
-}
+};
 
 export function CheckboxGrid({ grid, cellSize, toggleCell }: Props) {
   const [rows, cols] = getGridSize(grid);
