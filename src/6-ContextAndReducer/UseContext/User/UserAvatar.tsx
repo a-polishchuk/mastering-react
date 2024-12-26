@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-
 import { useCurrentTheme } from '../Theme/ThemeContext';
 import { useUserContext } from './UserContext';
 

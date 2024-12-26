@@ -1,7 +1,6 @@
 import { Todo } from '8-DataFetching/types';
 import { useUserId } from '8-DataFetching/UserContext';
 import useSWR, { SWRResponse } from 'swr';
-
 import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 
 export function useTodoList(): SWRResponse<Todo[]> {

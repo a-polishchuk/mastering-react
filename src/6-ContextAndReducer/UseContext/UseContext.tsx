@@ -1,5 +1,4 @@
 import { ChapterWrapper, Toolbar } from 'components';
-
 import { ThemeButton } from './Theme/ThemeButton';
 import { ThemeProvider } from './Theme/ThemeContext';
 import { ThemeToolbar } from './Theme/ThemeToolbar';

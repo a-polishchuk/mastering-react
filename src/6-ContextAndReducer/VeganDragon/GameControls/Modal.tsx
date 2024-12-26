@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import classes from './Modal.module.css';
 import { ReactNode } from 'react';
+import classes from './Modal.module.css';
 
 type Props = {
   title: string;

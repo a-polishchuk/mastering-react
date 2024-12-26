@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { useState } from 'react';
-
 import { useInterval } from '../useInterval';
 
 function TestComponent() {

@@ -1,6 +1,5 @@
 import { GridToolbar } from '7-StateManagement/components/GridToolbar';
 import { useAutoGeneration } from '7-StateManagement/useAutoGeneration';
-
 import { useGridStore } from './useGridStore';
 
 const GENERATION_DELAY = 500;

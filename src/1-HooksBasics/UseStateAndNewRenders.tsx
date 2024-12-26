@@ -1,7 +1,7 @@
 import { Button, ChapterWrapper, ColoredBlock, EmojiButton, PropsTable, Toolbar, ValueLabel } from 'components';
+import { useRerender } from 'hooks/useRerender';
 import { ReactElement } from 'react';
 import { useState } from 'react';
-import { useRerender } from 'hooks/useRerender';
 import { logTagged } from 'utils/logTagged';
 
 enum UserRole {

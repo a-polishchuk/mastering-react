@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-
 import { Button } from '../Button/Button';
 import { Toolbar } from '../Toolbar/Toolbar';
 import { ValueLabel } from './ValueLabel';

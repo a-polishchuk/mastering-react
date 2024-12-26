@@ -1,7 +1,6 @@
 import { ColoredBlock } from 'components';
 import { useCallback, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { BlockProps } from './BlockProps';
 
 export function BlockMemoizedRefCallback({ visible }: BlockProps) {

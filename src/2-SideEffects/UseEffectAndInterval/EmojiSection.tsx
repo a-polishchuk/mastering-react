@@ -1,6 +1,5 @@
 import { Toolbar } from 'components';
 import { ChangeEventHandler, useState } from 'react';
-
 import { AnimatedEmoji } from './AnimatedEmoji';
 
 const DEFAULT_DELAY = 500;

@@ -1,5 +1,4 @@
 import { ChapterWrapper } from 'components';
-
 import { renderValues } from './renderValues';
 
 export function DataTypes() {

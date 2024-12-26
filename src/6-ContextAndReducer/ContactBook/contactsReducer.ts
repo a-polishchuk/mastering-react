@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-
 import { initialState } from './initialState';
 import { Action, ActionType, Contact, ContactsState } from './types';
 

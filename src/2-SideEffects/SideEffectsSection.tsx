@@ -1,6 +1,5 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
-
 import { FetchDataInUseEffect } from './FetchDataInUseEffect';
 import { BewareOfInfiniteLoops } from './InfiniteLoops/BewareOfInfiniteLoops';
 import { UseEffectAndInterval } from './UseEffectAndInterval/UseEffectAndInterval';

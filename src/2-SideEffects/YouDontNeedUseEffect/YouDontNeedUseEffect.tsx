@@ -1,7 +1,6 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { CSSProperties } from 'react';
-
 import { useBallPosition } from './useBallPosition';
 
 const MIN_STEP = 20;

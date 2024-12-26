@@ -1,7 +1,6 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
 import { CSSProperties } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
-
 import realDomPng from './real-dom.png';
 import classes from './RenderingProcess.module.css';
 

@@ -1,7 +1,7 @@
-import classes from './Chapter.module.css';
 import { RouterPath } from 'config/RouterPath';
 import { ReactNode, useLayoutEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import classes from './Chapter.module.css';
 import { useMasterDetailContext } from './MasterDetailContext';
 
 export type ChapterProps = {

@@ -2,7 +2,6 @@ import { ReactLogo } from 'assets/ReactLogo';
 import { useElementSize } from 'hooks/useElementSize';
 import { useMemo } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
-
 import classes from './Background.module.css';
 
 export function Background() {

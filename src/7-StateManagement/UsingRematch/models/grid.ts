@@ -4,7 +4,6 @@ import { nextGeneration } from '7-StateManagement/model/nextGeneration';
 import { randomize } from '7-StateManagement/model/randomize';
 import { toggleCell } from '7-StateManagement/model/toggleCell';
 import { createModel } from '@rematch/core';
-
 import type { RootModel } from '.';
 
 export const grid = createModel<RootModel>()({

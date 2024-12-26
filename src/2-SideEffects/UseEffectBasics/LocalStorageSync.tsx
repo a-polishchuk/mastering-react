@@ -1,7 +1,6 @@
 import { ChapterWrapper } from 'components';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { Counter } from './Counter';
 
 const DELTA = 1;

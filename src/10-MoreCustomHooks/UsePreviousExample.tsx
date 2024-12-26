@@ -1,7 +1,6 @@
 import { ChapterWrapper } from 'components';
 import { usePreviousRenderValue } from 'hooks/usePreviousRenderValue';
 import { useRerender } from 'hooks/useRerender';
-
 import { Circle, CircleColor } from './common/Circle';
 import classes from './common/common.module.css';
 import { Line } from './common/Line';

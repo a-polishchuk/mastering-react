@@ -1,7 +1,6 @@
 import { Button } from 'components';
 import { useLocalStorage } from 'hooks/useLocalStorage';
 import { useEffect, useState } from 'react';
-
 import { HIGH_SCORE_KEY } from '../constants';
 import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, GameStatus } from '../types';

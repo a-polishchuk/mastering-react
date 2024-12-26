@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-
 import { useAnimatedText } from '../useAnimatedText';
 
 function TestComponent({ text }: { text: string }) {

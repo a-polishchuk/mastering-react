@@ -1,5 +1,4 @@
 import { ChapterWrapper } from 'components';
-
 import { EmojiSection } from './EmojiSection';
 
 const MOON_EMOJIS = ['🌕', '🌖', '🌗', '🌘', '🌑', '🌒', '🌓', '🌔'];

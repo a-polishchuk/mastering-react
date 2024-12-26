@@ -1,7 +1,6 @@
 import { useUserId } from '8-DataFetching/UserContext';
 import { Button } from 'components';
 import { useSWRConfig } from 'swr';
-
 import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 
 export function RefreshAll() {

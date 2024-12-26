@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
-import { Cell } from './Cell';
-import classes from './AlternativeGrid.module.css';
 import { getGridSize } from '../getGridSize';
 import { GridProps } from '../GridProps';
+import classes from './AlternativeGrid.module.css';
+import { Cell } from './Cell';
 
 export function mapCells(grid: string[][]): ReactElement[] {
   const [rowsCount, columnsCount] = getGridSize(grid);

@@ -1,6 +1,5 @@
 import { ChapterWrapper, Toolbar } from 'components';
 import { useEffect, useState } from 'react';
-
 import { WindowSizePreview } from './WindowSizePreview';
 
 const STEP = 10;

@@ -1,5 +1,4 @@
 import { DivGrid } from '7-StateManagement/components/DivGrid';
-
 import { useGridStore } from './useGridStore';
 
 const CELL_SIZE = 15;

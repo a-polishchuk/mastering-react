@@ -1,5 +1,5 @@
-import classes from './Button.module.css';
 import { MouseEventHandler } from 'react';
+import classes from './Button.module.css';
 
 export type ButtonProps = {
   text: string;

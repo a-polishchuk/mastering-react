@@ -1,6 +1,5 @@
 import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useReducer } from 'react';
-
 import { Action } from './Action';
 import { counterReducer, INITIAL_COUNT } from './counterReducer';
 

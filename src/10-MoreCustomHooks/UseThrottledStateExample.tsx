@@ -3,7 +3,6 @@ import { useHistory } from 'hooks/useHistory';
 import { useThrottledState } from 'hooks/useThrottledState';
 import { MouseEventHandler } from 'react';
 import { Position } from 'utils/geometry';
-
 import { Car } from './common/Car';
 import { CircleColor, mapToCircle } from './common/Circle';
 import classes from './common/common.module.css';

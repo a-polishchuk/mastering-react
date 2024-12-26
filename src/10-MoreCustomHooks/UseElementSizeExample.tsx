@@ -1,10 +1,9 @@
-import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useElementSize } from 'hooks/useElementSize';
+import { ReactElement } from 'react';
 import { CSSProperties, useState } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
-
 import classes from './UseElementSize.module.css';
 
 export function UseElementSizeExample() {

@@ -1,7 +1,6 @@
 import { ChapterWrapper, TextBlock } from 'components';
 import { useInterval } from 'hooks/useInterval';
 import { useRerender } from 'hooks/useRerender';
-
 import { TypicalComponent } from './TypicalComponent';
 
 export function ReactTraits() {

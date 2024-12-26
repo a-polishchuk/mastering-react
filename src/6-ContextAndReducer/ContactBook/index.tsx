@@ -1,5 +1,4 @@
 import { ChapterWrapper } from 'components';
-
 import { ContactsProvider } from './ContactsContext';
 import { ContactsList } from './ContactsList';
 import { ContactsToolbar } from './ContactsToolbar';

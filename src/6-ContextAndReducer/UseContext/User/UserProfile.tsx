@@ -1,8 +1,7 @@
 import { PropsTable } from 'components';
-
 import { useCurrentTheme } from '../Theme/ThemeContext';
-import { useUserContext } from './UserContext';
 import { UserAvatar } from './UserAvatar';
+import { useUserContext } from './UserContext';
 
 export function UserProfile() {
   const user = useUserContext();

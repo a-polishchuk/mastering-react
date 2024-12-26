@@ -2,7 +2,6 @@ import { Button, ChapterWrapper, FlexRow, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { useToggle } from 'hooks/useToggle';
 import { ReactElement, useState } from 'react';
-
 import { BlockMemoizedRefCallback } from './BlockMemoizedRefCallback';
 import { BlockProps } from './BlockProps';
 import { BlockRefCallback } from './BlockRefCallback';

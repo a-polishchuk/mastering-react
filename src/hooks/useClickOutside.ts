@@ -1,6 +1,5 @@
 import { useCallback, useRef } from 'react';
 import { RefCallback } from 'types/RefCallback';
-
 import { useWindowEvent } from './useWindowEvent';
 
 export function useClickOutside(callback: () => void): RefCallback {

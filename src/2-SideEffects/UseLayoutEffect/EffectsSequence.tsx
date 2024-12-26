@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { MouseEventHandler, useEffect, useState } from 'react';
-
 import { ClickDots, CONTAINER_ID } from './ClicksDots';
 import { Dot, DOT_ZERO } from './Dot';
 

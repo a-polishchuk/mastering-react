@@ -1,7 +1,6 @@
 import { GridToolbar } from '7-StateManagement/components/GridToolbar';
 import { useAutoGeneration } from '7-StateManagement/useAutoGeneration';
 import { useDispatch } from 'react-redux';
-
 import { Dispatch } from './store';
 
 const GENERATION_DELAY = 500;

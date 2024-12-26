@@ -1,6 +1,5 @@
 import { CellState, GridState } from '7-StateManagement/types';
 import { getGridSize } from '7-StateManagement/utils';
-
 import { empty } from './empty';
 
 const NEIGHBORS = [

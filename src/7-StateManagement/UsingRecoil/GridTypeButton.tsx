@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import { GridType } from './GridType';
 import { UseState } from 'types/UseState';
+import { GridType } from './GridType';
 
 type Props = {
   text: string;

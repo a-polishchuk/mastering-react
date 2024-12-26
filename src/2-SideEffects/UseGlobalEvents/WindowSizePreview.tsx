@@ -1,5 +1,5 @@
-import classes from './WindowSize.module.css';
 import { useEffect, useState } from 'react';
+import classes from './WindowSize.module.css';
 
 type Size = {
   width: number;

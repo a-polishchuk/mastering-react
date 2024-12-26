@@ -1,5 +1,5 @@
-import { ChangeEvent, ChangeEventHandler, Dispatch, SetStateAction, useState } from 'react';
 import { Button, ChapterWrapper, EmojiButton, Label, PropsTable, Toolbar } from 'components';
+import { ChangeEvent, ChangeEventHandler, Dispatch, SetStateAction, useState } from 'react';
 
 type User = {
   id: string;

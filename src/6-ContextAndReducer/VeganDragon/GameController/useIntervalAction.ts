@@ -1,5 +1,4 @@
 import { useInterval } from 'hooks/useInterval';
-
 import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, GameStatus } from '../types';
 

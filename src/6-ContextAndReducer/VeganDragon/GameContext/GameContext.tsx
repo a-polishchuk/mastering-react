@@ -1,6 +1,5 @@
 import { createContext, Dispatch, ReactElement, useContext, useReducer } from 'react';
 import { ProviderProps } from 'types/ProviderProps';
-
 import { Action, GameContextState } from '../types';
 import { INITIAL_STATE } from './reducer/initialState';
 import { reducer } from './reducer/reducer';

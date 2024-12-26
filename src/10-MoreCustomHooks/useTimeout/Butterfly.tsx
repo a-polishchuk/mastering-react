@@ -1,6 +1,6 @@
-import { CSSProperties, useEffect, useState } from 'react';
 import { useInterval } from 'hooks/useInterval';
 import { useToggle } from 'hooks/useToggle';
+import { CSSProperties, useEffect, useState } from 'react';
 import { Position } from 'utils/geometry';
 import { Creature } from './Creature';
 import { generateRandomPosition } from './generateRandomPosition';

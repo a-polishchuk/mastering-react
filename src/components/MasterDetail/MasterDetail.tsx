@@ -3,7 +3,6 @@ import { RouterPath } from 'config/RouterPath';
 import { useToggle } from 'hooks/useToggle';
 import { CSSProperties, ReactNode, Suspense } from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
-
 import { EasterEgg } from './EasterEgg';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';

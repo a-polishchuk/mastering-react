@@ -1,7 +1,6 @@
 import { ChapterWrapper, ColoredBlock, LoggedLifecycle, TextBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, useCallback, useMemo } from 'react';
-
 import { MemoRenderFunc } from './MemoRenderFunc';
 import { MemoText } from './MemoText';
 

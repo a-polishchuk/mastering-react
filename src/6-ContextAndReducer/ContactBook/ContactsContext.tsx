@@ -1,5 +1,4 @@
 import { createContext, ReactNode, useContext, useReducer } from 'react';
-
 import { contactsReducer } from './contactsReducer';
 import { initialState } from './initialState';
 import { Action, ContactsContextType } from './types';

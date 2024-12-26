@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-
 import { TextBlock } from '../TextBlock/TextBlock';
 import { Tabs } from './Tabs';
 

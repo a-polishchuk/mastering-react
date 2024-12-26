@@ -1,5 +1,5 @@
-import { CSSProperties, useState } from 'react';
 import { useInterval } from 'hooks/useInterval';
+import { CSSProperties, useState } from 'react';
 import { getDistance, Position } from 'utils/geometry';
 
 enum Direction {

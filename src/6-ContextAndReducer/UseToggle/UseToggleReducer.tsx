@@ -1,6 +1,5 @@
 import { ChapterWrapper, Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
-
 import { EmojiToggle } from './EmojiToggle';
 
 export function UseToggleReducer() {

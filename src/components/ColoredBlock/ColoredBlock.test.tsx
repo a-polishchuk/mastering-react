@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import { ChapterWrapper } from 'components/ChapterWrapper/ChapterWrapper';
 import { useRerender } from 'hooks/useRerender';
 import { BrowserRouter } from 'react-router-dom';
-
 import { ColoredBlock } from './ColoredBlock';
 
 function WithChapterWrapper() {

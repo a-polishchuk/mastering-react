@@ -1,6 +1,5 @@
 import { ChapterWrapper, Tabs } from 'components';
 import { SWRConfig } from 'swr';
-
 import { fetcher } from './api/fetcher';
 import { Profile } from './Profile';
 import { TodoList } from './TodoList';

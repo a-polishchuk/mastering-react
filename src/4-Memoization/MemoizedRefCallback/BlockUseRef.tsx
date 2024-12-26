@@ -1,7 +1,6 @@
 import { ColoredBlock } from 'components';
 import { useEffect, useRef, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { BlockProps } from './BlockProps';
 
 export function BlockUseRef({ visible }: BlockProps) {

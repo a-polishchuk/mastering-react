@@ -1,5 +1,5 @@
-import classes from './TextBlock.module.css';
 import { ReactNode } from 'react';
+import classes from './TextBlock.module.css';
 
 export type TextBlockProps = {
   children: ReactNode;

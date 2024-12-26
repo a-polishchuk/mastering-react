@@ -1,5 +1,5 @@
-import { memo } from 'react';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
+import { memo } from 'react';
 
 type Props = {
   tag: string;

@@ -3,7 +3,6 @@ import { useToggle } from 'hooks/useToggle';
 import { useMemo } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
 import { generateUniqueId } from 'utils/generateUniqueId';
-
 import { AlienMessage } from './AlienMessage';
 import { Background } from './Background';
 import { DotsMessage } from './DotsMessage';

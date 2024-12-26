@@ -3,7 +3,6 @@ import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { useCallback, useEffect } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { useUpdateEffect } from './useUpdateEffect';
 
 export function UseUpdateEffect() {

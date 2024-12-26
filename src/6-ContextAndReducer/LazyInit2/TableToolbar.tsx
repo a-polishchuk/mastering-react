@@ -1,6 +1,6 @@
 import { Button } from 'components';
-import { Dispatch } from 'react';
 import { Toolbar } from 'components';
+import { Dispatch } from 'react';
 import { Action, ActionType } from './types';
 
 type ActionButtonProps = {

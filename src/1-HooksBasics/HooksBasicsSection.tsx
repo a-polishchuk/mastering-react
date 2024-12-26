@@ -1,6 +1,5 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
-
 import { UseCounterExample } from './CustomHooks/UseCounterExample';
 import { UseMergedStateExample } from './CustomHooks/UseMergedStateExample';
 import { DirectDomChanges } from './DirectDomChanges';

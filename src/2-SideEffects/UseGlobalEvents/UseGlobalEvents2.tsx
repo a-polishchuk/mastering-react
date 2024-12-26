@@ -1,6 +1,5 @@
 import { ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
-
 import { useKeyDown } from './useKeyDown';
 import { WindowSizePreview } from './WindowSizePreview';
 

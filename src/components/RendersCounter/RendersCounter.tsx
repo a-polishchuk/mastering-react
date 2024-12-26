@@ -1,5 +1,5 @@
-import classes from './RendersCounter.module.css';
 import { ReactNode, useEffect, useRef } from 'react';
+import classes from './RendersCounter.module.css';
 
 export type RendersCounterProps = {
   children: ReactNode;

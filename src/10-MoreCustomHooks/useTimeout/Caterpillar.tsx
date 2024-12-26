@@ -1,6 +1,6 @@
-import { CSSProperties, useMemo } from 'react';
 import { useInterval } from 'hooks/useInterval';
 import { useToggle } from 'hooks/useToggle';
+import { CSSProperties, useMemo } from 'react';
 import { generateRandomNumber } from 'utils/generateRandomNumber';
 import { Creature } from './Creature';
 

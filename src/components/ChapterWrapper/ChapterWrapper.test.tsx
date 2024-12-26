@@ -2,7 +2,6 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import { vi } from 'vitest';
-
 import { ChapterWrapper, ChapterWrapperProps } from './ChapterWrapper';
 
 function TestWrapper(props: ChapterWrapperProps) {

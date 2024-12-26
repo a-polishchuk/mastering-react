@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { useInterval } from 'hooks/useInterval';
+import { useState } from 'react';
 
 type Props = {
   emojis: string[];

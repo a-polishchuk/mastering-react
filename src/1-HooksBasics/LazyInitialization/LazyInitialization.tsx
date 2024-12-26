@@ -1,7 +1,6 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { HeaderRow } from './HeaderRow';
 import { Row } from './Row';
 

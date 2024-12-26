@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
+import { ReactNode } from 'react';
 
 type Props = {
   tag: string;

@@ -2,7 +2,6 @@ import { ChapterWrapper } from 'components';
 import { useClickOutside } from 'hooks/useClickOutside';
 import { CSSProperties, useState } from 'react';
 import { generateRandomColor } from 'utils/generateRandomColor';
-
 import classes from './UseClickOutside.module.css';
 
 const INITIAL_SIZE = 200;

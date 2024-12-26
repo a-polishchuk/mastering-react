@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useState } from 'react';
-
 import { ToggleButton } from './ToggleButton';
 import { ToggleOption } from './ToggleOption';
 

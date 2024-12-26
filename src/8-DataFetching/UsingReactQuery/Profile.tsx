@@ -1,5 +1,4 @@
 import { LoadingSpinner, PropsTable } from 'components';
-
 import { useUser } from './hooks/useUser';
 import classes from './Profile.module.css';
 

@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useEffect, useState } from 'react';
-
 import { createMappedState } from './createMappedState';
 import { Field } from './Field';
 

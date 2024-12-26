@@ -1,7 +1,6 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useState } from 'react';
 import { RecoilRoot } from 'recoil';
-
 import { GridController } from './GridController';
 import { GridType } from './GridType';
 import { GridTypeButton } from './GridTypeButton';

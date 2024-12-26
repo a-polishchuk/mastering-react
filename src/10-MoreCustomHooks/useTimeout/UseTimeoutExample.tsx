@@ -2,7 +2,6 @@ import { Button, ChapterWrapper } from 'components';
 import { useTimeout } from 'hooks/useTimeout';
 import { useState } from 'react';
 import { generateUniqueId } from 'utils/generateUniqueId';
-
 import commonClasses from '../common/common.module.css';
 import { Butterfly } from './Butterfly';
 import { Caterpillar } from './Caterpillar';

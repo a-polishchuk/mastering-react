@@ -1,5 +1,4 @@
 import { ChapterWrapper } from 'components';
-
 import { FamilyMember } from './FamilyMember';
 
 export function PropsAndChildren() {

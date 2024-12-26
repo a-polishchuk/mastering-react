@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-
 import { Case, Switch } from '../Switch/Switch';
 import { TextBlock } from '../TextBlock/TextBlock';
 import { TabsHeader } from './TabsHeader';

@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-
 import { Dot } from './Dot';
 
 export function buildDotStyle({ x, y }: Dot, color: string, size: number): CSSProperties {

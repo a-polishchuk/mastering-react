@@ -1,5 +1,4 @@
 import { ChangeEventHandler, CSSProperties, useState } from 'react';
-
 import classes from './ContactRow.module.css';
 import { useContacts } from './ContactsContext';
 import { ActionType, Contact } from './types';

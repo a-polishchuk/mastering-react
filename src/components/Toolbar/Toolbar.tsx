@@ -1,5 +1,5 @@
-import classes from './Toolbar.module.css';
 import { ReactNode } from 'react';
+import classes from './Toolbar.module.css';
 
 export type ToolbarProps = {
   children: ReactNode;

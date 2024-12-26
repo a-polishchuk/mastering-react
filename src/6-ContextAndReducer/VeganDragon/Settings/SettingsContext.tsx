@@ -1,6 +1,6 @@
-import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
 import { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
 import { ProviderProps } from 'types/ProviderProps';
+import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
 
 export type SettingsContextState = {
   useAlternativeGrid: boolean;

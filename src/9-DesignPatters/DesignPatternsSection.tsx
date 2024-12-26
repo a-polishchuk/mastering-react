@@ -1,6 +1,5 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-
 import { EmojiNumberedListExample } from './CompoundComponent/EmojiNumberedListExample';
 import { ToggleButtonExample } from './CompoundComponent/ToggleButtonExample';
 import { HooksFactory } from './HooksFactory/HooksFactory';

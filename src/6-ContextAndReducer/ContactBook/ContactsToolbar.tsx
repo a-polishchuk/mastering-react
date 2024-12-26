@@ -1,6 +1,5 @@
 import { Button } from 'components';
 import { Toolbar } from 'components';
-
 import { useContacts } from './ContactsContext';
 import { ActionType } from './types';
 

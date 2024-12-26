@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useRerender } from 'hooks/useRerender';
-
 import { ITEMS } from '../ItemData';
 import { EmojisGallery } from './EmojisGallery';
 

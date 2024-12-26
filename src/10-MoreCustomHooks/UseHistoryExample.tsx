@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useHistory } from 'hooks/useHistory';
-
 import { Car } from './common/Car';
 import { CircleColor, mapToCircle } from './common/Circle';
 import classes from './common/common.module.css';

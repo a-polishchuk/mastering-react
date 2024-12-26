@@ -1,6 +1,5 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-
 import { TrackMousePosition } from './TrackMousePosition';
 import { UseClickOutsideExample } from './UseClickOutsideExample';
 import { UseDebouncedStateExample } from './UseDebouncedStateExample';

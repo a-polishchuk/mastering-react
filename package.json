@@ -16,6 +16,7 @@
   "scripts": {
     "dev": "vite",
     "ts-lint": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx --fix",
     "watch-errors": "tsc --watch",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -72,6 +73,7 @@
     "babel-loader": "9.2.1",
     "eslint": "8.56.0",
     "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-import": "2.31.0",
     "eslint-plugin-storybook": "^0.11.1",
     "gh-pages": "6.2.0",
     "jsdom": "25.0.1",

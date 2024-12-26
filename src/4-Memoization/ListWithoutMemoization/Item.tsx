@@ -1,6 +1,6 @@
 import classNames from 'classnames';
-import { ItemData } from '../ItemData';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
+import { ItemData } from '../ItemData';
 import classes from './Item.module.css';
 
 type Props = {

@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useEffect, useState } from 'react';
-
 import { EmojisBar } from './EmojisBar';
 
 const EMOJIS = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐻‍❄️', '🐨'];

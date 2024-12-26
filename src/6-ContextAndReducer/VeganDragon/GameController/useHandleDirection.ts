@@ -1,5 +1,4 @@
 import { useKeyDown } from '2-SideEffects/UseGlobalEvents/useKeyDown';
-
 import { useGameContext } from '../GameContext/GameContext';
 import { ActionType, Direction, GameStatus } from '../types';
 

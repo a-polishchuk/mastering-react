@@ -1,6 +1,5 @@
 import { ChapterWrapper, TextBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
-
 import { Child } from './Child';
 import { RandomContainer } from './RandomContainer';
 

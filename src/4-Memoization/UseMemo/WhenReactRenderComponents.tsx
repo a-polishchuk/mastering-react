@@ -1,8 +1,8 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
-import { Leaf } from './Leaf';
-import { MouseEventHandler } from 'react';
-import { nodeStyle } from './nodeStyle';
 import { useRerender } from 'hooks/useRerender';
+import { MouseEventHandler } from 'react';
+import { Leaf } from './Leaf';
+import { nodeStyle } from './nodeStyle';
 
 type NodeProps = {
   level: number;

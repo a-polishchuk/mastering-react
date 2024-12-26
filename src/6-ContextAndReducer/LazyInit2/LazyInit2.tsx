@@ -1,6 +1,5 @@
 import { ChapterWrapper } from 'components';
 import { useReducer } from 'react';
-
 import { buildMatrix } from './buildMatrix';
 import { reducer } from './reducer';
 import { DataTable } from './table/DataTable';

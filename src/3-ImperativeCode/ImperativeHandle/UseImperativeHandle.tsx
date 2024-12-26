@@ -1,6 +1,5 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useRef, useState } from 'react';
-
 import { PinInput, PinInputHandle } from './PinInput';
 
 const initialDigits = ['', '', '', ''];

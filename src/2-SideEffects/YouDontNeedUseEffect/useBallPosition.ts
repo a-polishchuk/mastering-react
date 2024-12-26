@@ -1,5 +1,5 @@
-import { generateRandomNumber } from 'utils/generateRandomNumber';
 import { useEffect, useState } from 'react';
+import { generateRandomNumber } from 'utils/generateRandomNumber';
 
 type LeftTop = [number, number];
 

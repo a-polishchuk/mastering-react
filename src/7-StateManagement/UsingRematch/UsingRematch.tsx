@@ -1,9 +1,8 @@
 import { ChapterWrapper } from 'components';
 import { Provider } from 'react-redux';
-
+import { GridController } from './GridController';
 import { store } from './store';
 import { ToolbarController } from './ToolbarController';
-import { GridController } from './GridController';
 import classes from './UsingRematch.module.css';
 
 export function UsingRematch() {

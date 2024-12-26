@@ -1,7 +1,7 @@
-import { EmojiButton } from '../EmojiButton/EmojiButton';
-import { FlexFiller } from '../FlexFiller';
 import { ReactElement, ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { EmojiButton } from '../EmojiButton/EmojiButton';
+import { FlexFiller } from '../FlexFiller';
 import classes from './ChapterWrapper.module.css';
 
 export type ChapterWrapperProps = {

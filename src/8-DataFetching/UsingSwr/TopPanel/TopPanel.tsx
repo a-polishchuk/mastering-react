@@ -1,5 +1,4 @@
 import { Toolbar } from 'components';
-
 import { Avatar } from './Avatar';
 import { LastUpdated } from './LastUpdated';
 import { RefreshAll } from './RefreshAll';

@@ -1,5 +1,4 @@
 import { ChapterWrapper } from 'components';
-
 import { GameContextProvider } from './GameContext/GameContext';
 import { GameController } from './GameController/GameController';
 import { GameControls } from './GameControls/GameControls';

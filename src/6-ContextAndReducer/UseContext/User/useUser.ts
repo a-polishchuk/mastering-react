@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
 import { User } from './User';
 
 export function useUser(userId: number) {

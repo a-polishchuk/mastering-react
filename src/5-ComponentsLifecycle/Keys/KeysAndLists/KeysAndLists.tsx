@@ -1,5 +1,4 @@
 import { ChapterWrapper, TextBlock } from 'components';
-
 import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';
 import { List } from './List';

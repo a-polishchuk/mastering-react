@@ -1,5 +1,4 @@
 import { useAnimatedText } from 'hooks/useAnimatedText';
-
 import { AlienMessage } from './AlienMessage';
 
 export function DotsMessage({ color }: { color: string }) {

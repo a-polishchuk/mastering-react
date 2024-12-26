@@ -1,5 +1,5 @@
-import { ReactElement } from 'react';
 import { Toolbar } from 'components';
+import { ReactElement } from 'react';
 import { ToggleOption, ToggleOptionProps } from './ToggleOption';
 
 type Props = {

@@ -1,5 +1,4 @@
 import { Button, ChapterWrapper, ValueLabel } from 'components';
-
 import { useCounter } from './useCounter';
 
 function ClicksCounter() {

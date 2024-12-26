@@ -1,5 +1,4 @@
 import { ChapterWrapper, TextBlock } from 'components';
-
 import { EmojiNumberedList } from './EmojiNumberedList';
 
 const FRUITS = [

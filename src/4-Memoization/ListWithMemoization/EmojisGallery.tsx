@@ -1,7 +1,6 @@
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { useCallback, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
-
 import { ItemData } from '../ItemData';
 import classes from './EmojisGallery.module.css';
 import { MemoizedItem } from './MemoizedItem';

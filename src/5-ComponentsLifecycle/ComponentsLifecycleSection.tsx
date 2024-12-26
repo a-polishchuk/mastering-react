@@ -1,6 +1,5 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
-
 import { FunctionOrComponent } from './FunctionOrComponent';
 import { ComponentsStructure } from './Keys/ComponentsStructure';
 import { KeysAndLists } from './Keys/KeysAndLists/KeysAndLists';

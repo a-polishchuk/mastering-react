@@ -1,7 +1,6 @@
 import { CheckboxGrid } from '7-StateManagement/components/CheckboxGrid';
 import { GridState } from '7-StateManagement/types';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { Dispatch, RootState } from './store';
 
 const CELL_SIZE = 16;

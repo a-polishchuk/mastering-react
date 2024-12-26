@@ -1,6 +1,5 @@
 import { forwardRef, ForwardRefRenderFunction, useImperativeHandle, useRef } from 'react';
 import { updateArrayElement } from 'utils/updateArrayElement';
-
 import classes from './PinInput.module.css';
 
 export type PinInputHandle = {
