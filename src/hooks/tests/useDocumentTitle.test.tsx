@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { useDocumentTitle } from '../useDocumentTitle';
 
-function TestComponent(): JSX.Element {
+function TestComponent() {
   const [count, setCount] = useState<number>(0);
   const increment = () => setCount((value) => value + 1);
   useDocumentTitle(count.toString());

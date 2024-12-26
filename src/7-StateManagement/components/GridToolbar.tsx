@@ -8,7 +8,7 @@ interface Props {
   clear: () => void;
 }
 
-export function GridToolbar(props: Props): JSX.Element {
+export function GridToolbar(props: Props) {
   const { isAutoGenerating, toggleAutoGeneration, nextGeneration, randomize, clear } = props;
 
   return (

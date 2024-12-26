@@ -23,7 +23,7 @@ interface Props {
   onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-export function ClickDots({ blueDot, pinkDot, onClick }: Props): JSX.Element {
+export function ClickDots({ blueDot, pinkDot, onClick }: Props) {
   return (
     <div id={CONTAINER_ID} style={STYLE} onClick={onClick}>
       {generateDummies(DUMMIES_COUNT, DUMMY_SIZE)}

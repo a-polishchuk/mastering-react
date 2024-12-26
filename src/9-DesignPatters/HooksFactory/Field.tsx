@@ -6,7 +6,7 @@ interface Props {
   onChange: (newValue: string) => void;
 }
 
-export function Field({ label, value, onChange }: Props): JSX.Element {
+export function Field({ label, value, onChange }: Props) {
   return (
     <Toolbar>
       <div style={{ minWidth: 200 }}>{label}</div>

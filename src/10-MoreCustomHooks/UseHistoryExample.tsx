@@ -7,7 +7,7 @@ import classes from './common/common.module.css';
 import { mapToLine } from './common/Line';
 import { useMousePosition } from './common/useMousePosition';
 
-export function UseHistoryExample(): JSX.Element {
+export function UseHistoryExample() {
   const [clickPosition, clickHandler] = useMousePosition();
   const history = useHistory(clickPosition);
 

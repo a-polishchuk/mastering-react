@@ -1,6 +1,5 @@
 import { Button } from 'components';
-
-const stub = () => {};
+import { noop } from 'lodash';
 
 export interface ToggleOptionProps {
   option: any;
@@ -9,8 +8,8 @@ export interface ToggleOptionProps {
   onClick?: () => void;
 }
 
-export function ToggleOption(props: ToggleOptionProps): JSX.Element {
+export function ToggleOption(props: ToggleOptionProps) {
   const { option, label, selected, onClick } = props;
 
-  return <Button text={label || option} onClick={onClick ?? stub} disabled={selected} />;
+  return <Button text={label || option} onClick={onClick ?? noop} disabled={selected} />;
 }

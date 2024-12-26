@@ -5,7 +5,7 @@ import { CircleColor, mapToCircle } from './common/Circle';
 import classes from './common/common.module.css';
 import { useMousePosition } from './common/useMousePosition';
 
-export function TrackMousePosition(): JSX.Element {
+export function TrackMousePosition() {
   const [mousePosition, moveHandler] = useMousePosition();
   const positions = useHistory(mousePosition);
 

@@ -8,7 +8,7 @@ import { UseMemoExample } from './UseMemo/UseMemoExample';
 import { WhenReactRenderComponents } from './UseMemo/WhenReactRenderComponents';
 import { UseUpdateEffect } from './UseUpdateEffect/UseUpdateEffectExample';
 
-export function MemoizationSection(): JSX.Element {
+export function MemoizationSection() {
   return (
     <Section title="Memoization">
       <Section title="useCallback">

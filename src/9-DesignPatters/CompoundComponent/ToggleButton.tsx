@@ -9,7 +9,7 @@ interface Props {
   children: ReactElement<ToggleOptionProps>[];
 }
 
-export function ToggleButton({ value, onChange, children }: Props): JSX.Element {
+export function ToggleButton({ value, onChange, children }: Props) {
   const childProps = children.map(({ props }) => ({
     ...props,
     selected: props.option === value,

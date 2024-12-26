@@ -6,7 +6,7 @@ import { ToolbarController } from './ToolbarController';
 import { GridController } from './GridController';
 import classes from './UsingRematch.module.css';
 
-export function UsingRematch(): JSX.Element {
+export function UsingRematch() {
   return (
     <ChapterWrapper title="Rematch (Redux)" subtitle="State management">
       <Provider store={store}>

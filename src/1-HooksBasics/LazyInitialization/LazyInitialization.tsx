@@ -26,7 +26,7 @@ function getRowId(row: number[]): number {
   return row[0];
 }
 
-export function LazyInitialization(): JSX.Element {
+export function LazyInitialization() {
   const [data, setData] = useState<Matrix>(() => {
     logTagged('useState', 'init');
     const matrix = buildMatrix(MAX_NUMBER, MAX_POWER);

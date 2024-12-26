@@ -8,7 +8,7 @@ import { TopPanel } from './TopPanel/TopPanel';
 
 const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
 
-export function UsingSwr(): JSX.Element {
+export function UsingSwr() {
   return (
     <ChapterWrapper title="SWR" subtitle="Data fetching">
       <SWRConfig value={{ fetcher }}>

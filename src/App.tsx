@@ -11,7 +11,7 @@ import { DataFecthingSection } from '8-DataFetching/DataFetchingSection';
 import { DesignPatternsSection } from '9-DesignPatters/DesignPatternsSection';
 import { MasterDetail } from 'components';
 
-export function App(): JSX.Element {
+export function App() {
   return (
     <MasterDetail>
       <IntroSection />

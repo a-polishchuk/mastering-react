@@ -9,7 +9,7 @@ interface Props {
   children?: ReactNode;
 }
 
-export function FamilyMember({ name, children }: Props): JSX.Element {
+export function FamilyMember({ name, children }: Props) {
   return (
     <ColoredBlock style={{ flex: 1 }}>
       <Avatar name={name} />

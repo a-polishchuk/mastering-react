@@ -6,7 +6,7 @@ import { RefreshAll } from './RefreshAll';
 import { TodoCounter } from './TodoCounter';
 import { UserName } from './UserName';
 
-export function TopPanel(): JSX.Element {
+export function TopPanel() {
   return (
     <Toolbar>
       <Avatar />

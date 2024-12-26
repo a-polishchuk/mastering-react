@@ -6,7 +6,7 @@ import { ItemData } from '../ItemData';
 import classes from './EmojisGallery.module.css';
 import { Item } from './Item';
 
-export function EmojisGallery({ items }: { items: ItemData[] }): JSX.Element {
+export function EmojisGallery({ items }: { items: ItemData[] }) {
   const [selectedId, setSelectedId] = useState<string>('');
 
   useLoggedLifecycle('Gallery');

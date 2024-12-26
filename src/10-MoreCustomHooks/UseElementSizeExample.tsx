@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useElementSize } from 'hooks/useElementSize';
@@ -6,7 +7,7 @@ import { generateRandomColor } from 'utils/generateRandomColor';
 
 import classes from './UseElementSize.module.css';
 
-export function UseElementSizeExample(): JSX.Element {
+export function UseElementSizeExample() {
   const [size, refCallback] = useElementSize();
   const [width, height] = size;
   const [dummiesCount, setDummiesCount] = useState<number>(0);
@@ -18,7 +19,7 @@ export function UseElementSizeExample(): JSX.Element {
     backgroundColor: generateRandomColor(),
   };
 
-  const dummies = new Array<JSX.Element>(dummiesCount);
+  const dummies = new Array<ReactElement>(dummiesCount);
   for (let i = 0; i < dummiesCount; i++) {
     dummies[i] = (
       <div key={i} className={classNames(classes.node, classes.dummy)}>

@@ -9,7 +9,7 @@ import { gridAtom } from './gridAtom';
 
 const GENERATION_DELAY = 500;
 
-export function ToolbarController(): JSX.Element {
+export function ToolbarController() {
   const [, setGrid] = useRecoilState(gridAtom);
 
   const setNextGen = () => setGrid((value) => nextGeneration(value));

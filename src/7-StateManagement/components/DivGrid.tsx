@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { CellState, GridState } from '7-StateManagement/types';
 import { getGridSize } from '7-StateManagement/utils';
 import { CSSProperties } from 'react';
@@ -11,10 +12,10 @@ interface Props {
   toggleCell: (row: number, col: number) => void;
 }
 
-export function DivGrid({ grid, cellSize, toggleCell }: Props): JSX.Element {
+export function DivGrid({ grid, cellSize, toggleCell }: Props) {
   const [rows, cols] = getGridSize(grid);
 
-  const elements: JSX.Element[] = [];
+  const elements: ReactElement[] = [];
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       elements.push(

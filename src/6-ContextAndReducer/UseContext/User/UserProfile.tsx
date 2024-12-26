@@ -4,7 +4,7 @@ import { useCurrentTheme } from '../Theme/ThemeContext';
 import { useUserContext } from './UserContext';
 import { UserAvatar } from './UserAvatar';
 
-export function UserProfile(): JSX.Element {
+export function UserProfile() {
   const user = useUserContext();
   const { primaryColor } = useCurrentTheme();
 

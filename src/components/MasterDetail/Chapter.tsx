@@ -12,7 +12,7 @@ export interface ChapterProps {
   emoji?: string;
 }
 
-export function Chapter({ emoji, title, path, element }: ChapterProps): JSX.Element {
+export function Chapter({ emoji, title, path, element }: ChapterProps) {
   useRegisterRoute(path, element);
 
   return (

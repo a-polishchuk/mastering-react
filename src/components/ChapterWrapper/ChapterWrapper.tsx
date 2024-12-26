@@ -12,7 +12,7 @@ export interface ChapterWrapperProps {
   rerender?: () => void;
 }
 
-export function ChapterWrapper(props: ChapterWrapperProps): JSX.Element {
+export function ChapterWrapper(props: ChapterWrapperProps) {
   const { title, subtitle, children, rerender } = props;
 
   const navigate = useNavigate();

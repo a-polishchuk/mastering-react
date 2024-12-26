@@ -12,7 +12,7 @@ const STYLE: CSSProperties = {
 const BUTTON_TAG = 'Button';
 const INPUT_TAG = 'Input';
 
-export function EventHandlers(): JSX.Element {
+export function EventHandlers() {
   const rerender = useRerender();
 
   const inputFocusHandler = () => {

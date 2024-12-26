@@ -2,7 +2,7 @@ import { EmojiButton } from 'components';
 
 import { useTodoList } from './hooks/useTodoList';
 
-export function TodoList(): JSX.Element {
+export function TodoList() {
   const { data, mutate: refetch } = useTodoList();
 
   return (

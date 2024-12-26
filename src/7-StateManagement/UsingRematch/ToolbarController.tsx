@@ -6,7 +6,7 @@ import { Dispatch } from './store';
 
 const GENERATION_DELAY = 500;
 
-export function ToolbarController(): JSX.Element {
+export function ToolbarController() {
   const { grid } = useDispatch<Dispatch>();
 
   const nextGeneration = () => grid.nextGeneration();

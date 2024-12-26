@@ -2,7 +2,7 @@ import { ChapterWrapper, ColoredBlock } from 'components';
 
 import { useRerender } from './useRerender';
 
-export function UseRerenderReducer(): JSX.Element {
+export function UseRerenderReducer() {
   const rerender = useRerender();
 
   return (

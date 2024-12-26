@@ -4,7 +4,7 @@ import { logTagged } from 'utils/logTagged';
 
 import { BlockProps } from './BlockProps';
 
-export function BlockMemoizedRefCallback({ visible }: BlockProps): JSX.Element {
+export function BlockMemoizedRefCallback({ visible }: BlockProps) {
   const [rect, setRect] = useState<DOMRect | null>(null);
 
   const sizeText = rect ? `${rect.width.toFixed(0)} x ${rect.height.toFixed(0)}` : null;

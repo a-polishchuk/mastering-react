@@ -8,7 +8,7 @@ interface FormFieldProps {
   type?: HTMLInputTypeAttribute;
 }
 
-export function FormField(props: FormFieldProps): JSX.Element {
+export function FormField(props: FormFieldProps) {
   const { name, label, value, onChange, type = 'text' } = props;
 
   return (

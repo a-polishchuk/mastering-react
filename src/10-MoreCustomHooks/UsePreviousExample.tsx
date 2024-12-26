@@ -9,7 +9,7 @@ import { useMousePosition } from './common/useMousePosition';
 
 const HALF_TRANSPARENT = 0.5;
 
-export function UsePreviousExample(): JSX.Element {
+export function UsePreviousExample() {
   const [clickPosition, clickHandler] = useMousePosition();
   const prevPosition = usePreviousRenderValue(clickPosition);
   const rerender = useRerender();

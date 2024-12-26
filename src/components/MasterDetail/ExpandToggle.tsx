@@ -5,7 +5,7 @@ interface Props {
   onClick?: () => void;
 }
 
-export function ExpandToggle({ expanded, onClick }: Props): JSX.Element {
+export function ExpandToggle({ expanded, onClick }: Props) {
   return (
     <div className={classes.expandToggle} onClick={onClick}>
       {expanded ? '➖' : '➕'}

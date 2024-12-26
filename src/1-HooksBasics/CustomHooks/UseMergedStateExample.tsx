@@ -33,7 +33,7 @@ function validatePositiveNumber(stringValue: string): number | null {
   return Math.max(parseInt(stringValue), 0);
 }
 
-export function UseMergedStateExample(): JSX.Element {
+export function UseMergedStateExample() {
   const [data, setData] = useMergedState<Person>(INITIAL_STATE);
 
   const reset = () => setData(INITIAL_STATE);

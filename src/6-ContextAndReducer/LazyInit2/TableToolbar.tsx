@@ -10,11 +10,11 @@ interface ActionButtonProps {
   dispatch: Dispatch<Action>;
 }
 
-function ActionButton({ text, actionType, dispatch }: ActionButtonProps): JSX.Element {
+function ActionButton({ text, actionType, dispatch }: ActionButtonProps) {
   return <Button text={text} onClick={() => dispatch({ type: actionType })} />;
 }
 
-export function TableToolbar({ dispatch }: { dispatch: Dispatch<Action> }): JSX.Element {
+export function TableToolbar({ dispatch }: { dispatch: Dispatch<Action> }) {
   return (
     <Toolbar>
       <ActionButton text="⬆️ Sort" actionType={ActionType.SORT_ASC} dispatch={dispatch} />

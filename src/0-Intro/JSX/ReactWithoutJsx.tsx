@@ -14,7 +14,7 @@ export function ReactWithoutJsx() {
   return createElement(ChapterWrapper, props);
 }
 
-export function SameThingWithJsx(): JSX.Element {
+export function SameThingWithJsx() {
   return (
     <ChapterWrapper title="Same thing with JSX" subtitle="Introduction to JSX">
       <p style={{ fontSize: '18px' }}>

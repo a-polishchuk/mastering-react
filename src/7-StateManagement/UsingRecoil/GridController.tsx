@@ -11,7 +11,7 @@ interface Props {
   cellSize: number;
 }
 
-export function GridController({ gridType, cellSize }: Props): JSX.Element {
+export function GridController({ gridType, cellSize }: Props) {
   const [grid, setGrid] = useRecoilState(gridAtom);
 
   const toggle = (row: number, col: number) => {

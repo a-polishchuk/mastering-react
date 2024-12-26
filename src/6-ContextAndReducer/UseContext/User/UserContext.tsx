@@ -14,7 +14,7 @@ interface ProviderProps {
   children: ReactNode;
 }
 
-export function UserProvider({ userId, children }: ProviderProps): JSX.Element {
+export function UserProvider({ userId, children }: ProviderProps) {
   const user = useUser(userId);
 
   return <UserContext.Provider value={user}>{children}</UserContext.Provider>;

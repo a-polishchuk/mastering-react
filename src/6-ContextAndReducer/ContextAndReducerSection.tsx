@@ -9,7 +9,7 @@ import { UseRerenderReducer } from './UseRerender/UseRerenderReducer';
 import { UseToggleReducer } from './UseToggle/UseToggleReducer';
 import { VeganDragon } from './VeganDragon/VeganDragon';
 
-export function ContextAndReducerSection(): JSX.Element {
+export function ContextAndReducerSection() {
   return (
     <Section title="Context and reducer">
       <Section title="useReducer">

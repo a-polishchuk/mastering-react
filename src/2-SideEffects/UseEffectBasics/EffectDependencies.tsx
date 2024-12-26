@@ -7,7 +7,7 @@ import { Counter } from './Counter';
 
 const DELTA = 1;
 
-export function EffectDependencies(): JSX.Element {
+export function EffectDependencies() {
   const { value, increase, decrease } = useCounter(0, DELTA);
   const [inputValue, setInputValue] = useState<string>('Count:');
 

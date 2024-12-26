@@ -14,7 +14,7 @@ function buildDotStyle(size: number): CSSProperties {
   };
 }
 
-export function generateDummies(count: number, size: number): JSX.Element[] {
+export function generateDummies(count: number, size: number) {
   const array = [];
 
   for (let i = 0; i < count; i++) {

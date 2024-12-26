@@ -5,7 +5,7 @@ import { UsingRecoil } from './UsingRecoil/UsingRecoil';
 import { UsingRematch } from './UsingRematch/UsingRematch';
 import { UsingZustand } from './UsingZustand/UsingZustand';
 
-export function StateManagementSection(): JSX.Element {
+export function StateManagementSection() {
   return (
     <Section title="State management">
       <Chapter

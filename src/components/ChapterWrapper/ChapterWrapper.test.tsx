@@ -5,7 +5,7 @@ import { vi } from 'vitest';
 
 import { ChapterWrapper, ChapterWrapperProps } from './ChapterWrapper';
 
-function TestWrapper(props: ChapterWrapperProps): JSX.Element {
+function TestWrapper(props: ChapterWrapperProps) {
   return (
     <BrowserRouter>
       <ChapterWrapper {...props} />

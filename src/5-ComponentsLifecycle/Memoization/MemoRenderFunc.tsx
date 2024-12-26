@@ -1,12 +1,12 @@
+import { memo, ReactElement } from 'react';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
-import { memo } from 'react';
 
 interface Props {
   tag: string;
-  renderContent: () => JSX.Element;
+  renderContent: () => ReactElement;
 }
 
-export const MemoRenderFunc = memo(({ tag, renderContent }: Props): JSX.Element => {
+export const MemoRenderFunc = memo(({ tag, renderContent }: Props) => {
   useLoggedLifecycle(tag);
 
   return renderContent();

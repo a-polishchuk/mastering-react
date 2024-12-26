@@ -1,11 +1,12 @@
+import { ReactElement } from 'react';
 import { getGridSize } from '../getGridSize';
 import { GridProps } from '../GridProps';
 import { Cell } from './Cell';
 import classes from './DefaultGrid.module.css';
 
-function mapCells(grid: string[][]): JSX.Element[] {
+function mapCells(grid: string[][]): ReactElement[] {
   const [rowsCount, columnsCount] = getGridSize(grid);
-  const cells: JSX.Element[] = [];
+  const cells: ReactElement[] = [];
 
   for (let i = 0; i < rowsCount; i++) {
     for (let j = 0; j < columnsCount; j++) {

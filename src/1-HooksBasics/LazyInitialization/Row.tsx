@@ -4,7 +4,7 @@ interface RowProps {
   onClick: (rowId: number) => void;
 }
 
-export function Row({ rowId, array, onClick }: RowProps): JSX.Element {
+export function Row({ rowId, array, onClick }: RowProps) {
   const handleClick = () => {
     onClick(rowId);
   };

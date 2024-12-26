@@ -6,7 +6,7 @@ interface Props {
   onPlayAgain: () => void;
 }
 
-export function GameOverModal({ points, prevHighScore, onPlayAgain }: Props): JSX.Element {
+export function GameOverModal({ points, prevHighScore, onPlayAgain }: Props) {
   const message = (
     <>
       You scored <b>{points}</b> points!

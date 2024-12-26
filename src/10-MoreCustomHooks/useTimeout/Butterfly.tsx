@@ -10,7 +10,7 @@ interface Props {
   creature: Creature;
 }
 
-export function Butterfly({ creature }: Props): JSX.Element {
+export function Butterfly({ creature }: Props) {
   const [position, setPosition] = useState<Position>(creature.position);
   const [toggled, toggle] = useToggle(false);
   const angle = toggled ? 20 : -20;

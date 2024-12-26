@@ -5,7 +5,7 @@ interface Props {
   hovered: boolean;
 }
 
-export function AlienAvatar({ size, hovered }: Props): JSX.Element {
+export function AlienAvatar({ size, hovered }: Props) {
   return (
     <div style={{ position: 'relative' }}>
       {hovered && (

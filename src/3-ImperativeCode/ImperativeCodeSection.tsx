@@ -7,7 +7,7 @@ import { UseImperativeHandle } from './ImperativeHandle/UseImperativeHandle';
 import { RockScissorsPaper } from './RockScissorsPaper/RockScissorsPaper';
 import { StoringStateInUseRef } from './StoringStateInUseRef/StoringStateInUseRef';
 
-export function ImperativeCodeSection(): JSX.Element {
+export function ImperativeCodeSection() {
   return (
     <Section title="Imperative code, useRef">
       <Section title="Controlled vs uncontrolled">

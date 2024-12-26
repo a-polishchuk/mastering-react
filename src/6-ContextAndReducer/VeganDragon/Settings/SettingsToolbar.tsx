@@ -1,8 +1,7 @@
 import { Button, Toolbar } from 'components';
-
 import { useSettingsContext } from './SettingsContext';
 
-export function SettingsToolbar(): JSX.Element {
+export function SettingsToolbar() {
   const { setUseAlternativeGrid, moveDelay, changeMoveDelay } = useSettingsContext();
   const moveDelaySeconds = (moveDelay / 1000).toFixed(1);
 

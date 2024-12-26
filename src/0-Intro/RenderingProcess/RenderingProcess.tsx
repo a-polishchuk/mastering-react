@@ -15,7 +15,7 @@ function getSectionStyle(flex: number): CSSProperties {
   };
 }
 
-function Emoji({ children }: { children: string }): JSX.Element {
+function Emoji({ children }: { children: string }) {
   return (
     <div className={classes.emojiWrapper}>
       <div className={classes.emoji}>{children}</div>
@@ -23,7 +23,7 @@ function Emoji({ children }: { children: string }): JSX.Element {
   );
 }
 
-export function RenderingProcess(): JSX.Element {
+export function RenderingProcess() {
   return (
     <ChapterWrapper title="Rendering process" subtitle="🌲 🆚 🌲 ➡️ 🌳">
       <div className={classes.container}>

@@ -11,7 +11,7 @@ import { mapToLine } from './common/Line';
 
 const DELAY = 300;
 
-export function UseThrottledStateExample(): JSX.Element {
+export function UseThrottledStateExample() {
   const [throttledPosition, setThrottledPosition] = useThrottledState<Position | null>(null, DELAY);
   const throttledHistory = useHistory(throttledPosition);
 

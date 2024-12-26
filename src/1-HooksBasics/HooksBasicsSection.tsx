@@ -11,7 +11,7 @@ import { StoringFunctions } from './StoringFunctions';
 import { UseStateAndNewRenders } from './UseStateAndNewRenders';
 import { UseStateBasics } from './UseStateBasics';
 
-export function HooksBasicsSection(): JSX.Element {
+export function HooksBasicsSection() {
   return (
     <Section title="Hooks basics, useState">
       <Chapter

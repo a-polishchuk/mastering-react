@@ -28,7 +28,7 @@ function buildChangeHandler(
   };
 }
 
-export function DirectStateMutation(): JSX.Element {
+export function DirectStateMutation() {
   const [user, setUser] = useState<User>(INITIAL_VALUE);
   const [addressLine1, setAddressLine1] = useState<string>('');
   const [addressLine2, setAddressLine2] = useState<string>('');

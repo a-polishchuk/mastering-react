@@ -11,7 +11,7 @@ interface NodeProps {
   path: string[];
 }
 
-function Node({ level, maxLevel, path }: NodeProps): JSX.Element {
+function Node({ level, maxLevel, path }: NodeProps) {
   const rerender = useRerender();
 
   const handleClick: MouseEventHandler = (event) => {
@@ -31,7 +31,7 @@ function Node({ level, maxLevel, path }: NodeProps): JSX.Element {
   );
 }
 
-export function WhenReactRenderComponents(): JSX.Element {
+export function WhenReactRenderComponents() {
   return (
     <ChapterWrapper
       title="useMemo"

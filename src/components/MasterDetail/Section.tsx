@@ -10,7 +10,7 @@ export interface SectionProps {
   children: ReactNode;
 }
 
-export function Section({ title, children }: SectionProps): JSX.Element {
+export function Section({ title, children }: SectionProps) {
   const [expanded, setExpanded] = useState<boolean>(false);
   const { pathname } = useLocation();
 

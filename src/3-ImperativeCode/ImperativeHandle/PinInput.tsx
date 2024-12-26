@@ -15,13 +15,13 @@ export interface PinInputProps {
 const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
   props,
   ref
-): JSX.Element => {
+) => {
   const { digits, onChange } = props;
-  const inputRefs = useRef(new Array(digits.length));
+  const inputRefs = useRef(new Array<HTMLInputElement | null>(digits.length));
 
   useImperativeHandle(ref, () => ({
     focus: () => {
-      inputRefs.current[0].focus();
+      inputRefs.current[0]?.focus();
     },
   }));
 
@@ -34,9 +34,9 @@ const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
     onChange(updateArrayElement(digits, index, newDigit));
     const inputs = inputRefs.current;
     if (index < inputs.length - 1) {
-      inputs[index + 1].focus();
+      inputs[index + 1]?.focus();
     } else {
-      inputs[index].blur();
+      inputs[index]?.blur();
     }
   };
 
@@ -47,7 +47,7 @@ const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
     if (digits[index]) {
       onChange(updateArrayElement(digits, index, ''));
     } else if (index > 0) {
-      inputRefs.current[index - 1].focus();
+      inputRefs.current[index - 1]?.focus();
     }
   };
 
@@ -60,7 +60,9 @@ const Input: ForwardRefRenderFunction<PinInputHandle, PinInputProps> = (
           value={digit}
           onChange={(event) => handleChange(index, event.target.value)}
           onKeyDown={(event) => handleKeyDown(index, event.nativeEvent.key)}
-          ref={(ref) => (inputRefs.current[index] = ref)}
+          ref={(ref) => {
+            inputRefs.current[index] = ref;
+          }}
           autoComplete="nope"
         />
       ))}

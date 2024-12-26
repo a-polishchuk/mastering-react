@@ -10,7 +10,7 @@ interface Props {
   onClick: (item: ItemData) => void;
 }
 
-export function Item({ item, selected, onClick }: Props): JSX.Element {
+export function Item({ item, selected, onClick }: Props) {
   const { emoji } = item;
   const className = classNames(classes.item, selected && classes.selected);
 

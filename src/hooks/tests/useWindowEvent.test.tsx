@@ -8,7 +8,7 @@ interface TestProps {
   callback: () => void;
 }
 
-function TestComponent({ eventName, callback }: TestProps): JSX.Element {
+function TestComponent({ eventName, callback }: TestProps) {
   useWindowEvent(eventName, () => callback());
   return <div>Test Component</div>;
 }

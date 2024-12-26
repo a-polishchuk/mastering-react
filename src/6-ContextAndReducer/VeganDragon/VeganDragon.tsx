@@ -8,7 +8,7 @@ import { SettingsContextProvider } from './Settings/SettingsContext';
 import { SettingsToolbar } from './Settings/SettingsToolbar';
 import classes from './VeganDragon.module.css';
 
-export function VeganDragon(): JSX.Element {
+export function VeganDragon() {
   return (
     <ChapterWrapper title="Vegan Dragon" subtitle="useContext + useReducer">
       <div className={classes.root}>

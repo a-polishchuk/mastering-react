@@ -1,7 +1,7 @@
 import { ChapterWrapper, EmojiButton, LoggedLifecycle, TextBlock, Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
 
-export function ComponentsStructure(): JSX.Element {
+export function ComponentsStructure() {
   const [isToggled, toggle] = useToggle(true);
 
   const hedgehog = (

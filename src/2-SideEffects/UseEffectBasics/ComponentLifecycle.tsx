@@ -7,7 +7,7 @@ import { Counter } from './Counter';
 
 const DELTA = 1;
 
-export function ComponentLifecycle(): JSX.Element {
+export function ComponentLifecycle() {
   const { value, increase, decrease } = useCounter(0, DELTA);
 
   // ! async functions are not allowed here

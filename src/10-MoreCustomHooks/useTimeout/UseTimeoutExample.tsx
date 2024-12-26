@@ -13,7 +13,7 @@ import classes from './UseTimeouteExample.module.css';
 const TARGETS_NUMBER = 10;
 const PLAY_TIME = 10 * 1000;
 
-export function UseTimeoutExample(): JSX.Element {
+export function UseTimeoutExample() {
   const [caterpillars, setCaterpillars] = useState<Creature[]>(() =>
     generateRandomPositions(TARGETS_NUMBER)
   );

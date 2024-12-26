@@ -2,7 +2,7 @@ import { ChapterWrapper } from 'components';
 
 import { renderValues } from './renderValues';
 
-export function DataTypes(): JSX.Element {
+export function DataTypes() {
   return (
     <ChapterWrapper title="Data types" subtitle="Introduction to JSX">
       <h3>Let's check how React renders different data types</h3>

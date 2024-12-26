@@ -6,7 +6,7 @@ interface Props {
   fontSize: number;
 }
 
-export function AnimatedEmoji({ emojis, delay, fontSize }: Props): JSX.Element {
+export function AnimatedEmoji({ emojis, delay, fontSize }: Props) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   useEffect(() => {

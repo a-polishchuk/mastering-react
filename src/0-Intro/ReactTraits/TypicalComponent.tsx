@@ -17,7 +17,7 @@ const BLOCK_STYLE: CSSProperties = {
   alignItems: 'center',
 };
 
-export function TypicalComponent({ name, isRoot = false, children }: Props): JSX.Element {
+export function TypicalComponent({ name, isRoot = false, children }: Props) {
   return (
     <ColoredBlock style={BLOCK_STYLE}>
       &lt;{name} /&gt;

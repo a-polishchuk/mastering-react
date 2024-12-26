@@ -1,14 +1,15 @@
+import { ReactElement } from 'react';
 import { Cell } from './Cell';
 import classes from './AlternativeGrid.module.css';
 import { getGridSize } from '../getGridSize';
 import { GridProps } from '../GridProps';
 
-export function mapCells(grid: string[][]): JSX.Element[] {
+export function mapCells(grid: string[][]): ReactElement[] {
   const [rowsCount, columnsCount] = getGridSize(grid);
-  const rows = new Array<JSX.Element>(rowsCount);
+  const rows = new Array<ReactElement>(rowsCount);
 
   for (let r = 0; r < rowsCount; r++) {
-    const cells = new Array<JSX.Element>(columnsCount);
+    const cells = new Array<ReactElement>(columnsCount);
     for (let c = 0; c < columnsCount; c++) {
       cells[c] = <Cell key={`[${r}, ${c}]`} content={grid[r][c]} />;
     }
@@ -18,7 +19,7 @@ export function mapCells(grid: string[][]): JSX.Element[] {
   return rows;
 }
 
-export function AlternativeGrid({ grid }: GridProps): JSX.Element {
+export function AlternativeGrid({ grid }: GridProps) {
   return (
     <div className={classes.gridContainer}>
       <table>

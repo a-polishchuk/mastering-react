@@ -13,7 +13,7 @@ const MAX_CELL_SIZE = 30;
 const INITIAL_CELL_SIZE = 16;
 const CELL_SIZE_STEP = 4;
 
-export function UsingRecoil(): JSX.Element {
+export function UsingRecoil() {
   const gridTypeState = useState<GridType>(GridType.CHECKBOX);
   const [gridType] = gridTypeState;
   const [cellSize, setCellSize] = useState<number>(INITIAL_CELL_SIZE);

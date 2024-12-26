@@ -7,7 +7,7 @@ interface Props {
   step: number;
 }
 
-export function Score(props: Props): JSX.Element {
+export function Score(props: Props) {
   const animatedValue = useAnimatedValue(props);
 
   return <span>{animatedValue} pts</span>;

@@ -24,7 +24,7 @@ interface Props {
   disabled?: boolean;
 }
 
-export function ThemeButton(props: Props): JSX.Element {
+export function ThemeButton(props: Props) {
   const { text, onClick, disabled = false } = props;
   const [pressed, setPressed] = useState<boolean>(false);
   const theme = useCurrentTheme();

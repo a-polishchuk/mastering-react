@@ -2,7 +2,7 @@ import { ChapterWrapper } from 'components';
 
 import { FamilyMember } from './FamilyMember';
 
-export function PropsAndChildren(): JSX.Element {
+export function PropsAndChildren() {
   return (
     <ChapterWrapper
       title="Components, props and children"

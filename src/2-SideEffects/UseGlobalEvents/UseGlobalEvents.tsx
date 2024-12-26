@@ -7,7 +7,7 @@ const STEP = 10;
 const MIN_WIDTH = 100;
 const MAX_WIDTH = 300;
 
-export function UseGlobalEvents(): JSX.Element {
+export function UseGlobalEvents() {
   const [previewWidth, setPreviewWidth] = useState<number>((MAX_WIDTH + MIN_WIDTH) / 2);
 
   useEffect(() => {

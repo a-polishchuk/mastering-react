@@ -9,7 +9,7 @@ const INITIAL_SIZE = 200;
 const MIN_SIZE = 100;
 const STEP = 25;
 
-export function UseClickOutsideExample(): JSX.Element {
+export function UseClickOutsideExample() {
   const [size, setSize] = useState<number>(INITIAL_SIZE);
 
   const refCallback = useClickOutside(() => {

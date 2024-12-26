@@ -1,6 +1,6 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef } from 'react';
 
-export function useRefWrapper<T>(value: T): MutableRefObject<T> {
+export function useRefWrapper<T>(value: T): RefObject<T> {
   const refWrapper = useRef<T>(value);
 
   useEffect(() => {

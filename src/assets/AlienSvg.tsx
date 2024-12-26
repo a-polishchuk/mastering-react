@@ -8,7 +8,7 @@ export interface AlienSvgProps {
   style?: CSSProperties;
 }
 
-export function AlienSvg(props: AlienSvgProps): JSX.Element {
+export function AlienSvg(props: AlienSvgProps) {
   const {
     size,
     eyesColor = '#242424',

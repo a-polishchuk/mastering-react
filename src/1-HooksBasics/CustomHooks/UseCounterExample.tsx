@@ -2,7 +2,7 @@ import { Button, ChapterWrapper, ValueLabel } from 'components';
 
 import { useCounter } from './useCounter';
 
-function ClicksCounter(): JSX.Element {
+function ClicksCounter() {
   const { value: clicks, increase } = useCounter(0, 5);
   const text = 'Click me! '.repeat(clicks + 1);
   return (
@@ -12,7 +12,7 @@ function ClicksCounter(): JSX.Element {
   );
 }
 
-function DecadePicker({ initialValue }: { initialValue: number }): JSX.Element {
+function DecadePicker({ initialValue }: { initialValue: number }) {
   const { value: year, increase, decrease } = useCounter(initialValue, 10);
   return (
     <div style={{ padding: 10 }}>
@@ -26,7 +26,7 @@ function DecadePicker({ initialValue }: { initialValue: number }): JSX.Element {
   );
 }
 
-export function UseCounterExample(): JSX.Element {
+export function UseCounterExample() {
   return (
     <ChapterWrapper title="useCounter" subtitle="First custom hooks">
       <ClicksCounter />

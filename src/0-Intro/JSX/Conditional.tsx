@@ -6,7 +6,7 @@ interface ConditionalContentProps {
   value: number;
 }
 
-function ConditionalContent({ value }: ConditionalContentProps): JSX.Element | null {
+function ConditionalContent({ value }: ConditionalContentProps) {
   // an early return
   if (value > MAX_RENDERED_NUM) {
     return null;
@@ -36,7 +36,7 @@ function ConditionalContent({ value }: ConditionalContentProps): JSX.Element | n
   );
 }
 
-export function Conditional(): JSX.Element {
+export function Conditional() {
   const numbers = new Array(MAX_RENDERED_NUM + 5).fill(0).map((value, index) => index);
 
   return (

@@ -5,7 +5,7 @@ import { EmojisBar } from './EmojisBar';
 
 const EMOJIS = ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊', '🐻', '🐼', '🐻‍❄️', '🐨'];
 
-export function BewareOfInfiniteLoops(): JSX.Element {
+export function BewareOfInfiniteLoops() {
   const [topEmojis, setTopEmojis] = useState<string[]>(EMOJIS);
   const [bottomEmojis, setBottomEmojis] = useState<string[]>([]);
 

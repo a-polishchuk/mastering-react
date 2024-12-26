@@ -4,7 +4,7 @@ import { useRef } from 'react';
 
 import { useRerender } from '../useRerender';
 
-function TestComponent(): JSX.Element {
+function TestComponent() {
   const rerender = useRerender();
   const rendersCountRef = useRef<number>(0);
 

@@ -11,7 +11,7 @@ function useUserInitials(): string {
     .join('');
 }
 
-export function Avatar(): JSX.Element {
+export function Avatar() {
   const initials = useUserInitials();
 
   return <div className={classes.avatar}>{initials}</div>;

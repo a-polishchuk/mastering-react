@@ -4,7 +4,7 @@ import { GridController } from './GridController';
 import { ToolbarController } from './ToolbarController';
 import classes from './UsingZustand.module.css';
 
-export function UsingZustand(): JSX.Element {
+export function UsingZustand() {
   return (
     <ChapterWrapper title="Zustand" subtitle="State management">
       <div className={classes.root}>

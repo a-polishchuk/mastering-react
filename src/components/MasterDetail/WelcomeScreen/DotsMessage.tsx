@@ -2,7 +2,7 @@ import { useAnimatedText } from 'hooks/useAnimatedText';
 
 import { AlienMessage } from './AlienMessage';
 
-export function DotsMessage({ color }: { color: string }): JSX.Element {
+export function DotsMessage({ color }: { color: string }) {
   const dotsText = useAnimatedText('...', 400);
 
   return (

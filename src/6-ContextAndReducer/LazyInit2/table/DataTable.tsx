@@ -11,7 +11,7 @@ interface Props {
   dispatch: Dispatch<Action>;
 }
 
-export function DataTable({ maxPower, data, dispatch }: Props): JSX.Element {
+export function DataTable({ maxPower, data, dispatch }: Props) {
   const handleRowClick = (rowId: number) => {
     dispatch({
       type: ActionType.REMOVE_ROW,

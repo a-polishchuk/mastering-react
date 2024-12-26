@@ -6,6 +6,6 @@ export interface ToolbarProps {
   children: ReactNode;
 }
 
-export function Toolbar({ children }: ToolbarProps): JSX.Element {
+export function Toolbar({ children }: ToolbarProps) {
   return <div className={classes.toolbar}>{children}</div>;
 }

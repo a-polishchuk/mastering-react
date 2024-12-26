@@ -9,7 +9,7 @@ interface Props {
   decrease?: () => void;
 }
 
-export function Counter({ value, delta, increase, decrease }: Props): JSX.Element {
+export function Counter({ value, delta, increase, decrease }: Props) {
   return (
     <Toolbar>
       <ValueLabel value={value} minWidth="100px" />

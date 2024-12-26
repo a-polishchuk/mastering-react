@@ -9,7 +9,7 @@ interface ListProps {
   getKey: (item: Item, index: number) => string | number;
 }
 
-export function List({ generateItems, getKey }: ListProps): JSX.Element {
+export function List({ generateItems, getKey }: ListProps) {
   const [items, setItems] = useState<Item[]>(generateItems);
 
   const removeItem = useCallback((itemToRemove: Item) => {

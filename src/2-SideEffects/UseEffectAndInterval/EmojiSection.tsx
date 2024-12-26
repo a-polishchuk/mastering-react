@@ -6,7 +6,7 @@ import { AnimatedEmoji } from './AnimatedEmoji';
 const DEFAULT_DELAY = 500;
 const MIN_DELAY = 100;
 
-export function EmojiSection({ emojis }: { emojis: string[] }): JSX.Element {
+export function EmojiSection({ emojis }: { emojis: string[] }) {
   const [delay, setDelay] = useState<number>(DEFAULT_DELAY);
 
   const handleDelayChange: ChangeEventHandler<HTMLInputElement> = (event) => {

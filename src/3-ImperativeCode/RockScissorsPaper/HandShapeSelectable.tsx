@@ -9,7 +9,7 @@ interface Props {
   onClick: (value: HandShape) => void;
 }
 
-export function HandShapeSelectable({ value, isSelected, onClick }: Props): JSX.Element {
+export function HandShapeSelectable({ value, isSelected, onClick }: Props) {
   const style: CSSProperties = {
     opacity: isSelected ? 1 : 0.5,
     textShadow: isSelected ? '2px 2px #e1ccff' : '',

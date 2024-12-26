@@ -3,7 +3,7 @@ import { Toolbar } from 'components';
 import { useThemeContext } from './ThemeContext';
 import { ThemeOption } from './ThemeOption';
 
-export function ThemeToolbar(): JSX.Element {
+export function ThemeToolbar() {
   const [themesPalette, setThemeIndex] = useThemeContext();
   const { themes, themeIndex } = themesPalette;
 

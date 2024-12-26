@@ -6,7 +6,7 @@ interface Props {
   text: string;
 }
 
-export const MemoText = memo(({ tag, text }: Props): JSX.Element => {
+export const MemoText = memo(({ tag, text }: Props) => {
   useLoggedLifecycle(tag);
 
   return <div>{text}</div>;

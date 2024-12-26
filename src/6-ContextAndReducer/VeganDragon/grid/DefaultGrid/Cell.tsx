@@ -22,7 +22,7 @@ interface Props {
   content: string;
 }
 
-export const Cell = memo(({ row, col, content }: Props): JSX.Element => {
+export const Cell = memo(({ row, col, content }: Props) => {
   const isSnake = content === CellType.SNAKE || content === CellType.SNAKE_HEAD;
   const style = getStyle(row, col, isSnake);
 

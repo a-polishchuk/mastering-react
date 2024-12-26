@@ -1,21 +1,21 @@
 import { Button, ChapterWrapper, FlexRow, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { useToggle } from 'hooks/useToggle';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 
 import { BlockMemoizedRefCallback } from './BlockMemoizedRefCallback';
 import { BlockProps } from './BlockProps';
 import { BlockRefCallback } from './BlockRefCallback';
 import { BlockUseRef } from './BlockUseRef';
 
-type ComponentType = (props: BlockProps) => JSX.Element;
+type ComponentType = (props: BlockProps) => ReactElement;
 
-export function MemoizedRefCallback(): JSX.Element {
+export function MemoizedRefCallback(): ReactElement {
   const rerender = useRerender();
   const [BlockComponent, setBlockComponent] = useState<ComponentType>(() => BlockUseRef);
   const [visible, toggleVisibility] = useToggle(true);
 
-  const componentButton = (text: string, component: ComponentType): JSX.Element => (
+  const componentButton = (text: string, component: ComponentType) => (
     <Button
       text={text}
       onClick={() => setBlockComponent(() => component)}

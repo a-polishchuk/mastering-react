@@ -3,7 +3,7 @@ import { LoadingSpinner, PropsTable } from 'components';
 import { useUser } from './hooks/useUser';
 import classes from './Profile.module.css';
 
-export function Profile(): JSX.Element {
+export function Profile() {
   const { isValidating, data, error } = useUser();
 
   if (isValidating) {

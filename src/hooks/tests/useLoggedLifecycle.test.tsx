@@ -5,12 +5,12 @@ import { vi } from 'vitest';
 
 import { useLoggedLifecycle } from '../useLoggedLifecycle';
 
-function LifecycleTest(): JSX.Element {
+function LifecycleTest() {
   useLoggedLifecycle('test');
   return <div>Lifecycle Test</div>;
 }
 
-function TestComponent(): JSX.Element {
+function TestComponent() {
   const [key, setKey] = useState<number>(0);
   const incrementKey = () => {
     setKey((value) => value + 1);

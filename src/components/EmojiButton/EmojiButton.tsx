@@ -10,7 +10,7 @@ export interface EmojiButtonProps {
   disabled?: boolean;
 }
 
-export function EmojiButton({ emoji, onClick, disabled, tooltip }: EmojiButtonProps): JSX.Element {
+export function EmojiButton({ emoji, onClick, disabled, tooltip }: EmojiButtonProps) {
   return (
     <>
       <div data-tip={tooltip}>

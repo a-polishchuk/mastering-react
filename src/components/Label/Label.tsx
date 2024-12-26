@@ -5,7 +5,7 @@ export interface LabelProps {
   minWidth?: number;
 }
 
-export function Label({ text, minWidth = 150 }: LabelProps): JSX.Element {
+export function Label({ text, minWidth = 150 }: LabelProps) {
   return (
     <div className={classes.label} style={{ minWidth }}>
       {text}

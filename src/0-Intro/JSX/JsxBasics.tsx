@@ -1,7 +1,7 @@
 import { ChapterWrapper } from 'components';
 import { CSSProperties } from 'react';
 
-function JsxIsNot(): JSX.Element {
+function JsxIsNot() {
   const listStyle: CSSProperties = {
     listStyleType: 'circle',
   };
@@ -17,9 +17,9 @@ function JsxIsNot(): JSX.Element {
   );
 }
 
-const codeElement: JSX.Element = <code>React.createElement()</code>;
+const codeElement = <code>React.createElement()</code>;
 
-function JsxIs(): JSX.Element {
+function JsxIs() {
   return (
     <div>
       ✅ JSX <span style={{ color: 'green', fontWeight: 'bold' }}>IS</span>:
@@ -43,7 +43,7 @@ function getUrlFor(subject: string): string {
   }
 }
 
-function FactsAboutJsx(): JSX.Element {
+function FactsAboutJsx() {
   const any = 'any';
   return (
     <div>
@@ -67,8 +67,8 @@ function FactsAboutJsx(): JSX.Element {
   );
 }
 
-export function JsxBasics(): JSX.Element {
-  const anchorElement: JSX.Element = (
+export function JsxBasics() {
+  const anchorElement = (
     <a href={getUrlFor('jsx')} target="_blank" rel="noreferrer">
       JSX
     </a>

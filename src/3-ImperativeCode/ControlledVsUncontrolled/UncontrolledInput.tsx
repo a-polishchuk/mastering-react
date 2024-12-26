@@ -2,7 +2,7 @@ import { Button, ChapterWrapper, TextBlock, Toolbar } from 'components';
 import { capitalize } from 'lodash';
 import { ChangeEventHandler, useRef, useState } from 'react';
 
-export function UncontrolledInput(): JSX.Element {
+export function UncontrolledInput() {
   const [text, setText] = useState<string>('');
   const inputRef = useRef<HTMLInputElement | null>(null);
 

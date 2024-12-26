@@ -32,7 +32,7 @@ function generatePalette(): ThemesPalette {
   };
 }
 
-export function ThemeProvider({ children }: { children: ReactNode }): JSX.Element {
+export function ThemeProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<ThemesPalette>(generatePalette);
 
   const setThemeIndex = (themeIndex: number) => {

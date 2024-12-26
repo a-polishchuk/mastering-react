@@ -6,7 +6,7 @@ type PostData = Record<string, any>;
 const ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
 const STATUS_OK = 200;
 
-export function FetchDataInUseEffect(): JSX.Element {
+export function FetchDataInUseEffect() {
   const [postId, setPostId] = useState<string>('1');
   const [postData, setPostData] = useState<PostData | null>(null);
 

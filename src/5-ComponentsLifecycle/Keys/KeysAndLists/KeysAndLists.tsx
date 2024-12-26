@@ -4,7 +4,7 @@ import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';
 import { List } from './List';
 
-export function KeysAndLists(): JSX.Element {
+export function KeysAndLists() {
   const generateInitialItems = () => generateItems(10);
 
   const getIndexKey = (item: Item, index: number) => index;

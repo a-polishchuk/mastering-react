@@ -4,7 +4,7 @@ import { vi } from 'vitest';
 
 import { useLocalStorage } from '../useLocalStorage';
 
-function TestComponent(): JSX.Element {
+function TestComponent() {
   const [count, setCount] = useLocalStorage<number>('test-key', 0);
   return (
     <div>

@@ -5,7 +5,7 @@ import { PinInput, PinInputHandle } from './PinInput';
 
 const initialDigits = ['', '', '', ''];
 
-export function UseImperativeHandle(): JSX.Element {
+export function UseImperativeHandle() {
   const [digits, setDigits] = useState<string[]>(initialDigits);
   const ref = useRef<PinInputHandle | null>(null);
 

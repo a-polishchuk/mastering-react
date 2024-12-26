@@ -1,7 +1,7 @@
 import { useTodoList } from '../hooks/useTodoList';
 import classes from './TodoCounter.module.css';
 
-export function TodoCounter(): JSX.Element {
+export function TodoCounter() {
   const { data } = useTodoList();
   const todoCount = data?.length ?? 0;
 

@@ -7,7 +7,7 @@ export interface TabsHeaderProps {
   onSelect: (index: number) => void;
 }
 
-export function TabsHeader(props: TabsHeaderProps): JSX.Element {
+export function TabsHeader(props: TabsHeaderProps) {
   const { tabs, selectedIndex, onSelect } = props;
 
   return (

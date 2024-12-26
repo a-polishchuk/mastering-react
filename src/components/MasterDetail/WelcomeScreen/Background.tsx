@@ -5,7 +5,7 @@ import { generateRandomColor } from 'utils/generateRandomColor';
 
 import classes from './Background.module.css';
 
-export function Background(): JSX.Element {
+export function Background() {
   const color = useMemo(() => generateRandomColor() + '33', []);
   const [size, refCallback] = useElementSize();
   const [width] = size;

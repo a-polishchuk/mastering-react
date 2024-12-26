@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import { ChapterWrapper } from 'components';
 
 const TRANSPORT_EMOJIS = ['🚗', '🚕', '🚙', '🚌', '🚎', '🏎', '🚓', '🚑', '🚒', '🚐', '🛻', '🚚'];
@@ -8,15 +10,15 @@ interface EmojisListProps {
   ordered?: boolean;
 }
 
-function EmojisList(props: EmojisListProps): JSX.Element {
+function EmojisList(props: EmojisListProps) {
   const { emojis, ordered = false } = props;
   const listItems = emojis.map((emoji, index) => <li key={index}>{emoji}</li>);
   const ListComponent = ordered ? 'ol' : 'ul';
   return <ListComponent>{listItems}</ListComponent>;
 }
 
-function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
-  const rows = new Array<JSX.Element>();
+function EmojisTable({ emojis }: { emojis: string[] }) {
+  const rows = new Array<ReactElement>();
   // const rows: JSX.Element[] = [];
 
   for (let i = 0; i < emojis.length; i++) {
@@ -49,7 +51,7 @@ function EmojisTable({ emojis }: { emojis: string[] }): JSX.Element {
   );
 }
 
-export function Arrays(): JSX.Element {
+export function Arrays() {
   return (
     <ChapterWrapper title="Rendering arrays" subtitle="Introduction to JSX">
       <p>Balls emojis: {BALLS_EMOJIS}</p>

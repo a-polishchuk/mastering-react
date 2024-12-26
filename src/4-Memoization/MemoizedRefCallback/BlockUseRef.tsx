@@ -4,7 +4,7 @@ import { logTagged } from 'utils/logTagged';
 
 import { BlockProps } from './BlockProps';
 
-export function BlockUseRef({ visible }: BlockProps): JSX.Element {
+export function BlockUseRef({ visible }: BlockProps) {
   const divRef = useRef<HTMLDivElement | null>(null);
   const [rect, setRect] = useState<DOMRect | null>(null);
 

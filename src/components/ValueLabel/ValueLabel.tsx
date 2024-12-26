@@ -5,7 +5,7 @@ export interface ValueLabelProps {
   minWidth?: string | number;
 }
 
-export function ValueLabel({ value, minWidth }: ValueLabelProps): JSX.Element {
+export function ValueLabel({ value, minWidth }: ValueLabelProps) {
   return (
     <div className={classes.valueLabel} style={{ minWidth }}>
       {value}

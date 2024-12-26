@@ -9,7 +9,7 @@ export interface TabsProps {
   onSelect?: (index: number) => void;
 }
 
-export function Tabs({ tabs, children, onSelect }: TabsProps): JSX.Element {
+export function Tabs({ tabs, children, onSelect }: TabsProps) {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const childArray = Children.toArray(children);
   const selectedTabContent = childArray[selectedIndex];

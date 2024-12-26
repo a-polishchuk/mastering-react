@@ -13,7 +13,7 @@ interface Props {
   path: (Position | null)[];
 }
 
-export function Car({ path }: Props): JSX.Element | null {
+export function Car({ path }: Props) {
   const [prevIndex, setPrevIndex] = useState<number>(0);
   const [index, setIndex] = useState<number>(0);
   const [direction, setDirection] = useState<Direction>(Direction.FORWARD);

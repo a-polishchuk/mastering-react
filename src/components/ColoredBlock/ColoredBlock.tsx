@@ -9,7 +9,7 @@ export interface ColoredBlockProps {
   onClick?: MouseEventHandler;
 }
 
-export function ColoredBlock({ children, style, onClick }: ColoredBlockProps): JSX.Element {
+export function ColoredBlock({ children, style, onClick }: ColoredBlockProps) {
   const composedStyle: CSSProperties = {
     backgroundColor: generateRandomColor(),
     ...style,

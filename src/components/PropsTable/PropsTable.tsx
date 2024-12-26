@@ -3,7 +3,7 @@ interface EntryProps {
   value: any;
 }
 
-function Entry({ name, value }: EntryProps): JSX.Element {
+function Entry({ name, value }: EntryProps) {
   return (
     <tr>
       <td>{name}</td>
@@ -17,7 +17,7 @@ export interface PropsTableProps {
   data: Record<string, any> | null | undefined;
 }
 
-export function PropsTable({ title, data }: PropsTableProps): JSX.Element {
+export function PropsTable({ title, data }: PropsTableProps) {
   if (!data) {
     return <></>;
   }

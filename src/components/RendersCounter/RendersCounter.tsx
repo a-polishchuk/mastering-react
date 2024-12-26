@@ -1,11 +1,11 @@
-import { useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import classes from './RendersCounter.module.css';
 
 export interface RendersCounterProps {
-  children: JSX.Element;
+  children: ReactNode;
 }
 
-export function RendersCounter({ children }: RendersCounterProps): JSX.Element {
+export function RendersCounter({ children }: RendersCounterProps) {
   const rendersCountRef = useRef<number>(1);
 
   useEffect(() => {

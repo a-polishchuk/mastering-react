@@ -6,7 +6,7 @@ interface Props {
   children: ReactNode;
 }
 
-export function LoggedLifecycle({ tag, children }: Props): JSX.Element {
+export function LoggedLifecycle({ tag, children }: Props) {
   useLoggedLifecycle(tag);
 
   return <>{children}</>;

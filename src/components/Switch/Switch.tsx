@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
+import { JSX, ReactNode } from 'react';
 
-interface CaseProps<T> {
+export interface CaseProps<T> {
   value?: T;
   condition?: (value: T) => boolean;
-  children: JSX.Element;
+  children: ReactNode;
 }
 
-export function Case<T>({ children }: CaseProps<T>): JSX.Element {
+export function Case<T>({ children }: CaseProps<T>) {
   return children;
 }
 

@@ -6,7 +6,7 @@ import { logTagged } from 'utils/logTagged';
 
 import { useUpdateEffect } from './useUpdateEffect';
 
-export function UseUpdateEffect(): JSX.Element {
+export function UseUpdateEffect() {
   const { value, increase } = useCounter();
 
   useLoggedLifecycle('Parent');

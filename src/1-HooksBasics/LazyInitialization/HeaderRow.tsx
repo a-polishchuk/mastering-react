@@ -1,4 +1,4 @@
-export function HeaderRow({ maxPower }: { maxPower: number }): JSX.Element {
+export function HeaderRow({ maxPower }: { maxPower: number }) {
   const cells = [];
 
   for (let pow = 1; pow <= maxPower; pow++) {

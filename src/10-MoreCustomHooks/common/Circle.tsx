@@ -19,7 +19,7 @@ interface CircleProps {
   opacity?: number;
 }
 
-export const Circle = memo(({ position, color, opacity }: CircleProps): JSX.Element => {
+export const Circle = memo(({ position, color, opacity }: CircleProps) => {
   const style: CSSProperties = {
     left: position.x,
     top: position.y,

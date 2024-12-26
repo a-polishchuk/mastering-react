@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const NODE_ID = 'value-label-container';
 
-export function DirectDomChanges(): JSX.Element {
+export function DirectDomChanges() {
   const rerender = useRerender();
   const [uid, setUid] = useState<string>(() => uuidv4());
   const [bgColor, setBgColor] = useState<string>(() => generateRandomColor());

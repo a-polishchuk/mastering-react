@@ -1,6 +1,6 @@
 import classes from './Avatar.module.css';
 
-export function Avatar({ name }: { name: string }): JSX.Element {
+export function Avatar({ name }: { name: string }) {
   const imageSrc = `https://cataas.com/cat?${name}`;
 
   return (

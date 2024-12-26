@@ -1,4 +1,4 @@
-import { createContext, Dispatch, useContext, useReducer } from 'react';
+import { createContext, Dispatch, ReactElement, useContext, useReducer } from 'react';
 import { ProviderProps } from 'types/ProviderProps';
 
 import { Action, GameContextState } from '../types';
@@ -18,7 +18,7 @@ export function useGameContext() {
   return contextValue;
 }
 
-export function GameContextProvider({ children }: ProviderProps): JSX.Element {
+export function GameContextProvider({ children }: ProviderProps) {
   const value = useReducer(reducer, INITIAL_STATE);
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;

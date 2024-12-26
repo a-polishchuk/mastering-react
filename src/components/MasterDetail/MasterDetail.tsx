@@ -19,7 +19,7 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
   width: expanded ? '25%' : COLLAPSED_WIDTH,
 });
 
-export function MasterDetail({ children }: { children: ReactNode }): JSX.Element {
+export function MasterDetail({ children }: { children: ReactNode }) {
   const contextValue = useContextValue();
   const [expanded, toggleExpanded] = useToggle(true);
 

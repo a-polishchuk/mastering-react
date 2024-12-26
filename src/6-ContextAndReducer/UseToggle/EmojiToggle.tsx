@@ -7,7 +7,7 @@ interface Props {
   toggle: () => void;
 }
 
-export function EmojiToggle(props: Props): JSX.Element {
+export function EmojiToggle(props: Props) {
   const { emojiOn, emojiOff, value, toggle } = props;
 
   return (

@@ -4,7 +4,7 @@ type Callback = () => void;
 
 export function useUpdateEffect(callback: Callback, deps: any[]) {
   const firstRenderRef = useRef<boolean>(true);
-  const callbackRef = useRef<Callback>();
+  const callbackRef = useRef<Callback>(callback);
 
   useEffect(() => {
     callbackRef.current = callback;

@@ -7,7 +7,7 @@ interface Props {
   color?: string;
 }
 
-export const Line = memo(({ from, to, color }: Props): JSX.Element => {
+export const Line = memo(({ from, to, color }: Props) => {
   const { x, y } = getMiddle(from, to);
   const width = getDistance(from, to);
   const angle = getAngle(from, to);

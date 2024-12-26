@@ -7,7 +7,7 @@ export interface ReactLogoProps {
   style?: CSSProperties;
 }
 
-export function ReactLogo(props: ReactLogoProps): JSX.Element {
+export function ReactLogo(props: ReactLogoProps) {
   const { color = '#61dafb', size, className, style } = props;
 
   return (

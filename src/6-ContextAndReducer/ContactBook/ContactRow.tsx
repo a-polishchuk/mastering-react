@@ -15,7 +15,7 @@ function buildStyle(selected: boolean): CSSProperties {
   };
 }
 
-export function ContactRow({ contact }: { contact: Contact }): JSX.Element {
+export function ContactRow({ contact }: { contact: Contact }) {
   const { name, phone } = contact;
   const avatarUrl = `https://cataas.com/cat?${name}`;
 

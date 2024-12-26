@@ -21,7 +21,7 @@ export function useSettingsContext() {
   return contextValue;
 }
 
-export function SettingsContextProvider({ children }: ProviderProps): JSX.Element {
+export function SettingsContextProvider({ children }: ProviderProps) {
   const [useAlternativeGrid, setUseAlternativeGrid] = useState<boolean>(false);
   const [moveDelay, setMoveDelay] = useState<number>(MOVE_DELAY);
 

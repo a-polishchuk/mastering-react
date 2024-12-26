@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import {
   Button,
   ChapterWrapper,
@@ -30,13 +31,13 @@ const DEFAULT_USER: User = {
 
 const EMOJIS: string[] = ['🗺', '🗿', '🏟', '🗼', '🏯', '🎡'];
 
-export function UseStateAndNewRenders(): JSX.Element {
+export function UseStateAndNewRenders(): ReactElement {
   const [emoji, setEmoji] = useState<string>(EMOJIS[0]);
   const [user, setUser] = useState<User>(DEFAULT_USER);
 
   const rerender = useRerender();
 
-  const mapToEmojiButton = (e: string): JSX.Element => {
+  const mapToEmojiButton = (e: string): ReactElement => {
     const onClick = () => {
       logTagged('setState', e);
       setEmoji(e);

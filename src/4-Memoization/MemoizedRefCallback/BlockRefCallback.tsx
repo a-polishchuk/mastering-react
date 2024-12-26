@@ -4,7 +4,7 @@ import { logTagged } from 'utils/logTagged';
 
 import { BlockProps } from './BlockProps';
 
-export function BlockRefCallback({ visible }: BlockProps): JSX.Element {
+export function BlockRefCallback({ visible }: BlockProps) {
   const [width, setWidth] = useState<number | null>(null);
   const [height, setHeight] = useState<number | null>(null);
 

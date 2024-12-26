@@ -10,7 +10,7 @@ interface Props {
   onClick: (creature: Creature) => void;
 }
 
-export function Caterpillar({ creature, onClick }: Props): JSX.Element {
+export function Caterpillar({ creature, onClick }: Props) {
   const { x, y } = creature.position;
   const [toggled, toggle] = useToggle(false);
   const toggleDelay = useMemo(() => generateRandomNumber(500, 3000), []);

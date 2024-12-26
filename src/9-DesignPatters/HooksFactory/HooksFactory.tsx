@@ -9,7 +9,7 @@ const useUppercaseState = createMappedState((newValue) => newValue.toUpperCase()
 const useNoSpacesState = createMappedState((newValue) => newValue.replaceAll(/\s/g, ''));
 const useNoNumbersState = createMappedState((newValue) => newValue.replaceAll(/[0-9]/g, ''));
 
-export function HooksFactory(): JSX.Element {
+export function HooksFactory() {
   const [originalValue, setOriginalValue] = useState<string>('Some Value 123');
 
   const [lowercase, setLowercase] = useLowercaseState('');

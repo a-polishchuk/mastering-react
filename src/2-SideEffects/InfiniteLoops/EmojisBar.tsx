@@ -7,7 +7,7 @@ interface Props {
   onClick: (emoji: string) => void;
 }
 
-export function EmojisBar({ emojis, onClick }: Props): JSX.Element {
+export function EmojisBar({ emojis, onClick }: Props) {
   return (
     <Toolbar>
       {emojis.map((emoji) => (

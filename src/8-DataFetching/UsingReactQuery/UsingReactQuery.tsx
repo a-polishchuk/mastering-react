@@ -18,7 +18,7 @@ const queryClient = new QueryClient({
   },
 });
 
-export function UsingReactQuery(): JSX.Element {
+export function UsingReactQuery() {
   return (
     <ChapterWrapper title="React Query" subtitle="Data fetching">
       <QueryClientProvider client={queryClient}>

@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { ColoredBlock } from './ColoredBlock';
 
-function WithChapterWrapper(): JSX.Element {
+function WithChapterWrapper() {
   const rerender = useRerender();
   return (
     <BrowserRouter>

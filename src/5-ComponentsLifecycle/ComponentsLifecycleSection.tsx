@@ -8,7 +8,7 @@ import { RemountComponent } from './Keys/RemountComponent';
 import { LifecycleAndMemoization } from './Memoization/LifecycleAndMemoization';
 import { RandomRendering } from './RandomRendering/RandomRendering';
 
-export function ComponentsLifecycleSection(): JSX.Element {
+export function ComponentsLifecycleSection() {
   return (
     <Section title="Components lifecycle">
       <Section title="Key property">

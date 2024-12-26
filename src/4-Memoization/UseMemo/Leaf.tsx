@@ -8,7 +8,7 @@ interface Props {
   onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-export function Leaf({ path, onClick }: Props): JSX.Element {
+export function Leaf({ path, onClick }: Props) {
   const leafStyle: CSSProperties = {
     ...nodeStyle,
     justifyContent: 'center',

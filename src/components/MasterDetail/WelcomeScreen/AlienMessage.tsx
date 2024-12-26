@@ -14,7 +14,7 @@ interface Props {
   message: Message;
 }
 
-export function AlienMessage({ color, message }: Props): JSX.Element {
+export function AlienMessage({ color, message }: Props) {
   const { text, dateTime } = message;
   const [hovered, refCallback] = useHovered();
 

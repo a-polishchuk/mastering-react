@@ -11,7 +11,7 @@ interface NodeProps {
   path: string[];
 }
 
-const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps): JSX.Element => {
+const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps) => {
   const rerender = useRerender();
   const leftPath = useMemo(() => [...path, 'left'], [path]);
   const rightPath = useMemo(() => [...path, 'right'], [path]);
@@ -35,7 +35,7 @@ const MemoizedNode = memo(({ level, maxLevel, path }: NodeProps): JSX.Element =>
 
 const ROOT_PATH = ['root'];
 
-export function UseMemoExample(): JSX.Element {
+export function UseMemoExample() {
   return (
     <ChapterWrapper title="useMemo" subtitle="React.memo + useMemo" rerender={useRerender()}>
       <MemoizedNode level={0} maxLevel={2} path={ROOT_PATH} />

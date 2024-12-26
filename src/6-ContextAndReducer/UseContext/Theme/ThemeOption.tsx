@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 
 import { Theme } from './Theme';
 
@@ -16,7 +16,7 @@ interface Props {
   onSelect: (theme: Theme) => void;
 }
 
-export function ThemeOption({ theme, selected, onSelect }: Props): JSX.Element {
+export function ThemeOption({ theme, selected, onSelect }: Props) {
   const { primaryColor, secondaryColor } = theme;
   const cellSize = selected ? 50 : 40;
 

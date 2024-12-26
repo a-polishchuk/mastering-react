@@ -11,7 +11,7 @@ import { mapToLine } from './common/Line';
 
 const DELAY = 200;
 
-export function UseDebouncedStateExample(): JSX.Element {
+export function UseDebouncedStateExample() {
   const [debouncedPosition, setDebouncedPosition] = useDebouncedState<Position | null>(null, DELAY);
   const debouncedHistory = useHistory(debouncedPosition);
 

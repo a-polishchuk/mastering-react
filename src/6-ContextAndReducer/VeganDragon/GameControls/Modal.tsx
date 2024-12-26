@@ -9,7 +9,7 @@ interface Props {
   buttons: Record<string, () => void>;
 }
 
-export function Modal({ title, message, buttons }: Props): JSX.Element {
+export function Modal({ title, message, buttons }: Props) {
   return (
     <div className={classes.root}>
       <div className={classes.body}>

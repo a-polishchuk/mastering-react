@@ -16,7 +16,7 @@ const MESSAGES_TEXT = [
   'Просто натисни на потрібний розділ в меню ліворуч',
 ];
 
-export function WelcomeScreen(): JSX.Element {
+export function WelcomeScreen() {
   const isDotsVisible = useDotsVisible();
 
   const messageColor = useMemo(() => generateRandomColor(), []);

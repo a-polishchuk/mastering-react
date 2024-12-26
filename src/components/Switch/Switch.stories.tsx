@@ -8,7 +8,7 @@ export default {
 
 type Story = StoryObj<typeof Switch>;
 
-function Emoji({ children }: { children: string }): JSX.Element {
+function Emoji({ children }: { children: string }) {
   return <span style={{ fontSize: 32 }}>{children}</span>;
 }
 

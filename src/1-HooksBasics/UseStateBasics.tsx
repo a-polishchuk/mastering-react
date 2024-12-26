@@ -3,7 +3,7 @@ import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];
 
-export function UseStateBasics(): JSX.Element {
+export function UseStateBasics() {
   const [clicks, setClicks] = useState<number>(0);
   const [isClicksVisible, setClicksVisible] = useState<boolean>(true);
   const [someText, setSomeText] = useState<string>('');

@@ -12,7 +12,7 @@ import { EffectsSequence } from './UseLayoutEffect/EffectsSequence';
 import { UseLayoutEffectExample } from './UseLayoutEffect/UseLayoutEffectExample';
 import { YouDontNeedUseEffect } from './YouDontNeedUseEffect/YouDontNeedUseEffect';
 
-export function SideEffectsSection(): JSX.Element {
+export function SideEffectsSection() {
   return (
     <Section title="Side effects, useEffect">
       <Section title="useEffect basics">

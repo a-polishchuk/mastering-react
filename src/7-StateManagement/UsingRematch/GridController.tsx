@@ -10,7 +10,7 @@ function gridSelector(state: RootState): GridState {
   return state.grid;
 }
 
-export function GridController(): JSX.Element {
+export function GridController() {
   const grid = useSelector<RootState, GridState>(gridSelector);
   const dispatch = useDispatch<Dispatch>();
 

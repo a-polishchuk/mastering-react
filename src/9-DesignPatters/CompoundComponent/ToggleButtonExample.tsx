@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ToggleButton } from './ToggleButton';
 import { ToggleOption } from './ToggleOption';
 
-export function ToggleButtonExample(): JSX.Element {
+export function ToggleButtonExample() {
   const [value, setValue] = useState<string>('One');
 
   return (

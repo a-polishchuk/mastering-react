@@ -2,7 +2,7 @@ import { ChapterWrapper, ColoredBlock, LoggedLifecycle, TextBlock } from 'compon
 import { useRerender } from 'hooks/useRerender';
 import { useRef } from 'react';
 
-export function RemountComponent(): JSX.Element {
+export function RemountComponent() {
   const keyRef = useRef<number>(0);
 
   keyRef.current = keyRef.current + 1;

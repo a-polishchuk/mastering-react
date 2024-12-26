@@ -3,7 +3,7 @@ import { useToggle } from 'hooks/useToggle';
 
 import { EmojiToggle } from './EmojiToggle';
 
-export function UseToggleReducer(): JSX.Element {
+export function UseToggleReducer() {
   const [isHappy, toggleHappy] = useToggle(true);
   const [isOk, toggleOk] = useToggle(true);
   const [isDay, toggleDay] = useToggle(false);

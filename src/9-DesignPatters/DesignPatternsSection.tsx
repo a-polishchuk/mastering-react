@@ -5,7 +5,7 @@ import { EmojiNumberedListExample } from './CompoundComponent/EmojiNumberedListE
 import { ToggleButtonExample } from './CompoundComponent/ToggleButtonExample';
 import { HooksFactory } from './HooksFactory/HooksFactory';
 
-export function DesignPatternsSection(): JSX.Element {
+export function DesignPatternsSection() {
   return (
     <Section title="Design patterns">
       <Chapter

@@ -7,7 +7,7 @@ interface BadgeProps {
   lastName: string;
 }
 
-function Badge(props: BadgeProps): JSX.Element {
+function Badge(props: BadgeProps) {
   const { firstName, lastName } = props;
 
   useWhatCausedRender('Badge', props);
@@ -19,7 +19,7 @@ function Badge(props: BadgeProps): JSX.Element {
   );
 }
 
-export function UseWhatCausedRenderExample(): JSX.Element {
+export function UseWhatCausedRenderExample() {
   const [firstName, setFirstName] = useState<string>('');
   const [lastName, setLastName] = useState<string>('');
 

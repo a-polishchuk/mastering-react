@@ -18,7 +18,7 @@ const FRUITS = [
   'Kiwi 🥝',
 ];
 
-export function EmojiNumberedListExample(): JSX.Element {
+export function EmojiNumberedListExample() {
   return (
     <ChapterWrapper title="Emoji numbered list" subtitle="Compound component">
       <TextBlock>

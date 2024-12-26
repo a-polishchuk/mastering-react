@@ -4,7 +4,7 @@ import { useState } from 'react';
 const DELAY = 2000;
 const FIBONACCI = [1, 1];
 
-export function PreviousStateUpdate(): JSX.Element {
+export function PreviousStateUpdate() {
   const [clicks, setClicks] = useState<number>(0);
   const [isClicksVisible, setClicksVisible] = useState<boolean>(true);
   const [fibonacci, setFibonacci] = useState<number[]>(FIBONACCI);

@@ -10,7 +10,7 @@ interface ListItemProps {
 }
 
 export const ListItem = memo(
-  ({ item, onClick }: ListItemProps): JSX.Element => (
+  ({ item, onClick }: ListItemProps) => (
     <RendersCounter>
       <ColoredBlock onClick={() => onClick(item)}>{item.value}</ColoredBlock>
     </RendersCounter>

@@ -6,7 +6,7 @@ interface EmojiHoverProps {
   hover: string;
 }
 
-function EmojiHover({ idle, hover }: EmojiHoverProps): JSX.Element {
+function EmojiHover({ idle, hover }: EmojiHoverProps) {
   const [isHovered, refCallback] = useHovered();
 
   return (
@@ -16,7 +16,7 @@ function EmojiHover({ idle, hover }: EmojiHoverProps): JSX.Element {
   );
 }
 
-export function UseHoveredExample(): JSX.Element {
+export function UseHoveredExample() {
   return (
     <ChapterWrapper title="useHovered" subtitle="More custom hooks">
       <Toolbar>

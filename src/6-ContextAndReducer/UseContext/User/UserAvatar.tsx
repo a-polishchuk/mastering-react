@@ -3,7 +3,7 @@ import { CSSProperties } from 'react';
 import { useCurrentTheme } from '../Theme/ThemeContext';
 import { useUserContext } from './UserContext';
 
-export function UserAvatar(): JSX.Element {
+export function UserAvatar() {
   const user = useUserContext();
   const username = user?.username;
   const { primaryColor, secondaryColor } = useCurrentTheme();

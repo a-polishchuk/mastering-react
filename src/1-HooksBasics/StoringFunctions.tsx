@@ -16,7 +16,7 @@ const buildOnChange = (setter: Setter): ChangeEventHandler<HTMLInputElement> => 
   };
 };
 
-export function StoringFunctions(): JSX.Element {
+export function StoringFunctions() {
   const [a, setA] = useState<number>(0);
   const [b, setB] = useState<number>(0);
   const [mathFunction, setMathFunction] = useState<MathFunction>(() => add);

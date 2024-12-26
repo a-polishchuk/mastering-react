@@ -4,7 +4,7 @@ import { useRerender } from 'hooks/useRerender';
 
 import { TypicalComponent } from './TypicalComponent';
 
-export function ReactTraits(): JSX.Element {
+export function ReactTraits() {
   const rerender = useRerender();
 
   useInterval(rerender, 3000);

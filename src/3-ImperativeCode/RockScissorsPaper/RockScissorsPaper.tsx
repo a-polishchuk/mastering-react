@@ -5,7 +5,7 @@ import { HandShape } from './HandShape';
 import { HandShapeEmoji } from './HandShapeEmoji';
 import { RockScissorsPaperInput } from './RockScissorsPaperInput';
 
-export function RockScissorsPaper(): JSX.Element {
+export function RockScissorsPaper() {
   const [currentValue, setCurrentValue] = useState<HandShape>('✊');
 
   return (

@@ -7,7 +7,7 @@ import { MemoText } from './MemoText';
 
 const MemoLoggedLifecycle = memo(LoggedLifecycle);
 
-export function LifecycleAndMemoization(): JSX.Element {
+export function LifecycleAndMemoization() {
   const rerender = useRerender();
 
   const useMemoText = useMemo(

@@ -7,7 +7,7 @@ const INITIAL_SIZE: Size = [0, 0];
 
 export function useElementSize(): [Size, RefCallback] {
   const [size, setSize] = useState<Size>(INITIAL_SIZE);
-  const observerRef = useRef<ResizeObserver>();
+  const observerRef = useRef<ResizeObserver | null>(null);
 
   if (!observerRef.current) {
     observerRef.current = new ResizeObserver((entries) => {

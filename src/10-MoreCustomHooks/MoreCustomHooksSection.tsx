@@ -12,7 +12,7 @@ import { UseThrottledStateExample } from './UseThrottledStateExample';
 import { UseTimeoutExample } from './useTimeout/UseTimeoutExample';
 import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
-export function MoreCustomHooksSection(): JSX.Element {
+export function MoreCustomHooksSection() {
   return (
     <Section title="More custom hooks">
       <Chapter

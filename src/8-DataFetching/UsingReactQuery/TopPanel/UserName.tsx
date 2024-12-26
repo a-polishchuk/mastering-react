@@ -1,7 +1,7 @@
 import { useUser } from '../hooks/useUser';
 import classes from './UserName.module.css';
 
-export function UserName(): JSX.Element {
+export function UserName() {
   const { data } = useUser();
 
   return (

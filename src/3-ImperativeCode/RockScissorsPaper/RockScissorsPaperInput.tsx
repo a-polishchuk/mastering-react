@@ -8,7 +8,7 @@ interface Props {
 
 const HAND_SHAPES: HandShape[] = ['✊', '✌️', '✋'];
 
-export function RockScissorsPaperInput({ currentValue, onChange }: Props): JSX.Element {
+export function RockScissorsPaperInput({ currentValue, onChange }: Props) {
   return (
     <>
       {HAND_SHAPES.map((handShape) => (

@@ -1,6 +1,6 @@
 import { Direction } from '../types';
 
-export function CurrentDirection({ direction }: { direction: Direction }): JSX.Element {
+export function CurrentDirection({ direction }: { direction: Direction }) {
   const emoji = getDirectionEmoji(direction);
 
   return <span>{emoji.repeat(3)}</span>;

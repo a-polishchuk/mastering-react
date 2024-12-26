@@ -22,7 +22,7 @@ interface Props {
   content: string;
 }
 
-export const Cell = memo(({ content }: Props): JSX.Element => {
+export const Cell = memo(({ content }: Props) => {
   const style = getStyle(content);
   const text = content === CellType.SNAKE ? '' : content;
 

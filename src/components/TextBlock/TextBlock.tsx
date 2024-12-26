@@ -6,6 +6,6 @@ export interface TextBlockProps {
   children: ReactNode;
 }
 
-export function TextBlock({ children }: TextBlockProps): JSX.Element {
+export function TextBlock({ children }: TextBlockProps) {
   return <div className={classes.textBlock}>{children}</div>;
 }

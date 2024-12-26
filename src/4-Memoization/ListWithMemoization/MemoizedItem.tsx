@@ -11,7 +11,7 @@ interface Props {
   onClick: (item: ItemData) => void;
 }
 
-function Item({ item, selected, onClick }: Props): JSX.Element {
+function Item({ item, selected, onClick }: Props) {
   const { emoji } = item;
   const className = classNames(classes.item, selected && classes.selected);
 

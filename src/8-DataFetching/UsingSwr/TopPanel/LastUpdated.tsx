@@ -1,7 +1,7 @@
 import { useLastUpdated } from '../hooks/useLastUpdated';
 import classes from './LastUpdated.module.css';
 
-export function LastUpdated(): JSX.Element {
+export function LastUpdated() {
   const { data } = useLastUpdated();
   const formattedTime = data?.toLocaleTimeString() ?? '--';
 

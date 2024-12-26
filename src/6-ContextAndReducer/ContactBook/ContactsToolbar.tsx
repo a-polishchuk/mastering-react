@@ -4,7 +4,7 @@ import { Toolbar } from 'components';
 import { useContacts } from './ContactsContext';
 import { ActionType } from './types';
 
-export function ContactsToolbar(): JSX.Element {
+export function ContactsToolbar() {
   const [state, dispatch] = useContacts();
   const { selectedId } = state;
 

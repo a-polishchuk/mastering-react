@@ -5,7 +5,7 @@ import { useGridStore } from './useGridStore';
 
 const GENERATION_DELAY = 500;
 
-export function ToolbarController(): JSX.Element {
+export function ToolbarController() {
   const nextGeneration = useGridStore((state) => state.nextGeneration);
   const randomize = useGridStore((state) => state.randomize);
   const clear = useGridStore((state) => state.clear);

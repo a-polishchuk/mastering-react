@@ -1,7 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { Button } from 'components';
 
-export function RefreshAll(): JSX.Element {
+export function RefreshAll() {
   const queryClient = useQueryClient();
 
   const handleClick = () => {

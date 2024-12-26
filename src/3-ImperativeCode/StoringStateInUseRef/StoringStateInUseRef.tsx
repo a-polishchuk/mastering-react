@@ -6,7 +6,7 @@ import { logTagged } from 'utils/logTagged';
 import { useRefState } from './useRefState';
 import { useUpdateEffect } from './useUpdateEffect';
 
-export function StoringStateInUseRef(): JSX.Element {
+export function StoringStateInUseRef() {
   const { value: stateClicks, increase: increaseStateClicks } = useCounter();
   const [refStateClicks, setRefStateClicks] = useRefState<number>(0);
 

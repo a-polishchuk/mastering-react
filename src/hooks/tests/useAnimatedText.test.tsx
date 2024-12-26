@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { useAnimatedText } from '../useAnimatedText';
 
-function TestComponent({ text }: { text: string }): JSX.Element {
+function TestComponent({ text }: { text: string }) {
   const animatedText = useAnimatedText(text, 10);
   return <div>{animatedText}</div>;
 }

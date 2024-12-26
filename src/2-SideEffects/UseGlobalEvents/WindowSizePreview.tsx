@@ -15,7 +15,7 @@ function calculatePreviewSize(previewWidth: number): Size {
   };
 }
 
-export function WindowSizePreview({ previewWidth }: { previewWidth: number }): JSX.Element | null {
+export function WindowSizePreview({ previewWidth }: { previewWidth: number }) {
   const [previewSize, setPreviewSize] = useState<Size>(() => calculatePreviewSize(previewWidth));
 
   useEffect(() => {

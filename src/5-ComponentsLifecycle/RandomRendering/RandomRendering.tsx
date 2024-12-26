@@ -6,7 +6,7 @@ import { RandomContainer } from './RandomContainer';
 
 const EMOJIS = ['🏍', '✈️', '🚀', '🏎'];
 
-export function RandomRendering(): JSX.Element {
+export function RandomRendering() {
   return (
     <ChapterWrapper
       title="Random container"

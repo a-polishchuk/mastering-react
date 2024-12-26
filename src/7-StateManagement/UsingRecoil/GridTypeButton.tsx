@@ -9,7 +9,7 @@ interface Props {
   state: UseState<GridType>;
 }
 
-export function GridTypeButton({ text, gridType, state }: Props): JSX.Element {
+export function GridTypeButton({ text, gridType, state }: Props) {
   const [currentGridType, setGridType] = state;
 
   return (

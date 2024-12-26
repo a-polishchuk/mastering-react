@@ -10,7 +10,7 @@ function getEmojiNumber(n: number): string {
     .join('');
 }
 
-export function EmojiNumberedList({ children }: { children: ReactNode }): JSX.Element {
+export function EmojiNumberedList({ children }: { children: ReactNode }) {
   const array = Children.toArray(children);
 
   return (

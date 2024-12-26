@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import { useInterval } from '../useInterval';
 
-function TestComponent(): JSX.Element {
+function TestComponent() {
   const [count, setCount] = useState<number>(0);
   useInterval(() => setCount((value) => value + 1), 50);
   return <div>{`Count: ${count}`}</div>;

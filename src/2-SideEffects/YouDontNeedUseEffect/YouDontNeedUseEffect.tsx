@@ -18,7 +18,7 @@ function buildStyle(left: number, top: number): CSSProperties {
   };
 }
 
-export function YouDontNeedUseEffect(): JSX.Element {
+export function YouDontNeedUseEffect() {
   const [left, top] = useBallPosition(MIN_STEP, MAX_STEP);
   const style = buildStyle(left, top);
   const rerender = useRerender();
