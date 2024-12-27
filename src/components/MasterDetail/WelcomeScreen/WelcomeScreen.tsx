@@ -10,41 +10,41 @@ import { Message } from './types';
 import classes from './WelcomeScreen.module.css';
 
 const MESSAGES_TEXT = [
-  'Вітаю, homo sapiens!',
-  'Тут ти зможеш знайти всі приклади з курсу "Опановуємо React"',
-  'Просто натисни на потрібний розділ в меню ліворуч',
+    'Вітаю, homo sapiens!',
+    'Тут ти зможеш знайти всі приклади з курсу "Опановуємо React"',
+    'Просто натисни на потрібний розділ в меню ліворуч',
 ];
 
 export function WelcomeScreen() {
-  const isDotsVisible = useDotsVisible();
+    const isDotsVisible = useDotsVisible();
 
-  const messageColor = useMemo(() => generateRandomColor(), []);
+    const messageColor = useMemo(() => generateRandomColor(), []);
 
-  const messages: Message[] = useMemo(
-    () =>
-      MESSAGES_TEXT.map((text) => ({
-        id: generateUniqueId(),
-        text,
-        dateTime: new Date(),
-      })),
-    []
-  );
+    const messages: Message[] = useMemo(
+        () =>
+            MESSAGES_TEXT.map((text) => ({
+                id: generateUniqueId(),
+                text,
+                dateTime: new Date(),
+            })),
+        [],
+    );
 
-  return (
-    <div className={classes.container}>
-      <Background />
-      <div className={classes.messages}>
-        {messages.map((message) => (
-          <AlienMessage key={message.id} color={messageColor} message={message} />
-        ))}
-        {isDotsVisible && <DotsMessage color={messageColor} />}
-      </div>
-    </div>
-  );
+    return (
+        <div className={classes.container}>
+            <Background />
+            <div className={classes.messages}>
+                {messages.map((message) => (
+                    <AlienMessage key={message.id} color={messageColor} message={message} />
+                ))}
+                {isDotsVisible && <DotsMessage color={messageColor} />}
+            </div>
+        </div>
+    );
 }
 
 function useDotsVisible() {
-  const [dotsVisible, toggle] = useToggle(false);
-  useInterval(toggle, 3000);
-  return dotsVisible;
+    const [dotsVisible, toggle] = useToggle(false);
+    useInterval(toggle, 3000);
+    return dotsVisible;
 }

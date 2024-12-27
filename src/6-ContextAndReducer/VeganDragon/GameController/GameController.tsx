@@ -5,11 +5,11 @@ import { useHandleDirection } from './useHandleDirection';
 import { useIntervalAction } from './useIntervalAction';
 
 export function GameController(): null {
-  const { moveDelay } = useSettingsContext();
+    const { moveDelay } = useSettingsContext();
 
-  useHandleDirection();
-  useIntervalAction(ActionType.MOVE, moveDelay);
-  useIntervalAction(ActionType.SPAWN_VEGETABLE, moveDelay * MOVES_PER_SPAWN);
+    useHandleDirection();
+    useIntervalAction(ActionType.MOVE, moveDelay);
+    useIntervalAction(ActionType.SPAWN_VEGETABLE, moveDelay * MOVES_PER_SPAWN);
 
-  return null;
+    return null;
 }

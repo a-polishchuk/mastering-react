@@ -3,6 +3,6 @@ import { getGridSize } from '7-StateManagement/utils';
 import { empty } from './empty';
 
 export function clear(grid: GridState): GridState {
-  const [rows, cols] = getGridSize(grid);
-  return empty(rows, cols);
+    const [rows, cols] = getGridSize(grid);
+    return empty(rows, cols);
 }

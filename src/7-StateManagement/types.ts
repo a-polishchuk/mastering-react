@@ -1,6 +1,6 @@
 export enum CellState {
-  DEAD,
-  ALIVE,
+    DEAD,
+    ALIVE,
 }
 
 export type GridState = CellState[][];

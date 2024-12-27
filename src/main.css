@@ -1,90 +1,90 @@
 :root {
-  --divider-color: #0003;
-  --table-border-color: #eeeeee;
-  --table-hover-color: #bbbbbb;
+    --divider-color: #0003;
+    --table-border-color: #eeeeee;
+    --table-hover-color: #bbbbbb;
 
-  --box-shadow: 3px 3px 0px 0px #eadff9;
-  --active-box-shadow: 3px 3px 0px 0px #e1ccff;
-  --disabled-box-shadow: 3px 3px 0px 0px #e7e7e7;
+    --box-shadow: 3px 3px 0px 0px #eadff9;
+    --active-box-shadow: 3px 3px 0px 0px #e1ccff;
+    --disabled-box-shadow: 3px 3px 0px 0px #e7e7e7;
 
-  --passive-text-shadow: 2px 2px #eadff9;
-  --active-text-shadow: 2px 2px #e1ccff;
-  --disabled-text-shadow: 2px 2px 0px 0px #e7e7e7;
+    --passive-text-shadow: 2px 2px #eadff9;
+    --active-text-shadow: 2px 2px #e1ccff;
+    --disabled-text-shadow: 2px 2px 0px 0px #e7e7e7;
 }
 
 body {
-  font-family: Arial;
+    font-family: Arial;
 }
 
 h2 {
-  margin: 0;
-  text-shadow: var(--passive-text-shadow);
+    margin: 0;
+    text-shadow: var(--passive-text-shadow);
 }
 
 h3 {
-  margin: 0;
-  color: rgb(102, 102, 102);
+    margin: 0;
+    color: rgb(102, 102, 102);
 }
 
 div {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 tr:nth-child(even) {
-  background-color: #eeeeee66;
+    background-color: #eeeeee66;
 }
 
 th {
-  background-color: var(--table-border-color);
-  border: 1px solid var(--table-border-color);
-  padding: 8px;
+    background-color: var(--table-border-color);
+    border: 1px solid var(--table-border-color);
+    padding: 8px;
 }
 
 th:hover {
-  border: 1px solid var(--table-hover-color);
+    border: 1px solid var(--table-hover-color);
 }
 
 td {
-  border: 1px solid var(--table-border-color);
-  padding: 8px;
+    border: 1px solid var(--table-border-color);
+    padding: 8px;
 }
 
 td:hover {
-  border: 1px solid var(--table-hover-color);
+    border: 1px solid var(--table-hover-color);
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px;
-  border: 1px solid var(--table-hover-color);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    border: 1px solid var(--table-hover-color);
 }
 
 input {
-  padding: 8px;
-  border: 1px solid var(--table-hover-color);
-  border-radius: 0;
-  font-size: 16px;
+    padding: 8px;
+    border: 1px solid var(--table-hover-color);
+    border-radius: 0;
+    font-size: 16px;
 }
 
 input:focus {
-  outline: none;
-  box-shadow: var(--active-box-shadow);
+    outline: none;
+    box-shadow: var(--active-box-shadow);
 }
 
 input:hover {
-  text-shadow: var(--active-text-shadow);
+    text-shadow: var(--active-text-shadow);
 }
 
 .flex1 {
-  flex: 1;
+    flex: 1;
 }
 
 .flex2 {
-  flex: 2;
+    flex: 2;
 }
 
 .flex3 {
-  flex: 3;
+    flex: 3;
 }

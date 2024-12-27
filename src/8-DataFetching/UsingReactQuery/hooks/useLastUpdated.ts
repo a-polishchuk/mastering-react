@@ -8,15 +8,15 @@ import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 // }
 
 async function fetchLastUpdated() {
-  return new Date();
+    return new Date();
 }
 
 export function useLastUpdated() {
-  const keyBuilder = QueryKeyFactory[Queries.LAST_UPDATED];
+    const keyBuilder = QueryKeyFactory[Queries.LAST_UPDATED];
 
-  return useQuery({
-    queryKey: keyBuilder(),
-    queryFn: fetchLastUpdated,
-    refetchInterval: 3000,
-  });
+    return useQuery({
+        queryKey: keyBuilder(),
+        queryFn: fetchLastUpdated,
+        refetchInterval: 3000,
+    });
 }

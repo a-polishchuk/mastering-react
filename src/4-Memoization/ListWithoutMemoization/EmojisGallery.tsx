@@ -6,20 +6,25 @@ import classes from './EmojisGallery.module.css';
 import { Item } from './Item';
 
 export function EmojisGallery({ items }: { items: ItemData[] }) {
-  const [selectedId, setSelectedId] = useState<string>('');
+    const [selectedId, setSelectedId] = useState<string>('');
 
-  useLoggedLifecycle('Gallery');
+    useLoggedLifecycle('Gallery');
 
-  const clickCallback = (item: ItemData) => {
-    setSelectedId(item.id);
-    logTagged(item.emoji, 'Selected');
-  };
+    const clickCallback = (item: ItemData) => {
+        setSelectedId(item.id);
+        logTagged(item.emoji, 'Selected');
+    };
 
-  return (
-    <div className={classes.gallery}>
-      {items.map((item) => (
-        <Item key={item.id} item={item} selected={item.id === selectedId} onClick={clickCallback} />
-      ))}
-    </div>
-  );
+    return (
+        <div className={classes.gallery}>
+            {items.map((item) => (
+                <Item
+                    key={item.id}
+                    item={item}
+                    selected={item.id === selectedId}
+                    onClick={clickCallback}
+                />
+            ))}
+        </div>
+    );
 }

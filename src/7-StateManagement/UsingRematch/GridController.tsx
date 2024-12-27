@@ -6,16 +6,16 @@ import { Dispatch, RootState } from './store';
 const CELL_SIZE = 16;
 
 function gridSelector(state: RootState): GridState {
-  return state.grid;
+    return state.grid;
 }
 
 export function GridController() {
-  const grid = useSelector<RootState, GridState>(gridSelector);
-  const dispatch = useDispatch<Dispatch>();
+    const grid = useSelector<RootState, GridState>(gridSelector);
+    const dispatch = useDispatch<Dispatch>();
 
-  const toggleCell = (row: number, col: number) => {
-    return dispatch.grid.toggleCell([row, col]);
-  };
+    const toggleCell = (row: number, col: number) => {
+        return dispatch.grid.toggleCell([row, col]);
+    };
 
-  return <CheckboxGrid grid={grid} cellSize={CELL_SIZE} toggleCell={toggleCell} />;
+    return <CheckboxGrid grid={grid} cellSize={CELL_SIZE} toggleCell={toggleCell} />;
 }

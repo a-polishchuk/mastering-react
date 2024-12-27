@@ -6,35 +6,35 @@ import classes from './EmojisGallery.module.css';
 import { MemoizedItem } from './MemoizedItem';
 
 export function EmojisGallery({ items }: { items: ItemData[] }) {
-  const [selectedId, setSelectedId] = useState<string>('');
+    const [selectedId, setSelectedId] = useState<string>('');
 
-  useLoggedLifecycle('Gallery');
+    useLoggedLifecycle('Gallery');
 
-  const memoizedCallback = useCallback((item: ItemData) => {
-    setSelectedId(item.id);
-    logTagged(item.emoji, 'Selected');
-  }, []);
+    const memoizedCallback = useCallback((item: ItemData) => {
+        setSelectedId(item.id);
+        logTagged(item.emoji, 'Selected');
+    }, []);
 
-  // ! basically, same behaviour can be achieved with useMemo hook instead of useCallback
+    // ! basically, same behaviour can be achieved with useMemo hook instead of useCallback
 
-  // const alsoMemoizedCallback = useMemo(() => {
-  //   const callback = (item: ItemData) => {
-  //     setSelectedId(item.id);
-  //     logTagged(item.emoji, 'Selected');
-  //   };
-  //   return callback;
-  // }, []);
+    // const alsoMemoizedCallback = useMemo(() => {
+    //   const callback = (item: ItemData) => {
+    //     setSelectedId(item.id);
+    //     logTagged(item.emoji, 'Selected');
+    //   };
+    //   return callback;
+    // }, []);
 
-  return (
-    <div className={classes.gallery}>
-      {items.map((item) => (
-        <MemoizedItem
-          key={item.id}
-          item={item}
-          selected={item.id === selectedId}
-          onClick={memoizedCallback}
-        />
-      ))}
-    </div>
-  );
+    return (
+        <div className={classes.gallery}>
+            {items.map((item) => (
+                <MemoizedItem
+                    key={item.id}
+                    item={item}
+                    selected={item.id === selectedId}
+                    onClick={memoizedCallback}
+                />
+            ))}
+        </div>
+    );
 }

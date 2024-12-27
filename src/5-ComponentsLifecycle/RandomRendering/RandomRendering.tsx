@@ -6,25 +6,25 @@ import { RandomContainer } from './RandomContainer';
 const EMOJIS = ['🏍', '✈️', '🚀', '🏎'];
 
 export function RandomRendering() {
-  return (
-    <ChapterWrapper
-      title="Random container"
-      subtitle="Components lifecycle"
-      rerender={useRerender()}
-    >
-      <TextBlock>
-        <div>
-          ℹ️ If you pass a child component to some custom container component, there is no guarantee
-          it'll be rendered.
-        </div>
-        <div>ℹ️ It fully depends on the rendering logic of container component.</div>
-      </TextBlock>
+    return (
+        <ChapterWrapper
+            title="Random container"
+            subtitle="Components lifecycle"
+            rerender={useRerender()}
+        >
+            <TextBlock>
+                <div>
+                    ℹ️ If you pass a child component to some custom container component, there is no
+                    guarantee it'll be rendered.
+                </div>
+                <div>ℹ️ It fully depends on the rendering logic of container component.</div>
+            </TextBlock>
 
-      <RandomContainer>
-        {EMOJIS.map((emoji) => (
-          <Child key={emoji} tag={emoji} />
-        ))}
-      </RandomContainer>
-    </ChapterWrapper>
-  );
+            <RandomContainer>
+                {EMOJIS.map((emoji) => (
+                    <Child key={emoji} tag={emoji} />
+                ))}
+            </RandomContainer>
+        </ChapterWrapper>
+    );
 }

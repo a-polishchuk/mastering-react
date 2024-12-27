@@ -4,12 +4,12 @@ import { ContactsList } from './ContactsList';
 import { ContactsToolbar } from './ContactsToolbar';
 
 export function ContactBook() {
-  return (
-    <ChapterWrapper title="Contact book" subtitle="useContext + useReducer">
-      <ContactsProvider>
-        <ContactsToolbar />
-        <ContactsList />
-      </ContactsProvider>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="Contact book" subtitle="useContext + useReducer">
+            <ContactsProvider>
+                <ContactsToolbar />
+                <ContactsList />
+            </ContactsProvider>
+        </ChapterWrapper>
+    );
 }

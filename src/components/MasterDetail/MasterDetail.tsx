@@ -13,49 +13,49 @@ import { WelcomeScreen } from './WelcomeScreen/WelcomeScreen';
 const COLLAPSED_WIDTH = '44px';
 
 const buildMasterStyle = (expanded: boolean): CSSProperties => ({
-  minWidth: expanded ? '250px' : COLLAPSED_WIDTH,
-  maxWidth: expanded ? '350px' : COLLAPSED_WIDTH,
-  width: expanded ? '25%' : COLLAPSED_WIDTH,
+    minWidth: expanded ? '250px' : COLLAPSED_WIDTH,
+    maxWidth: expanded ? '350px' : COLLAPSED_WIDTH,
+    width: expanded ? '25%' : COLLAPSED_WIDTH,
 });
 
 export function MasterDetail({ children }: { children: ReactNode }) {
-  const contextValue = useContextValue();
-  const [expanded, toggleExpanded] = useToggle(true);
+    const contextValue = useContextValue();
+    const [expanded, toggleExpanded] = useToggle(true);
 
-  return (
-    <BrowserRouter basename="/mastering-react">
-      <div className={classes.container}>
-        <nav className={classes.master} style={buildMasterStyle(expanded)}>
-          <div className={classes.masterTitle}>
-            <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
-            {expanded && (
-              <NavLink to={RouterPath.ROOT} className={classes.titleLink}>
-                <h2>Mastering React</h2>
-              </NavLink>
-            )}
-          </div>
-          {expanded && (
-            <div className={classes.tableOfContents}>
-              <MasterDetailContext.Provider value={contextValue}>
-                {children}
-              </MasterDetailContext.Provider>
+    return (
+        <BrowserRouter basename="/mastering-react">
+            <div className={classes.container}>
+                <nav className={classes.master} style={buildMasterStyle(expanded)}>
+                    <div className={classes.masterTitle}>
+                        <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
+                        {expanded && (
+                            <NavLink to={RouterPath.ROOT} className={classes.titleLink}>
+                                <h2>Mastering React</h2>
+                            </NavLink>
+                        )}
+                    </div>
+                    {expanded && (
+                        <div className={classes.tableOfContents}>
+                            <MasterDetailContext.Provider value={contextValue}>
+                                {children}
+                            </MasterDetailContext.Provider>
+                        </div>
+                    )}
+                </nav>
+
+                <main className={classes.detail}>
+                    <Suspense fallback={<LoadingSpinner />}>
+                        <Routes>
+                            <Route path={RouterPath.ROOT} element={<WelcomeScreen />} />
+                            <Route path={RouterPath.PAGE_NOT_FOUND} element={<WelcomeScreen />} />
+                            {contextValue.routes.map((props) => (
+                                <Route key={props.path} {...props} />
+                            ))}
+                        </Routes>
+                    </Suspense>
+                </main>
             </div>
-          )}
-        </nav>
-
-        <main className={classes.detail}>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path={RouterPath.ROOT} element={<WelcomeScreen />} />
-              <Route path={RouterPath.PAGE_NOT_FOUND} element={<WelcomeScreen />} />
-              {contextValue.routes.map((props) => (
-                <Route key={props.path} {...props} />
-              ))}
-            </Routes>
-          </Suspense>
-        </main>
-      </div>
-      <EasterEgg />
-    </BrowserRouter>
-  );
+            <EasterEgg />
+        </BrowserRouter>
+    );
 }

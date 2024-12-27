@@ -4,41 +4,41 @@ export type UseHovered = [boolean, (element: HTMLElement | null) => void];
 type EventCallback = () => void;
 
 export function useHovered(): UseHovered {
-  const [hovered, setHovered] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
-  const elementRef = useRef<HTMLElement | null>(null);
-  const mouseOverRef = useRef<EventCallback | null>(null);
-  const mouseOutRef = useRef<EventCallback | null>(null);
+    const elementRef = useRef<HTMLElement | null>(null);
+    const mouseOverRef = useRef<EventCallback | null>(null);
+    const mouseOutRef = useRef<EventCallback | null>(null);
 
-  const refCallback = useCallback((element: HTMLElement | null) => {
-    if (!element) {
-      return;
-    }
+    const refCallback = useCallback((element: HTMLElement | null) => {
+        if (!element) {
+            return;
+        }
 
-    if (mouseOverRef.current) {
-      elementRef.current?.removeEventListener('mouseover', mouseOverRef.current);
-    }
-    if (mouseOutRef.current) {
-      elementRef.current?.removeEventListener('mouseout', mouseOutRef.current);
-    }
+        if (mouseOverRef.current) {
+            elementRef.current?.removeEventListener('mouseover', mouseOverRef.current);
+        }
+        if (mouseOutRef.current) {
+            elementRef.current?.removeEventListener('mouseout', mouseOutRef.current);
+        }
 
-    elementRef.current = element;
-    mouseOverRef.current = () => setHovered(true);
-    mouseOutRef.current = () => setHovered(false);
-    element.addEventListener('mouseover', mouseOverRef.current);
-    element.addEventListener('mouseout', mouseOutRef.current);
-  }, []);
+        elementRef.current = element;
+        mouseOverRef.current = () => setHovered(true);
+        mouseOutRef.current = () => setHovered(false);
+        element.addEventListener('mouseover', mouseOverRef.current);
+        element.addEventListener('mouseout', mouseOutRef.current);
+    }, []);
 
-  useEffect(() => {
-    return () => {
-      if (mouseOverRef.current) {
-        elementRef.current?.removeEventListener('mouseover', mouseOverRef.current);
-      }
-      if (mouseOutRef.current) {
-        elementRef.current?.removeEventListener('mouseout', mouseOutRef.current);
-      }
-    };
-  }, []);
+    useEffect(() => {
+        return () => {
+            if (mouseOverRef.current) {
+                elementRef.current?.removeEventListener('mouseover', mouseOverRef.current);
+            }
+            if (mouseOutRef.current) {
+                elementRef.current?.removeEventListener('mouseout', mouseOutRef.current);
+            }
+        };
+    }, []);
 
-  return [hovered, refCallback];
+    return [hovered, refCallback];
 }

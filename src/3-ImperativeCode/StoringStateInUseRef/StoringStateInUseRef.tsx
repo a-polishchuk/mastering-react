@@ -6,33 +6,33 @@ import { useRefState } from './useRefState';
 import { useUpdateEffect } from './useUpdateEffect';
 
 export function StoringStateInUseRef() {
-  const { value: stateClicks, increase: increaseStateClicks } = useCounter();
-  const [refStateClicks, setRefStateClicks] = useRefState<number>(0);
+    const { value: stateClicks, increase: increaseStateClicks } = useCounter();
+    const [refStateClicks, setRefStateClicks] = useRefState<number>(0);
 
-  useLoggedLifecycle('Main');
+    useLoggedLifecycle('Main');
 
-  useUpdateEffect(() => {
-    logTagged('useUpdateEffect', `value: ${stateClicks}`);
-  }, [stateClicks]);
+    useUpdateEffect(() => {
+        logTagged('useUpdateEffect', `value: ${stateClicks}`);
+    }, [stateClicks]);
 
-  const increaseRefStateClicks = () => {
-    setRefStateClicks((value) => value + 1);
-    logTagged('useRefState', 'increase ref state');
-  };
+    const increaseRefStateClicks = () => {
+        setRefStateClicks((value) => value + 1);
+        logTagged('useRefState', 'increase ref state');
+    };
 
-  return (
-    <ChapterWrapper title="Storing state in useRef" subtitle="useUpdateEffect">
-      <div>useState clicks:</div>
-      <Toolbar>
-        <ValueLabel value={stateClicks} minWidth="100px" />
-        <Button text="+1" onClick={increaseStateClicks} />
-      </Toolbar>
+    return (
+        <ChapterWrapper title="Storing state in useRef" subtitle="useUpdateEffect">
+            <div>useState clicks:</div>
+            <Toolbar>
+                <ValueLabel value={stateClicks} minWidth="100px" />
+                <Button text="+1" onClick={increaseStateClicks} />
+            </Toolbar>
 
-      <div>useRefState clicks:</div>
-      <Toolbar>
-        <ValueLabel value={refStateClicks} minWidth="100px" />
-        <Button text="+1" onClick={increaseRefStateClicks} />
-      </Toolbar>
-    </ChapterWrapper>
-  );
+            <div>useRefState clicks:</div>
+            <Toolbar>
+                <ValueLabel value={refStateClicks} minWidth="100px" />
+                <Button text="+1" onClick={increaseRefStateClicks} />
+            </Toolbar>
+        </ChapterWrapper>
+    );
 }

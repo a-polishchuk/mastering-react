@@ -6,15 +6,15 @@ import { TodoCounter } from './TodoCounter';
 import { UserName } from './UserName';
 
 export function TopPanel() {
-  return (
-    <Toolbar>
-      <Avatar />
-      <div style={{ flex: 1 }}>
-        <UserName />
-      </div>
-      <TodoCounter />
-      <LastUpdated />
-      <RefreshAll />
-    </Toolbar>
-  );
+    return (
+        <Toolbar>
+            <Avatar />
+            <div style={{ flex: 1 }}>
+                <UserName />
+            </div>
+            <TodoCounter />
+            <LastUpdated />
+            <RefreshAll />
+        </Toolbar>
+    );
 }

@@ -5,41 +5,41 @@ import { vi } from 'vitest';
 import { useLoggedLifecycle } from '../useLoggedLifecycle';
 
 function LifecycleTest() {
-  useLoggedLifecycle('test');
-  return <div>Lifecycle Test</div>;
+    useLoggedLifecycle('test');
+    return <div>Lifecycle Test</div>;
 }
 
 function TestComponent() {
-  const [key, setKey] = useState<number>(0);
-  const incrementKey = () => {
-    setKey((value) => value + 1);
-  };
-  return (
-    <div>
-      <div>Test Component</div>
-      <button onClick={incrementKey}>remount</button>
-      <LifecycleTest key={key} />
-    </div>
-  );
+    const [key, setKey] = useState<number>(0);
+    const incrementKey = () => {
+        setKey((value) => value + 1);
+    };
+    return (
+        <div>
+            <div>Test Component</div>
+            <button onClick={incrementKey}>remount</button>
+            <LifecycleTest key={key} />
+        </div>
+    );
 }
 
 describe('useLoggedLifecycle', () => {
-  test('should log lifecycle events', async () => {
-    const mockFn = vi.fn();
-    console.log = mockFn;
-    render(<TestComponent />);
+    test('should log lifecycle events', async () => {
+        const mockFn = vi.fn();
+        console.log = mockFn;
+        render(<TestComponent />);
 
-    expect(mockFn.mock.calls[0][0]).toBe('%c test %c                🔄 Rendering');
-    expect(mockFn.mock.calls[1][0]).toBe('%c test %c                ✅ Mounted');
+        expect(mockFn.mock.calls[0][0]).toBe('%c test %c                🔄 Rendering');
+        expect(mockFn.mock.calls[1][0]).toBe('%c test %c                ✅ Mounted');
 
-    await userEvent.click(screen.getByText('remount'));
+        await userEvent.click(screen.getByText('remount'));
 
-    await waitFor(() => {
-      expect(mockFn.mock.calls[2][0]).toBe('%c test %c                🔄 Rendering');
+        await waitFor(() => {
+            expect(mockFn.mock.calls[2][0]).toBe('%c test %c                🔄 Rendering');
+        });
+
+        await waitFor(() => {
+            expect(mockFn.mock.calls[3][0]).toBe('%c test %c                ⛔️ Unmounting');
+        });
     });
-
-    await waitFor(() => {
-      expect(mockFn.mock.calls[3][0]).toBe('%c test %c                ⛔️ Unmounting');
-    });
-  });
 });

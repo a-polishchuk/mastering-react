@@ -1,23 +1,23 @@
 .fieldsWrapper {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .field {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .emoji {
-  font-size: 32px;
-  margin-right: 8px;
+    font-size: 32px;
+    margin-right: 8px;
 }
 
 .avatar {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #0005;
-  box-shadow: 3px 3px 0px 0px #0002;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #0005;
+    box-shadow: 3px 3px 0px 0px #0002;
 }

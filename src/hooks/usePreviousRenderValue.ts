@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 
 export function usePreviousRenderValue<T>(value: T): T | undefined {
-  const refContainer = useRef<T | undefined>(undefined);
+    const refContainer = useRef<T | undefined>(undefined);
 
-  useEffect(() => {
-    refContainer.current = value;
-  }, [value]);
+    useEffect(() => {
+        refContainer.current = value;
+    }, [value]);
 
-  return refContainer.current;
+    return refContainer.current;
 }

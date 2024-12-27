@@ -4,27 +4,27 @@ import { useRef } from 'react';
 import { useRerender } from '../useRerender';
 
 function TestComponent() {
-  const rerender = useRerender();
-  const rendersCountRef = useRef<number>(0);
+    const rerender = useRerender();
+    const rendersCountRef = useRef<number>(0);
 
-  rendersCountRef.current++;
+    rendersCountRef.current++;
 
-  return (
-    <>
-      <button onClick={rerender}>RERENDER</button>
-      <div>{`Renders count: ${rendersCountRef.current}`}</div>
-    </>
-  );
+    return (
+        <>
+            <button onClick={rerender}>RERENDER</button>
+            <div>{`Renders count: ${rendersCountRef.current}`}</div>
+        </>
+    );
 }
 
 describe('useRerender', () => {
-  test('should trigger new render when called', async () => {
-    render(<TestComponent />);
+    test('should trigger new render when called', async () => {
+        render(<TestComponent />);
 
-    expect(await screen.findByText('Renders count: 1')).toBeVisible();
+        expect(await screen.findByText('Renders count: 1')).toBeVisible();
 
-    await userEvent.click(screen.getByText('RERENDER'));
+        await userEvent.click(screen.getByText('RERENDER'));
 
-    expect(await screen.findByText('Renders count: 2')).toBeVisible();
-  });
+        expect(await screen.findByText('Renders count: 2')).toBeVisible();
+    });
 });

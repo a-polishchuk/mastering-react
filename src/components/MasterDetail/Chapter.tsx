@@ -5,35 +5,35 @@ import classes from './Chapter.module.css';
 import { useMasterDetailContext } from './MasterDetailContext';
 
 export type ChapterProps = {
-  title: string;
-  element: ReactNode;
-  path: RouterPath;
-  emoji?: string;
+    title: string;
+    element: ReactNode;
+    path: RouterPath;
+    emoji?: string;
 };
 
 export function Chapter({ emoji, title, path, element }: ChapterProps) {
-  useRegisterRoute(path, element);
+    useRegisterRoute(path, element);
 
-  return (
-    <NavLink
-      to={path}
-      className={({ isActive }) => (isActive ? classes.navLinkActive : classes.navLink)}
-    >
-      <div className={classes.chapter}>
-        <div className={classes.emoji}>{emoji}</div>
-        {title}
-      </div>
-    </NavLink>
-  );
+    return (
+        <NavLink
+            to={path}
+            className={({ isActive }) => (isActive ? classes.navLinkActive : classes.navLink)}
+        >
+            <div className={classes.chapter}>
+                <div className={classes.emoji}>{emoji}</div>
+                {title}
+            </div>
+        </NavLink>
+    );
 }
 
 function useRegisterRoute(path: string, element: ReactNode) {
-  const { addRoute } = useMasterDetailContext();
+    const { addRoute } = useMasterDetailContext();
 
-  useLayoutEffect(() => {
-    addRoute({
-      path,
-      element,
-    });
-  }, [addRoute, element, path]);
+    useLayoutEffect(() => {
+        addRoute({
+            path,
+            element,
+        });
+    }, [addRoute, element, path]);
 }

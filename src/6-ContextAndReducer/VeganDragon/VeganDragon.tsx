@@ -8,20 +8,20 @@ import { SettingsToolbar } from './Settings/SettingsToolbar';
 import classes from './VeganDragon.module.css';
 
 export function VeganDragon() {
-  return (
-    <ChapterWrapper title="Vegan Dragon" subtitle="useContext + useReducer">
-      <div className={classes.root}>
-        <SettingsContextProvider>
-          <SettingsToolbar />
-          <div className={classes.gridContainer}>
-            <GameContextProvider>
-              <GameController />
-              <GridController />
-              <GameControls />
-            </GameContextProvider>
-          </div>
-        </SettingsContextProvider>
-      </div>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="Vegan Dragon" subtitle="useContext + useReducer">
+            <div className={classes.root}>
+                <SettingsContextProvider>
+                    <SettingsToolbar />
+                    <div className={classes.gridContainer}>
+                        <GameContextProvider>
+                            <GameController />
+                            <GridController />
+                            <GameControls />
+                        </GameContextProvider>
+                    </div>
+                </SettingsContextProvider>
+            </div>
+        </ChapterWrapper>
+    );
 }

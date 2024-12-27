@@ -1,22 +1,22 @@
 @keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .loadingContainer {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loadingSpinner {
-  font-size: 64px;
-  animation: spin 1s linear infinite;
+    font-size: 64px;
+    animation: spin 1s linear infinite;
 }

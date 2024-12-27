@@ -7,31 +7,31 @@ import { Counter } from './Counter';
 const DELTA = 1;
 
 export function EffectDependencies() {
-  const { value, increase, decrease } = useCounter(0, DELTA);
-  const [inputValue, setInputValue] = useState<string>('Count:');
+    const { value, increase, decrease } = useCounter(0, DELTA);
+    const [inputValue, setInputValue] = useState<string>('Count:');
 
-  useEffect(() => {
-    logTagged('Effect', `running effect ${value}`);
+    useEffect(() => {
+        logTagged('Effect', `running effect ${value}`);
 
-    // optional cleanup function
-    return () => {
-      logTagged('Effect', `cleaning up ${value}`);
-    };
-  }, [value]);
+        // optional cleanup function
+        return () => {
+            logTagged('Effect', `cleaning up ${value}`);
+        };
+    }, [value]);
 
-  useEffect(
-    function updateDocTitle() {
-      document.title = `${inputValue} ${value}`;
-    },
-    [inputValue, value]
-  );
+    useEffect(
+        function updateDocTitle() {
+            document.title = `${inputValue} ${value}`;
+        },
+        [inputValue, value],
+    );
 
-  return (
-    <ChapterWrapper title="Effect dependencies" subtitle="useEffect basics">
-      <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
-      <Toolbar>
-        <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
-      </Toolbar>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="Effect dependencies" subtitle="useEffect basics">
+            <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
+            <Toolbar>
+                <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
+            </Toolbar>
+        </ChapterWrapper>
+    );
 }

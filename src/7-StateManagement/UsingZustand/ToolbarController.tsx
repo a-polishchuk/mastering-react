@@ -5,22 +5,22 @@ import { useGridStore } from './useGridStore';
 const GENERATION_DELAY = 500;
 
 export function ToolbarController() {
-  const nextGeneration = useGridStore((state) => state.nextGeneration);
-  const randomize = useGridStore((state) => state.randomize);
-  const clear = useGridStore((state) => state.clear);
+    const nextGeneration = useGridStore((state) => state.nextGeneration);
+    const randomize = useGridStore((state) => state.randomize);
+    const clear = useGridStore((state) => state.clear);
 
-  const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(
-    GENERATION_DELAY,
-    nextGeneration
-  );
+    const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(
+        GENERATION_DELAY,
+        nextGeneration,
+    );
 
-  return (
-    <GridToolbar
-      isAutoGenerating={isAutoGenerating}
-      toggleAutoGeneration={toggleAutoGeneration}
-      nextGeneration={nextGeneration}
-      randomize={randomize}
-      clear={clear}
-    />
-  );
+    return (
+        <GridToolbar
+            isAutoGenerating={isAutoGenerating}
+            toggleAutoGeneration={toggleAutoGeneration}
+            nextGeneration={nextGeneration}
+            randomize={randomize}
+            clear={clear}
+        />
+    );
 }

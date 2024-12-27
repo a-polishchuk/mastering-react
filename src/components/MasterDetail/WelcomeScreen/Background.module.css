@@ -1,39 +1,39 @@
 @-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
 }
 
 @-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .logoContainer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(50%, 50%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 50%);
 }
 
 .logo {
-  -webkit-animation: spin 30s linear infinite;
-  -moz-animation: spin 30s linear infinite;
-  animation: spin 30s linear infinite;
+    -webkit-animation: spin 30s linear infinite;
+    -moz-animation: spin 30s linear infinite;
+    animation: spin 30s linear infinite;
 }

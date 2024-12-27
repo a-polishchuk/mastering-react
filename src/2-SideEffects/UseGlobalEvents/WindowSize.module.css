@@ -1,21 +1,21 @@
 .windowSize {
-  position: relative;
-  border: 2px dashed #000;
-  background-color: #e1ccff;
+    position: relative;
+    border: 2px dashed #000;
+    background-color: #e1ccff;
 }
 
 .widthText {
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
 }
 
 .heightText {
-  position: absolute;
-  left: 0;
-  top: 0;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-align: center;
 }

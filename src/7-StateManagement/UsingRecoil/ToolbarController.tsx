@@ -9,21 +9,24 @@ import { gridAtom } from './gridAtom';
 const GENERATION_DELAY = 500;
 
 export function ToolbarController() {
-  const [, setGrid] = useRecoilState(gridAtom);
+    const [, setGrid] = useRecoilState(gridAtom);
 
-  const setNextGen = () => setGrid((value) => nextGeneration(value));
-  const setRandomized = () => setGrid((value) => randomize(value));
-  const setCleared = () => setGrid((value) => clear(value));
+    const setNextGen = () => setGrid((value) => nextGeneration(value));
+    const setRandomized = () => setGrid((value) => randomize(value));
+    const setCleared = () => setGrid((value) => clear(value));
 
-  const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(GENERATION_DELAY, setNextGen);
+    const [isAutoGenerating, toggleAutoGeneration] = useAutoGeneration(
+        GENERATION_DELAY,
+        setNextGen,
+    );
 
-  return (
-    <GridToolbar
-      isAutoGenerating={isAutoGenerating}
-      toggleAutoGeneration={toggleAutoGeneration}
-      nextGeneration={setNextGen}
-      randomize={setRandomized}
-      clear={setCleared}
-    />
-  );
+    return (
+        <GridToolbar
+            isAutoGenerating={isAutoGenerating}
+            toggleAutoGeneration={toggleAutoGeneration}
+            nextGeneration={setNextGen}
+            randomize={setRandomized}
+            clear={setCleared}
+        />
+    );
 }

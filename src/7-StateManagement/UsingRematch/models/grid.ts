@@ -7,11 +7,11 @@ import { createModel } from '@rematch/core';
 import type { RootModel } from '.';
 
 export const grid = createModel<RootModel>()({
-  state: empty(30, 30),
-  reducers: {
-    toggleCell,
-    nextGeneration,
-    randomize,
-    clear,
-  },
+    state: empty(30, 30),
+    reducers: {
+        toggleCell,
+        nextGeneration,
+        randomize,
+        clear,
+    },
 });

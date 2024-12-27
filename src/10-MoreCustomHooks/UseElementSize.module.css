@@ -1,20 +1,20 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .node {
-  flex: 1;
-  padding: 24px;
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px #0006;
-  border-radius: 4px;
-  border: 2px solid #0004;
+    flex: 1;
+    padding: 24px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px #0006;
+    border-radius: 4px;
+    border: 2px solid #0004;
 }
 
 .dummy {
-  background-color: #0004;
+    background-color: #0004;
 }

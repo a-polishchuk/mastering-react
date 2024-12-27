@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import classes from './Toolbar.module.css';
 
 export type ToolbarProps = {
-  children: ReactNode;
+    children: ReactNode;
 };
 
 export function Toolbar({ children }: ToolbarProps) {
-  return <div className={classes.toolbar}>{children}</div>;
+    return <div className={classes.toolbar}>{children}</div>;
 }

@@ -1,7 +1,7 @@
 .circle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  cursor: default;
-  pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    cursor: default;
+    pointer-events: none;
 }

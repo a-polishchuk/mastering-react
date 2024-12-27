@@ -1,23 +1,23 @@
 .container {
-  position: relative;
-  display: flex;
-  justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .image {
-  width: 64px;
-  height: 64px;
-  border-radius: 4px;
-  object-fit: cover;
-  background-color: #0004;
-  border: 1px solid #0001;
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    object-fit: cover;
+    background-color: #0004;
+    border: 1px solid #0001;
 }
 
 .caption {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  text-shadow: 1px 1px #000;
-  width: 100%;
-  text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-shadow: 1px 1px #000;
+    width: 100%;
+    text-align: center;
 }

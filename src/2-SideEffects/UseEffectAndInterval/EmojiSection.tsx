@@ -6,18 +6,18 @@ const DEFAULT_DELAY = 500;
 const MIN_DELAY = 100;
 
 export function EmojiSection({ emojis }: { emojis: string[] }) {
-  const [delay, setDelay] = useState<number>(DEFAULT_DELAY);
+    const [delay, setDelay] = useState<number>(DEFAULT_DELAY);
 
-  const handleDelayChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    const stringValue = event.target.value || '0';
-    const newDelay = Math.max(parseInt(stringValue), MIN_DELAY);
-    setDelay(newDelay);
-  };
+    const handleDelayChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+        const stringValue = event.target.value || '0';
+        const newDelay = Math.max(parseInt(stringValue), MIN_DELAY);
+        setDelay(newDelay);
+    };
 
-  return (
-    <Toolbar>
-      <AnimatedEmoji emojis={emojis} delay={delay} fontSize={64} />
-      <input type="number" value={delay} onChange={handleDelayChange} />
-    </Toolbar>
-  );
+    return (
+        <Toolbar>
+            <AnimatedEmoji emojis={emojis} delay={delay} fontSize={64} />
+            <input type="number" value={delay} onChange={handleDelayChange} />
+        </Toolbar>
+    );
 }

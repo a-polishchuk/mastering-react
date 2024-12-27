@@ -8,15 +8,15 @@ import { TopPanel } from './TopPanel/TopPanel';
 const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
 
 export function UsingSwr() {
-  return (
-    <ChapterWrapper title="SWR" subtitle="Data fetching">
-      <SWRConfig value={{ fetcher }}>
-        <TopPanel />
-        <Tabs tabs={TABS}>
-          <Profile />
-          <TodoList />
-        </Tabs>
-      </SWRConfig>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="SWR" subtitle="Data fetching">
+            <SWRConfig value={{ fetcher }}>
+                <TopPanel />
+                <Tabs tabs={TABS}>
+                    <Profile />
+                    <TodoList />
+                </Tabs>
+            </SWRConfig>
+        </ChapterWrapper>
+    );
 }

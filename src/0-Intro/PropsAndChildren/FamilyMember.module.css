@@ -1,6 +1,6 @@
 .children {
-  flex: 1;
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
+    flex: 1;
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
 }

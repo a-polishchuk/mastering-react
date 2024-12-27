@@ -1,3 +1,3 @@
 export interface GridProps {
-  grid: string[][];
+    grid: string[][];
 }

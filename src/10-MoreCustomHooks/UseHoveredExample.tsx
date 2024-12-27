@@ -2,30 +2,30 @@ import { ChapterWrapper, Toolbar } from 'components';
 import { useHovered } from 'hooks/useHovered';
 
 type EmojiHoverProps = {
-  idle: string;
-  hover: string;
+    idle: string;
+    hover: string;
 };
 
 function EmojiHover({ idle, hover }: EmojiHoverProps) {
-  const [isHovered, refCallback] = useHovered();
+    const [isHovered, refCallback] = useHovered();
 
-  return (
-    <div ref={refCallback} style={{ fontSize: 48, cursor: 'pointer' }}>
-      {isHovered ? hover : idle}
-    </div>
-  );
+    return (
+        <div ref={refCallback} style={{ fontSize: 48, cursor: 'pointer' }}>
+            {isHovered ? hover : idle}
+        </div>
+    );
 }
 
 export function UseHoveredExample() {
-  return (
-    <ChapterWrapper title="useHovered" subtitle="More custom hooks">
-      <Toolbar>
-        <EmojiHover idle="🐈" hover="🐈‍⬛" />
-        <EmojiHover idle="🐘" hover="🦣" />
-        <EmojiHover idle="🐠" hover="🐡" />
-        <EmojiHover idle="🐴" hover="🦄" />
-        <EmojiHover idle="🐵" hover="🙈" />
-      </Toolbar>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="useHovered" subtitle="More custom hooks">
+            <Toolbar>
+                <EmojiHover idle="🐈" hover="🐈‍⬛" />
+                <EmojiHover idle="🐘" hover="🦣" />
+                <EmojiHover idle="🐠" hover="🐡" />
+                <EmojiHover idle="🐴" hover="🦄" />
+                <EmojiHover idle="🐵" hover="🙈" />
+            </Toolbar>
+        </ChapterWrapper>
+    );
 }

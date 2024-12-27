@@ -12,19 +12,19 @@ import { DesignPatternsSection } from '9-DesignPatters/DesignPatternsSection';
 import { MasterDetail } from 'components';
 
 export function App() {
-  return (
-    <MasterDetail>
-      <IntroSection />
-      <HooksBasicsSection />
-      <SideEffectsSection />
-      <ImperativeCodeSection />
-      <MemoizationSection />
-      <ComponentsLifecycleSection />
-      <ContextAndReducerSection />
-      <StateManagementSection />
-      <DataFecthingSection />
-      <DesignPatternsSection />
-      <MoreCustomHooksSection />
-    </MasterDetail>
-  );
+    return (
+        <MasterDetail>
+            <IntroSection />
+            <HooksBasicsSection />
+            <SideEffectsSection />
+            <ImperativeCodeSection />
+            <MemoizationSection />
+            <ComponentsLifecycleSection />
+            <ContextAndReducerSection />
+            <StateManagementSection />
+            <DataFecthingSection />
+            <DesignPatternsSection />
+            <MoreCustomHooksSection />
+        </MasterDetail>
+    );
 }

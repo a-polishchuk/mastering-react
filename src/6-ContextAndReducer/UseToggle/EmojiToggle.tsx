@@ -1,18 +1,18 @@
 import classes from './EmojiToggle.module.css';
 
 type Props = {
-  emojiOn: string;
-  emojiOff: string;
-  value: boolean;
-  toggle: () => void;
+    emojiOn: string;
+    emojiOff: string;
+    value: boolean;
+    toggle: () => void;
 };
 
 export function EmojiToggle(props: Props) {
-  const { emojiOn, emojiOff, value, toggle } = props;
+    const { emojiOn, emojiOff, value, toggle } = props;
 
-  return (
-    <div className={classes.emoji} onClick={() => toggle()}>
-      {value ? emojiOn : emojiOff}
-    </div>
-  );
+    return (
+        <div className={classes.emoji} onClick={() => toggle()}>
+            {value ? emojiOn : emojiOff}
+        </div>
+    );
 }

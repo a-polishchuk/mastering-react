@@ -10,46 +10,46 @@ import { BlockUseRef } from './BlockUseRef';
 type ComponentType = (props: BlockProps) => ReactElement;
 
 export function MemoizedRefCallback(): ReactElement {
-  const rerender = useRerender();
-  const [BlockComponent, setBlockComponent] = useState<ComponentType>(() => BlockUseRef);
-  const [visible, toggleVisibility] = useToggle(true);
+    const rerender = useRerender();
+    const [BlockComponent, setBlockComponent] = useState<ComponentType>(() => BlockUseRef);
+    const [visible, toggleVisibility] = useToggle(true);
 
-  const componentButton = (text: string, component: ComponentType) => (
-    <Button
-      text={text}
-      onClick={() => setBlockComponent(() => component)}
-      disabled={BlockComponent === component}
-    />
-  );
+    const componentButton = (text: string, component: ComponentType) => (
+        <Button
+            text={text}
+            onClick={() => setBlockComponent(() => component)}
+            disabled={BlockComponent === component}
+        />
+    );
 
-  return (
-    <ChapterWrapper title="Memoized ref callback" subtitle="Memoization" rerender={rerender}>
-      <h3>Choose block component</h3>
-      <Toolbar>
-        {componentButton('useRef', BlockUseRef)}
-        {componentButton('Ref callback', BlockRefCallback)}
-        {componentButton('Memoized ref callback', BlockMemoizedRefCallback)}
-      </Toolbar>
+    return (
+        <ChapterWrapper title="Memoized ref callback" subtitle="Memoization" rerender={rerender}>
+            <h3>Choose block component</h3>
+            <Toolbar>
+                {componentButton('useRef', BlockUseRef)}
+                {componentButton('Ref callback', BlockRefCallback)}
+                {componentButton('Memoized ref callback', BlockMemoizedRefCallback)}
+            </Toolbar>
 
-      <h3>
-        Toggle <code>{'<div />'}</code> rendering
-      </h3>
-      <Toolbar>
-        <Button text={visible ? 'Hide div' : 'Show div'} onClick={toggleVisibility} />
-      </Toolbar>
+            <h3>
+                Toggle <code>{'<div />'}</code> rendering
+            </h3>
+            <Toolbar>
+                <Button text={visible ? 'Hide div' : 'Show div'} onClick={toggleVisibility} />
+            </Toolbar>
 
-      <FlexRow>
-        <BlockComponent visible={visible} />
-        <BlockComponent visible={visible} />
-      </FlexRow>
-      <FlexRow>
-        <BlockComponent visible={visible} />
-      </FlexRow>
-      <FlexRow>
-        <BlockComponent visible={visible} />
-        <BlockComponent visible={visible} />
-        <BlockComponent visible={visible} />
-      </FlexRow>
-    </ChapterWrapper>
-  );
+            <FlexRow>
+                <BlockComponent visible={visible} />
+                <BlockComponent visible={visible} />
+            </FlexRow>
+            <FlexRow>
+                <BlockComponent visible={visible} />
+            </FlexRow>
+            <FlexRow>
+                <BlockComponent visible={visible} />
+                <BlockComponent visible={visible} />
+                <BlockComponent visible={visible} />
+            </FlexRow>
+        </ChapterWrapper>
+    );
 }

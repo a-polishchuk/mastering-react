@@ -4,9 +4,9 @@ import { AlternativeGrid } from './AlternativeGrid/AlternativeGrid';
 import { DefaultGrid } from './DefaultGrid/DefaultGrid';
 
 export function GridController() {
-  const [{ grid }] = useGameContext();
-  const { useAlternativeGrid } = useSettingsContext();
-  const Grid = useAlternativeGrid ? AlternativeGrid : DefaultGrid;
+    const [{ grid }] = useGameContext();
+    const { useAlternativeGrid } = useSettingsContext();
+    const Grid = useAlternativeGrid ? AlternativeGrid : DefaultGrid;
 
-  return <Grid grid={grid} />;
+    return <Grid grid={grid} />;
 }

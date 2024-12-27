@@ -1,16 +1,16 @@
 .item {
-  padding: 4px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #0000;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0000;
 }
 
 .item:hover {
-  border: 1px dashed #e1ccff;
+    border: 1px dashed #e1ccff;
 }
 
 .selected {
-  text-shadow: 3px 3px #e1ccff;
+    text-shadow: 3px 3px #e1ccff;
 }

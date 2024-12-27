@@ -1,4 +1,4 @@
 export enum GridType {
-  CHECKBOX = 'checkbox',
-  DIV = 'div',
+    CHECKBOX = 'checkbox',
+    DIV = 'div',
 }

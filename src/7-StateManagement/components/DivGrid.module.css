@@ -1,12 +1,12 @@
 .grid {
-  border: 0.5px solid #0005;
+    border: 0.5px solid #0005;
 }
 
 .cell {
-  border: 0.5px solid #0005;
-  transition: background ease-in-out 0.3s;
+    border: 0.5px solid #0005;
+    transition: background ease-in-out 0.3s;
 }
 
 .cell:hover {
-  border: 2px solid black;
+    border: 2px solid black;
 }

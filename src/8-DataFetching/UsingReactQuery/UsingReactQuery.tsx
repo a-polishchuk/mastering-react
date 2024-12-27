@@ -8,25 +8,25 @@ import { TopPanel } from './TopPanel/TopPanel';
 const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
 
 const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      queryFn: queryFunction,
-      refetchOnReconnect: true,
-      refetchOnWindowFocus: true,
+    defaultOptions: {
+        queries: {
+            queryFn: queryFunction,
+            refetchOnReconnect: true,
+            refetchOnWindowFocus: true,
+        },
     },
-  },
 });
 
 export function UsingReactQuery() {
-  return (
-    <ChapterWrapper title="React Query" subtitle="Data fetching">
-      <QueryClientProvider client={queryClient}>
-        <TopPanel />
-        <Tabs tabs={TABS}>
-          <Profile />
-          <TodoList />
-        </Tabs>
-      </QueryClientProvider>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="React Query" subtitle="Data fetching">
+            <QueryClientProvider client={queryClient}>
+                <TopPanel />
+                <Tabs tabs={TABS}>
+                    <Profile />
+                    <TodoList />
+                </Tabs>
+            </QueryClientProvider>
+        </ChapterWrapper>
+    );
 }

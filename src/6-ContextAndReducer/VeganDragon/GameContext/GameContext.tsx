@@ -10,15 +10,15 @@ const defaultValue: any = null;
 const GameContext = createContext<GameContextType>(defaultValue);
 
 export function useGameContext() {
-  const contextValue = useContext(GameContext);
-  if (!contextValue) {
-    throw new Error('This component should be used under GameContextProvider!');
-  }
-  return contextValue;
+    const contextValue = useContext(GameContext);
+    if (!contextValue) {
+        throw new Error('This component should be used under GameContextProvider!');
+    }
+    return contextValue;
 }
 
 export function GameContextProvider({ children }: ProviderProps) {
-  const value = useReducer(reducer, INITIAL_STATE);
+    const value = useReducer(reducer, INITIAL_STATE);
 
-  return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
+    return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }

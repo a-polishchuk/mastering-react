@@ -2,7 +2,7 @@ import { init, RematchDispatch, RematchRootState } from '@rematch/core';
 import { models, RootModel } from './models';
 
 export const store = init({
-  models,
+    models,
 });
 
 export type Store = typeof store;

@@ -3,19 +3,19 @@ import { useThemeContext } from './ThemeContext';
 import { ThemeOption } from './ThemeOption';
 
 export function ThemeToolbar() {
-  const [themesPalette, setThemeIndex] = useThemeContext();
-  const { themes, themeIndex } = themesPalette;
+    const [themesPalette, setThemeIndex] = useThemeContext();
+    const { themes, themeIndex } = themesPalette;
 
-  return (
-    <Toolbar>
-      {themes.map((theme, index) => (
-        <ThemeOption
-          key={index}
-          theme={theme}
-          selected={index === themeIndex}
-          onSelect={() => setThemeIndex(index)}
-        />
-      ))}
-    </Toolbar>
-  );
+    return (
+        <Toolbar>
+            {themes.map((theme, index) => (
+                <ThemeOption
+                    key={index}
+                    theme={theme}
+                    selected={index === themeIndex}
+                    onSelect={() => setThemeIndex(index)}
+                />
+            ))}
+        </Toolbar>
+    );
 }

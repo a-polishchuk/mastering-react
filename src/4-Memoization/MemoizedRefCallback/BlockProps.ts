@@ -1,3 +1,3 @@
 export interface BlockProps {
-  visible: boolean;
+    visible: boolean;
 }

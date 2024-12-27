@@ -6,26 +6,26 @@ import { logTagged } from 'utils/logTagged';
 import { useUpdateEffect } from './useUpdateEffect';
 
 export function UseUpdateEffect() {
-  const { value, increase } = useCounter();
+    const { value, increase } = useCounter();
 
-  useLoggedLifecycle('Parent');
+    useLoggedLifecycle('Parent');
 
-  useEffect(() => {
-    logTagged('useEffect', 'effect with empty deps list');
-  }, []);
+    useEffect(() => {
+        logTagged('useEffect', 'effect with empty deps list');
+    }, []);
 
-  useUpdateEffect(
-    useCallback(() => {
-      logTagged('updateEffect', `value === ${value}`);
-    }, [value])
-  );
+    useUpdateEffect(
+        useCallback(() => {
+            logTagged('updateEffect', `value === ${value}`);
+        }, [value]),
+    );
 
-  return (
-    <ChapterWrapper title="useCallback" subtitle="useUpdateEffect">
-      <Toolbar>
-        <ValueLabel value={value} minWidth="100px" />
-        <Button text="+1" onClick={increase} />
-      </Toolbar>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="useCallback" subtitle="useUpdateEffect">
+            <Toolbar>
+                <ValueLabel value={value} minWidth="100px" />
+                <Button text="+1" onClick={increase} />
+            </Toolbar>
+        </ChapterWrapper>
+    );
 }

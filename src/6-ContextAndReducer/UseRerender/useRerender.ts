@@ -1,11 +1,11 @@
 import { useReducer } from 'react';
 
 function createNewObject(): {} | null {
-  return {};
+    return {};
 }
 
 export function useRerender() {
-  const [, rerender] = useReducer(createNewObject, null);
+    const [, rerender] = useReducer(createNewObject, null);
 
-  return rerender;
+    return rerender;
 }

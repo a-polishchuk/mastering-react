@@ -7,31 +7,31 @@ import { Counter } from './Counter';
 const DELTA = 1;
 
 export function ComponentLifecycle() {
-  const { value, increase, decrease } = useCounter(0, DELTA);
+    const { value, increase, decrease } = useCounter(0, DELTA);
 
-  // ! async functions are not allowed here
-  useEffect(() => {
-    logTagged('useEffect', 'component did mount');
+    // ! async functions are not allowed here
+    useEffect(() => {
+        logTagged('useEffect', 'component did mount');
 
-    // optional cleanup function
-    return () => {
-      logTagged('useEffect', 'component will unmount');
-    };
-  }, []);
+        // optional cleanup function
+        return () => {
+            logTagged('useEffect', 'component will unmount');
+        };
+    }, []);
 
-  useEffect(() => {
-    logTagged('one more effect', 'component did mount');
-  }, []);
+    useEffect(() => {
+        logTagged('one more effect', 'component did mount');
+    }, []);
 
-  useEffect(() => {
-    logTagged('effect with no deps', 'executed AFTER each render');
-  }); // ! deps list is missing
+    useEffect(() => {
+        logTagged('effect with no deps', 'executed AFTER each render');
+    }); // ! deps list is missing
 
-  logTagged('Render', 'render function was called by React');
+    logTagged('Render', 'render function was called by React');
 
-  return (
-    <ChapterWrapper title="Component lifecycle" subtitle="useEffect basics">
-      <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="Component lifecycle" subtitle="useEffect basics">
+            <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
+        </ChapterWrapper>
+    );
 }

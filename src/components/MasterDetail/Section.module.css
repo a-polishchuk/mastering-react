@@ -1,26 +1,26 @@
 .section {
-  padding-top: 4px;
-  padding-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .sectionTitle {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
 }
 
 .expanded {
-  font-weight: 600;
-  text-shadow: var(--active-text-shadow);
+    font-weight: 600;
+    text-shadow: var(--active-text-shadow);
 }
 
 .sectionTitle:hover {
-  text-shadow: 2px 2px #e1ccff;
+    text-shadow: 2px 2px #e1ccff;
 }
 
 .sectionContent {
-  padding: 8px;
-  border-left: 1px solid var(--divider-color);
-  border-top: 1px solid var(--divider-color);
+    padding: 8px;
+    border-left: 1px solid var(--divider-color);
+    border-top: 1px solid var(--divider-color);
 }

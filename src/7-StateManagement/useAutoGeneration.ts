@@ -3,14 +3,14 @@ import { useToggle } from 'hooks/useToggle';
 import { DispatchWithoutAction } from 'react';
 
 export function useAutoGeneration(
-  delay: number,
-  nextGeneration: () => void
+    delay: number,
+    nextGeneration: () => void,
 ): [boolean, DispatchWithoutAction] {
-  const toggle = useToggle(false);
-  const [isAutoGenerating] = toggle;
-  const delayOrNull = isAutoGenerating ? delay : null;
+    const toggle = useToggle(false);
+    const [isAutoGenerating] = toggle;
+    const delayOrNull = isAutoGenerating ? delay : null;
 
-  useInterval(nextGeneration, delayOrNull);
+    useInterval(nextGeneration, delayOrNull);
 
-  return toggle;
+    return toggle;
 }

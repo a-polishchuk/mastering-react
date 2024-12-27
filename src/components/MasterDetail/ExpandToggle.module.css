@@ -1,8 +1,8 @@
 .expandToggle {
-  font-size: 24px;
-  cursor: pointer;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .expandToggle:hover {
-  text-shadow: var(--active-text-shadow);
+    text-shadow: var(--active-text-shadow);
 }

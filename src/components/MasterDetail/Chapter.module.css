@@ -1,24 +1,24 @@
 .navLink {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .navLinkActive {
-  font-weight: 600;
-  text-decoration: none;
-  text-shadow: 2px 2px #e1ccff;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 2px 2px #e1ccff;
 }
 
 .chapter {
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .chapter:hover {
-  text-shadow: 2px 2px #e1ccff;
+    text-shadow: 2px 2px #e1ccff;
 }
 
 .emoji {
-  font-size: 24px;
+    font-size: 24px;
 }

@@ -4,38 +4,38 @@ import { EventType, useWindowEvent } from 'hooks/useWindowEvent';
 import { vi } from 'vitest';
 
 type TestProps = {
-  eventName: EventType;
-  callback: () => void;
+    eventName: EventType;
+    callback: () => void;
 };
 
 function TestComponent({ eventName, callback }: TestProps) {
-  useWindowEvent(eventName, () => callback());
-  return <div>Test Component</div>;
+    useWindowEvent(eventName, () => callback());
+    return <div>Test Component</div>;
 }
 
 describe('useEventListener', () => {
-  test('should listen to keypress event', async () => {
-    const onKeyPress = vi.fn();
+    test('should listen to keypress event', async () => {
+        const onKeyPress = vi.fn();
 
-    render(<TestComponent eventName="keypress" callback={onKeyPress} />);
+        render(<TestComponent eventName="keypress" callback={onKeyPress} />);
 
-    await userEvent.keyboard('key');
+        await userEvent.keyboard('key');
 
-    expect(onKeyPress).toHaveBeenCalledTimes(3);
-  });
+        expect(onKeyPress).toHaveBeenCalledTimes(3);
+    });
 
-  test('should listen to click event', async () => {
-    const onClick = vi.fn();
+    test('should listen to click event', async () => {
+        const onClick = vi.fn();
 
-    render(
-      <div data-testid="parent-node">
-        <div>Some other node</div>
-        <TestComponent eventName="click" callback={onClick} />
-      </div>
-    );
+        render(
+            <div data-testid="parent-node">
+                <div>Some other node</div>
+                <TestComponent eventName="click" callback={onClick} />
+            </div>,
+        );
 
-    await userEvent.click(screen.getByTestId('parent-node'));
+        await userEvent.click(screen.getByTestId('parent-node'));
 
-    expect(onClick).toHaveBeenCalledTimes(1);
-  });
+        expect(onClick).toHaveBeenCalledTimes(1);
+    });
 });

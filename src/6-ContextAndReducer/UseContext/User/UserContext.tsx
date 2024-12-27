@@ -5,16 +5,16 @@ import { useUser } from './useUser';
 const UserContext = createContext<User | undefined>(undefined);
 
 export function useUserContext() {
-  return useContext(UserContext);
+    return useContext(UserContext);
 }
 
 type ProviderProps = {
-  userId: number;
-  children: ReactNode;
+    userId: number;
+    children: ReactNode;
 };
 
 export function UserProvider({ userId, children }: ProviderProps) {
-  const user = useUser(userId);
+    const user = useUser(userId);
 
-  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+    return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
 }

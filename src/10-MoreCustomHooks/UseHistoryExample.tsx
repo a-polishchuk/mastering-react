@@ -7,16 +7,16 @@ import { mapToLine } from './common/Line';
 import { useMousePosition } from './common/useMousePosition';
 
 export function UseHistoryExample() {
-  const [clickPosition, clickHandler] = useMousePosition();
-  const history = useHistory(clickPosition);
+    const [clickPosition, clickHandler] = useMousePosition();
+    const history = useHistory(clickPosition);
 
-  return (
-    <ChapterWrapper title="useHistory" subtitle="More custom hooks">
-      <div className={classes.container} onClick={clickHandler}>
-        {mapToLine(history)}
-        {mapToCircle(history, CircleColor.GREEN)}
-        <Car path={history} />
-      </div>
-    </ChapterWrapper>
-  );
+    return (
+        <ChapterWrapper title="useHistory" subtitle="More custom hooks">
+            <div className={classes.container} onClick={clickHandler}>
+                {mapToLine(history)}
+                {mapToCircle(history, CircleColor.GREEN)}
+                <Car path={history} />
+            </div>
+        </ChapterWrapper>
+    );
 }

@@ -2,12 +2,12 @@ import { useUser } from '../hooks/useUser';
 import classes from './UserName.module.css';
 
 export function UserName() {
-  const { data } = useUser();
+    const { data } = useUser();
 
-  return (
-    <>
-      <div className={classes.userName}>{data?.name}</div>
-      <div className={classes.userNameEmail}>{data?.email}</div>
-    </>
-  );
+    return (
+        <>
+            <div className={classes.userName}>{data?.name}</div>
+            <div className={classes.userNameEmail}>{data?.email}</div>
+        </>
+    );
 }
