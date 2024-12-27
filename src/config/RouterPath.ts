@@ -95,4 +95,7 @@ export enum RouterPath {
     USE_TIMEOUT = 'use-timeout',
     USE_CLICK_OUTSIDE = 'use-click-outside',
     USE_ELEMENT_SIZE = 'use-element-size',
+
+    // react 19
+    USE_FORM_STATUS = 'use-form-status',
 }

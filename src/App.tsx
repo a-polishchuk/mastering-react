@@ -1,6 +1,7 @@
 import { IntroSection } from '0-Intro/IntroSection';
 import { HooksBasicsSection } from '1-HooksBasics/HooksBasicsSection';
 import { MoreCustomHooksSection } from '10-MoreCustomHooks/MoreCustomHooksSection';
+import { React19Section } from '11-React19/React19Section';
 import { SideEffectsSection } from '2-SideEffects/SideEffectsSection';
 import { ImperativeCodeSection } from '3-ImperativeCode/ImperativeCodeSection';
 import { MemoizationSection } from '4-Memoization/MemoizationSection';
@@ -25,6 +26,7 @@ export function App() {
             <DataFecthingSection />
             <DesignPatternsSection />
             <MoreCustomHooksSection />
+            <React19Section />
         </MasterDetail>
     );
 }

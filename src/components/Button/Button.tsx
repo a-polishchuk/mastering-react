@@ -1,17 +1,14 @@
-import { MouseEventHandler } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import classes from './Button.module.css';
 
-export type ButtonProps = {
+export type ButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> & {
     text: string;
-    onClick: MouseEventHandler<HTMLButtonElement>;
-    disabled?: boolean;
 };
 
-export function Button(props: ButtonProps) {
-    const { text, onClick, disabled = false } = props;
-
+// TODO: check about class names library
+export function Button({ text, className, ...restProps }: ButtonProps) {
     return (
-        <button className={classes.button} onClick={onClick} disabled={disabled}>
+        <button className={`${classes.button} ${className ?? ''}`} {...restProps}>
             {text}
         </button>
     );
