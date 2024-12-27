@@ -29,7 +29,8 @@
     "storybook:build": "storybook build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "check-deps": "npx npm-check"
+    "check-deps": "npx npm-check",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@rematch/core": "2.2.0",
@@ -77,6 +78,7 @@
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-storybook": "^0.11.1",
     "gh-pages": "6.2.0",
+    "husky": "^8.0.0",
     "jsdom": "25.0.1",
     "storybook": "^8.4.5",
     "tsdef": "0.0.14",
