@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import { cn } from 'utils/cn';
 import classes from './Tabs.module.css';
 
 export type TabsHeaderProps = {
@@ -13,7 +13,7 @@ export function TabsHeader(props: TabsHeaderProps) {
     return (
         <div className={classes.header}>
             {tabs.map((tab, index) => {
-                const className = classNames(
+                const className = cn(
                     classes.tabHeader,
                     index === selectedIndex && classes.selected,
                 );

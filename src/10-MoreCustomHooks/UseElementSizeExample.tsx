@@ -1,8 +1,8 @@
-import classNames from 'classnames';
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { useElementSize } from 'hooks/useElementSize';
 import { ReactElement } from 'react';
 import { CSSProperties, useState } from 'react';
+import { cn } from 'utils/cn';
 import { generateRandomColor } from 'utils/generateRandomColor';
 import classes from './UseElementSize.module.css';
 
@@ -21,7 +21,7 @@ export function UseElementSizeExample() {
     const dummies = new Array<ReactElement>(dummiesCount);
     for (let i = 0; i < dummiesCount; i++) {
         dummies[i] = (
-            <div key={i} className={classNames(classes.node, classes.dummy)}>
+            <div key={i} className={cn(classes.node, classes.dummy)}>
                 Dummy
             </div>
         );
