@@ -1,29 +1,57 @@
-import { Button, ChapterWrapper } from 'components';
+import { Button, ChapterWrapper, TextBlock } from 'components';
+import { HTMLInputTypeAttribute } from 'react';
 import { useFormStatus } from 'react-dom';
+import { cn } from 'utils/cn';
 import classes from './UseFormStatusExample.module.css';
+
+const ARTIFICIAL_DELAY = 2000;
 
 export function UseFormStatusExample() {
     const handleFormAction = async (_formData: FormData) => {
         // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, ARTIFICIAL_DELAY));
     };
 
     return (
         <ChapterWrapper title="useFormStatus" subtitle="New hooks in React 19">
-            <form action={handleFormAction}>
-                <div className={classes.formField}>
-                    <label htmlFor="firstName">First Name:</label>
-                    <input type="text" name="firstName" autoComplete="off" />
-                </div>
-                <div className={classes.formField}>
-                    <label htmlFor="lastName">Last Name:</label>
-                    <input type="text" name="lastName" autoComplete="off" />
-                </div>
-                <div className={classes.formField}>
-                    <SubmitButton />
-                </div>
-            </form>
+            <div className={classes.content}>
+                <form action={handleFormAction}>
+                    <FormField label="First Name" name="firstName" />
+                    <FormField label="Last Name" name="lastName" />
+                    <div>
+                        <SubmitButton />
+                    </div>
+                </form>
+                <TextBlock>
+                    ℹ️ Read more{' '}
+                    <a
+                        target="_blank"
+                        href="https://react.dev/reference/react-dom/hooks/useFormStatus"
+                        rel="noreferrer"
+                    >
+                        here
+                    </a>
+                </TextBlock>
+            </div>
         </ChapterWrapper>
+    );
+}
+
+type FormFieldProps = {
+    label: string;
+    name: string;
+    type?: HTMLInputTypeAttribute;
+    required?: boolean;
+};
+
+function FormField({ label, name, type = 'text', required }: FormFieldProps) {
+    const { pending } = useFormStatus();
+
+    return (
+        <div className={classes.formField}>
+            <label htmlFor={name}>{label}:</label>
+            <input type={type} name={name} required={required} disabled={pending} />
+        </div>
     );
 }
 
@@ -35,7 +63,7 @@ function SubmitButton() {
             type="submit"
             disabled={pending}
             text={pending ? 'Submitting...' : 'Submit'}
-            className={pending ? classes.blink : ''}
+            className={cn(pending && classes.blink)}
         />
     );
 }
