@@ -5,7 +5,5 @@ type ClassNamesArg = string | undefined | null | false;
  * Ignores falsy values.
  */
 export function cn(...args: ClassNamesArg[]): string {
-    return args
-        .filter(arg => typeof arg === 'string' && arg)
-        .join(' ');
+    return args.filter((arg) => typeof arg === 'string' && arg).join(' ');
 }

@@ -29,4 +29,4 @@ describe('cn (classNames)', () => {
     it('should preserve whitespace in class names', () => {
         expect(cn('foo bar', 'baz')).toBe('foo bar baz');
     });
-}); 
+});

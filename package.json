@@ -31,7 +31,8 @@
     "deploy": "gh-pages -d dist",
     "check-deps": "npx npm-check",
     "prepare": "husky install",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "format:ci": "prettier --check \"src/**/*.{ts,tsx,css}\""
   },
   "dependencies": {
     "@rematch/core": "2.2.0",
