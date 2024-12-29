@@ -1,4 +1,5 @@
-import { Button, ChapterWrapper, TextBlock } from 'components';
+import { Button, ChapterWrapper } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { HTMLInputTypeAttribute } from 'react';
 import { useFormStatus } from 'react-dom';
 import { cn } from 'utils/cn';
@@ -16,22 +17,20 @@ export function UseFormStatusExample() {
         <ChapterWrapper title="useFormStatus" subtitle="New hooks in React 19">
             <div className={classes.content}>
                 <form action={handleFormAction}>
-                    <FormField label="First Name" name="firstName" />
-                    <FormField label="Last Name" name="lastName" />
+                    <FormField label="First Name" name="firstName" required />
+                    <FormField label="Last Name" name="lastName" required />
                     <div>
                         <SubmitButton />
                     </div>
                 </form>
-                <TextBlock>
-                    ℹ️ Read more{' '}
-                    <a
-                        target="_blank"
-                        href="https://react.dev/reference/react-dom/hooks/useFormStatus"
-                        rel="noreferrer"
-                    >
-                        here
-                    </a>
-                </TextBlock>
+                <RelatedDocs
+                    docs={[
+                        {
+                            label: 'useFormStatus',
+                            href: 'https://react.dev/reference/react-dom/hooks/useFormStatus',
+                        },
+                    ]}
+                />
             </div>
         </ChapterWrapper>
     );
