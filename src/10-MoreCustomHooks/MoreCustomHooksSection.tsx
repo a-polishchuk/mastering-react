@@ -9,17 +9,10 @@ import { UseHoveredExample } from './UseHoveredExample';
 import { UsePreviousExample } from './UsePreviousExample';
 import { UseThrottledStateExample } from './UseThrottledStateExample';
 import { UseTimeoutExample } from './useTimeout/UseTimeoutExample';
-import { UseWhatCausedRenderExample } from './UseWhatCausedRenderExample';
 
 export function MoreCustomHooksSection() {
     return (
         <Section title="More custom hooks">
-            <Chapter
-                emoji="🔂"
-                title="useWhatCausedRender"
-                path={RouterPath.USE_WHAT_CAUSED_RENDER}
-                element={<UseWhatCausedRenderExample />}
-            />
             <Chapter
                 emoji="🦄"
                 title="useHovered"
