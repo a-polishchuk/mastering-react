@@ -7,7 +7,8 @@ enum Direction {
     BACKWARD,
 }
 
-const INITIAL_DELAY = 1000;
+const INITIAL_DELAY = 1000; // milliseconds
+const SPEED = 300; // pixels per second
 
 type Props = {
     path: (Position | null)[];
@@ -21,7 +22,7 @@ export function Car({ path }: Props) {
     const positions = path.filter((item) => !!item) as Position[];
     const position = positions[index];
     const distance = getDistance(positions[prevIndex], position);
-    const timeSeconds = distance / 300;
+    const timeSeconds = distance / SPEED;
     const intervalDelay = positions.length >= 2 ? timeSeconds * 1000 || INITIAL_DELAY : null;
 
     const style: CSSProperties = {
