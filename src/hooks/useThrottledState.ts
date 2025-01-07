@@ -1,16 +1,14 @@
 import { throttle } from 'lodash';
-import { useCallback, useState } from 'react';
+import { useState, useMemo } from 'react';
 
 export type UseThrottledState<T> = [T, (newValue: T) => void];
 
 export function useThrottledState<T>(initialValue: T, delay: number): UseThrottledState<T> {
-    const [throttledValue, setThrottledValue] = useState<T>(initialValue);
+    const [throttledValue, setValue] = useState<T>(initialValue);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const setter = useCallback(
-        throttle((newValue: T) => setThrottledValue(newValue), delay),
-        [delay],
-    );
+    const throttledSetter = useMemo(() => {
+        return throttle((newValue: T) => setValue(newValue), delay);
+    }, [delay]);
 
-    return [throttledValue, setter];
+    return [throttledValue, throttledSetter];
 }
