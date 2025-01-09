@@ -14,7 +14,7 @@ const PLAY_TIME = 10 * 1000;
 
 export function UseTimeoutExample() {
     const [caterpillars, setCaterpillars] = useState<Creature[]>(() =>
-        generateRandomPositions(TARGETS_NUMBER),
+        generateRandomCreatures(TARGETS_NUMBER),
     );
     const [butterflies, setButterflies] = useState<Creature[]>([]);
     const [isPlaying, setPlaying] = useState<boolean>(true);
@@ -27,7 +27,7 @@ export function UseTimeoutExample() {
     const { reschedule: rescheduleTimeout } = useTimeout(() => setPlaying(false), PLAY_TIME);
 
     const playAgain = () => {
-        setCaterpillars(generateRandomPositions(TARGETS_NUMBER));
+        setCaterpillars(generateRandomCreatures(TARGETS_NUMBER));
         setButterflies([]);
         setPlaying(true);
         rescheduleTimeout();
@@ -61,7 +61,7 @@ export function UseTimeoutExample() {
     );
 }
 
-function generateRandomPositions(n: number): Creature[] {
+function generateRandomCreatures(n: number): Creature[] {
     const array = new Array<Creature>(n);
     for (let i = 0; i < n; i++) {
         array[i] = {
