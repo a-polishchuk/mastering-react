@@ -1,8 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export type UseLocalStorage<T> = [T, (newValue: T) => void];
-
-export function useLocalStorage<T>(key: string, initialValue: T): UseLocalStorage<T> {
+export function useLocalStorage<T>(key: string, initialValue: T) {
     const [storedValue, setStoredValue] = useState<T>(() => {
         try {
             const storedValue = window.localStorage.getItem(key);
@@ -25,5 +23,5 @@ export function useLocalStorage<T>(key: string, initialValue: T): UseLocalStorag
         [key],
     );
 
-    return [storedValue, setValue];
+    return [storedValue, setValue] as const;
 }

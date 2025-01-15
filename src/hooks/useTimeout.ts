@@ -1,10 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export interface UseTimeout {
-    reschedule: () => void;
-}
-
-export function useTimeout(callback: () => void, timeout: number | null): UseTimeout {
+export function useTimeout(callback: () => void, timeout: number | null) {
     const callbackRef = useRef(callback);
     const [dummyState, setDummyState] = useState<any>();
 

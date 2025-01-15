@@ -1,9 +1,8 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 
-export type UseHovered = [boolean, (element: HTMLElement | null) => void];
 type EventCallback = () => void;
 
-export function useHovered(): UseHovered {
+export function useHovered() {
     const [hovered, setHovered] = useState(false);
 
     const elementRef = useRef<HTMLElement | null>(null);
@@ -40,5 +39,5 @@ export function useHovered(): UseHovered {
         };
     }, []);
 
-    return [hovered, refCallback];
+    return [hovered, refCallback] as const;
 }

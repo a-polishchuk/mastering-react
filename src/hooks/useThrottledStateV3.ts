@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { UseThrottledState } from './useThrottledState';
 
-export function useThrottledStateV3<T>(initialValue: T, delay: number): UseThrottledState<T> {
+export function useThrottledStateV3<T>(initialValue: T, delay: number) {
     const [throttledValue, setValue] = useState<T>(initialValue);
     const lastValueRef = useRef<T>(initialValue);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -37,5 +36,5 @@ export function useThrottledStateV3<T>(initialValue: T, delay: number): UseThrot
         };
     }, []);
 
-    return [throttledValue, throttledSetter];
+    return [throttledValue, throttledSetter] as const;
 }

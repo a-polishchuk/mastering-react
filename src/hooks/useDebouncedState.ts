@@ -1,9 +1,7 @@
 import { debounce } from 'lodash';
 import { useCallback, useState } from 'react';
 
-export type UseDebouncedState<T> = [T, (newValue: T) => void];
-
-export function useDebouncedState<T>(initialValue: T, delay: number): UseDebouncedState<T> {
+export function useDebouncedState<T>(initialValue: T, delay: number) {
     const [debouncedValue, setDebouncedValue] = useState<T>(initialValue);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -12,5 +10,5 @@ export function useDebouncedState<T>(initialValue: T, delay: number): UseDebounc
         [delay],
     );
 
-    return [debouncedValue, setter];
+    return [debouncedValue, setter] as const;
 }

@@ -8,7 +8,7 @@ describe('Button', () => {
         const clickHandler = vi.fn();
         render(<Button text="Click me!" onClick={clickHandler} />);
 
-        expect(await screen.findByText('Click me!')).toBeVisible();
+        expect(screen.getByText('Click me!')).toBeVisible();
 
         await userEvent.click(screen.getByText('Click me!'));
 
@@ -19,7 +19,7 @@ describe('Button', () => {
         const clickHandler = vi.fn();
         render(<Button text="Click me!" onClick={clickHandler} disabled />);
 
-        expect(await screen.findByText('Click me!')).toBeVisible();
+        expect(screen.getByText('Click me!')).toBeVisible();
 
         await userEvent.click(screen.getByText('Click me!'));
 
