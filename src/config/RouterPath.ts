@@ -79,11 +79,6 @@ export enum RouterPath {
     REACT_QUERY = 'react-query',
     SWR = 'swr',
 
-    // design patters
-    HOOKS_FACTORY = 'hactory-factory',
-    EMOJI_NUMBERED_LIST = 'emoji-numbered-list',
-    TOGGLE_BUTTON = 'toggle-button',
-
     // more custom hooks
     USE_WHAT_CAUSED_RENDER = 'use-what-caused-render',
     USE_HOVERED = 'use-hovered',

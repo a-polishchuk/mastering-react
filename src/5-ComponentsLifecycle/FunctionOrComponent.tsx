@@ -1,6 +1,6 @@
-import { EmojiNumberedList } from '9-DesignPatters/CompoundComponent/EmojiNumberedList';
 import { ChapterWrapper, ColoredBlock, TextBlock } from 'components';
 import { ReactNode } from 'react';
+import { EmojiNumberedList } from './EmojiNumberedList';
 
 function Message({ children }: { children: ReactNode }) {
     return <ColoredBlock>{children}</ColoredBlock>;
