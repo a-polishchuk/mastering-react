@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useHistory<T>(value: T): T[] {
+export function useHistory<T>(value: T) {
     const [history, setHistory] = useState<T[]>([]);
 
     useEffect(() => {

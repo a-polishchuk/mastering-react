@@ -1,8 +1,7 @@
 import { useCallback, useRef } from 'react';
-import { RefCallback } from 'types/RefCallback';
 import { useWindowEvent } from './useWindowEvent';
 
-export function useClickOutside(callback: () => void): RefCallback {
+export function useClickOutside(callback: () => void) {
     const elementRef = useRef<HTMLElement | null>(null);
 
     useWindowEvent('click', (event: PointerEvent) => {

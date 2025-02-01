@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useAnimatedText(text: string, delayMs: number): string {
+export function useAnimatedText(text: string, delayMs: number) {
     const [currentPos, setCurrentPos] = useState(0);
 
     useEffect(() => {

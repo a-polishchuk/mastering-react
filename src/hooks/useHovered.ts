@@ -30,11 +30,12 @@ export function useHovered() {
 
     useEffect(() => {
         return () => {
+            const element = elementRef.current;
             if (mouseOverRef.current) {
-                elementRef.current?.removeEventListener('mouseover', mouseOverRef.current);
+                element?.removeEventListener('mouseover', mouseOverRef.current);
             }
             if (mouseOutRef.current) {
-                elementRef.current?.removeEventListener('mouseout', mouseOutRef.current);
+                element?.removeEventListener('mouseout', mouseOutRef.current);
             }
         };
     }, []);

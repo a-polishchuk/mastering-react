@@ -10,6 +10,5 @@ export function useLoggedLifecycle(tag: string) {
         return () => {
             logTagged(tag, '⛔️ Unmounting');
         };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [tag]);
 }
