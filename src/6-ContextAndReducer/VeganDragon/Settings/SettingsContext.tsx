@@ -1,5 +1,4 @@
-import { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
-import { ProviderProps } from 'types/ProviderProps';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
 import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
 
 export type SettingsContextState = {
@@ -9,8 +8,7 @@ export type SettingsContextState = {
     changeMoveDelay: () => void;
 };
 
-const defaultValue: any = null;
-const SettingsContext = createContext<SettingsContextState>(defaultValue);
+const SettingsContext = createContext<SettingsContextState | null>(null);
 
 export function useSettingsContext() {
     const contextValue = useContext(SettingsContext);
@@ -20,7 +18,7 @@ export function useSettingsContext() {
     return contextValue;
 }
 
-export function SettingsContextProvider({ children }: ProviderProps) {
+export function SettingsContextProvider({ children }: { children: ReactNode }) {
     const [useAlternativeGrid, setUseAlternativeGrid] = useState<boolean>(false);
     const [moveDelay, setMoveDelay] = useState<number>(MOVE_DELAY);
 

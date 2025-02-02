@@ -1,13 +1,11 @@
-import { createContext, Dispatch, useContext, useReducer } from 'react';
-import { ProviderProps } from 'types/ProviderProps';
+import { createContext, Dispatch, ReactNode, useContext, useReducer } from 'react';
 import { Action, GameContextState } from '../types';
 import { INITIAL_STATE } from './reducer/initialState';
 import { reducer } from './reducer/reducer';
 
 type GameContextType = [GameContextState, Dispatch<Action>];
 
-const defaultValue: any = null;
-const GameContext = createContext<GameContextType>(defaultValue);
+const GameContext = createContext<GameContextType | null>(null);
 
 export function useGameContext() {
     const contextValue = useContext(GameContext);
@@ -17,7 +15,7 @@ export function useGameContext() {
     return contextValue;
 }
 
-export function GameContextProvider({ children }: ProviderProps) {
+export function GameContextProvider({ children }: { children: ReactNode }) {
     const value = useReducer(reducer, INITIAL_STATE);
 
     return <GameContext.Provider value={value}>{children}</GameContext.Provider>;

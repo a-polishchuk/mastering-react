@@ -1,5 +1,5 @@
 import { Button } from 'components';
-import { UseState } from 'types/UseState';
+import { Dispatch, SetStateAction } from 'react';
 import { GridType } from './GridType';
 
 type Props = {
@@ -7,6 +7,8 @@ type Props = {
     gridType: GridType;
     state: UseState<GridType>;
 };
+
+type UseState<T> = [T, Dispatch<SetStateAction<T>>];
 
 export function GridTypeButton({ text, gridType, state }: Props) {
     const [currentGridType, setGridType] = state;
