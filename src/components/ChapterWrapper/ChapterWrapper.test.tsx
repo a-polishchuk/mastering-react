@@ -41,7 +41,7 @@ describe('ChapterWrapper', () => {
             </TestWrapper>,
         );
 
-        expect(await screen.findByText(title)).toBeVisible();
+        expect(screen.getByText(title)).toBeVisible();
 
         const rerenderButton = screen.getByText('🔄');
         expect(rerenderButton).toBeVisible();

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 import { RendersCounter } from './RendersCounter';
 
 describe('RendersCounter', () => {
@@ -30,6 +29,7 @@ describe('RendersCounter', () => {
             </RendersCounter>,
         );
 
+        expect(screen.getByText('Test Content')).toBeInTheDocument();
         expect(screen.getByText('R: 1')).toBeInTheDocument();
 
         rerender(
@@ -38,6 +38,7 @@ describe('RendersCounter', () => {
             </RendersCounter>,
         );
 
+        expect(screen.getByText('Updated Content')).toBeInTheDocument();
         expect(screen.getByText('R: 2')).toBeInTheDocument();
     });
 });
