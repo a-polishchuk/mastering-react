@@ -26,5 +26,10 @@ describe('useRerender', () => {
         await userEvent.click(screen.getByText('RERENDER'));
 
         expect(await screen.findByText('Renders count: 2')).toBeVisible();
+
+        await userEvent.click(screen.getByText('RERENDER'));
+        await userEvent.click(screen.getByText('RERENDER'));
+
+        expect(await screen.findByText('Renders count: 4')).toBeVisible();
     });
 });

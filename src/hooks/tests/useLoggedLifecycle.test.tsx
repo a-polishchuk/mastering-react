@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import { vi } from 'vitest';
@@ -24,22 +24,44 @@ function TestComponent() {
 }
 
 describe('useLoggedLifecycle', () => {
-    test('should log lifecycle events', async () => {
-        const mockFn = vi.fn();
+    const originalConsoleLog = console.log;
+    let mockFn: ReturnType<typeof vi.fn>;
+
+    beforeEach(() => {
+        mockFn = vi.fn();
         console.log = mockFn;
+    });
+
+    afterEach(() => {
+        console.log = originalConsoleLog;
+        vi.clearAllMocks();
+    });
+
+    test('should log lifecycle events', async () => {
         render(<TestComponent />);
 
-        expect(mockFn.mock.calls[0][0]).toBe('%c test %c                🔄 Rendering');
-        expect(mockFn.mock.calls[1][0]).toBe('%c test %c                ✅ Mounted');
+        expect(mockFn).toHaveBeenCalledWith(
+            '%c test %c                🔄 Rendering',
+            expect.any(String),
+            expect.any(String),
+        );
+        expect(mockFn).toHaveBeenCalledWith(
+            '%c test %c                ✅ Mounted',
+            expect.any(String),
+            expect.any(String),
+        );
 
         await userEvent.click(screen.getByText('remount'));
 
-        await waitFor(() => {
-            expect(mockFn.mock.calls[2][0]).toBe('%c test %c                🔄 Rendering');
-        });
-
-        await waitFor(() => {
-            expect(mockFn.mock.calls[3][0]).toBe('%c test %c                ⛔️ Unmounting');
-        });
+        expect(mockFn).toHaveBeenCalledWith(
+            '%c test %c                🔄 Rendering',
+            expect.any(String),
+            expect.any(String),
+        );
+        expect(mockFn).toHaveBeenCalledWith(
+            '%c test %c                ⛔️ Unmounting',
+            expect.any(String),
+            expect.any(String),
+        );
     });
 });

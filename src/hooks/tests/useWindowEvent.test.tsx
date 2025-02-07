@@ -19,9 +19,11 @@ describe('useEventListener', () => {
 
         render(<TestComponent eventName="keypress" callback={onKeyPress} />);
 
-        await userEvent.keyboard('key');
+        await userEvent.keyboard('k');
+        expect(onKeyPress).toHaveBeenCalledTimes(1);
 
-        expect(onKeyPress).toHaveBeenCalledTimes(3);
+        await userEvent.keyboard('hello, world!');
+        expect(onKeyPress).toHaveBeenCalledTimes(14);
     });
 
     test('should listen to click event', async () => {
