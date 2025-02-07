@@ -15,13 +15,7 @@ export function RendersCounter({ children }: RendersCounterProps) {
     return (
         <div className={classes.container}>
             {children}
-            <div key={generateNewKey()} className={classes.rendersCounter}>
-                R: {rendersCountRef.current}
-            </div>
+            <div className={classes.rendersCounter}>R: {rendersCountRef.current}</div>
         </div>
     );
-}
-
-function generateNewKey(): number {
-    return new Date().getTime();
 }

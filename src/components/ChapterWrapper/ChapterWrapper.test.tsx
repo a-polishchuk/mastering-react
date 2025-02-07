@@ -26,6 +26,9 @@ describe('ChapterWrapper', () => {
         expect(screen.getByText(title)).toBeVisible();
         expect(screen.getByText(subtitle)).toBeVisible();
         expect(screen.getByText('❌')).toBeVisible();
+
+        // we need to check that this element was not rendered
+        // so we need to use queryByText instead of getByText
         expect(screen.queryByText('🔄')).toBeNull();
     });
 
