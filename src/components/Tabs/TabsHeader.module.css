@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+}
+
+.tabHeader {
+    padding: 10px;
+    transition: all 0.2s linear;
+    cursor: default;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tabHeader:hover {
+    text-shadow: var(--passive-text-shadow);
+}
+
+.selected {
+    text-shadow: var(--active-text-shadow);
+    box-shadow: 0px 3px 0px 0px #e1ccff;
+}

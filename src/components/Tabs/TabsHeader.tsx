@@ -1,5 +1,5 @@
 import { cn } from 'utils/cn';
-import classes from './Tabs.module.css';
+import classes from './TabsHeader.module.css';
 
 export type TabsHeaderProps = {
     tabs: string[];

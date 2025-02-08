@@ -1,10 +1,10 @@
-export interface Company {
+export type Company = {
     name: string;
     catchPhrase?: string;
     bs?: string;
-}
+};
 
-export interface User {
+export type User = {
     id: number;
     name: string;
     username: string;
@@ -22,11 +22,11 @@ export interface User {
     phone: string;
     website: string;
     company?: Company;
-}
+};
 
-export interface Todo {
+export type Todo = {
     id: number;
     userId: number;
     title: string;
     completed: boolean;
-}
+};
