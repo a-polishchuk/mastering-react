@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ChapterWrapper, Tabs } from 'components';
 import { queryFunction } from './api/queryFunction';
 import { Profile } from './Profile';
@@ -26,6 +27,7 @@ export function UsingReactQuery() {
                     <Profile />
                     <TodoList />
                 </Tabs>
+                <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>
         </ChapterWrapper>
     );
