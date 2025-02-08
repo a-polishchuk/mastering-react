@@ -14,6 +14,10 @@ function TestComponent() {
 }
 
 describe('useLocalStorage', () => {
+    afterEach(() => {
+        vi.clearAllMocks();
+    });
+
     test('should call local storage api', async () => {
         const getItemSpy = vi.spyOn(Storage.prototype, 'getItem');
         const setItemSpy = vi.spyOn(Storage.prototype, 'setItem');

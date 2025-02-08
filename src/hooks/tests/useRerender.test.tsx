@@ -21,15 +21,15 @@ describe('useRerender', () => {
     test('should trigger new render when called', async () => {
         render(<TestComponent />);
 
-        expect(await screen.findByText('Renders count: 1')).toBeVisible();
+        expect(screen.getByText('Renders count: 1')).toBeVisible();
 
         await userEvent.click(screen.getByText('RERENDER'));
 
-        expect(await screen.findByText('Renders count: 2')).toBeVisible();
+        expect(screen.getByText('Renders count: 2')).toBeVisible();
 
         await userEvent.click(screen.getByText('RERENDER'));
         await userEvent.click(screen.getByText('RERENDER'));
 
-        expect(await screen.findByText('Renders count: 4')).toBeVisible();
+        expect(screen.getByText('Renders count: 4')).toBeVisible();
     });
 });
