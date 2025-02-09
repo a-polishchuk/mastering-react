@@ -4,14 +4,17 @@ import { ChapterWrapper, Tabs } from 'components';
 import { Profile } from './Profile';
 import { TodoList } from './TodoList';
 import { TopPanel } from './TopPanel/TopPanel';
+import { Users } from './Users';
 
-const TABS: string[] = ['👤 User Profile', '✅ Todos List'];
+const TABS: string[] = ['✅ Todos List', '👥 Users', '👤 User Profile'];
 
 const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             refetchOnReconnect: true,
             refetchOnWindowFocus: true,
+            staleTime: 1000 * 60 * 5, // 5 minutes
+            gcTime: 1000 * 60, // 1 minute (only for inactive queries)
         },
     },
 });
@@ -22,8 +25,9 @@ export function UsingReactQuery() {
             <QueryClientProvider client={queryClient}>
                 <TopPanel />
                 <Tabs tabs={TABS}>
-                    <Profile />
                     <TodoList />
+                    <Users />
+                    <Profile />
                 </Tabs>
                 <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>

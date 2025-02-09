@@ -10,6 +10,7 @@ export function useTodoList() {
 
     return useQuery<Todo[]>({
         initialData: new Array<Todo>(),
+        initialDataUpdatedAt: 0, // it's important to set this to 0 to trigger fetch
         queryKey: buildKey(userId),
         queryFn: async () => {
             const response = await axiosInstance.get(`todos?userId=${userId}`);
