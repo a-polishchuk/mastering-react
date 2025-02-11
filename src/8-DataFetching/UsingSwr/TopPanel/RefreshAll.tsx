@@ -4,7 +4,7 @@ import { useSWRConfig } from 'swr';
 import { Queries, QueryKeyFactory } from '../api/QueryKeyFactory';
 
 export function RefreshAll() {
-    const userId = useUserId();
+    const { userId } = useUserId();
     const { mutate: refetch } = useSWRConfig();
 
     const handleClick = () => {

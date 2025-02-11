@@ -1,8 +1,12 @@
-import { EmojiButton } from 'components';
+import { EmojiButton, LoadingSpinner } from 'components';
 import { useTodoList } from './hooks/useTodoList';
 
 export function TodoList() {
-    const { data, refetch } = useTodoList();
+    const { data, isLoading, refetch } = useTodoList();
+
+    if (isLoading) {
+        return <LoadingSpinner />;
+    }
 
     return (
         <table>

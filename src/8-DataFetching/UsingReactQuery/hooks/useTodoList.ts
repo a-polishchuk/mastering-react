@@ -5,7 +5,7 @@ import { axiosInstance } from '../api/axiosInstance';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 export function useTodoList() {
-    const userId = useUserId();
+    const { userId } = useUserId();
     const buildKey = QueryKeyFactory[Queries.TODO_LIST];
 
     return useQuery<Todo[]>({

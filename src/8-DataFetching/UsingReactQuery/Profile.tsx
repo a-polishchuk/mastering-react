@@ -6,11 +6,7 @@ export function Profile() {
     const { isLoading, data, error } = useUser();
 
     if (isLoading) {
-        return (
-            <div className={classes.loading}>
-                <LoadingSpinner />
-            </div>
-        );
+        return <LoadingSpinner />;
     }
 
     if (error) {

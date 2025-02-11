@@ -1,3 +1,4 @@
+import { UserContextProvider } from '8-DataFetching/UserContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { ChapterWrapper, Tabs } from 'components';
@@ -23,12 +24,14 @@ export function UsingReactQuery() {
     return (
         <ChapterWrapper title="React Query" subtitle="Data fetching">
             <QueryClientProvider client={queryClient}>
-                <TopPanel />
-                <Tabs tabs={TABS}>
-                    <TodoList />
-                    <Users />
-                    <Profile />
-                </Tabs>
+                <UserContextProvider>
+                    <TopPanel />
+                    <Tabs tabs={TABS}>
+                        <TodoList />
+                        <Users />
+                        <Profile />
+                    </Tabs>
+                </UserContextProvider>
                 <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>
         </ChapterWrapper>

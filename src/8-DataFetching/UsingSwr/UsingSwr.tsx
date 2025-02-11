@@ -1,3 +1,4 @@
+import { UserContextProvider } from '8-DataFetching/UserContext';
 import { ChapterWrapper, Tabs } from 'components';
 import { SWRConfig } from 'swr';
 import { fetcher } from './api/fetcher';
@@ -11,11 +12,13 @@ export function UsingSwr() {
     return (
         <ChapterWrapper title="SWR" subtitle="Data fetching">
             <SWRConfig value={{ fetcher }}>
-                <TopPanel />
-                <Tabs tabs={TABS}>
-                    <Profile />
-                    <TodoList />
-                </Tabs>
+                <UserContextProvider>
+                    <TopPanel />
+                    <Tabs tabs={TABS}>
+                        <Profile />
+                        <TodoList />
+                    </Tabs>
+                </UserContextProvider>
             </SWRConfig>
         </ChapterWrapper>
     );
