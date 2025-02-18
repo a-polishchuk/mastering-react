@@ -53,7 +53,7 @@ export function Background() {
                                 default: 'bounce',
                             },
                             random: false,
-                            speed: 2,
+                            speed: 0.5,
                             straight: false,
                         },
                         number: {
