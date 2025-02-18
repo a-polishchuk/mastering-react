@@ -17,7 +17,7 @@
   - [Redux](https://redux.js.org/)
   - [Rematch](https://rematchjs.org/)
   - [Zustand](https://github.com/pmndrs/zustand)
-  - [Recoil](https://recoiljs.org/)
+  - [Jotai](https://jotai.org)
 - Data fetching
   - [React Query](https://tanstack.com/query/v4)
   - [SWR](https://swr.vercel.app/)

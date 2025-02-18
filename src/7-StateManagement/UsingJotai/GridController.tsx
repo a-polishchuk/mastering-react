@@ -1,7 +1,7 @@
 import { CheckboxGrid } from '7-StateManagement/components/CheckboxGrid';
 import { DivGrid } from '7-StateManagement/components/DivGrid';
 import { toggleCell } from '7-StateManagement/model/toggleCell';
-import { useRecoilState } from 'recoil';
+import { useAtom } from 'jotai';
 import { gridAtom } from './gridAtom';
 import { GridType } from './GridType';
 
@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function GridController({ gridType, cellSize }: Props) {
-    const [grid, setGrid] = useRecoilState(gridAtom);
+    const [grid, setGrid] = useAtom(gridAtom);
 
     const toggle = (row: number, col: number) => {
         setGrid((currValue) => toggleCell(currValue, [row, col]));
@@ -23,6 +23,6 @@ export function GridController({ gridType, cellSize }: Props) {
         case GridType.DIV:
             return <DivGrid grid={grid} cellSize={cellSize} toggleCell={toggle} />;
         default:
-            throw new Error(``);
+            throw new Error(`Unsupported grid type: ${gridType}`);
     }
 }

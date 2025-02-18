@@ -3,13 +3,13 @@ import { clear } from '7-StateManagement/model/clear';
 import { nextGeneration } from '7-StateManagement/model/nextGeneration';
 import { randomize } from '7-StateManagement/model/randomize';
 import { useAutoGeneration } from '7-StateManagement/useAutoGeneration';
-import { useRecoilState } from 'recoil';
+import { useSetAtom } from 'jotai';
 import { gridAtom } from './gridAtom';
 
 const GENERATION_DELAY = 500;
 
 export function ToolbarController() {
-    const [, setGrid] = useRecoilState(gridAtom);
+    const setGrid = useSetAtom(gridAtom);
 
     const setNextGen = () => setGrid((value) => nextGeneration(value));
     const setRandomized = () => setGrid((value) => randomize(value));

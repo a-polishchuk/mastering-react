@@ -1,6 +1,6 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-import { UsingRecoil } from './UsingRecoil/UsingRecoil';
+import { UsingJotai } from './UsingJotai/UsingJotai';
 import { UsingRematch } from './UsingRematch/UsingRematch';
 import { UsingZustand } from './UsingZustand/UsingZustand';
 
@@ -21,9 +21,9 @@ export function StateManagementSection() {
             />
             <Chapter
                 emoji="🤹🏼‍♂️"
-                title="Recoil"
-                path={RouterPath.STATE_RECOIL}
-                element={<UsingRecoil />}
+                title="Jotai"
+                path={RouterPath.STATE_JOTAI}
+                element={<UsingJotai />}
             />
         </Section>
     );
