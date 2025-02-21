@@ -98,4 +98,5 @@ export enum RouterPath {
 
     // misc
     ERROR_BOUNDARY = 'error-boundary',
+    SUSPENSE = 'suspense',
 }
