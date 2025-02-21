@@ -95,4 +95,7 @@ export enum RouterPath {
     USE_FORM_STATUS = 'use-form-status',
     USE_OPTIMISTIC = 'use-optimistic',
     USE_ACTION_STATE = 'use-action-state',
+
+    // misc
+    ERROR_BOUNDARY = 'error-boundary',
 }

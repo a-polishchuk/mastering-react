@@ -30,7 +30,7 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                         <ExpandToggle expanded={expanded} onClick={toggleExpanded} />
                         {expanded && (
                             <NavLink to={RouterPath.ROOT} className={classes.titleLink}>
-                                <h2>Mastering React</h2>
+                                <h2>Опановуємо React</h2>
                             </NavLink>
                         )}
                     </div>
