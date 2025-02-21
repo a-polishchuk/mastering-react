@@ -7,7 +7,7 @@ export function ErrorBoundaryExample() {
         <ChapterWrapper title="Error boundary">
             <ErrorBoundary>
                 <ComponentWithError />
-                <ErrorBoundary fallback={<div>Error in OneMoreBrokenComponent</div>}>
+                <ErrorBoundary fallback={<div>Error was caught by inner ErrorBoundary</div>}>
                     <div>
                         You can move ComponentWithError here and the error will be caught by inner
                         ErrorBoundary
