@@ -76,8 +76,9 @@ export enum RouterPath {
     STATE_JOTAI = 'state-jotai',
 
     // data fetching
-    REACT_QUERY = 'react-query',
-    SWR = 'swr',
+    DATA_FETCHING_USE_EFFECT = 'data-fetching/with-use-effect',
+    REACT_QUERY = 'data-fetching/react-query',
+    SWR = 'data-fetching/swr',
 
     // more custom hooks
     USE_WHAT_CAUSED_RENDER = 'use-what-caused-render',
