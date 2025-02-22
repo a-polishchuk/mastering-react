@@ -1,5 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { ChapterWrapper, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useEffect, useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 import { Counter } from './Counter';
@@ -32,6 +33,14 @@ export function EffectDependencies() {
             <Toolbar>
                 <input value={inputValue} onChange={(event) => setInputValue(event.target.value)} />
             </Toolbar>
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useEffect Hook Reference',
+                        href: 'https://react.dev/reference/react/useEffect',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

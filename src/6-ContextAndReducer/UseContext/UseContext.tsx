@@ -1,4 +1,5 @@
 import { ChapterWrapper, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { ThemeButton } from './Theme/ThemeButton';
 import { ThemeProvider } from './Theme/ThemeContext';
 import { ThemeToolbar } from './Theme/ThemeToolbar';
@@ -20,6 +21,27 @@ export function UseContext() {
                     <UserProfile />
                 </UserProvider>
             </ThemeProvider>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useContext Hook Reference',
+                        href: 'https://react.dev/reference/react/useContext',
+                    },
+                    {
+                        label: 'Passing Data Deeply with Context',
+                        href: 'https://react.dev/learn/passing-data-deeply-with-context',
+                    },
+                    {
+                        label: 'Scaling Up with Reducer and Context',
+                        href: 'https://react.dev/learn/scaling-up-with-reducer-and-context',
+                    },
+                    {
+                        label: 'createContext API Reference',
+                        href: 'https://react.dev/reference/react/createContext',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

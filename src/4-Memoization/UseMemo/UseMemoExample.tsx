@@ -1,4 +1,5 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useRerender } from 'hooks/useRerender';
 import { memo, MouseEventHandler, useMemo } from 'react';
 import { Leaf } from './Leaf';
@@ -38,6 +39,18 @@ export function UseMemoExample() {
     return (
         <ChapterWrapper title="useMemo" subtitle="React.memo + useMemo" rerender={useRerender()}>
             <MemoizedNode level={0} maxLevel={2} path={ROOT_PATH} />
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useMemo Hook Reference',
+                        href: 'https://react.dev/reference/react/useMemo',
+                    },
+                    {
+                        label: 'Skipping Re-rendering with memo',
+                        href: 'https://react.dev/reference/react/memo',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

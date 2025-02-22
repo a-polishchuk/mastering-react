@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];
@@ -43,6 +44,19 @@ export function UseStateBasics() {
                 <Button text="Add Fibonacci number" onClick={addFibonacci} />
             </Toolbar>
             <div>Fibonacci sequence: {fibonacci.join(', ')}</div>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: "State: A Component's Memory",
+                        href: 'https://react.dev/learn/state-a-components-memory',
+                    },
+                    {
+                        label: 'useState Hook Reference',
+                        href: 'https://react.dev/reference/react/useState',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

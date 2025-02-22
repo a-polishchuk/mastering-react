@@ -1,4 +1,5 @@
 import { ChapterWrapper, ColoredBlock, LoggedLifecycle, TextBlock } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useRerender } from 'hooks/useRerender';
 import { useRef } from 'react';
 
@@ -24,6 +25,15 @@ export function RemountComponent() {
             <LoggedLifecycle key={keyRef.current} tag="Random key">
                 <ColoredBlock>My key is changing every render.</ColoredBlock>
             </LoggedLifecycle>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Resetting state with a key',
+                        href: 'https://react.dev/reference/react/useState#resetting-state-with-a-key',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

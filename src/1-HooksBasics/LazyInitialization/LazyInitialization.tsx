@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 import { HeaderRow } from './HeaderRow';
@@ -82,6 +83,15 @@ export function LazyInitialization() {
                     ))}
                 </tbody>
             </table>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Avoiding recreating the initial state',
+                        href: 'https://react.dev/reference/react/useState#avoiding-recreating-the-initial-state',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

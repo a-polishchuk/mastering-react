@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, TextBlock, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { capitalize } from 'lodash';
 import { ChangeEventHandler, useRef, useState } from 'react';
 
@@ -6,8 +7,9 @@ export function UncontrolledInput() {
     const [text, setText] = useState<string>('');
     const inputRef = useRef<HTMLInputElement | null>(null);
 
-    const handleChange: ChangeEventHandler<HTMLInputElement> = (event) =>
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         setText(event.target.value);
+    };
 
     const clear = () => {
         if (inputRef.current) {
@@ -27,7 +29,9 @@ export function UncontrolledInput() {
         }
     };
 
-    const focus = () => inputRef.current?.focus();
+    const focus = () => {
+        inputRef.current?.focus();
+    };
 
     return (
         <ChapterWrapper title="Uncontrolled input" subtitle="Controlled vs uncontrolled">
@@ -56,6 +60,15 @@ export function UncontrolledInput() {
             <Toolbar>
                 Current value: <strong>{text}</strong>
             </Toolbar>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Manipulating the DOM with Refs',
+                        href: 'https://react.dev/learn/manipulating-the-dom-with-refs',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

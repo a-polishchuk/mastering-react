@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useRef, useState } from 'react';
 import { PinInput, PinInputHandle } from './PinInput';
 
@@ -26,6 +27,15 @@ export function UseImperativeHandle() {
                 <Button text="Focus" onClick={focus} />
                 <Button text="Clear" onClick={clear} />
             </Toolbar>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useImperativeHandle Hook Reference',
+                        href: 'https://react.dev/reference/react/useImperativeHandle',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

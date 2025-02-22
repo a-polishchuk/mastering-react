@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, TextBlock, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { capitalize } from 'lodash';
 import { ChangeEventHandler, useRef, useState } from 'react';
 
@@ -6,16 +7,25 @@ export function ControlledInput() {
     const [text, setText] = useState<string>('');
     const inputRef = useRef<HTMLInputElement | null>(null);
 
-    const handleChange: ChangeEventHandler<HTMLInputElement> = (event) =>
+    const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
         setText(event.target.value);
+    };
 
-    const clear = () => setText('');
+    const clear = () => {
+        setText('');
+    };
 
-    const toUpperCase = () => setText((value) => value.toUpperCase());
+    const toUpperCase = () => {
+        setText((value) => value.toUpperCase());
+    };
 
-    const toCapitalCase = () => setText((value) => capitalize(value));
+    const toCapitalCase = () => {
+        setText((value) => capitalize(value));
+    };
 
-    const focus = () => inputRef.current?.focus();
+    const focus = () => {
+        inputRef.current?.focus();
+    };
 
     return (
         <ChapterWrapper title="Controlled input" subtitle="Controlled vs uncontrolled">
@@ -40,6 +50,15 @@ export function ControlledInput() {
             <Toolbar>
                 Current value: <strong>{text}</strong>
             </Toolbar>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Manipulating the DOM with Refs',
+                        href: 'https://react.dev/learn/manipulating-the-dom-with-refs',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

@@ -1,5 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { ChapterWrapper } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useEffect } from 'react';
 import { logTagged } from 'utils/logTagged';
 import { Counter } from './Counter';
@@ -32,6 +33,14 @@ export function ComponentLifecycle() {
     return (
         <ChapterWrapper title="Component lifecycle" subtitle="useEffect basics">
             <Counter value={value} delta={DELTA} increase={increase} decrease={decrease} />
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useEffect Hook Reference',
+                        href: 'https://react.dev/reference/react/useEffect',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

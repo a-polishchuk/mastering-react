@@ -9,12 +9,12 @@ export function DataFecthingSection() {
     return (
         <Section title="Data fecthing">
             <Chapter
-                emoji="🌐"
-                title="React Query"
+                emoji="📡"
+                title="TanStack Query / React Query"
                 path={RouterPath.REACT_QUERY}
                 element={<UsingReactQuery />}
             />
-            <Chapter emoji="🌐" title="SWR" path={RouterPath.SWR} element={<UsingSwr />} />
+            <Chapter emoji="📡" title="SWR" path={RouterPath.SWR} element={<UsingSwr />} />
         </Section>
     );
 }

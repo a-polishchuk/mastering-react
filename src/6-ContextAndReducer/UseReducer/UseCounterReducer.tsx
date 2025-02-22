@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useReducer } from 'react';
 import { Action } from './Action';
 import { counterReducer, INITIAL_COUNT } from './counterReducer';
@@ -18,6 +19,23 @@ export function UseCounterReducer() {
                 <Button text="^ 2" onClick={() => dispatch(Action.POWER_2)} />
                 <Button text="Reset" onClick={() => dispatch(Action.RESET)} />
             </Toolbar>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useReducer Hook Reference',
+                        href: 'https://react.dev/reference/react/useReducer',
+                    },
+                    {
+                        label: 'Extracting State Logic into a Reducer',
+                        href: 'https://react.dev/learn/extracting-state-logic-into-a-reducer',
+                    },
+                    {
+                        label: 'Choosing the State Structure',
+                        href: 'https://react.dev/learn/choosing-the-state-structure',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

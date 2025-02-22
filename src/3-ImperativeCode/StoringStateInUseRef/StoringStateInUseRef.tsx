@@ -1,5 +1,6 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
 import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useLoggedLifecycle } from 'hooks/useLoggedLifecycle';
 import { logTagged } from 'utils/logTagged';
 import { useRefState } from './useRefState';
@@ -33,6 +34,15 @@ export function StoringStateInUseRef() {
                 <ValueLabel value={refStateClicks} minWidth="100px" />
                 <Button text="+1" onClick={increaseRefStateClicks} />
             </Toolbar>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'useRef Hook Reference',
+                        href: 'https://react.dev/reference/react/useRef',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

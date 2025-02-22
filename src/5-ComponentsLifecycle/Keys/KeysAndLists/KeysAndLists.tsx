@@ -1,4 +1,5 @@
 import { ChapterWrapper, TextBlock } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { generateItems, Item } from './Item';
 import classes from './KeysAndLists.module.css';
 import { List } from './List';
@@ -30,6 +31,15 @@ export function KeysAndLists() {
                 <List generateItems={generateInitialItems} getKey={getIndexKey} />
                 <List generateItems={generateInitialItems} getKey={getIdKey} />
             </div>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Keeping list items in order with key',
+                        href: 'https://react.dev/learn/rendering-lists#keeping-list-items-in-order-with-key',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

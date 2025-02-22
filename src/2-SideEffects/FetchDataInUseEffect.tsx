@@ -1,4 +1,5 @@
 import { ChapterWrapper, LoadingSpinner, PropsTable, Toolbar } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { ChangeEventHandler, useEffect, useState } from 'react';
 
 type PostData = Record<string, any>;
@@ -44,7 +45,9 @@ export function FetchDataInUseEffect() {
             </Toolbar>
 
             {loading ? (
-                <LoadingSpinner />
+                <div style={{ position: 'relative', height: 200 }}>
+                    <LoadingSpinner />
+                </div>
             ) : error ? (
                 <div style={{ color: 'red' }}>
                     <strong>Error: </strong>
@@ -53,6 +56,15 @@ export function FetchDataInUseEffect() {
             ) : (
                 <PropsTable title={`/posts/${postId}`} data={postData} />
             )}
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Fetching data with effects',
+                        href: 'https://react.dev/reference/react/useEffect#fetching-data-with-effects',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }

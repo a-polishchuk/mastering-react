@@ -1,4 +1,5 @@
 import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
+import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useState } from 'react';
 
 const DELAY = 2000;
@@ -43,6 +44,15 @@ export function PreviousStateUpdate() {
                 <Button text="Add Fibonacci number" onClick={addFibonacci} />
             </Toolbar>
             <div>Fibonacci sequence: {fibonacci.join(', ')}</div>
+
+            <RelatedDocs
+                docs={[
+                    {
+                        label: 'Updating state based on the previous state',
+                        href: 'https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state',
+                    },
+                ]}
+            />
         </ChapterWrapper>
     );
 }
