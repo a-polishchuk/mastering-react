@@ -1,30 +1,18 @@
 {
-  "extends": [
-    "react-app",
-    "plugin:storybook/recommended"
-  ],
-  "plugins": [
-    "import"
-  ],
-  "rules": {
-    "default-case": "off",
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
-        "newlines-between": "never",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ]
-  }
+    "extends": ["react-app", "plugin:storybook/recommended"],
+    "plugins": ["import"],
+    "rules": {
+        "default-case": "off",
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+                "newlines-between": "never",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
 }
