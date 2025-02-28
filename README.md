@@ -10,21 +10,25 @@
 
 ## 🛠 Стек технологій
 
-- [React](https://reactjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- State management
+- Основа
+  - [Typescript](https://www.typescriptlang.org/)
+  - [React](https://reactjs.org/)
+  - [Vite](https://vitejs.dev/)
+- Менеджмент локального стану (Local state management)
+  - useContext + useState/useRef/useReducer
   - [Redux](https://redux.js.org/)
   - [Rematch](https://rematchjs.org/)
   - [Zustand](https://github.com/pmndrs/zustand)
   - [Jotai](https://jotai.org)
-- Data fetching
+- Дані з бекенду (Data fetching)
+  - useEffect + fetch API
   - [React Query](https://tanstack.com/query/v4)
   - [SWR](https://swr.vercel.app/)
-- Unit tests
+- Тестування, юніт тести (Unit tests)
   - [Vitest](https://vitest.dev/)
   - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [Storybook](https://storybook.js.org/)
+- Бібліотека компонентів
+  - [Storybook](https://storybook.js.org/)
 
 ## 💻 Що треба встановити до початку роботи
 
