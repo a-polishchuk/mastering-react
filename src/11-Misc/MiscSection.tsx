@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 import { ErrorBoundaryExample } from './ErrorBoundary/ErrorBoundaryExample';
+import { StrictModeExample } from './StrictModeExample';
 import { SuspenseExample } from './Suspense/SuspenseExample';
 
 export function MiscSection() {
@@ -11,6 +12,12 @@ export function MiscSection() {
                 title="Error boundary"
                 path={RouterPath.ERROR_BOUNDARY}
                 element={<ErrorBoundaryExample />}
+            />
+            <Chapter
+                emoji="🔍"
+                title="StrictMode"
+                path={RouterPath.STRICT_MODE}
+                element={<StrictModeExample />}
             />
             <Chapter
                 emoji="⌛"
