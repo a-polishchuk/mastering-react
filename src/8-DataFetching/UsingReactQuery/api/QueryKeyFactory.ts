@@ -1,5 +1,3 @@
-import { QueryKey } from '@tanstack/react-query';
-
 export enum Queries {
     USERS = 'users',
     USER_DETAILS = 'user-details',
@@ -8,8 +6,8 @@ export enum Queries {
 }
 
 export const QueryKeyFactory = {
-    [Queries.USERS]: (): QueryKey => ['users', 'all'],
-    [Queries.USER_DETAILS]: (userId: number): QueryKey => ['users', userId],
-    [Queries.TODO_LIST]: (userId: number): QueryKey => ['todos', userId],
-    [Queries.LAST_UPDATED]: (): QueryKey => ['lastUpdated'],
+    [Queries.USERS]: () => ['users', 'all'],
+    [Queries.USER_DETAILS]: (userId: number) => ['users', userId],
+    [Queries.TODO_LIST]: (userId: number) => ['todos', userId],
+    [Queries.LAST_UPDATED]: () => ['lastUpdated'],
 };
