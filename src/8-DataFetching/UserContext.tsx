@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 export type UserContextType = {
     userId: number;
@@ -15,7 +15,7 @@ export function useUserId() {
     return contextValue;
 }
 
-export function UserContextProvider({ children }: { children: React.ReactNode }) {
-    const [userId, setUserId] = useState(3);
+export function UserContextProvider({ children }: { children: ReactNode }) {
+    const [userId, setUserId] = useState(1);
     return <UserContext.Provider value={{ userId, setUserId }}>{children}</UserContext.Provider>;
 }

@@ -30,3 +30,11 @@ export type Todo = {
     title: string;
     completed: boolean;
 };
+
+export type PostComment = {
+    id: number;
+    postId: number;
+    name: string;
+    email: string;
+    body: string;
+};

@@ -3,6 +3,7 @@ export enum Queries {
     USER_DETAILS = 'user-details',
     TODO_LIST = 'todo-list',
     LAST_UPDATED = 'last-updated',
+    COMMENTS = 'comments',
 }
 
 export const QueryKeyFactory = {
@@ -10,4 +11,5 @@ export const QueryKeyFactory = {
     [Queries.USER_DETAILS]: (userId: number) => ['users', userId],
     [Queries.TODO_LIST]: (userId: number) => ['todos', userId],
     [Queries.LAST_UPDATED]: () => ['lastUpdated'],
+    [Queries.COMMENTS]: () => ['comments'],
 };
