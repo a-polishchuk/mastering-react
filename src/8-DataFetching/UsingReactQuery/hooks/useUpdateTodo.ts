@@ -13,25 +13,30 @@ export function useUpdateTodo() {
             const response = await axiosInstance.put(`todos/${todo.id}`, todo);
             return response.data;
         },
-        onSuccess: (updatedTodo) => {
-            queryClient.setQueryData(
-                buildTodoListKey(updatedTodo.userId),
-                (oldData: Todo[] | undefined) => {
-                    if (!oldData) {
-                        return oldData;
-                    }
-                    return oldData.map((todo) => {
-                        if (todo.id === updatedTodo.id) {
-                            return updatedTodo;
-                        }
-                        return todo;
-                    });
-                },
+        onMutate: async (newTodo) => {
+            const previousTodos = queryClient.getQueryData<Todo[]>(
+                buildTodoListKey(newTodo.userId),
             );
-
-            // queryClient.invalidateQueries({
-            //     queryKey: QueryKeyFactory[Queries.TODO_LIST](updatedTodo.userId),
-            // });
+            if (previousTodos) {
+                queryClient.setQueryData(
+                    buildTodoListKey(newTodo.userId),
+                    previousTodos.map((todo) => (todo.id === newTodo.id ? newTodo : todo)),
+                );
+            }
+            return {
+                previousTodos,
+                userId: newTodo.userId,
+            };
         },
+        onError: (err, newTodo, context) => {
+            if (context?.previousTodos && context.userId) {
+                queryClient.setQueryData(buildTodoListKey(context.userId), context.previousTodos);
+            }
+        },
+        // onSettled: (data, error, variables) => {
+        //     queryClient.invalidateQueries({
+        //         queryKey: buildTodoListKey(variables.userId),
+        //     });
+        // },
     });
 }
