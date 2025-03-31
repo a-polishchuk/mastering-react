@@ -1,1 +1,0 @@
-import{j as t,P as o}from"./index-Bc-h3PQA.js";function n(){return t.jsx(o,{title:"Heavy Component",data:{heavyComputationResult:42,computationDuration:`${new Date().getSeconds()} seconds`}})}export{n as HeavyComponent};
