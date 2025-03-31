@@ -1,0 +1,17 @@
+.linksSection {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.linksSection a {
+    text-decoration: none;
+    color: #000;
+}
+
+.linksSection a:hover {
+    text-shadow: var(--passive-text-shadow);
+}

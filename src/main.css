@@ -16,6 +16,11 @@ body {
     font-family: Arial;
 }
 
+h1 {
+    margin: 0;
+    text-shadow: var(--passive-text-shadow);
+}
+
 h2 {
     margin: 0;
     text-shadow: var(--passive-text-shadow);

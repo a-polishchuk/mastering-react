@@ -1,3 +1,4 @@
+import { About } from 'about/About';
 import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
@@ -49,6 +50,7 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                         <Routes>
                             <Route path={RouterPath.ROOT} element={<Background />} />
                             <Route path={RouterPath.PAGE_NOT_FOUND} element={<NotFound />} />
+                            <Route path="about" element={<About />} />
                             {contextValue.routes.map((props) => (
                                 <Route key={props.path} {...props} />
                             ))}
