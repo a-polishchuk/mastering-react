@@ -1,5 +1,5 @@
 import { RouterPath } from 'config/RouterPath';
-import { ReactNode, useLayoutEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Chapter.module.css';
 import { useMasterDetailContext } from './MasterDetailContext';
@@ -12,7 +12,14 @@ export type ChapterProps = {
 };
 
 export function Chapter({ emoji, title, path, element }: ChapterProps) {
-    useRegisterRoute(path, element);
+    const { addRoute } = useMasterDetailContext();
+
+    useEffect(() => {
+        addRoute({
+            path,
+            element,
+        });
+    }, [addRoute, element, path]);
 
     return (
         <NavLink
@@ -25,15 +32,4 @@ export function Chapter({ emoji, title, path, element }: ChapterProps) {
             </div>
         </NavLink>
     );
-}
-
-function useRegisterRoute(path: string, element: ReactNode) {
-    const { addRoute } = useMasterDetailContext();
-
-    useLayoutEffect(() => {
-        addRoute({
-            path,
-            element,
-        });
-    }, [addRoute, element, path]);
 }

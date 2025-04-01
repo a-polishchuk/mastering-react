@@ -3,17 +3,15 @@ import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, ReactNode, Suspense } from 'react';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
+import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router-dom';
 import { Background } from './Background';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext } from './MasterDetailContext';
 import { NotFound } from './NotFound';
-import { useContextValue } from './useContextValue';
 
 const COLLAPSED_WIDTH = '44px';
-
 const buildMasterStyle = (expanded: boolean): CSSProperties => ({
     minWidth: expanded ? '250px' : COLLAPSED_WIDTH,
     maxWidth: expanded ? '350px' : COLLAPSED_WIDTH,
@@ -21,8 +19,17 @@ const buildMasterStyle = (expanded: boolean): CSSProperties => ({
 });
 
 export function MasterDetail({ children }: { children: ReactNode }) {
-    const contextValue = useContextValue();
+    const [routes, setRoutes] = useState<PathRouteProps[]>([]);
     const [expanded, toggleExpanded] = useToggle(true);
+
+    const addRoute = useCallback((route: PathRouteProps) => {
+        setRoutes((array) => {
+            if (array.some((item) => item.path === route.path)) {
+                return array;
+            }
+            return [...array, route];
+        });
+    }, []);
 
     return (
         <BrowserRouter basename="/mastering-react">
@@ -38,7 +45,7 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                     </div>
                     {expanded && (
                         <div className={classes.tableOfContents}>
-                            <MasterDetailContext.Provider value={contextValue}>
+                            <MasterDetailContext.Provider value={{ addRoute }}>
                                 {children}
                             </MasterDetailContext.Provider>
                         </div>
@@ -49,9 +56,9 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                     <Suspense fallback={<LoadingSpinner />}>
                         <Routes>
                             <Route path={RouterPath.ROOT} element={<Background />} />
+                            <Route path={RouterPath.ABOUT} element={<About />} />
                             <Route path={RouterPath.PAGE_NOT_FOUND} element={<NotFound />} />
-                            <Route path="about" element={<About />} />
-                            {contextValue.routes.map((props) => (
+                            {routes.map((props) => (
                                 <Route key={props.path} {...props} />
                             ))}
                         </Routes>

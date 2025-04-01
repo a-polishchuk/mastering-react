@@ -7,11 +7,15 @@
     padding-top: 10px;
 }
 
-.linksSection a {
+.link {
     text-decoration: none;
     color: #000;
 }
 
-.linksSection a:hover {
+.link:hover {
     text-shadow: var(--passive-text-shadow);
+}
+
+.activeLink {
+    text-shadow: var(--active-text-shadow);
 }

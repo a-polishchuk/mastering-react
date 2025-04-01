@@ -2,12 +2,10 @@ import { createContext, useContext } from 'react';
 import { PathRouteProps } from 'react-router-dom';
 
 export type MasterDetailState = {
-    routes: PathRouteProps[];
     addRoute: (route: PathRouteProps) => void;
 };
 
-const defaultValue: any = null;
-export const MasterDetailContext = createContext<MasterDetailState>(defaultValue);
+export const MasterDetailContext = createContext<MasterDetailState | null>(null);
 
 export function useMasterDetailContext() {
     const contextValue = useContext(MasterDetailContext);
