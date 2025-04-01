@@ -1,6 +1,6 @@
 import { About } from 'about/About';
 import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
-import { RouterPath } from 'config/RouterPath';
+import { BASE_PATH, RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
 import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
@@ -32,7 +32,7 @@ export function MasterDetail({ children }: { children: ReactNode }) {
     }, []);
 
     return (
-        <BrowserRouter basename="/mastering-react">
+        <BrowserRouter basename={BASE_PATH}>
             <div className={classes.container}>
                 <nav className={classes.master} style={buildMasterStyle(expanded)}>
                     <div className={classes.masterTitle}>

@@ -11,9 +11,9 @@ import { StateManagementSection } from '7-StateManagement/StateManagementSection
 import { DataFecthingSection } from '8-DataFetching/DataFetchingSection';
 import { MoreCustomHooksSection } from '9-MoreCustomHooks/MoreCustomHooksSection';
 import { MasterDetail } from 'components';
+import { StyledLink } from 'components/StyledLink/StyledLink';
 import { RouterPath } from 'config/RouterPath';
-import { NavLink } from 'react-router-dom';
-import { cn } from 'utils/cn';
+import { RoutingSection } from 'Routing/RoutingSection';
 import classes from './App.module.css';
 
 export function App() {
@@ -28,17 +28,13 @@ export function App() {
             <ContextAndReducerSection />
             <StateManagementSection />
             <DataFecthingSection />
+            <RoutingSection />
             <MoreCustomHooksSection />
             <React19Section />
             <MiscSection />
 
             <div className={classes.linksSection}>
-                <NavLink
-                    to={RouterPath.ABOUT}
-                    className={({ isActive }) => cn(classes.link, isActive && classes.activeLink)}
-                >
-                    📚 Про цей курс
-                </NavLink>
+                <StyledLink to={RouterPath.ABOUT}>📚 Про цей курс</StyledLink>
             </div>
         </MasterDetail>
     );

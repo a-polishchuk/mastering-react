@@ -1,3 +1,5 @@
+export const BASE_PATH = '/mastering-react';
+
 export enum RouterPath {
     ROOT = '/',
     PAGE_NOT_FOUND = '*',
@@ -80,6 +82,9 @@ export enum RouterPath {
     DATA_FETCHING_USE_EFFECT = 'data-fetching/with-use-effect',
     REACT_QUERY = 'data-fetching/react-query',
     SWR = 'data-fetching/swr',
+
+    // routing
+    LINK_VS_ANCHOR = 'routing/navlink-vs-anchor',
 
     // more custom hooks
     USE_WHAT_CAUSED_RENDER = 'hooks/use-what-caused-render',
