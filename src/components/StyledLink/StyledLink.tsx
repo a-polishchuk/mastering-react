@@ -3,7 +3,7 @@ import { NavLink, NavLinkProps } from 'react-router-dom';
 import { cn } from 'utils/cn';
 import classes from './StyledLink.module.css';
 
-export type LinkProps = Pick<NavLinkProps, 'to'> & {
+export type LinkProps = NavLinkProps & {
     children: ReactNode;
 };
 
