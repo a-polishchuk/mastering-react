@@ -86,6 +86,7 @@ export enum RouterPath {
     // routing
     LINK_VS_ANCHOR = 'routing/navlink-vs-anchor',
     USE_NAVIGATE = 'routing/use-navigate',
+    USE_LOCATION = 'routing/use-location',
 
     // more custom hooks
     USE_WHAT_CAUSED_RENDER = 'hooks/use-what-caused-render',

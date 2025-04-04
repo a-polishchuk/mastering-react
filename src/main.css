@@ -93,3 +93,9 @@ input:hover {
 .flex3 {
     flex: 3;
 }
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 import { LinkVsAnchor } from './LinkVsAnchor';
+import { UseLocation } from './UseLocation';
 import { UseNavigate } from './UseNavigate';
 
 export function RoutingSection() {
@@ -17,6 +18,12 @@ export function RoutingSection() {
                 title="useNavigate"
                 path={RouterPath.USE_NAVIGATE}
                 element={<UseNavigate />}
+            />
+            <Chapter
+                emoji="📍"
+                title="useLocation"
+                path={RouterPath.USE_LOCATION}
+                element={<UseLocation />}
             />
         </Section>
     );
