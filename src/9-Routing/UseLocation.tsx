@@ -1,7 +1,7 @@
 import { ChapterWrapper, PropsTable, Toolbar } from 'components';
 import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { ChangeEvent } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const DEFAULT_VALUE = '0';
 
@@ -9,7 +9,7 @@ export function UseLocation() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const { pathname, search } = location;
+    const { pathname, search, hash } = location;
     const searchParams = new URLSearchParams(search);
     const a = searchParams.get('a') || DEFAULT_VALUE;
     const b = searchParams.get('b') || DEFAULT_VALUE;
@@ -18,7 +18,7 @@ export function UseLocation() {
         const newSearchParams = new URLSearchParams(search);
         newSearchParams.set(param, value.trim() || DEFAULT_VALUE);
 
-        const newUrl = `${pathname}?${newSearchParams.toString()}`;
+        const newUrl = `${pathname}?${newSearchParams.toString()}${hash}`;
 
         navigate(newUrl, { replace: true });
     };
@@ -35,7 +35,8 @@ export function UseLocation() {
         <ChapterWrapper title="useLocation" subtitle="React Router">
             <div className="flexColumn">
                 <PropsTable title="Location" data={location} />
-                <div>
+
+                <section id="inputs">
                     <h2>Operands are synced with URL params</h2>
                     <Toolbar>
                         <input
@@ -54,8 +55,15 @@ export function UseLocation() {
                         <span>🟰</span>
                         <span>{(Number(a) + Number(b)).toString()}</span>
                     </Toolbar>
-                </div>
+                </section>
+
+                <section id="hashes" className="flexRow">
+                    <NavLink to="#inputs">Inputs Section</NavLink>
+                    <NavLink to="#hashes">Hashes Section</NavLink>
+                    <NavLink to="#">Clear Hash</NavLink>
+                </section>
             </div>
+
             <RelatedDocs
                 docs={[
                     {
