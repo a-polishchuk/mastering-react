@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
 import { LinkVsAnchor } from './LinkVsAnchor';
+import { NestedRoutes } from './NestedRoutes';
 import { UseLocation } from './UseLocation';
 import { UseNavigate } from './UseNavigate';
 
@@ -24,6 +25,12 @@ export function RoutingSection() {
                 title="useLocation"
                 path={RouterPath.USE_LOCATION}
                 element={<UseLocation />}
+            />
+            <Chapter
+                emoji="🛣️"
+                title="Nested Routes"
+                path={RouterPath.NESTED_ROUTES}
+                element={<NestedRoutes />}
             />
         </Section>
     );

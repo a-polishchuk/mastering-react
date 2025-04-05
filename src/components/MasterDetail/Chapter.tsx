@@ -13,6 +13,7 @@ export type ChapterProps = {
 
 export function Chapter({ emoji, title, path, element }: ChapterProps) {
     const { addRoute } = useMasterDetailContext();
+    const to = path.endsWith('/*') ? path.slice(0, -2) : path;
 
     useEffect(() => {
         addRoute({
@@ -23,8 +24,10 @@ export function Chapter({ emoji, title, path, element }: ChapterProps) {
 
     return (
         <NavLink
-            to={path}
-            className={({ isActive }) => (isActive ? classes.navLinkActive : classes.navLink)}
+            to={to}
+            className={({ isActive }) => {
+                return isActive ? classes.navLinkActive : classes.navLink;
+            }}
         >
             <div className={classes.chapter}>
                 <div className={classes.emoji}>{emoji}</div>

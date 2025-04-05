@@ -8,7 +8,7 @@ import { TodoList } from './TodoList';
 import { TopPanel } from './TopPanel/TopPanel';
 import { Users } from './Users';
 
-const TABS: string[] = ['✅ Todos List', '👥 Users', '👤 User Profile', '💬 Comments'];
+const TABS = ['✅ Todos List', '👥 Users', '👤 User Profile', '💬 Comments'];
 
 const queryClient = new QueryClient({
     defaultOptions: {
