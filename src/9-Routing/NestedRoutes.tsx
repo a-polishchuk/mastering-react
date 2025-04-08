@@ -1,10 +1,24 @@
 import { ChapterWrapper, ColoredBlock, TabsHeader } from 'components';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { RouterPath } from 'config/RouterPath';
+import { Outlet, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
+const TABS_PATH = 'tabs';
 const TABS = [
-    { key: 'todos', label: '✅ Todos List' },
-    { key: 'users', label: '👥 Users' },
-    { key: 'comments', label: '💬 Comments' },
+    {
+        path: 'todos',
+        label: '✅ Todos List',
+        element: <span>Todos Tab</span>,
+    },
+    {
+        path: 'users',
+        label: '👥 Users',
+        element: <span>Users Tab</span>,
+    },
+    {
+        path: 'comments',
+        label: '💬 Comments',
+        element: <span>Comments Tab</span>,
+    },
 ];
 
 export function NestedRoutes() {
@@ -22,12 +36,24 @@ export function NestedRoutes() {
                 <Routes>
                     <Route index element={<span>Select a tab</span>} />
                     <Route path="*" element={<span>Nested route not found</span>} />
-                    <Route path="todos" element={<span>Todos Tab</span>} />
-                    <Route path="users" element={<span>Users Tab</span>} />
-                    <Route path="comments" element={<span>Comments Tab</span>} />
+                    <Route path={TABS_PATH}>
+                        <Route element={<Layout />}>
+                            {TABS.map(({ path, element }) => (
+                                <Route key={path} path={path} element={element} />
+                            ))}
+                        </Route>
+                    </Route>
                 </Routes>
             </ColoredBlock>
         </ChapterWrapper>
+    );
+}
+
+function Layout() {
+    return (
+        <ColoredBlock>
+            <Outlet />
+        </ColoredBlock>
     );
 }
 
@@ -35,16 +61,12 @@ function useTabIndex() {
     const { pathname } = useLocation();
     const navigate = useNavigate();
 
-    const selectedIndex = TABS.findIndex((tab) => pathname.includes(tab.key));
+    const selectedIndex = TABS.findIndex((tab) => pathname.includes(tab.path));
 
     const setSelectedIndex = (index: number) => {
-        const tabKey = TABS[index].key;
-        const pathSegments = pathname.split('/');
-        const lastSegment = pathSegments.at(-1);
-        const parentPath = TABS.find((tab) => tab.key === lastSegment)
-            ? pathSegments.slice(0, -1).join('/')
-            : pathname;
-        navigate(`${parentPath}/${tabKey}`);
+        const parentPath = RouterPath.NESTED_ROUTES.slice(0, -2);
+        const tabKey = TABS[index].path;
+        navigate(`/${parentPath}/${TABS_PATH}/${tabKey}`);
     };
 
     return [selectedIndex, setSelectedIndex] as const;

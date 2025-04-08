@@ -6,8 +6,8 @@ import { useMasterDetailContext } from './MasterDetailContext';
 
 export type ChapterProps = {
     title: string;
-    element: ReactNode;
     path: RouterPath;
+    element?: ReactNode;
     emoji?: string;
 };
 
@@ -16,10 +16,12 @@ export function Chapter({ emoji, title, path, element }: ChapterProps) {
     const to = path.endsWith('/*') ? path.slice(0, -2) : path;
 
     useEffect(() => {
-        addRoute({
-            path,
-            element,
-        });
+        if (element) {
+            addRoute({
+                path,
+                element,
+            });
+        }
     }, [addRoute, element, path]);
 
     return (

@@ -17,9 +17,7 @@ export function UseLocation() {
     const updateSearchParams = (param: string, value: string) => {
         const newSearchParams = new URLSearchParams(search);
         newSearchParams.set(param, value.trim() || DEFAULT_VALUE);
-
-        const newUrl = `${pathname}?${newSearchParams.toString()}${hash}`;
-
+        const newUrl = `${pathname}?${newSearchParams}${hash}`;
         navigate(newUrl, { replace: true });
     };
 

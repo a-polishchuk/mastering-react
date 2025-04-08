@@ -1,0 +1,12 @@
+.root {
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 250px;
+}

@@ -32,6 +32,7 @@ export function RoutingSection() {
                 path={RouterPath.NESTED_ROUTES}
                 element={<NestedRoutes />}
             />
+            <Chapter emoji="🛤️" title="Dynamic Routes" path={RouterPath.DYNAMIC_ROUTES} />
         </Section>
     );
 }

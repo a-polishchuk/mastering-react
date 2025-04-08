@@ -89,6 +89,7 @@ export enum RouterPath {
     USE_NAVIGATE = 'routing/use-navigate',
     USE_LOCATION = 'routing/use-location',
     NESTED_ROUTES = 'routing/nested-routes/*',
+    DYNAMIC_ROUTES = 'routing/dynamic-routes',
 
     // more custom hooks
     USE_WHAT_CAUSED_RENDER = 'hooks/use-what-caused-render',

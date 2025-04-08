@@ -1,3 +1,6 @@
+import { Breed } from '9-Routing/DynamicRoutes/Breed';
+import { BreedsList } from '9-Routing/DynamicRoutes/BreedsList';
+import { DynamicRoutes } from '9-Routing/DynamicRoutes/DynamicRoutes';
 import { About } from 'about/About';
 import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { BASE_PATH, RouterPath } from 'config/RouterPath';
@@ -58,6 +61,14 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                             <Route path={RouterPath.ROOT} element={<Background />} />
                             <Route path={RouterPath.ABOUT} element={<About />} />
                             <Route path={RouterPath.PAGE_NOT_FOUND} element={<NotFound />} />
+
+                            <Route path={RouterPath.DYNAMIC_ROUTES} element={<DynamicRoutes />}>
+                                {/* <Route path="*" element={<NotFound />} /> */}
+                                <Route path="breeds" element={<BreedsList />}>
+                                    <Route path=":breedId" element={<Breed />} />
+                                </Route>
+                            </Route>
+
                             {routes.map((props) => (
                                 <Route key={props.path} {...props} />
                             ))}
