@@ -3,7 +3,7 @@ import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { StyledLink } from 'components/StyledLink/StyledLink';
 import { BASE_PATH, RouterPath } from 'config/RouterPath';
 
-export function LinkVsAnchor() {
+export function NavLinkVsAnchor() {
     return (
         <ChapterWrapper title="NavLink vs anchor" subtitle="Routing">
             <p>
@@ -16,7 +16,7 @@ export function LinkVsAnchor() {
                 docs={[
                     {
                         label: 'NavLink',
-                        href: 'https://api.reactrouter.com/v7/functions/react_router.NavLink.html',
+                        href: 'https://reactrouter.com/api/components/NavLink',
                     },
                 ]}
             />

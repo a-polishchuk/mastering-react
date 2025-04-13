@@ -85,7 +85,8 @@ export enum RouterPath {
     SWR = 'data-fetching/swr',
 
     // routing
-    LINK_VS_ANCHOR = 'routing/navlink-vs-anchor',
+    NAVLINK_VS_ANCHOR = 'routing/navlink-vs-anchor',
+    LINK_VS_NAVLINK = 'routing/link-vs-navlink',
     USE_NAVIGATE = 'routing/use-navigate',
     USE_LOCATION = 'routing/use-location',
     NESTED_ROUTES = 'routing/nested-routes/*',

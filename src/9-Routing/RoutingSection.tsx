@@ -1,6 +1,7 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-import { LinkVsAnchor } from './LinkVsAnchor';
+import { LinkVsNavLink } from './LinkVsNavLink';
+import { NavLinkVsAnchor } from './NavLinkVsAnchor';
 import { NestedRoutes } from './NestedRoutes';
 import { UseLocation } from './UseLocation';
 import { UseNavigate } from './UseNavigate';
@@ -11,8 +12,14 @@ export function RoutingSection() {
             <Chapter
                 emoji="⚓"
                 title="NavLink vs anchor"
-                path={RouterPath.LINK_VS_ANCHOR}
-                element={<LinkVsAnchor />}
+                path={RouterPath.NAVLINK_VS_ANCHOR}
+                element={<NavLinkVsAnchor />}
+            />
+            <Chapter
+                emoji="🔗"
+                title="Link vs NavLink"
+                path={RouterPath.LINK_VS_NAVLINK}
+                element={<LinkVsNavLink />}
             />
             <Chapter
                 emoji="🧭"
