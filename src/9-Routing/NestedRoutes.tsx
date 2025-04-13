@@ -65,8 +65,8 @@ function useTabIndex() {
 
     const setSelectedIndex = (index: number) => {
         const parentPath = RouterPath.NESTED_ROUTES.slice(0, -2);
-        const tabKey = TABS[index].path;
-        navigate(`/${parentPath}/${TABS_PATH}/${tabKey}`);
+        const tabPath = TABS[index].path;
+        navigate(`/${parentPath}/${TABS_PATH}/${tabPath}`);
     };
 
     return [selectedIndex, setSelectedIndex] as const;
