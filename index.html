@@ -3,12 +3,36 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Веб застосунок з усіма прикладами з курсу 'Опановуємо React'" />
+        <meta
+            name="description"
+            content="Веб застосунок з усіма прикладами з курсу 'Опановуємо React'"
+        />
         <link rel="icon" type="image/png" sizes="32x32" href="/mastering-react/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/mastering-react/favicon-16x16.png" />
         <link rel="manifest" href="/mastering-react/site.webmanifest" />
         <link rel="manifest" href="/manifest.json" />
         <title>Опановуємо React</title>
+        <script type="text/javascript">
+            // Single Page Apps for GitHub Pages
+            // MIT License
+            // https://github.com/rafgraph/spa-github-pages
+            (function (l) {
+                if (l.search[1] === '/') {
+                    var decoded = l.search
+                        .slice(1)
+                        .split('&')
+                        .map(function (s) {
+                            return s.replace(/~and~/g, '&');
+                        })
+                        .join('?');
+                    window.history.replaceState(
+                        null,
+                        null,
+                        l.pathname.slice(0, -1) + decoded + l.hash,
+                    );
+                }
+            })(window.location);
+        </script>
       <script type="module" crossorigin src="/mastering-react/assets/index-CzYwGx2r.js"></script>
       <link rel="stylesheet" crossorigin href="/mastering-react/assets/index-CjGPKsHX.css">
     </head>
