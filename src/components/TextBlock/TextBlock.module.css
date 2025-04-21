@@ -3,3 +3,23 @@
     padding: 10px;
     border: 1px solid #cccccc;
 }
+
+.default {
+    border-left: 4px solid #cccccc;
+}
+
+.info {
+    border-left: 4px solid #7da9ef;
+}
+
+.success {
+    border-left: 4px solid #5bbe34;
+}
+
+.warning {
+    border-left: 4px solid #efda73;
+}
+
+.error {
+    border-left: 4px solid #f67d7d;
+}

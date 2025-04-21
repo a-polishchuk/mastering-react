@@ -1,12 +1,17 @@
 import { TextBlock } from 'components/TextBlock/TextBlock';
 
+export type RelatedDocRef = {
+    label: string;
+    href: string;
+};
+
 export type RelatedDocsProps = {
-    docs: { label: string; href: string }[];
+    docs: RelatedDocRef[];
 };
 
 export function RelatedDocs({ docs }: RelatedDocsProps) {
     return (
-        <TextBlock style={{ marginTop: 16 }}>
+        <TextBlock type="info" style={{ marginTop: 16 }}>
             📚 Related docs:
             <ul>
                 {docs.map((doc) => (

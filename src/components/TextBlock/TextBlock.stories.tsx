@@ -1,38 +1,53 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { TextBlock } from './TextBlock';
 
+const TEXT = (
+    `
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur.
+    `
+);
+
 export default {
     component: TextBlock,
 } as Meta<typeof TextBlock>;
 
 type Story = StoryObj<typeof TextBlock>;
 
-export const WithText: Story = {
+export const Default: Story = {
     args: {
-        children: 'Text block with a simple text.',
+        children: TEXT,
+        type: 'default',
     },
 };
 
-export const WithList: Story = {
+export const Info: Story = {
     args: {
-        children: (
-            <>
-                Fruits list:
-                <ol>
-                    <li>🍎 - apple</li>
-                    <li>🍐 - pear</li>
-                    <li>🍊 - orange</li>
-                    <li>🍋 - lemon</li>
-                    <li>🍌 - banana</li>
-                    <li>🍉 - watermelon</li>
-                    <li>🍇 - grapes</li>
-                    <li>🍓 - strawberry</li>
-                    <li>🫐 - blueberry</li>
-                    <li>🍒 - cherry</li>
-                    <li>🍍 - pineapple</li>
-                    <li>🥝 - kiwi</li>
-                </ol>
-            </>
-        ),
+        children: TEXT,
+        type: 'info',
+    },
+};
+
+export const Success: Story = {
+    args: {
+        children: TEXT,
+        type: 'success',
+    },
+};
+
+export const Warning: Story = {
+    args: {
+        children: TEXT,
+        type: 'warning',
+    },
+};
+
+export const Error: Story = {
+    args: {
+        children: TEXT,
+        type: 'error',
     },
 };

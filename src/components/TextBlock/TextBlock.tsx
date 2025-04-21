@@ -4,13 +4,14 @@ import classes from './TextBlock.module.css';
 
 export type TextBlockProps = {
     children: ReactNode;
+    type?: 'default' | 'info' | 'success' | 'warning' | 'error';
     className?: string;
     style?: CSSProperties;
 };
 
-export function TextBlock({ children, className, style }: TextBlockProps) {
+export function TextBlock({ children, type = 'default', className, style }: TextBlockProps) {
     return (
-        <div className={cn(classes.textBlock, className)} style={style}>
+        <div className={cn(classes.textBlock, classes[type], className)} style={style}>
             {children}
         </div>
     );
