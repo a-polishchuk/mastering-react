@@ -1,5 +1,5 @@
 import { Children, CSSProperties, ReactNode, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { cn } from 'utils/cn';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './Section.module.css';

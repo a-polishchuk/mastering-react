@@ -1,6 +1,6 @@
 import { RouterPath } from 'config/RouterPath';
 import { ReactNode, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import classes from './Chapter.module.css';
 import { useMasterDetailContext } from './MasterDetailContext';
 

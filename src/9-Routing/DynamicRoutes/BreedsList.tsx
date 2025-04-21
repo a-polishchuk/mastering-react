@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { StyledLink } from 'components/StyledLink/StyledLink';
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import classes from './BreedsList.module.css';
 
 export function BreedsList() {

@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { PathRouteProps } from 'react-router-dom';
+import { PathRouteProps } from 'react-router';
 
 export type MasterDetailState = {
     addRoute: (route: PathRouteProps) => void;

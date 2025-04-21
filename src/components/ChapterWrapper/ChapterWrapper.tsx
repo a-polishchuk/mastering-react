@@ -1,6 +1,6 @@
 import { EmojiButton, FlexFiller } from 'components';
 import { ReactElement, ReactNode } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import classes from './ChapterWrapper.module.css';
 
 export type ChapterWrapperProps = {

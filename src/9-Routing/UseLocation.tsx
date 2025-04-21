@@ -1,7 +1,7 @@
 import { ChapterWrapper, PropsTable, Toolbar } from 'components';
 import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { ChangeEvent } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router';
 
 const DEFAULT_VALUE = '0';
 

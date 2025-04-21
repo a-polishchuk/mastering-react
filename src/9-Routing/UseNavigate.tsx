@@ -1,7 +1,7 @@
 import { Button, ChapterWrapper, Toolbar } from 'components';
 import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router';
 
 export function UseNavigate() {
     const navigate = useNavigate();

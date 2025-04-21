@@ -1,6 +1,6 @@
 import { ChapterWrapper, ColoredBlock, TabsHeader } from 'components';
 import { RouterPath } from 'config/RouterPath';
-import { Outlet, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, Route, Routes, useLocation, useNavigate } from 'react-router';
 
 const TABS_PATH = 'tabs';
 const TABS = [

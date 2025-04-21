@@ -7,7 +7,7 @@ import { BASE_PATH, RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
 import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
-import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router';
 import { Background } from './Background';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
@@ -63,7 +63,6 @@ export function MasterDetail({ children }: { children: ReactNode }) {
                             <Route path={RouterPath.PAGE_NOT_FOUND} element={<NotFound />} />
 
                             <Route path={RouterPath.DYNAMIC_ROUTES} element={<DynamicRoutes />}>
-                                {/* <Route path="*" element={<NotFound />} /> */}
                                 <Route path="breeds" element={<BreedsList />}>
                                     <Route path=":breedId" element={<Breed />} />
                                 </Route>

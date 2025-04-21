@@ -2,7 +2,7 @@ import { ChapterWrapper } from 'components';
 import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
 import { StyledLink } from 'components/StyledLink/StyledLink';
 import { RouterPath } from 'config/RouterPath';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router';
 
 export function LinkVsNavLink() {
     return (

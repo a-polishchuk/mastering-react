@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { StyledLink } from 'components/StyledLink/StyledLink';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 export function Breed() {
     const { breedId } = useParams();
