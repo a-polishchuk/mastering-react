@@ -4,13 +4,9 @@
         <meta charset="utf-8" />
         <title>Page Not Found</title>
         <script type="text/javascript">
-            // Single Page Apps for GitHub Pages
-            // MIT License
-            // https://github.com/rafgraph/spa-github-pages
-            var pathSegmentsToKeep = 1;
-            var l = window.location;
-            l.replace(
-                l.protocol +
+            const pathSegmentsToKeep = 1; // GitHub Pages repo name
+            const l = window.location;
+            const redirectUrl = l.protocol +
                     '//' +
                     l.hostname +
                     (l.port ? ':' + l.port : '') +
@@ -26,8 +22,9 @@
                         .join('/')
                         .replace(/&/g, '~and~') +
                     (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-                    l.hash,
-            );
+                    l.hash;
+            console.log('REDIRECT URL', redirectUrl);
+            l.replace(redirectUrl);
         </script>
     </head>
     <body></body>
