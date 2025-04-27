@@ -1,0 +1,12 @@
+---
+description: 
+globs: *.ts,*.tsx
+alwaysApply: false
+---
+- Use "function" keyword for pure functions.
+- Use arrow functions only for callbacks and inlined anonymous functions.
+- Prefer types over interfaces.
+- Avoid enums, use objects with const assertion instead.
+- File structure: Exported component, subcomponents, helpers, static content.
+- Always use curly braces for all code blocks, even if it's a one-liner.
+- Use single quotes for strings.

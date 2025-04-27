@@ -1,0 +1,14 @@
+---
+description: 
+globs: *.tsx
+alwaysApply: false
+---
+- Use functional components and TypeScript types.
+- Use declarative JSX.
+- Use function keyword for component function, NOT arrow functions.
+- Use CSS modules for styling, do not use Tailwind.
+- Exported component should be first in the file, secondary components and util functions should go next after it, always maintain the same order.
+- Place static content and types at the file end.
+- Refer to the latest React documentation for best practices.
+- Use components composition to reduce complexity.
+- Prefer named exports over default exports where it's possible.
