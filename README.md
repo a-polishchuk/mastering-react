@@ -11,24 +11,26 @@
 ## 🛠 Стек технологій
 
 - Основа
-  - [Typescript](https://www.typescriptlang.org/)
-  - [React](https://reactjs.org/)
-  - [Vite](https://vitejs.dev/)
+    - [Typescript](https://www.typescriptlang.org/)
+    - [React](https://reactjs.org/)
+    - [Vite](https://vitejs.dev/)
 - Менеджмент локального стану (Local state management)
-  - useContext + useState/useRef/useReducer
-  - [Redux](https://redux.js.org/)
-  - [Rematch](https://rematchjs.org/)
-  - [Zustand](https://github.com/pmndrs/zustand)
-  - [Jotai](https://jotai.org)
+    - useContext + useState/useRef/useReducer
+    - [Redux](https://redux.js.org/)
+    - [Rematch](https://rematchjs.org/)
+    - [Zustand](https://github.com/pmndrs/zustand)
+    - [Jotai](https://jotai.org)
 - Дані з бекенду (Data fetching)
-  - useEffect + fetch API
-  - [React Query](https://tanstack.com/query/v4)
-  - [SWR](https://swr.vercel.app/)
+    - useEffect + fetch API
+    - [React Query](https://tanstack.com/query/v4)
+    - [SWR](https://swr.vercel.app/)
+- Маршрутизація (Routing)
+    - React Router
 - Тестування, юніт тести (Unit tests)
-  - [Vitest](https://vitest.dev/)
-  - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+    - [Vitest](https://vitest.dev/)
+    - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Бібліотека компонентів
-  - [Storybook](https://storybook.js.org/)
+    - [Storybook](https://storybook.js.org/)
 
 ## 💻 Що треба встановити до початку роботи
 
@@ -37,6 +39,7 @@
 - [Node.js](https://nodejs.org/en/) - javascript runtime для виконання js скриптів поза браузером
 
 ## 🟢 Node.js
+
 Нам необхідно буде запускати деякі скрипти на локальній машині поза браузером.
 Для того щоб це зробити необхідно середовище виконання javascript - node.js.
 Я стараюсь періодично оновлювати версії node.js і бібліотек і наразі раджу запускати проект на версії 18 (обирайте саму свіжу 18ту збірку).
@@ -59,11 +62,11 @@ NVM дозволяє "менеджити" різні версії node.js на �
 Якщо розбираєтесь у пакетних менеджерах - ви можете використовувати будь-який з них, різниці не буде.
 Я буду використовувати дуже прості команди менеджеру, і вони досить схожі між yarn і npm.
 
-| Крок                    | npm             | yarn         |
-| ----------------------- | --------------- | ------------ |
-| Встановлюємо бібліотеки | npm install     | yarn         |
-| Запускаємо дев сервер   | npm run dev     | yarn dev     |
-| Production збірка       | npm run build   | yarn build   |
+| Крок                    | npm           | yarn       |
+| ----------------------- | ------------- | ---------- |
+| Встановлюємо бібліотеки | npm install   | yarn       |
+| Запускаємо дев сервер   | npm run dev   | yarn dev   |
+| Production збірка       | npm run build | yarn build |
 
 ❗️ Головне - виберіть один менеджер, і використовуйте тільки його.
 
@@ -87,7 +90,7 @@ NVM дозволяє "менеджити" різні версії node.js на �
 - [usehooks](https://usehooks.com/) - колекція "рецептів" користувацьких хуків
 - [react-use](https://github.com/streamich/react-use) - бібліотека хуків загального призначення, стане в нагоді майже у кожному проекті
 - 👤 Блоги
-  - [Kent C. Dodds](https://kentcdodds.com/blog/)
-  - [Robin Wieruch](https://www.robinwieruch.de/blog)
-  - [Josh W Comeau](https://www.joshwcomeau.com/)
-  - [TkDodo](https://tkdodo.eu/blog/)
+    - [Kent C. Dodds](https://kentcdodds.com/blog/)
+    - [Robin Wieruch](https://www.robinwieruch.de/blog)
+    - [Josh W Comeau](https://www.joshwcomeau.com/)
+    - [TkDodo](https://tkdodo.eu/blog/)
