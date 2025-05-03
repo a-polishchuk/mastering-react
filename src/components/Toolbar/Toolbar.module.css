@@ -5,5 +5,5 @@
     padding: 10px;
     margin-bottom: 16px;
     border: 2px dotted #cccccc;
-    overflow-x: scroll;
+    overflow-x: auto;
 }

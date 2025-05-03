@@ -12,7 +12,7 @@ export function ComponentsStructure() {
 
     return (
         <ChapterWrapper title="Components structure" subtitle="Key property">
-            <TextBlock>
+            <TextBlock type="info">
                 <div>
                     ℹ️ <code>key</code> property only makes sense in the scope of a single parent.
                 </div>

@@ -31,7 +31,7 @@ export function UseImperativeHandle() {
             <RelatedDocs
                 docs={[
                     {
-                        label: 'useImperativeHandle Hook Reference',
+                        label: 'useImperativeHandle',
                         href: 'https://react.dev/reference/react/useImperativeHandle',
                     },
                 ]}

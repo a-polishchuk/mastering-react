@@ -10,7 +10,7 @@ export function RemountComponent() {
 
     return (
         <ChapterWrapper title="Re-mount component" subtitle="Key property" rerender={useRerender()}>
-            <TextBlock>
+            <TextBlock type="info">
                 <div>ℹ️ You can force a component to unmount and mount again (aka re-mount).</div>
                 <div>
                     ℹ️ Simply change the <code>key</code> value, and React will create a new

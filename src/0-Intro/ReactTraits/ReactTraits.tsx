@@ -13,7 +13,7 @@ export function ReactTraits() {
             title="React traits"
             subtitle="How React is different from other libraries?"
         >
-            <TextBlock>
+            <TextBlock type="info">
                 <ul style={{ listStyleType: 'none', margin: 0, padding: 0, fontSize: 24 }}>
                     <li>🗂 Declarative</li>
                     <li>🌳 Virtual DOM</li>
@@ -24,9 +24,7 @@ export function ReactTraits() {
                 </ul>
             </TextBlock>
 
-            <div style={{ marginTop: 20, marginBottom: 10 }}>
-                This is how a typical React app looks like:
-            </div>
+            <h4>This is how a typical React app looks like:</h4>
 
             <TypicalComponent name="App" isRoot>
                 <TypicalComponent name="Header">

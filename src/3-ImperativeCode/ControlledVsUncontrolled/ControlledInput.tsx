@@ -29,10 +29,9 @@ export function ControlledInput() {
 
     return (
         <ChapterWrapper title="Controlled input" subtitle="Controlled vs uncontrolled">
-            <TextBlock>
+            <TextBlock type="success">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span style={{ fontSize: 24 }}>ℹ️</span> State is managed by React (Virutal DOM
-                    side)
+                    ✅ State is managed by React (Virutal DOM side)
                 </div>
             </TextBlock>
 

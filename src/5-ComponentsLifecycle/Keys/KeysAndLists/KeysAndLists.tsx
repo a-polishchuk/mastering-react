@@ -12,9 +12,9 @@ export function KeysAndLists() {
 
     return (
         <ChapterWrapper title="Keys & lists" subtitle="Key property">
-            <TextBlock>
+            <TextBlock type="warning">
                 <div>
-                    ❗️ DO NOT use <code>index</code> property as React <code>key</code> if the order
+                    ⚠️ DO NOT use <code>index</code> property as React <code>key</code> if the order
                     of items will be changed.
                 </div>
                 <div>

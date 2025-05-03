@@ -12,7 +12,7 @@ export function RandomRendering() {
             subtitle="Components lifecycle"
             rerender={useRerender()}
         >
-            <TextBlock>
+            <TextBlock type="info">
                 <div>
                     ℹ️ If you pass a child component to some custom container component, there is no
                     guarantee it'll be rendered.

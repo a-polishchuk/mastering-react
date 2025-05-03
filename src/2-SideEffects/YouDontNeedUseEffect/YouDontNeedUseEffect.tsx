@@ -1,7 +1,26 @@
-import { Button, ChapterWrapper, Toolbar } from 'components';
+import { Button, ChapterWrapper, TextBlock, Toolbar } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { CSSProperties } from 'react';
 import { useBallPosition } from './useBallPosition';
+
+export function YouDontNeedUseEffect() {
+    const [left, top] = useBallPosition(MIN_STEP, MAX_STEP);
+    const style = buildStyle(left, top);
+    const rerender = useRerender();
+
+    return (
+        <ChapterWrapper title="You don't need useEffect" subtitle="Side effects, useEffect">
+            <Toolbar>
+                <Button text="Click me to re-render the component" onClick={rerender} />
+            </Toolbar>
+            <TextBlock type="info">Use ⬅️ ⬆️ ➡️ ⬇️ to move the ball.</TextBlock>
+
+            <div style={{ position: 'relative' }}>
+                <div style={style}>⚽️</div>
+            </div>
+        </ChapterWrapper>
+    );
+}
 
 const MIN_STEP = 20;
 const MAX_STEP = 100;
@@ -15,23 +34,4 @@ function buildStyle(left: number, top: number): CSSProperties {
         left,
         top,
     };
-}
-
-export function YouDontNeedUseEffect() {
-    const [left, top] = useBallPosition(MIN_STEP, MAX_STEP);
-    const style = buildStyle(left, top);
-    const rerender = useRerender();
-
-    return (
-        <ChapterWrapper title="You don't need useEffect" subtitle="Side effects, useEffect">
-            <Toolbar>
-                <Button text="Click me to re-render the component" onClick={rerender} />
-            </Toolbar>
-            <Toolbar>Use ⬅️ ⬆️ ➡️ ⬇️ to move the ball.</Toolbar>
-
-            <div style={{ position: 'relative' }}>
-                <div style={style}>⚽️</div>
-            </div>
-        </ChapterWrapper>
-    );
 }

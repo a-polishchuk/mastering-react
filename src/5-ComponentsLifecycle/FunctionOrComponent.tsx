@@ -10,7 +10,7 @@ export function FunctionOrComponent() {
     return (
         <ChapterWrapper title="Function or component?" subtitle="Components lifecycle">
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <TextBlock>
+                <TextBlock type="info">
                     🔍 Open{' '}
                     <a
                         target="_blank"

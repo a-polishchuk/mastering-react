@@ -15,11 +15,11 @@ export function ListWithMemoization() {
             <RelatedDocs
                 docs={[
                     {
-                        label: 'useCallback Hook Reference',
+                        label: 'useCallback',
                         href: 'https://react.dev/reference/react/useCallback',
                     },
                     {
-                        label: 'useMemo Hook Reference',
+                        label: 'useMemo',
                         href: 'https://react.dev/reference/react/useMemo',
                     },
                     {

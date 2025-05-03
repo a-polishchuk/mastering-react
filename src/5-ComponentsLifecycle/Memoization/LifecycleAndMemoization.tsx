@@ -31,7 +31,7 @@ export function LifecycleAndMemoization() {
 
     return (
         <ChapterWrapper title="Memoization" subtitle="Components lifecycle" rerender={rerender}>
-            <TextBlock>
+            <TextBlock type="info">
                 <div>ℹ️ Each of these lines was rendered in a different way.</div>
                 <div>ℹ️ You can achieve similar results in so many different ways with React.</div>
             </TextBlock>

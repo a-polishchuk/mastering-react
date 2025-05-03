@@ -35,10 +35,8 @@ export function UncontrolledInput() {
 
     return (
         <ChapterWrapper title="Uncontrolled input" subtitle="Controlled vs uncontrolled">
-            <TextBlock>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span style={{ fontSize: 24 }}>ℹ️</span> State is managed by real DOM
-                </div>
+            <TextBlock type="warning" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                ⚠️ State is managed by real DOM
             </TextBlock>
 
             <Toolbar>
