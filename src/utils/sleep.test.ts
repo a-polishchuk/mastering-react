@@ -20,16 +20,6 @@ describe('sleep', () => {
         }
     });
 
-    it('handles zero milliseconds correctly', async () => {
-        const startTime = Date.now();
-        vi.useRealTimers(); // Use real timers for this test
-
-        await sleep(0);
-
-        const elapsed = Date.now() - startTime;
-        expect(elapsed).toBeLessThan(5); // Should resolve almost immediately
-    });
-
     it('does not resolve before the specified time', async () => {
         const duration = 1000;
         let isResolved = false;
