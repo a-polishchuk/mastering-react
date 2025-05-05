@@ -1,4 +1,4 @@
-import { ChapterWrapper, ColoredBlock, TextBlock } from 'components';
+import { ChapterWrapper, ColoredBlock, OutsideLink, TextBlock } from 'components';
 import { ReactNode } from 'react';
 import { EmojiNumberedList } from './EmojiNumberedList';
 
@@ -12,13 +12,9 @@ export function FunctionOrComponent() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <TextBlock type="info">
                     🔍 Open{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
-                    >
+                    <OutsideLink href="https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi?utm_source=item-share-cb">
                         React Dev Tools
-                    </a>{' '}
+                    </OutsideLink>{' '}
                     and you'll see the difference between these two messages.
                 </TextBlock>
 

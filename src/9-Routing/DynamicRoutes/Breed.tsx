@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { StyledLink } from 'components/StyledLink/StyledLink';
+import { StyledLink } from 'components';
 import { useParams } from 'react-router';
 
 export function Breed() {

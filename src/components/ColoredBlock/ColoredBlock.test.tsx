@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ChapterWrapper } from 'components/ChapterWrapper/ChapterWrapper';
+import { ChapterWrapper } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { BrowserRouter } from 'react-router';
 import { ColoredBlock } from './ColoredBlock';

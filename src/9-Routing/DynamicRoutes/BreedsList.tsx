@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { StyledLink } from 'components/StyledLink/StyledLink';
+import { StyledLink } from 'components';
 import { Outlet } from 'react-router';
 import classes from './BreedsList.module.css';
 

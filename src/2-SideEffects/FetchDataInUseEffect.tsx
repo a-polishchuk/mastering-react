@@ -1,5 +1,4 @@
-import { ChapterWrapper, LoadingSpinner, PropsTable, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, LoadingSpinner, PropsTable, RelatedDocs, Toolbar } from 'components';
 import { ChangeEventHandler, useEffect, useState } from 'react';
 
 type PostData = Record<string, any>;

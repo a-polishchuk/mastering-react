@@ -1,6 +1,5 @@
 import { useCounter } from '1-HooksBasics/CustomHooks/useCounter';
-import { ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, RelatedDocs } from 'components';
 import { useEffect } from 'react';
 import { logTagged } from 'utils/logTagged';
 import { Counter } from './Counter';

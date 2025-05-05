@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs, Toolbar, ValueLabel } from 'components';
 import { ChangeEventHandler, useState } from 'react';
 
 const FIBONACCI = [1, 1];

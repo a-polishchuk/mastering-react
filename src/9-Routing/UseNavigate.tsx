@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, Toolbar, RelatedDocs } from 'components';
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 

@@ -1,5 +1,4 @@
-import { ChapterWrapper, PropsTable, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, PropsTable, Toolbar, RelatedDocs } from 'components';
 import { ChangeEvent } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router';
 

@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs } from 'components';
 import { HTMLInputTypeAttribute } from 'react';
 import { useFormStatus } from 'react-dom';
 import { cn } from 'utils/cn';

@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper, TextBlock, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs, TextBlock, Toolbar } from 'components';
 import { capitalize } from 'lodash';
 import { ChangeEventHandler, useRef, useState } from 'react';
 

@@ -11,8 +11,7 @@ import { ContextAndReducerSection } from '6-ContextAndReducer/ContextAndReducerS
 import { StateManagementSection } from '7-StateManagement/StateManagementSection';
 import { DataFecthingSection } from '8-DataFetching/DataFetchingSection';
 import { RoutingSection } from '9-Routing/RoutingSection';
-import { MasterDetail } from 'components';
-import { StyledLink } from 'components/StyledLink/StyledLink';
+import { MasterDetail, OutsideLink, StyledLink } from 'components';
 import { RouterPath } from 'config/RouterPath';
 import classes from './App.module.css';
 
@@ -35,13 +34,9 @@ export function App() {
 
             <div className={classes.linksSection}>
                 <StyledLink to={RouterPath.ABOUT}>📚 Про цей курс</StyledLink>
-                <a
-                    href="https://a-polishchuk.github.io/mastering-react/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    [⚛️ Production версія]
-                </a>
+                <OutsideLink href="https://a-polishchuk.github.io/mastering-react/">
+                    ⚛️ Production версія
+                </OutsideLink>
             </div>
         </MasterDetail>
     );

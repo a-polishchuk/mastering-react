@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper, Toolbar, ValueLabel } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs, Toolbar, ValueLabel } from 'components';
 import { useState } from 'react';
 
 const DELAY = 2000;

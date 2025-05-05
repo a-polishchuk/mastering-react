@@ -1,4 +1,4 @@
-import { TextBlock } from 'components/TextBlock/TextBlock';
+import { OutsideLink, TextBlock } from 'components';
 
 export type RelatedDocRef = {
     label: string;
@@ -16,9 +16,7 @@ export function RelatedDocs({ docs }: RelatedDocsProps) {
             <ul>
                 {docs.map((doc) => (
                     <li key={doc.href}>
-                        <a target="_blank" rel="noreferrer" href={doc.href}>
-                            {doc.label}
-                        </a>
+                        <OutsideLink href={doc.href}>{doc.label}</OutsideLink>
                     </li>
                 ))}
             </ul>

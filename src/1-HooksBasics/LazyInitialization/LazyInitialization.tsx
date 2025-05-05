@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs, Toolbar } from 'components';
 import { useState } from 'react';
 import { logTagged } from 'utils/logTagged';
 import { HeaderRow } from './HeaderRow';

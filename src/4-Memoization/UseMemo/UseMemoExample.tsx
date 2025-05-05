@@ -1,5 +1,4 @@
-import { ChapterWrapper, ColoredBlock } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, ColoredBlock, RelatedDocs } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { memo, MouseEventHandler, useMemo } from 'react';
 import { Leaf } from './Leaf';

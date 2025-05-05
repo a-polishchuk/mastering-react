@@ -1,5 +1,4 @@
-import { ChapterWrapper, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, RelatedDocs, Toolbar } from 'components';
 import { useHovered } from 'hooks/useHovered';
 
 type EmojiHoverProps = {

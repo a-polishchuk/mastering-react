@@ -1,5 +1,4 @@
-import { ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, RelatedDocs } from 'components';
 import { MouseEventHandler, useOptimistic, useState, useTransition } from 'react';
 import { cn } from 'utils/cn';
 import { Position } from 'utils/geometry';

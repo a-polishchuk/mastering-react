@@ -1,5 +1,4 @@
-import { ChapterWrapper, LoadingSpinner, PropsTable, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, LoadingSpinner, PropsTable, Toolbar, RelatedDocs } from 'components';
 import { ChangeEventHandler, useState } from 'react';
 import { useFetch } from './useFetch';
 

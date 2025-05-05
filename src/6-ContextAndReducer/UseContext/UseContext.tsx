@@ -1,5 +1,4 @@
-import { ChapterWrapper, Toolbar } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, Toolbar, RelatedDocs } from 'components';
 import { ThemeButton } from './Theme/ThemeButton';
 import { ThemeProvider } from './Theme/ThemeContext';
 import { ThemeToolbar } from './Theme/ThemeToolbar';

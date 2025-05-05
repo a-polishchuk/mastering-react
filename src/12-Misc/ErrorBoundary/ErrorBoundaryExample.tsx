@@ -1,5 +1,4 @@
-import { ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, RelatedDocs } from 'components';
 import { ErrorBoundary } from './ErrorBoundary';
 
 export function ErrorBoundaryExample() {

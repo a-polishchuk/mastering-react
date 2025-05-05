@@ -2,7 +2,7 @@ import { Breed } from '9-Routing/DynamicRoutes/Breed';
 import { BreedsList } from '9-Routing/DynamicRoutes/BreedsList';
 import { DynamicRoutes } from '9-Routing/DynamicRoutes/DynamicRoutes';
 import { About } from 'about/About';
-import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
+import { LoadingSpinner } from 'components';
 import { BASE_PATH, RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';

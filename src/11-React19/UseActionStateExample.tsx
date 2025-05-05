@@ -1,5 +1,4 @@
-import { Button, ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { Button, ChapterWrapper, RelatedDocs } from 'components';
 import { useActionState } from 'react';
 import classes from './UseActionStateExample.module.css';
 

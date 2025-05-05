@@ -1,5 +1,4 @@
-import { ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, RelatedDocs } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { StrictMode, useRef } from 'react';
 import { logTagged } from 'utils/logTagged';

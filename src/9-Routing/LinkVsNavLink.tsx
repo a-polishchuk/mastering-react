@@ -1,6 +1,4 @@
-import { ChapterWrapper } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
-import { StyledLink } from 'components/StyledLink/StyledLink';
+import { ChapterWrapper, RelatedDocs, StyledLink } from 'components';
 import { RouterPath } from 'config/RouterPath';
 import { Link, NavLink } from 'react-router';
 

@@ -1,5 +1,4 @@
-import { ColoredBlock } from 'components';
-import { RendersCounter } from 'components/RendersCounter/RendersCounter';
+import { ColoredBlock, RendersCounter } from 'components';
 import { memo } from 'react';
 import { Item } from './Item';
 

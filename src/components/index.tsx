@@ -15,3 +15,7 @@ export { TabsHeader } from './Tabs/TabsHeader';
 export { TextBlock } from './TextBlock/TextBlock';
 export { Toolbar } from './Toolbar/Toolbar';
 export { ValueLabel } from './ValueLabel/ValueLabel';
+export { OutsideLink } from './OutsideLink/OutsideLink';
+export { RelatedDocs } from './RelatedDocs/RelatedDocs';
+export { StyledLink } from './StyledLink/StyledLink';
+export { RendersCounter } from './RendersCounter/RendersCounter';

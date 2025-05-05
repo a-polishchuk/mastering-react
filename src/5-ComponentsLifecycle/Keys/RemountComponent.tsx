@@ -1,5 +1,4 @@
-import { ChapterWrapper, ColoredBlock, LoggedLifecycle, TextBlock } from 'components';
-import { RelatedDocs } from 'components/RelatedDocs/RelatedDocs';
+import { ChapterWrapper, ColoredBlock, LoggedLifecycle, RelatedDocs, TextBlock } from 'components';
 import { useRerender } from 'hooks/useRerender';
 import { useRef } from 'react';
 
