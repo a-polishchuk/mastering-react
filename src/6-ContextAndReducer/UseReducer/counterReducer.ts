@@ -2,8 +2,6 @@ import { Action } from './Action';
 
 export const INITIAL_COUNT = 0;
 
-export type CounterReducer = (count: number, action: Action) => number;
-
 export function counterReducer(count: number, action: Action): number {
     switch (action) {
         case Action.INCREMENT:
