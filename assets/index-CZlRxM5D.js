@@ -1,0 +1,1 @@
+import{j as e,C as t,q as s,o as r,O as i}from"./index-DVTBwKMH.js";import{Q as n}from"./queryClient-BWQ0n3Hn.js";const a=new n;function l(){return e.jsxs(t,{title:"Dynamic Routes",subtitle:"Nested routes, dynamic segments & useParams()",children:[e.jsx(s,{to:"breeds",children:"Breeds List"}),e.jsx(r,{client:a,children:e.jsx(i,{})})]})}export{l as default};
