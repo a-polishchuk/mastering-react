@@ -55,7 +55,13 @@ export function RenderingProcess() {
 
                 <div style={getSectionStyle(1)}>
                     <h3 className={classes.header}>Real DOM / Browser Realm</h3>
-                    <img alt="Real DOM" src={realDomPng} className={classes.realDomImage} />
+                    <img
+                        alt="Real DOM"
+                        src={realDomPng}
+                        className={classes.realDomImage}
+                        loading="lazy"
+                        decoding="async"
+                    />
                     <div className={classes.bottomLabel}>
                         The "real" Document Object Model tree. You can check it on any page by
                         opening the browser's Dev Tools panel.

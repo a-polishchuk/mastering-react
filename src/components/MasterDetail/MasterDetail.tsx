@@ -1,18 +1,19 @@
 import { Breed } from '9-Routing/DynamicRoutes/Breed';
 import { BreedsList } from '9-Routing/DynamicRoutes/BreedsList';
-import { DynamicRoutes } from '9-Routing/DynamicRoutes/DynamicRoutes';
 import { About } from 'about/About';
 import { LoadingSpinner } from 'components';
 import { BASE_PATH, RouterPath } from 'config/RouterPath';
 import { DEFAULT_TITLE } from 'hooks/useDocumentTitle';
 import { useToggle } from 'hooks/useToggle';
-import { CSSProperties, ReactNode, Suspense, useCallback, useState } from 'react';
+import { CSSProperties, lazy, ReactNode, Suspense, useCallback, useState } from 'react';
 import { BrowserRouter, NavLink, PathRouteProps, Route, Routes } from 'react-router';
-import { Background } from './Background';
 import { ExpandToggle } from './ExpandToggle';
 import classes from './MasterDetail.module.css';
 import { MasterDetailContext } from './MasterDetailContext';
 import { NotFound } from './NotFound';
+
+const DynamicRoutes = lazy(() => import('9-Routing/DynamicRoutes'));
+const Background = lazy(() => import('./Background'));
 
 const COLLAPSED_WIDTH = '44px';
 const buildMasterStyle = (expanded: boolean): CSSProperties => ({

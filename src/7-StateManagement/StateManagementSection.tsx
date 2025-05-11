@@ -1,8 +1,10 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
-import { UsingJotai } from './UsingJotai/UsingJotai';
-import { UsingRematch } from './UsingRematch/UsingRematch';
-import { UsingZustand } from './UsingZustand/UsingZustand';
+import { lazy } from 'react';
+
+const UsingRematch = lazy(() => import('./UsingRematch'));
+const UsingZustand = lazy(() => import('./UsingZustand'));
+const UsingJotai = lazy(() => import('./UsingJotai'));
 
 export function StateManagementSection() {
     return (

@@ -1,7 +1,7 @@
 import Particles, { IParticlesProps } from 'react-tsparticles';
 import classes from './Background.module.css';
 
-export function Background() {
+export default function Background() {
     return (
         <div className={classes.container}>
             <Particles id="tsparticles" options={PARTICLE_OPTIONS} />
