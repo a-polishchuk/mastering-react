@@ -1,4 +1,4 @@
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
 import { useState, useMemo } from 'react';
 
 export function useThrottledState<T>(initialValue: T, delay: number) {

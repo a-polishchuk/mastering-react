@@ -1,5 +1,5 @@
 import { Button, ChapterWrapper, RelatedDocs, TextBlock, Toolbar } from 'components';
-import { capitalize } from 'lodash';
+import capitalize from 'lodash/capitalize';
 import { ChangeEventHandler, useRef, useState } from 'react';
 
 export function UncontrolledInput() {

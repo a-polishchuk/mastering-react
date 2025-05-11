@@ -1,5 +1,5 @@
 import { CellState, GridState } from '7-StateManagement/types';
-import { cloneDeep } from 'lodash';
+import cloneDeep from 'lodash/cloneDeep';
 
 export function toggleCell(grid: GridState, payload: [number, number]): GridState {
     const [row, col] = payload;
