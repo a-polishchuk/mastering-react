@@ -31,7 +31,7 @@
 
 .tableOfContents {
     position: relative;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 10px;
     flex: 1;
 }
@@ -39,5 +39,5 @@
 .detail {
     flex: 1;
     position: relative;
-    overflow: scroll;
+    overflow: auto;
 }
