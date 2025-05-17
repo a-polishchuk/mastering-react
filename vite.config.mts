@@ -3,7 +3,7 @@ import { defineConfig } from 'vitest/config';
 import * as tsconfigPaths from 'vite-tsconfig-paths';
 import { visualizer } from 'rollup-plugin-visualizer';
 
-const VENDOR_LIBS = ['/react/', '/react-dom/', '/react-router/', '/axios/', '/lodash/'];
+const VENDOR_LIBS = ['/react/', '/react-dom/', '/react-router/', '/lodash/'];
 
 export default defineConfig({
     base: '/mastering-react/',

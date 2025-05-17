@@ -8,13 +8,13 @@ import { create } from 'zustand';
 
 const GRID_SIZE = 30;
 
-interface GridStore {
+type GridStore = {
     grid: GridState;
     toggleCell: (row: number, col: number) => void;
     nextGeneration: () => void;
     randomize: () => void;
     clear: () => void;
-}
+};
 
 export const useGridStore = create<GridStore>()((set) => ({
     grid: empty(GRID_SIZE, GRID_SIZE),

@@ -1,6 +1,6 @@
 import { PostComment } from '8-DataFetching/types';
 import { useInfiniteQuery } from '@tanstack/react-query';
-import { axiosInstance } from '../api/axiosInstance';
+import { fetchFunction } from '../api/fetchFunction';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 const LIMIT = 5;
@@ -27,10 +27,10 @@ async function fetchComments(page: number): Promise<CommentsPage> {
         _limit: LIMIT.toString(),
     });
 
-    const response = await axiosInstance.get(`comments?${params}`);
+    const data = await fetchFunction(`comments?${params}`);
 
     return {
-        data: response.data,
-        nextPage: response.data.length === LIMIT ? page + 1 : null,
+        data,
+        nextPage: data.length === LIMIT ? page + 1 : null,
     };
 }

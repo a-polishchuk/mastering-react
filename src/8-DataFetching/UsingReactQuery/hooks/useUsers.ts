@@ -1,6 +1,6 @@
 import { User } from '8-DataFetching/types';
 import { useQuery } from '@tanstack/react-query';
-import { axiosInstance } from '../api/axiosInstance';
+import { fetchFunction } from '../api/fetchFunction';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 export function useUsers() {
@@ -8,9 +8,6 @@ export function useUsers() {
 
     return useQuery<User[]>({
         queryKey: buildKey(),
-        queryFn: async () => {
-            const response = await axiosInstance.get(`users`);
-            return response.data;
-        },
+        queryFn: async () => fetchFunction('users'),
     });
 }

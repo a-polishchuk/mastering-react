@@ -1,7 +1,7 @@
 import { Todo } from '8-DataFetching/types';
 import { useUserId } from '8-DataFetching/UserContext';
 import { useQuery } from '@tanstack/react-query';
-import { axiosInstance } from '../api/axiosInstance';
+import { fetchFunction } from '../api/fetchFunction';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 export function useTodoList() {
@@ -12,9 +12,6 @@ export function useTodoList() {
         initialData: new Array<Todo>(),
         initialDataUpdatedAt: 0, // it's important to set this to 0 to trigger fetch
         queryKey: buildKey(userId),
-        queryFn: async () => {
-            const response = await axiosInstance.get(`todos?userId=${userId}`);
-            return response.data;
-        },
+        queryFn: () => fetchFunction(`todos?userId=${userId}`),
     });
 }

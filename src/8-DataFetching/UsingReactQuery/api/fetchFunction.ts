@@ -1,4 +1,4 @@
-export async function fetcher(path: string, options?: RequestInit) {
+export async function fetchFunction(path: string, options?: RequestInit) {
     // раніше тут була бібліотечка axios, але тепер краще використовувати fetch
     // він підтримується всіма браузерами, і не потрібно встановлювати додаткові бібліотеки
     // axios краще брати тільки якщо вам треба просунуті можливості на кшталт interceptors

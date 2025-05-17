@@ -1,7 +1,7 @@
 import { User } from '8-DataFetching/types';
 import { useUserId } from '8-DataFetching/UserContext';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
-import { axiosInstance } from '../api/axiosInstance';
+import { fetchFunction } from '../api/fetchFunction';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 export function useUser() {
@@ -10,10 +10,7 @@ export function useUser() {
 
     return useQuery<User>({
         queryKey: buildKey(userId),
-        queryFn: async () => {
-            const response = await axiosInstance.get(`users/${userId}`);
-            return response.data;
-        },
+        queryFn: () => fetchFunction(`users/${userId}`),
         placeholderData: keepPreviousData,
     });
 }

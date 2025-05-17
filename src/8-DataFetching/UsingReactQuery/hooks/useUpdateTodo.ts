@@ -1,6 +1,6 @@
 import { Todo } from '8-DataFetching/types';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { axiosInstance } from '../api/axiosInstance';
+import { fetchFunction } from '../api/fetchFunction';
 import { QueryKeyFactory, Queries } from '../api/QueryKeyFactory';
 
 export function useUpdateTodo() {
@@ -10,8 +10,10 @@ export function useUpdateTodo() {
     return useMutation({
         mutationKey: ['updateTodo'],
         mutationFn: async (todo: Todo): Promise<Todo> => {
-            const response = await axiosInstance.put(`todos/${todo.id}`, todo);
-            return response.data;
+            return fetchFunction(`todos/${todo.id}`, {
+                method: 'PUT',
+                body: JSON.stringify(todo),
+            });
         },
         onMutate: async (newTodo) => {
             const previousTodos = queryClient.getQueryData<Todo[]>(

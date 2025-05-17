@@ -1,6 +1,6 @@
 import { Position } from 'utils/geometry';
 
-export interface Creature {
+export type Creature = {
     id: string;
     position: Position;
-}
+};

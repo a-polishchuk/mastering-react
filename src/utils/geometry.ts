@@ -1,7 +1,7 @@
-export interface Position {
+export type Position = {
     x: number;
     y: number;
-}
+};
 
 export function getMiddle(a: Position, b: Position): Position {
     return {
