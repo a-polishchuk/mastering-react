@@ -11,7 +11,7 @@ export default defineConfig({
         react(),
         tsconfigPaths.default(),
         visualizer({
-            filename: 'stats.html',
+            filename: 'bundle-stats.html',
             open: false,
             gzipSize: true,
             brotliSize: true,
