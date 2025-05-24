@@ -70,6 +70,7 @@ export enum RouterPath {
     REDUCER_LAZY_INIT = 'context/reducer-lazy-init',
     TOGGLE_REDUCER = 'context/toggle-reducer',
     RERENDER_REDUCER = 'context/rerender-reducer',
+    COMPOUND_COMPONENT = 'context/compound-component',
     USE_CONTEXT = 'context/use-context',
     CONTACT_BOOK = 'context/contact-book',
     VEGAN_DRAGON = 'context/vegan-dragon',

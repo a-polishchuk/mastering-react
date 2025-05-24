@@ -1,5 +1,6 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
+import { CompoundComponent } from './CompoundComponent/CompoundComponent';
 import { ContactBook } from './ContactBook';
 import { LazyInit2 } from './LazyInit2/LazyInit2';
 import { UseContext } from './UseContext/UseContext';
@@ -37,6 +38,12 @@ export function ContextAndReducerSection() {
                     element={<UseRerenderReducer />}
                 />
             </Section>
+            <Chapter
+                emoji="🧱"
+                title="Compound Component"
+                path={RouterPath.COMPOUND_COMPONENT}
+                element={<CompoundComponent />}
+            />
             <Chapter
                 emoji="🎨"
                 title="useContext"
