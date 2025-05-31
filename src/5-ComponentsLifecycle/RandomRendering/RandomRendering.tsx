@@ -6,11 +6,13 @@ import { RandomContainer } from './RandomContainer';
 const EMOJIS = ['🏍', '✈️', '🚀', '🏎'];
 
 export function RandomRendering() {
+    const rerender = useRerender();
+
     return (
         <ChapterWrapper
             title="Random container"
             subtitle="Components lifecycle"
-            rerender={useRerender()}
+            rerender={rerender}
         >
             <TextBlock type="info">
                 <div>

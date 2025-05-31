@@ -4,12 +4,10 @@ import { ITEMS } from '../ItemData';
 import { EmojisGallery } from './EmojisGallery';
 
 export function ListWithMemoization() {
+    const rerender = useRerender();
+
     return (
-        <ChapterWrapper
-            title="useCallback"
-            subtitle="List with memoization"
-            rerender={useRerender()}
-        >
+        <ChapterWrapper title="useCallback" subtitle="List with memoization" rerender={rerender}>
             <EmojisGallery items={ITEMS} />
             <RelatedDocs
                 docs={[

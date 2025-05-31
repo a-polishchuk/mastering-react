@@ -3,12 +3,13 @@ import { useRerender } from 'hooks/useRerender';
 import { useRef } from 'react';
 
 export function RemountComponent() {
+    const rerender = useRerender();
     const keyRef = useRef<number>(0);
 
     keyRef.current = keyRef.current + 1;
 
     return (
-        <ChapterWrapper title="Re-mount component" subtitle="Key property" rerender={useRerender()}>
+        <ChapterWrapper title="Re-mount component" subtitle="Key property" rerender={rerender}>
             <TextBlock type="info">
                 <div>ℹ️ You can force a component to unmount and mount again (aka re-mount).</div>
                 <div>

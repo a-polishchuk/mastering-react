@@ -31,11 +31,13 @@ function Node({ level, maxLevel, path }: NodeProps) {
 }
 
 export function WhenReactRenderComponents() {
+    const rerender = useRerender();
+
     return (
         <ChapterWrapper
             title="useMemo"
             subtitle="When React render components?"
-            rerender={useRerender()}
+            rerender={rerender}
         >
             <Node level={0} maxLevel={2} path={['root']} />
         </ChapterWrapper>
