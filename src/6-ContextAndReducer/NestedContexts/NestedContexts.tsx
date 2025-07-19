@@ -1,13 +1,13 @@
 import { ChapterWrapper, RelatedDocs } from 'components';
 import { ColorNode } from './ColorNode';
 import { ColorProvider } from './ColorProvider';
-import classes from './CompoundComponent.module.css';
+import classes from './NestedContexts.module.css';
 
-export function CompoundComponent() {
+export function NestedContexts() {
     return (
         <ChapterWrapper
-            title="Compound Component"
-            subtitle="Implementing a 'compound component' pattern with React.Context"
+            title="Nested Contexts"
+            subtitle="Nesting several context providers for the same context"
             contentClassName={classes.content}
         >
             <div>

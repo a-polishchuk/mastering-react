@@ -1,20 +1,16 @@
 import { createContext, ReactNode, useContext, useReducer } from 'react';
 import { contactsReducer } from './contactsReducer';
 import { initialState } from './initialState';
-import { Action, ContactsContextType } from './types';
+import { ContactsContextType } from './types';
 
-const defaultValue: ContactsContextType = [
-    {
-        contacts: [],
-        selectedId: null,
-    },
-    (action: Action) => {},
-];
-
-const ContactsContext = createContext<ContactsContextType>(defaultValue);
+const ContactsContext = createContext<ContactsContextType | null>(null);
 
 export function useContacts() {
-    return useContext(ContactsContext);
+    const context = useContext(ContactsContext);
+    if (!context) {
+        throw new Error('useContacts must be used within a ContactsProvider');
+    }
+    return context;
 }
 
 export function ContactsProvider({ children }: { children: ReactNode }) {

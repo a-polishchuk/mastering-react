@@ -1,8 +1,9 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
-import { CompoundComponent } from './CompoundComponent/CompoundComponent';
 import { ContactBook } from './ContactBook';
+import { IntroToContext } from './IntroToContext/IntroToContext';
 import { LazyInit2 } from './LazyInit2/LazyInit2';
+import { NestedContexts } from './NestedContexts/NestedContexts';
 import { UseContext } from './UseContext/UseContext';
 import { UseCounterReducer } from './UseReducer/UseCounterReducer';
 import { UseRerenderReducer } from './UseRerender/UseRerenderReducer';
@@ -38,30 +39,40 @@ export function ContextAndReducerSection() {
                     element={<UseRerenderReducer />}
                 />
             </Section>
-            <Chapter
-                emoji="🧱"
-                title="Compound Component"
-                path={RouterPath.COMPOUND_COMPONENT}
-                element={<CompoundComponent />}
-            />
-            <Chapter
-                emoji="🎨"
-                title="useContext"
-                path={RouterPath.USE_CONTEXT}
-                element={<UseContext />}
-            />
-            <Chapter
-                emoji="📒"
-                title="Contact book"
-                path={RouterPath.CONTACT_BOOK}
-                element={<ContactBook />}
-            />
-            <Chapter
-                emoji="🐲"
-                title="Vegan Dragon"
-                path={RouterPath.VEGAN_DRAGON}
-                element={<VeganDragon />}
-            />
+            <Section title="Context">
+                <Chapter
+                    emoji="🔝"
+                    title="Intro to Context"
+                    path={RouterPath.INTRO_TO_CONTEXT}
+                    element={<IntroToContext />}
+                />
+                <Chapter
+                    emoji="🗃️"
+                    title="Nested Contexts"
+                    path={RouterPath.NESTED_CONTEXTS}
+                    element={<NestedContexts />}
+                />
+                <Chapter
+                    emoji="🎨"
+                    title="useContext"
+                    path={RouterPath.USE_CONTEXT}
+                    element={<UseContext />}
+                />
+            </Section>
+            <Section title="useContext && useReducer">
+                <Chapter
+                    emoji="📒"
+                    title="Contact book"
+                    path={RouterPath.CONTACT_BOOK}
+                    element={<ContactBook />}
+                />
+                <Chapter
+                    emoji="🐲"
+                    title="Vegan Dragon"
+                    path={RouterPath.VEGAN_DRAGON}
+                    element={<VeganDragon />}
+                />
+            </Section>
         </Section>
     );
 }
