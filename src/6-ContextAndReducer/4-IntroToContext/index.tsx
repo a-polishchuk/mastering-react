@@ -2,7 +2,7 @@ import { ChapterWrapper, RelatedDocs } from 'components';
 import { ReactNode } from 'react';
 import { FirstContextProvider, useFirstContext } from './FirstContext';
 
-export function IntroToContext() {
+export function IntroToContextChapter() {
     return (
         <ChapterWrapper title="Intro to Context" subtitle="Dependency injection with React.Context">
             <FirstContextProvider>

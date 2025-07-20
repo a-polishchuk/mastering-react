@@ -5,7 +5,7 @@ import { ThemeToolbar } from './Theme/ThemeToolbar';
 import { UserProvider } from './User/UserContext';
 import { UserProfile } from './User/UserProfile';
 
-export function UseContext() {
+export function MultipleContextsChapter() {
     return (
         <ChapterWrapper title="useContext" subtitle="Solving the props drilling problem">
             <ThemeProvider>

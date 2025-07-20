@@ -1,7 +1,7 @@
 import { ChapterWrapper, ColoredBlock } from 'components';
 import { useRerender } from './useRerender';
 
-export function UseRerenderReducer() {
+export function RerenderReducerChapter() {
     const rerender = useRerender();
 
     return (

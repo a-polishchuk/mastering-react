@@ -72,7 +72,7 @@ export enum RouterPath {
     RERENDER_REDUCER = 'context/rerender-reducer',
     INTRO_TO_CONTEXT = 'context/intro-to-context',
     NESTED_CONTEXTS = 'context/nested-contexts',
-    USE_CONTEXT = 'context/use-context',
+    MULTIPLE_CONTEXTS = 'context/multiple-contexts',
     CONTACT_BOOK = 'context/contact-book',
     VEGAN_DRAGON = 'context/vegan-dragon',
 

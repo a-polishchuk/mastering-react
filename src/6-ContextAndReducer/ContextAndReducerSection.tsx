@@ -1,14 +1,14 @@
 import { Chapter, Section } from 'components';
 import { RouterPath } from 'config/RouterPath';
-import { ContactBook } from './ContactBook';
-import { IntroToContext } from './IntroToContext/IntroToContext';
-import { LazyInit2 } from './LazyInit2/LazyInit2';
-import { NestedContexts } from './NestedContexts/NestedContexts';
-import { UseContext } from './UseContext/UseContext';
-import { UseCounterReducer } from './UseReducer/UseCounterReducer';
-import { UseRerenderReducer } from './UseRerender/UseRerenderReducer';
-import { UseToggleReducer } from './UseToggle/UseToggleReducer';
-import { VeganDragon } from './VeganDragon/VeganDragon';
+import { CounterReducerChapter } from './0-CounterReducer';
+import { LazyInit2Chapter } from './1-LazyInit2';
+import { ToggleReducerChapter } from './2-ToggleReducer';
+import { RerenderReducerChapter } from './3-RerenderReducer';
+import { IntroToContextChapter } from './4-IntroToContext';
+import { NestedContextsChapter } from './5-NestedContexts';
+import { MultipleContextsChapter } from './6-MultipleContexts';
+import { ContactBookChapter } from './7-ContactBook';
+import { VeganDragonChapter } from './8-VeganDragon';
 
 export function ContextAndReducerSection() {
     return (
@@ -18,25 +18,25 @@ export function ContextAndReducerSection() {
                     emoji="🧮"
                     title="Counter reducer"
                     path={RouterPath.COUNTER_REDUCER}
-                    element={<UseCounterReducer />}
+                    element={<CounterReducerChapter />}
                 />
                 <Chapter
                     emoji="🦥"
                     title="Lazy init 2"
                     path={RouterPath.REDUCER_LAZY_INIT}
-                    element={<LazyInit2 />}
+                    element={<LazyInit2Chapter />}
                 />
                 <Chapter
                     emoji="✅"
                     title="Toggle reducer"
                     path={RouterPath.TOGGLE_REDUCER}
-                    element={<UseToggleReducer />}
+                    element={<ToggleReducerChapter />}
                 />
                 <Chapter
                     emoji="🔄"
                     title="Rerender reducer"
                     path={RouterPath.RERENDER_REDUCER}
-                    element={<UseRerenderReducer />}
+                    element={<RerenderReducerChapter />}
                 />
             </Section>
             <Section title="Context">
@@ -44,19 +44,19 @@ export function ContextAndReducerSection() {
                     emoji="🔝"
                     title="Intro to Context"
                     path={RouterPath.INTRO_TO_CONTEXT}
-                    element={<IntroToContext />}
+                    element={<IntroToContextChapter />}
                 />
                 <Chapter
                     emoji="🗃️"
                     title="Nested Contexts"
                     path={RouterPath.NESTED_CONTEXTS}
-                    element={<NestedContexts />}
+                    element={<NestedContextsChapter />}
                 />
                 <Chapter
                     emoji="🎨"
-                    title="useContext"
-                    path={RouterPath.USE_CONTEXT}
-                    element={<UseContext />}
+                    title="Multiple Contexts"
+                    path={RouterPath.MULTIPLE_CONTEXTS}
+                    element={<MultipleContextsChapter />}
                 />
             </Section>
             <Section title="useContext && useReducer">
@@ -64,13 +64,13 @@ export function ContextAndReducerSection() {
                     emoji="📒"
                     title="Contact book"
                     path={RouterPath.CONTACT_BOOK}
-                    element={<ContactBook />}
+                    element={<ContactBookChapter />}
                 />
                 <Chapter
                     emoji="🐲"
                     title="Vegan Dragon"
                     path={RouterPath.VEGAN_DRAGON}
-                    element={<VeganDragon />}
+                    element={<VeganDragonChapter />}
                 />
             </Section>
         </Section>

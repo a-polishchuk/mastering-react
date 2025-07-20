@@ -2,7 +2,7 @@ import { ChapterWrapper, Toolbar } from 'components';
 import { useToggle } from 'hooks/useToggle';
 import { EmojiToggle } from './EmojiToggle';
 
-export function UseToggleReducer() {
+export function ToggleReducerChapter() {
     const [isHappy, toggleHappy] = useToggle(true);
     const [isOk, toggleOk] = useToggle(true);
     const [isDay, toggleDay] = useToggle(false);

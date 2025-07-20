@@ -1,9 +1,9 @@
 import { ChapterWrapper, RelatedDocs } from 'components';
 import { ColorNode } from './ColorNode';
 import { ColorProvider } from './ColorProvider';
-import classes from './NestedContexts.module.css';
+import classes from './index.module.css';
 
-export function NestedContexts() {
+export function NestedContextsChapter() {
     return (
         <ChapterWrapper
             title="Nested Contexts"

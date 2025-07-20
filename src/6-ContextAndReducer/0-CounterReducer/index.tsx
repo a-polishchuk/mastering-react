@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 import { Action } from './Action';
 import { counterReducer, INITIAL_COUNT } from './counterReducer';
 
-export function UseCounterReducer() {
+export function CounterReducerChapter() {
     const [count, dispatch] = useReducer(counterReducer, INITIAL_COUNT);
 
     return (
