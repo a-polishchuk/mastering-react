@@ -25,33 +25,36 @@ export function ContactRow({ contact }: { contact: Contact }) {
     const [isEditingName, setEditingName] = useState<boolean>(false);
     const [isEditingPhone, setEditingPhone] = useState<boolean>(false);
 
-    const select = () =>
+    const select = () => {
         dispatch({
             type: ActionType.SELECT,
-            payload: { id: contact.id },
+            contactId: contact.id,
         });
+    };
 
     const startEditingName = () => setEditingName(true);
     const stopEditingName = () => setEditingName(false);
-    const editName: ChangeEventHandler<HTMLInputElement> = (event) =>
+    const editName: ChangeEventHandler<HTMLInputElement> = (event) => {
         dispatch({
             type: ActionType.EDIT,
-            payload: {
+            contact: {
                 ...contact,
                 name: event.target.value,
             },
         });
+    };
 
     const startEditingPhone = () => setEditingPhone(true);
     const stopEditingPhone = () => setEditingPhone(false);
-    const editPhone: ChangeEventHandler<HTMLInputElement> = (event) =>
+    const editPhone: ChangeEventHandler<HTMLInputElement> = (event) => {
         dispatch({
             type: ActionType.EDIT,
-            payload: {
+            contact: {
                 ...contact,
                 phone: event.target.value,
             },
         });
+    };
 
     return (
         <div style={buildStyle(isSelected)} onClick={select}>

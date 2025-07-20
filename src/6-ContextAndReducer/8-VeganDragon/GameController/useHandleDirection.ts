@@ -9,7 +9,7 @@ export function useHandleDirection() {
     const setDirection = (direction: Direction) => {
         dispatch({
             type: ActionType.SET_DIRECTION,
-            payload: direction,
+            direction,
         });
     };
 

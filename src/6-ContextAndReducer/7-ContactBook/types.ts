@@ -1,15 +1,15 @@
 import { Dispatch } from 'react';
 
-export interface Contact {
+export type Contact = {
     id: string;
     name: string;
     phone: string;
-}
+};
 
-export interface ContactsState {
+export type ContactsState = {
     contacts: Contact[];
     selectedId: string | null;
-}
+};
 
 export enum ActionType {
     ADD = 'ADD',
@@ -19,10 +19,25 @@ export enum ActionType {
     ROLLBACK = 'ROLLBACK',
 }
 
-export interface Action {
-    type: ActionType;
-    payload?: any;
-}
+export type Action =
+    | {
+          type: ActionType.ADD;
+      }
+    | {
+          type: ActionType.SELECT;
+          contactId: string;
+      }
+    | {
+          type: ActionType.EDIT;
+          contact: Contact;
+      }
+    | {
+          type: ActionType.REMOVE;
+          idToRemove: string;
+      }
+    | {
+          type: ActionType.ROLLBACK;
+      };
 
 export type ContactsReducer = (state: ContactsState, action: Action) => ContactsState;
 

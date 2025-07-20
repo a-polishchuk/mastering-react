@@ -11,32 +11,34 @@ export function NestedContextsChapter() {
             contentClassName={classes.content}
         >
             <div>
-                <ColorNode>
+                <ColorProvider color="#97bbf5">
                     <ColorNode>
-                        <ColorProvider color="#d4ee40">
+                        <ColorNode>
+                            <ColorProvider color="#d4ee40">
+                                <ColorNode>
+                                    <ColorNode />
+                                </ColorNode>
+                            </ColorProvider>
+                        </ColorNode>
+                        <ColorProvider color="#47d07b">
                             <ColorNode>
+                                <ColorNode />
                                 <ColorNode />
                             </ColorNode>
                         </ColorProvider>
-                    </ColorNode>
-                    <ColorProvider color="#47d07b">
                         <ColorNode>
                             <ColorNode />
                             <ColorNode />
-                        </ColorNode>
-                    </ColorProvider>
-                    <ColorNode>
-                        <ColorNode />
-                        <ColorNode />
-                        <ColorNode>
-                            <ColorProvider color="#f466f9">
-                                <ColorNode />
-                                <ColorNode />
-                                <ColorNode />
-                            </ColorProvider>
+                            <ColorNode>
+                                <ColorProvider color="#f466f9">
+                                    <ColorNode />
+                                    <ColorNode />
+                                    <ColorNode />
+                                </ColorProvider>
+                            </ColorNode>
                         </ColorNode>
                     </ColorNode>
-                </ColorNode>
+                </ColorProvider>
             </div>
 
             <RelatedDocs

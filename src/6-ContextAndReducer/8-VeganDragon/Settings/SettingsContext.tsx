@@ -1,4 +1,5 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from 'react';
 import { MAX_MOVE_DELAY, MOVE_DELAY } from '../constants';
 
 export type SettingsContextState = {
@@ -8,15 +9,9 @@ export type SettingsContextState = {
     changeMoveDelay: () => void;
 };
 
-const SettingsContext = createContext<SettingsContextState | null>(null);
+const SettingsContext = createContext<SettingsContextState | undefined>(undefined);
 
-export function useSettingsContext() {
-    const contextValue = useContext(SettingsContext);
-    if (!contextValue) {
-        throw new Error('Settings context is only available under SettingsContextProvider!');
-    }
-    return contextValue;
-}
+export const useSettingsContext = createContextHook(SettingsContext, SettingsContextProvider);
 
 export function SettingsContextProvider({ children }: { children: ReactNode }) {
     const [useAlternativeGrid, setUseAlternativeGrid] = useState<boolean>(false);

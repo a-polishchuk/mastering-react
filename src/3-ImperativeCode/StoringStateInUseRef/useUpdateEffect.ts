@@ -2,7 +2,11 @@ import { useEffect, useRef } from 'react';
 
 type Callback = () => void;
 
-export function useUpdateEffect(callback: Callback, deps: any[]) {
+/**
+ * @param deps - передавати список залежностей ось таким чином, імітуючи стандартний useEffect -
+ * не добре, тому що ви позбавляєте себе автоматичних перевірок від ESLint
+ */
+export function useUpdateEffect(callback: Callback, deps: unknown[]) {
     const firstRenderRef = useRef<boolean>(true);
     const callbackRef = useRef<Callback>(callback);
 

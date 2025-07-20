@@ -1,6 +1,7 @@
 export interface RenderValue {
     type: string;
     valueString: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any;
 }
 

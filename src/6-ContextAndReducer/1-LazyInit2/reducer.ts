@@ -10,10 +10,9 @@ export function reducer(matrix: Matrix, action: Action): Matrix {
         case ActionType.SHUFFLE:
             return shuffle(matrix);
         case ActionType.REMOVE_ROW:
-            return removeRow(matrix, action.payload);
+            return removeRow(matrix, action.rowId);
         default:
-            throw new Error(`Action type ${action.type} was no recognized`);
-        // return matrix; // ! DO NOT return current state in the default clause !
+            throw new Error(`Unknown action: ${JSON.stringify(action)}`);
     }
 }
 

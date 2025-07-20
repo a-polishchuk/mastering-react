@@ -1,17 +1,12 @@
-import { createContext, ReactNode, useContext, useReducer } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, ReactNode, useReducer } from 'react';
 import { contactsReducer } from './contactsReducer';
 import { initialState } from './initialState';
 import { ContactsContextType } from './types';
 
-const ContactsContext = createContext<ContactsContextType | null>(null);
+const ContactsContext = createContext<ContactsContextType | undefined>(undefined);
 
-export function useContacts() {
-    const context = useContext(ContactsContext);
-    if (!context) {
-        throw new Error('useContacts must be used within a ContactsProvider');
-    }
-    return context;
-}
+export const useContacts = createContextHook(ContactsContext, ContactsProvider);
 
 export function ContactsProvider({ children }: { children: ReactNode }) {
     const value = useReducer(contactsReducer, initialState);

@@ -5,7 +5,7 @@ import { Action, ActionType } from './types';
 
 type ActionButtonProps = {
     text: string;
-    actionType: ActionType;
+    actionType: ActionType.SORT_ASC | ActionType.SORT_DESC | ActionType.SHUFFLE;
     dispatch: Dispatch<Action>;
 };
 

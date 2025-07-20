@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export type IntervalCallback = (...args: any[]) => void;
+export type IntervalCallback = (...args: unknown[]) => void;
 
 export function useInterval(callback: IntervalCallback, delay: number | null) {
     const callbackRef = useRef<IntervalCallback>(callback);

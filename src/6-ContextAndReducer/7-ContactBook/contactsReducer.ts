@@ -7,15 +7,15 @@ export function contactsReducer(state: ContactsState, action: Action): ContactsS
         case ActionType.ADD:
             return add(state);
         case ActionType.SELECT:
-            return select(state, action);
+            return select(state, action.contactId);
         case ActionType.EDIT:
-            return edit(state, action);
+            return edit(state, action.contact);
         case ActionType.REMOVE:
-            return remove(state, action);
+            return remove(state, action.idToRemove);
         case ActionType.ROLLBACK:
             return initialState;
         default:
-            throw new Error(`action type ${action.type} was not recognized`);
+            throw new Error(`Unknown action: ${JSON.stringify(action)}`);
     }
 }
 
@@ -31,18 +31,17 @@ function add(state: ContactsState): ContactsState {
     };
 }
 
-function edit(state: ContactsState, action: Action): ContactsState {
+function edit(state: ContactsState, payload: Contact): ContactsState {
     const contacts = [...state.contacts];
-    const index = contacts.findIndex((c) => c.id === action.payload.id);
-    contacts[index] = action.payload;
+    const index = contacts.findIndex((c) => c.id === payload.id);
+    contacts[index] = payload;
     return {
         ...state,
         contacts,
     };
 }
 
-function remove(state: ContactsState, action: Action): ContactsState {
-    const idToRemove = action.payload.id;
+function remove(state: ContactsState, idToRemove: string): ContactsState {
     return {
         ...state,
         contacts: state.contacts.filter((c) => c.id !== idToRemove),
@@ -50,9 +49,9 @@ function remove(state: ContactsState, action: Action): ContactsState {
     };
 }
 
-function select(state: ContactsState, action: Action): ContactsState {
+function select(state: ContactsState, contactId: string): ContactsState {
     return {
         ...state,
-        selectedId: action.payload.id,
+        selectedId: contactId,
     };
 }

@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useContext, useState } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, ReactNode, useState } from 'react';
 import { generateThemes, Theme } from './Theme';
 
 export type ThemesPalette = {
@@ -8,16 +9,9 @@ export type ThemesPalette = {
 
 export type ThemeContextState = [ThemesPalette, (themeIndex: number) => void];
 
-const defaultValue: any = null;
-const ThemeContext = createContext<ThemeContextState>(defaultValue);
+const ThemeContext = createContext<ThemeContextState | undefined>(undefined);
 
-export function useThemeContext(): ThemeContextState {
-    const theme = useContext(ThemeContext);
-    if (!theme) {
-        throw new Error(`useTheme must be used within a ThemeProvider`);
-    }
-    return theme;
-}
+export const useThemeContext = createContextHook(ThemeContext, ThemeProvider);
 
 export function useCurrentTheme(): Theme {
     const [{ themes, themeIndex }] = useThemeContext();

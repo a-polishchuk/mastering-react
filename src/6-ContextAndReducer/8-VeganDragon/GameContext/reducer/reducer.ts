@@ -20,8 +20,8 @@ export function reducer(state: GameContextState, action: Action): GameContextSta
         case ActionType.SPAWN_VEGETABLE:
             return spawnVegetable(state);
         case ActionType.SET_DIRECTION:
-            return setDirection(state, action.payload);
+            return setDirection(state, action.direction);
         default:
-            throw new Error(`Unknown action type ${action.type}`);
+            throw new Error(`Unknown action ${JSON.stringify(action)}`);
     }
 }

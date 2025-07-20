@@ -14,7 +14,7 @@ export function DataTable({ maxPower, data, dispatch }: Props) {
     const handleRowClick = (rowId: number) => {
         dispatch({
             type: ActionType.REMOVE_ROW,
-            payload: rowId,
+            rowId,
         });
     };
 

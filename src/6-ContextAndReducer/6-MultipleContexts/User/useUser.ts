@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { User } from './User';
 
 export function useUser(userId: number) {
-    const [user, setUser] = useState<User>();
+    const [user, setUser] = useState<User | null>(null);
 
     useEffect(() => {
         // раніше тут була бібліотечка axios, але тепер краще використовувати fetch

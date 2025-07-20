@@ -1,11 +1,15 @@
-import { createContext, ReactNode, useContext } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, ReactNode } from 'react';
 
-const ColorContext = createContext<string>('#97bbf5');
+const ColorContext = createContext<string | undefined>(undefined);
 
-export function useColorContext() {
-    return useContext(ColorContext);
-}
+type ProviderProps = {
+    color: string;
+    children: ReactNode;
+};
 
-export function ColorProvider({ color, children }: { color: string; children: ReactNode }) {
+export function ColorProvider({ color, children }: ProviderProps) {
     return <ColorContext.Provider value={color}>{children}</ColorContext.Provider>;
 }
+
+export const useColorContext = createContextHook(ColorContext, ColorProvider);

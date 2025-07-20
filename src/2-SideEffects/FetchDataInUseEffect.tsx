@@ -1,7 +1,7 @@
 import { ChapterWrapper, LoadingSpinner, PropsTable, RelatedDocs, Toolbar } from 'components';
 import { ChangeEventHandler, useEffect, useState } from 'react';
 
-type PostData = Record<string, any>;
+type PostData = Record<string, unknown>;
 
 const ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
 const STATUS_OK = 200;
@@ -11,7 +11,7 @@ export function FetchDataInUseEffect() {
     const [postData, setPostData] = useState<PostData | null>(null);
 
     const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<any>(null);
+    const [error, setError] = useState<Error | null>(null);
 
     useEffect(() => {
         setLoading(true);

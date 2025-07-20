@@ -7,18 +7,26 @@ export function ContactsToolbar() {
     const [state, dispatch] = useContacts();
     const { selectedId } = state;
 
-    const add = () => dispatch({ type: ActionType.ADD });
+    const add = () => {
+        dispatch({ type: ActionType.ADD });
+    };
 
-    const removeSelected = () =>
-        dispatch({
-            type: ActionType.REMOVE,
-            payload: { id: selectedId },
-        });
+    const removeSelected = () => {
+        if (selectedId) {
+            dispatch({
+                type: ActionType.REMOVE,
+                idToRemove: selectedId,
+            });
+        } else {
+            throw new Error('No contact selected');
+        }
+    };
 
-    const rollbackChanges = () =>
+    const rollbackChanges = () => {
         dispatch({
             type: ActionType.ROLLBACK,
         });
+    };
 
     return (
         <Toolbar>

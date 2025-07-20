@@ -1,19 +1,14 @@
-import { createContext, ReactNode, useContext, useState } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, ReactNode, useState } from 'react';
 
 export type UserContextType = {
     userId: number;
     setUserId: (userId: number) => void;
 };
 
-const UserContext = createContext<UserContextType | null>(null);
+const UserContext = createContext<UserContextType | undefined>(undefined);
 
-export function useUserId() {
-    const contextValue = useContext(UserContext);
-    if (contextValue === null) {
-        throw new Error('useUserId must be used within a UserContext');
-    }
-    return contextValue;
-}
+export const useUserId = createContextHook(UserContext, UserContextProvider);
 
 export function UserContextProvider({ children }: { children: ReactNode }) {
     const [userId, setUserId] = useState(1);

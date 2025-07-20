@@ -13,6 +13,7 @@
                     "caseInsensitive": true
                 }
             }
-        ]
+        ],
+        "@typescript-eslint/no-explicit-any": "error"
     }
 }

@@ -1,12 +1,11 @@
-import { createContext, ReactNode, useContext } from 'react';
+import { createContextHook } from 'hooks/createContextHook';
+import { createContext, ReactNode } from 'react';
 import { User } from './User';
 import { useUser } from './useUser';
 
-const UserContext = createContext<User | undefined>(undefined);
+const UserContext = createContext<User | null | undefined>(undefined);
 
-export function useUserContext() {
-    return useContext(UserContext);
-}
+export const useUserContext = createContextHook(UserContext, UserProvider);
 
 type ProviderProps = {
     userId: number;

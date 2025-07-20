@@ -49,6 +49,7 @@ function hasSelectedChild(path: string, selectedPath: string, children: ReactNod
     if (path === selectedPath) {
         return true;
     }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return Children.toArray(children).some(({ props }: any) =>
         hasSelectedChild(props.path, selectedPath, props.children),
     );

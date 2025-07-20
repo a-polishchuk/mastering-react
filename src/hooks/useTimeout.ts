@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export function useTimeout(callback: () => void, timeout: number | null) {
     const callbackRef = useRef(callback);
-    const [dummyState, setDummyState] = useState<any>();
+    const [dummyState, setDummyState] = useState<{}>();
 
     useEffect(() => {
         callbackRef.current = callback;

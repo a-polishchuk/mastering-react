@@ -21,10 +21,29 @@ export enum ActionType {
     SET_DIRECTION = 'set_direction',
 }
 
-export interface Action {
-    type: ActionType;
-    payload?: any;
-}
+export type Action =
+    | {
+          type: ActionType.PLAY;
+      }
+    | {
+          type: ActionType.PAUSE;
+      }
+    | {
+          type: ActionType.FINISH;
+      }
+    | {
+          type: ActionType.PLAY_AGAIN;
+      }
+    | {
+          type: ActionType.MOVE;
+      }
+    | {
+          type: ActionType.SPAWN_VEGETABLE;
+      }
+    | {
+          type: ActionType.SET_DIRECTION;
+          direction: Direction;
+      };
 
 export enum GameStatus {
     IDLE = 'idle',
@@ -35,19 +54,19 @@ export enum GameStatus {
 
 export type CellIndex = [number, number];
 
-export interface SnakeSegment {
+export type SnakeSegment = {
     row: number;
     col: number;
     next?: SnakeSegment;
-}
+};
 
-export interface Vegetable {
+export type Vegetable = {
     row: number;
     col: number;
     character: string;
-}
+};
 
-export interface GameContextState {
+export type GameContextState = {
     gameStatus: GameStatus;
     points: number;
     direction: Direction;
@@ -56,4 +75,4 @@ export interface GameContextState {
     vegetables: Vegetable[];
     snakeHead: SnakeSegment;
     grid: string[][];
-}
+};
