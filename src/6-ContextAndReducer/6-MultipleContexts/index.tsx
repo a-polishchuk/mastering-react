@@ -7,7 +7,7 @@ import { UserProfile } from './User/UserProfile';
 
 export function MultipleContextsChapter() {
     return (
-        <ChapterWrapper title="useContext" subtitle="Solving the props drilling problem">
+        <ChapterWrapper title="Multiple Contexts" subtitle="Using few different contexts">
             <ThemeProvider>
                 {/* you can get current theme in any component in this subtree */}
                 <ThemeToolbar />

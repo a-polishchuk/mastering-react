@@ -20,7 +20,7 @@ export function useCurrentTheme(): Theme {
 
 function generatePalette(): ThemesPalette {
     return {
-        themes: generateThemes(10),
+        themes: generateThemes(15),
         themeIndex: 0,
     };
 }
