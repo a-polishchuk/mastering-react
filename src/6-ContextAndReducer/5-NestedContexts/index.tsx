@@ -23,7 +23,9 @@ export function NestedContextsChapter() {
                         <ColorProvider color="#47d07b">
                             <ColorNode>
                                 <ColorNode />
-                                <ColorNode />
+                                <ColorProvider color="#ffff00">
+                                    <ColorNode />
+                                </ColorProvider>
                             </ColorNode>
                         </ColorProvider>
                         <ColorNode>
