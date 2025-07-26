@@ -1,18 +1,11 @@
 import { ChapterWrapper, RelatedDocs } from 'components';
-import { ReactNode } from 'react';
 import { FirstContextProvider, useFirstContext } from './FirstContext';
 
 export function IntroToContextChapter() {
     return (
         <ChapterWrapper title="Intro to Context" subtitle="Dependency injection with React.Context">
             <FirstContextProvider>
-                <A>
-                    <B>
-                        <C>
-                            <FirstContextConsumer />
-                        </C>
-                    </B>
-                </A>
+                <A />
             </FirstContextProvider>
 
             <RelatedDocs
@@ -39,16 +32,16 @@ export function IntroToContextChapter() {
     );
 }
 
-function A({ children }: { children: ReactNode }) {
-    return <div>{children}</div>;
+function A() {
+    return <B />;
 }
 
-function B({ children }: { children: ReactNode }) {
-    return <div>{children}</div>;
+function B() {
+    return <C />;
 }
 
-function C({ children }: { children: ReactNode }) {
-    return <div>{children}</div>;
+function C() {
+    return <FirstContextConsumer />;
 }
 
 function FirstContextConsumer() {
