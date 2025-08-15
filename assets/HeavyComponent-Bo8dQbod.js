@@ -1,0 +1,1 @@
+import{j as t}from"./vendor-BxO9C8ng.js";import{P as o}from"./index-0OOx0rPj.js";function a(){return t.jsx(o,{title:"Heavy Component",data:{heavyComputationResult:42,computationDuration:`${new Date().getSeconds()} seconds`}})}export{a as HeavyComponent};
