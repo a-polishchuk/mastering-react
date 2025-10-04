@@ -1,5 +1,6 @@
 import { Chapter, Section } from 'components/MasterDetail';
 import { RouterPath } from 'config/RouterPath';
+import { ActivityExample } from './Activity/ActivityExample';
 import { UseActionStateExample } from './UseActionStateExample';
 import { UseFormStatusExample } from './UseFormStatusExample';
 import { UseOptimisticExample } from './UseOptimisticExample';
@@ -24,6 +25,12 @@ export function React19Section() {
                 title="useActionState"
                 path={RouterPath.USE_ACTION_STATE}
                 element={<UseActionStateExample />}
+            />
+            <Chapter
+                emoji="🙈"
+                title="Activity"
+                path={RouterPath.ACTIVITY}
+                element={<ActivityExample />}
             />
         </Section>
     );
