@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.colorItem {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center;
+    border: 2px solid transparent;
+}
+
+.colorItem:hover {
+    transform: scale(1.2);
+}
+
+.selected {
+    border: 2px solid black;
+}

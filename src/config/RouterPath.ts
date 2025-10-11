@@ -111,6 +111,7 @@ export enum RouterPath {
     USE_OPTIMISTIC = 'react-19/use-optimistic',
     USE_ACTION_STATE = 'react-19/use-action-state',
     ACTIVITY = 'react-19/activity',
+    USE_EFFECT_EVENT = 'react-19/use-effect-event',
 
     // misc
     ERROR_BOUNDARY = 'misc/error-boundary',
