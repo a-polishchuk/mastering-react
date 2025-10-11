@@ -16,7 +16,7 @@ export function UseEffectEventExample() {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, []);
+    }, [selectedColor]);
 
     return (
         <ChapterWrapper
