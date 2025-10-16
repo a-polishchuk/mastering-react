@@ -1,5 +1,0 @@
----
-alwaysApply: false
----
-
-Use @src/components/Button/Button.tsx as an example. Apart from the tsx file create also unit tests and storybook .stories.tsx file. Put reusable components in @src/components folder
